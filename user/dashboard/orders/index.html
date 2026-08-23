@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>My Orders - MarketPlace</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config injected from design system -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#004395",
+                        "on-primary-fixed": "#131b2e",
+                        "primary-container": "#131b2e",
+                        "tertiary-fixed-dim": "#c4c7c9",
+                        "primary-fixed": "#dae2fd",
+                        "on-surface-variant": "#45464d",
+                        "on-tertiary-fixed": "#191c1e",
+                        "on-secondary-fixed": "#001a42",
+                        "tertiary-fixed": "#e0e3e5",
+                        "outline": "#76777d",
+                        "error-container": "#ffdad6",
+                        "outline-variant": "#c6c6cd",
+                        "surface-container": "#e5eeff",
+                        "surface-container-highest": "#d3e4fe",
+                        "inverse-on-surface": "#eaf1ff",
+                        "on-primary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-primary-container": "#7c839b",
+                        "on-surface": "#0b1c30",
+                        "tertiary-container": "#191c1e",
+                        "inverse-surface": "#213145",
+                        "primary-fixed-dim": "#bec6e0",
+                        "primary": "#000000",
+                        "inverse-primary": "#bec6e0",
+                        "surface-dim": "#cbdbf5",
+                        "tertiary": "#000000",
+                        "surface-container-high": "#dce9ff",
+                        "surface-container-low": "#eff4ff",
+                        "surface": "#f8f9ff",
+                        "on-error": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#444749",
+                        "surface-bright": "#f8f9ff",
+                        "secondary-fixed-dim": "#adc6ff",
+                        "secondary-fixed": "#d8e2ff",
+                        "background": "#f8f9ff",
+                        "error": "#ba1a1a",
+                        "on-secondary-container": "#fefcff",
+                        "on-tertiary-container": "#818486",
+                        "secondary-container": "#2170e4",
+                        "secondary": "#0058be",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "on-secondary": "#ffffff",
+                        "on-background": "#0b1c30",
+                        "surface-tint": "#565e74",
+                        "surface-variant": "#d3e4fe"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "gutter": "24px",
+                        "sm": "16px",
+                        "lg": "48px",
+                        "margin-desktop": "64px",
+                        "xs": "8px",
+                        "md": "24px",
+                        "base": "4px",
+                        "xl": "80px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Manrope"],
+                        "headline-xl": ["Manrope"],
+                        "label-sm": ["Hanken Grotesk"],
+                        "label-md": ["Hanken Grotesk"],
+                        "headline-md": ["Manrope"],
+                        "headline-lg": ["Manrope"],
+                        "body-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&amp;family=Manrope:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md">
+<!-- Top Navigation Shell - Based on JSON -->
+<header class="bg-surface-container-lowest border-b border-outline-variant w-full sticky top-0 z-50">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-base max-w-screen-2xl mx-auto h-16">
+<!-- Brand -->
+<a class="font-headline-md text-headline-md font-bold text-on-surface flex items-center gap-2" href="#">
+                MarketPlace
+            </a>
+<!-- Search (Desktop) -->
+<div class="hidden md:flex flex-1 max-w-md mx-8 relative">
+<span aria-hidden="true" class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full pl-10 pr-4 py-2 border border-outline-variant rounded-DEFAULT bg-surface-container-lowest focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-shadow outline-none text-body-md font-body-md" placeholder="Search products..." type="text"/>
+</div>
+<!-- Desktop Navigation Links -->
+<nav class="hidden md:flex items-center gap-md font-body-md text-body-md h-full">
+<!-- Highlight 'Profile' equivalent or just inactive for structural items if not active -->
+<a class="text-on-surface-variant hover:text-secondary transition-colors cursor-pointer active:opacity-80 h-full flex items-center" href="#">Categories</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors cursor-pointer active:opacity-80 h-full flex items-center" href="#">Deals</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors cursor-pointer active:opacity-80 h-full flex items-center" href="#">Sell</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors cursor-pointer active:opacity-80 h-full flex items-center" href="#">Help</a>
+</nav>
+<!-- Trailing Actions -->
+<div class="flex items-center gap-sm md:gap-md">
+<button aria-label="Notifications" class="text-secondary hover:text-secondary transition-colors cursor-pointer active:opacity-80 p-1">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button aria-label="Favorites" class="text-secondary hover:text-secondary transition-colors cursor-pointer active:opacity-80 p-1">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+<button aria-label="Shopping Cart" class="text-secondary hover:text-secondary transition-colors cursor-pointer active:opacity-80 p-1 relative">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+<span class="absolute top-0 right-0 -mt-1 -mr-1 bg-error text-on-error font-label-sm text-label-sm w-4 h-4 rounded-full flex items-center justify-center">2</span>
+</button>
+<!-- Profile Indicator -->
+<div class="w-8 h-8 rounded-full overflow-hidden border border-outline-variant ml-2 cursor-pointer relative group">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="A close-up, highly detailed portrait of a diverse young professional in bright, even studio lighting. They are smiling warmly, dressed in a sleek, modern, neutral-toned sweater. The background is a crisp, bright white studio setting. The overall aesthetic is premium, clean, and optimistic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAj7Xhi_AMZn3a3IunfGNhz3jgixEWiavSq-Pl8xJKR98Bqwfom5iDj6GQDqxIWKj0DQrxLIWnltHq1SqOn8EqwVhAm45A4yETGlu1VYBlHk4xDCG86Plf6ie85LLL5xhdjXlTo0gFZKDBQ0a5kJlPmN9TDZ1NB_MFZ-uMhOfPuI8a2ZnPSqrZLkN_TZ7wSia1H55VVaHWDUj14EpTdfAQX3fen9Exgqn1PGs0RNjHR_dOtcdeatAMe"/>
+<!-- Active State indicator for this generic 'My Account' intent -->
+<div class="absolute inset-x-0 bottom-0 h-1 bg-secondary hidden group-hover:block transition-all"></div>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full max-w-screen-xl mx-auto px-margin-mobile md:px-margin-desktop py-lg md:py-xl flex flex-col md:flex-row gap-gutter">
+<!-- Sidebar Navigation (Account Settings Context) -->
+<aside class="w-full md:w-64 flex-shrink-0 mb-8 md:mb-0">
+<h1 class="font-headline-lg text-headline-lg md:text-headline-xl md:font-headline-xl text-on-surface mb-8">My Account</h1>
+<nav class="flex flex-col gap-2">
+<a class="px-4 py-3 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-high transition-colors font-label-md text-label-md flex items-center gap-3" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+                    Profile
+                </a>
+<a class="px-4 py-3 rounded-DEFAULT bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-3 border-l-4 border-secondary font-bold" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+                    My Orders
+                </a>
+<a class="px-4 py-3 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-high transition-colors font-label-md text-label-md flex items-center gap-3" href="#">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+                    Wishlist
+                </a>
+<a class="px-4 py-3 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-high transition-colors font-label-md text-label-md flex items-center gap-3" href="#">
+<span class="material-symbols-outlined" data-icon="location_on">location_on</span>
+                    Addresses
+                </a>
+<a class="px-4 py-3 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-high transition-colors font-label-md text-label-md flex items-center gap-3" href="#">
+<span class="material-symbols-outlined" data-icon="payment">payment</span>
+                    Payment Methods
+                </a>
+</nav>
+</aside>
+<!-- Orders Section -->
+<section class="flex-grow flex flex-col gap-md">
+<!-- Filters & Actions -->
+<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-4">
+<div class="flex gap-2">
+<button class="px-4 py-1.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm border border-secondary-fixed">All Orders</button>
+<button class="px-4 py-1.5 rounded-full bg-transparent text-on-surface-variant border border-outline-variant hover:bg-surface-container transition-colors font-label-sm text-label-sm">In Progress</button>
+<button class="px-4 py-1.5 rounded-full bg-transparent text-on-surface-variant border border-outline-variant hover:bg-surface-container transition-colors font-label-sm text-label-sm hidden sm:block">Cancelled</button>
+</div>
+<div class="relative w-full sm:w-auto">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-sm">search</span>
+<input class="w-full sm:w-64 pl-9 pr-3 py-1.5 border border-outline-variant rounded-DEFAULT bg-surface-container-lowest focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-shadow outline-none font-body-md text-body-md" placeholder="Search orders..." type="text"/>
+</div>
+</div>
+<!-- Orders List -->
+<div class="flex flex-col gap-6">
+<!-- Order Card 1: In Progress -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden group hover:shadow-[0_4px_15px_rgba(0,0,0,0.04)] hover:border-outline transition-all duration-200">
+<div class="bg-surface-container-low px-sm py-3 border-b border-outline-variant flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+<div class="flex gap-4 sm:gap-8 font-label-sm text-label-sm">
+<div>
+<span class="text-on-surface-variant block uppercase tracking-wider text-[10px]">Order Placed</span>
+<span class="text-on-surface">October 24, 2024</span>
+</div>
+<div>
+<span class="text-on-surface-variant block uppercase tracking-wider text-[10px]">Total</span>
+<span class="text-on-surface">$1,299.00</span>
+</div>
+<div class="hidden sm:block">
+<span class="text-on-surface-variant block uppercase tracking-wider text-[10px]">Order #</span>
+<span class="text-on-surface">ORD-894-XYZ</span>
+</div>
+</div>
+<a class="text-secondary font-label-md text-label-md hover:underline flex items-center gap-1" href="#">
+                            View Details
+                        </a>
+</div>
+<div class="p-sm flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+<div class="w-24 h-24 sm:w-32 sm:h-32 flex-shrink-0 rounded-DEFAULT border border-outline-variant overflow-hidden bg-surface">
+<img alt="Premium Laptop Pro" class="w-full h-full object-cover" data-alt="A sleek, modern high-end laptop with a silver aluminum body, positioned on a clean white studio table. Soft, diffuse lighting highlights the metallic texture and minimal bezel design. The aesthetic is extremely premium, commercial, and uncluttered, suitable for a corporate tech marketplace." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJYxe-3ksrL4TJY14h0Njsm8atE-CF-6ZOjNL0iz419AeWvY_cbDGJovJZOuvAx3QognEpy7xxsJgR1zRGxYiu1SHddEk8UVMocGjUOI68QMbIwbIGtDZ22RQRDk8mPC_0YItZ5_CZgWCNjMV6zE7cqxcRiEkHDou7OU7U7x7HU7CjIHEpECzRNfDcul2V21sRtSlN_cjsO8LiDY6KGx50sFLEnNtSvYtG5km2t5zlTYM8PsUGFkF5"/>
+</div>
+<div class="flex-grow flex flex-col gap-2">
+<div class="flex justify-between items-start">
+<h3 class="font-headline-md text-headline-md text-on-surface">Premium Laptop Pro - 16" M3 Max</h3>
+<div class="px-2 py-1 rounded-sm bg-surface-container-high text-on-surface font-label-sm text-label-sm whitespace-nowrap flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">local_shipping</span>
+                                    In Progress
+                                </div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Space Gray, 32GB Unified Memory, 1TB SSD Storage, Backlit Magic Keyboard.</p>
+<div class="mt-2 flex gap-3">
+<button class="px-4 py-2 bg-primary text-on-primary rounded-DEFAULT font-label-md text-label-md hover:-translate-y-0.5 hover:shadow-[0_4px_15px_rgba(0,0,0,0.04)] transition-all duration-200">Track Package</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Order Card 2: Delivered -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden group hover:shadow-[0_4px_15px_rgba(0,0,0,0.04)] hover:border-outline transition-all duration-200">
+<div class="bg-surface-container-low px-sm py-3 border-b border-outline-variant flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+<div class="flex gap-4 sm:gap-8 font-label-sm text-label-sm">
+<div>
+<span class="text-on-surface-variant block uppercase tracking-wider text-[10px]">Order Placed</span>
+<span class="text-on-surface">September 12, 2024</span>
+</div>
+<div>
+<span class="text-on-surface-variant block uppercase tracking-wider text-[10px]">Total</span>
+<span class="text-on-surface">$349.50</span>
+</div>
+<div class="hidden sm:block">
+<span class="text-on-surface-variant block uppercase tracking-wider text-[10px]">Order #</span>
+<span class="text-on-surface">ORD-512-ABC</span>
+</div>
+</div>
+<a class="text-secondary font-label-md text-label-md hover:underline flex items-center gap-1" href="#">
+                            View Details
+                        </a>
+</div>
+<div class="p-sm flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+<div class="w-24 h-24 sm:w-32 sm:h-32 flex-shrink-0 rounded-DEFAULT border border-outline-variant overflow-hidden bg-surface">
+<img alt="Noise Canceling Headphones" class="w-full h-full object-cover" data-alt="A pair of premium noise-canceling over-ear headphones in a matte dark gray finish. They are elegantly resting on an acrylic stand against a pristine white studio background. Bright, high-key lighting emphasizes the high-quality ear cushions and metallic headband structure. Minimalist and corporate aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCddEjxCGpIAqL8dB0QzstAHUOREMzkapp4ztOW-_OYwsqseDojyK6lp87f9rCmKmvkZAPxzR3eL0VV6UAuKbCYitrCIkzYrmGadnPOC03Gur6qhJ5vkI8vbO4H_RG_2h3DYmk9qTtH5rqKkpWVDAvm1J_8-RBrp6oBUz63acTln_3sjSg_93H7Kr2wfXgNPJ_x4w3w6wbOU7uzQxwwgAf8wDrF9YM5Lo88sYXTY9Jjl9pUD72tAR8h"/>
+</div>
+<div class="flex-grow flex flex-col gap-2">
+<div class="flex justify-between items-start">
+<h3 class="font-headline-md text-headline-md text-on-surface">Noise Canceling Studio Headphones</h3>
+<div class="px-2 py-1 rounded-sm bg-surface-container text-on-surface font-label-sm text-label-sm whitespace-nowrap flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">check_circle</span>
+                                    Delivered Sep 15
+                                </div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Over-ear, 30-hour battery life, active noise cancellation, matte charcoal finish.</p>
+<div class="mt-2 flex gap-3">
+<button class="px-4 py-2 border border-secondary text-secondary rounded-DEFAULT font-label-md text-label-md hover:bg-surface-container transition-all duration-200 flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">replay</span>
+                                    Reorder
+                                </button>
+<button class="px-4 py-2 text-secondary font-label-md text-label-md hover:bg-surface-container rounded-DEFAULT transition-colors duration-200">Write Review</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Order Card 3: Cancelled -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden group hover:shadow-[0_4px_15px_rgba(0,0,0,0.04)] hover:border-outline transition-all duration-200 opacity-80">
+<div class="bg-surface-container-low px-sm py-3 border-b border-outline-variant flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+<div class="flex gap-4 sm:gap-8 font-label-sm text-label-sm">
+<div>
+<span class="text-on-surface-variant block uppercase tracking-wider text-[10px]">Order Placed</span>
+<span class="text-on-surface">August 05, 2024</span>
+</div>
+<div>
+<span class="text-on-surface-variant block uppercase tracking-wider text-[10px]">Total</span>
+<span class="text-on-surface">$89.00</span>
+</div>
+<div class="hidden sm:block">
+<span class="text-on-surface-variant block uppercase tracking-wider text-[10px]">Order #</span>
+<span class="text-on-surface">ORD-104-LMN</span>
+</div>
+</div>
+<a class="text-secondary font-label-md text-label-md hover:underline flex items-center gap-1" href="#">
+                            View Details
+                        </a>
+</div>
+<div class="p-sm flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+<div class="w-24 h-24 sm:w-32 sm:h-32 flex-shrink-0 rounded-DEFAULT border border-outline-variant overflow-hidden bg-surface opacity-60 grayscale">
+<img alt="Ceramic Mug Set" class="w-full h-full object-cover" data-alt="A minimalist, modern ceramic coffee mug in matte black, placed on a very clean, light gray surface. The lighting is soft and diffused, creating subtle shadows. The image implies high quality everyday utility items in a corporate, refined style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpq7zpoSAJajOJDPqsa2axy0MsN353orZRq92SgcMOlzGFGBX11jsyPVSluLlCHk7HHp3AAbKmmpsGahJ5y-rXbaEvkP9OTom79YrLo9Vu3BhPpVyVAv3g-rE4ahHEMu7XhGqT5FvhKWzc4CLitqBNRRGl91oaHNh-aX1SsyyrtkwuEut_SgwEGhSiHTvxdhaA5NKnrfCoo46VzmXWnTu1LjIBKOCIUZdpz9_EopeiAWyWsKG9maly"/>
+</div>
+<div class="flex-grow flex flex-col gap-2">
+<div class="flex justify-between items-start">
+<h3 class="font-headline-md text-headline-md text-on-surface">Artisan Ceramic Mug Set</h3>
+<div class="px-2 py-1 rounded-sm bg-error-container text-on-error-container font-label-sm text-label-sm whitespace-nowrap flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">cancel</span>
+                                    Cancelled
+                                </div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Set of 4 matte black ceramic mugs, 12oz capacity, dishwasher safe.</p>
+<div class="mt-2 flex gap-3">
+<button class="px-4 py-2 border border-secondary text-secondary rounded-DEFAULT font-label-md text-label-md hover:bg-surface-container transition-all duration-200 flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">replay</span>
+                                    Reorder
+                                </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-8 flex justify-center items-center gap-2">
+<button class="w-10 h-10 rounded-DEFAULT flex items-center justify-center border border-outline-variant text-on-surface-variant hover:bg-surface-container transition-colors disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 rounded-DEFAULT flex items-center justify-center border border-secondary bg-secondary-fixed text-on-secondary-fixed font-label-md font-bold">1</button>
+<button class="w-10 h-10 rounded-DEFAULT flex items-center justify-center border border-outline-variant text-on-surface hover:bg-surface-container transition-colors font-label-md">2</button>
+<button class="w-10 h-10 rounded-DEFAULT flex items-center justify-center border border-outline-variant text-on-surface hover:bg-surface-container transition-colors font-label-md">3</button>
+<button class="w-10 h-10 rounded-DEFAULT flex items-center justify-center border border-outline-variant text-on-surface-variant hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</section>
+</main>
+<!-- Footer Shell - Based on JSON -->
+<footer class="bg-surface-container-low dark:bg-primary-container text-on-surface dark:text-on-primary-container font-label-md text-label-md w-full border-t border-outline-variant dark:border-outline mt-auto">
+<div class="w-full py-xl px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-md max-w-screen-2xl mx-auto">
+<div class="mb-4 md:mb-0 text-center md:text-left">
+<div class="font-headline-sm text-headline-sm font-black text-secondary dark:text-secondary-fixed-dim mb-2">MarketPlace</div>
+<p class="text-on-surface-variant dark:text-surface-variant text-sm">© 2024 MarketPlace Inc. All rights reserved.</p>
+</div>
+<nav class="flex flex-wrap justify-center gap-6">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-200" href="/marketplace/privacy/statement/">Privacy Policy</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-200" href="/marketplace/servicesagreement/">Terms of Service</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-200" href="#">Cookie Settings</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-200" href="/marketplace/support">Contact Support</a>
+</nav>
+</div>
+</footer>
+</body></html>
