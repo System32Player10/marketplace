@@ -1,0 +1,1555 @@
+<!DOCTYPE html>
+
+<html lang="en" class="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>Payment Methods - MarketPlace</title>
+
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+<!-- Tailwind Configuration -->
+<script>
+    tailwind.config = {
+        darkMode: "class",
+
+        theme: {
+            extend: {
+                colors: {
+                    "on-secondary-fixed-variant": "#004395",
+                    "on-primary-fixed": "#131b2e",
+                    "primary-container": "#131b2e",
+                    "tertiary-fixed-dim": "#c4c7c9",
+                    "primary-fixed": "#dae2fd",
+                    "on-surface-variant": "#45464d",
+                    "on-tertiary-fixed": "#191c1e",
+                    "on-secondary-fixed": "#001a42",
+                    "outline": "#76777d",
+                    "error-container": "#ffdad6",
+                    "outline-variant": "#c6c6cd",
+                    "surface-container": "#e5eeff",
+                    "surface-container-highest": "#d3e4fe",
+                    "inverse-on-surface": "#eaf1ff",
+                    "on-primary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "on-primary-container": "#7c839b",
+                    "on-surface": "#0b1c30",
+                    "inverse-surface": "#213145",
+                    "primary-fixed-dim": "#bec6e0",
+                    "primary": "#000000",
+                    "inverse-primary": "#bec6e0",
+                    "surface-dim": "#cbdbf5",
+                    "surface-container-high": "#dce9ff",
+                    "surface-container-low": "#eff4ff",
+                    "surface": "#f8f9ff",
+                    "on-error": "#ffffff",
+                    "secondary-fixed-dim": "#adc6ff",
+                    "secondary-fixed": "#d8e2ff",
+                    "background": "#f8f9ff",
+                    "error": "#ba1a1a",
+                    "on-secondary-container": "#fefcff",
+                    "secondary-container": "#2170e4",
+                    "secondary": "#0058be",
+                    "on-primary-fixed-variant": "#3f465c",
+                    "on-secondary": "#ffffff",
+                    "on-background": "#0b1c30",
+                    "surface-tint": "#565e74",
+                    "surface-variant": "#d3e4fe"
+                },
+
+                borderRadius: {
+                    DEFAULT: "0.125rem",
+                    lg: "0.25rem",
+                    xl: "0.5rem",
+                    full: "0.75rem"
+                },
+
+                spacing: {
+                    "margin-mobile": "16px",
+                    gutter: "24px",
+                    sm: "16px",
+                    lg: "48px",
+                    "margin-desktop": "64px",
+                    xs: "8px",
+                    md: "24px",
+                    base: "4px",
+                    xl: "80px"
+                },
+
+                fontFamily: {
+                    "body": ["Hanken Grotesk", "sans-serif"],
+                    "headline": ["Manrope", "sans-serif"]
+                }
+            }
+        }
+    };
+</script>
+
+<!-- Google Fonts -->
+<link
+    href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Manrope:wght@600;700&display=swap"
+    rel="stylesheet"
+>
+
+<!-- Material Symbols -->
+<link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700&display=swap"
+    rel="stylesheet"
+>
+
+<style>
+    .material-symbols-outlined {
+        font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24;
+    }
+
+    .material-symbols-outlined.fill {
+        font-variation-settings:
+            'FILL' 1,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24;
+    }
+
+    body {
+        font-family: "Hanken Grotesk", sans-serif;
+    }
+
+    .headline {
+        font-family: "Manrope", sans-serif;
+    }
+
+    .payment-input {
+        width: 100%;
+        border: 1px solid #c6c6cd;
+        border-radius: 0.125rem;
+        background: #ffffff;
+        padding: 0.625rem 0.875rem;
+        color: #0b1c30;
+        outline: none;
+        transition:
+            border-color 0.2s ease,
+            box-shadow 0.2s ease;
+    }
+
+    .payment-input:focus {
+        border-color: #0058be;
+        box-shadow: 0 0 0 3px rgba(0, 88, 190, 0.12);
+    }
+
+    .payment-input::placeholder {
+        color: #76777d;
+    }
+
+    .payment-method {
+        transition:
+            background-color 0.2s ease,
+            border-color 0.2s ease,
+            transform 0.2s ease;
+    }
+
+    .payment-method:hover {
+        background-color: #eff4ff;
+    }
+
+    .payment-method.active {
+        background-color: #dce9ff;
+        border-color: #0058be;
+    }
+
+    .payment-method.active .method-radio {
+        border-color: #0058be;
+    }
+
+    .payment-method.active .method-radio::after {
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-radius: 999px;
+        background: #0058be;
+    }
+
+    .method-radio {
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+        border: 2px solid #76777d;
+        border-radius: 999px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .method-logo {
+        min-width: 54px;
+        height: 32px;
+        padding: 0 8px;
+        border: 1px solid #c6c6cd;
+        border-radius: 4px;
+        background: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Manrope", sans-serif;
+        font-size: 11px;
+        font-weight: 700;
+        color: #0b1c30;
+    }
+
+    .primary-button {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        border-radius: 0.125rem;
+        background: #000000;
+        color: #ffffff;
+        font-weight: 600;
+        transition:
+            transform 0.2s ease,
+            box-shadow 0.2s ease;
+    }
+
+    .primary-button:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    }
+</style>
+```
+
+</head>
+
+<body class="min-h-screen flex flex-col bg-background text-on-background">
+
+```
+<!-- =========================================================
+     HEADER
+========================================================== -->
+
+<header class="sticky top-0 z-50 w-full border-b border-outline-variant bg-surface-container-lowest">
+
+    <div
+        class="mx-auto flex h-16 w-full max-w-screen-2xl items-center justify-between px-margin-mobile py-base md:px-margin-desktop"
+    >
+
+        <!-- Brand -->
+        <a
+            href="#"
+            class="headline flex items-center gap-2 text-headline-md font-bold text-on-surface"
+        >
+            MarketPlace
+        </a>
+
+
+        <!-- Desktop Search -->
+        <div class="relative mx-8 hidden max-w-md flex-1 md:flex">
+
+            <span
+                class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant"
+            >
+                search
+            </span>
+
+            <input
+                type="text"
+                placeholder="Search products..."
+                class="w-full rounded-DEFAULT border border-outline-variant bg-surface-container-lowest py-2 pl-10 pr-4 text-body-md outline-none transition-shadow focus:border-secondary focus:ring-2 focus:ring-secondary/20"
+            >
+
+        </div>
+
+
+        <!-- Navigation -->
+        <nav class="hidden h-full items-center gap-md md:flex">
+
+            <a
+                href="#"
+                class="flex h-full items-center text-on-surface-variant transition-colors hover:text-secondary"
+            >
+                Categories
+            </a>
+
+            <a
+                href="#"
+                class="flex h-full items-center text-on-surface-variant transition-colors hover:text-secondary"
+            >
+                Deals
+            </a>
+
+            <a
+                href="#"
+                class="flex h-full items-center text-on-surface-variant transition-colors hover:text-secondary"
+            >
+                Sell
+            </a>
+
+            <a
+                href="#"
+                class="flex h-full items-center text-on-surface-variant transition-colors hover:text-secondary"
+            >
+                Help
+            </a>
+
+        </nav>
+
+
+        <!-- Header Actions -->
+        <div class="flex items-center gap-sm md:gap-md">
+
+            <button
+                type="button"
+                aria-label="Notifications"
+                class="p-1 text-secondary transition-opacity hover:opacity-70"
+            >
+                <span class="material-symbols-outlined">
+                    notifications
+                </span>
+            </button>
+
+
+            <button
+                type="button"
+                aria-label="Favorites"
+                class="p-1 text-secondary transition-opacity hover:opacity-70"
+            >
+                <span class="material-symbols-outlined">
+                    favorite
+                </span>
+            </button>
+
+
+            <button
+                type="button"
+                aria-label="Shopping Cart"
+                class="relative p-1 text-secondary transition-opacity hover:opacity-70"
+            >
+
+                <span class="material-symbols-outlined">
+                    shopping_cart
+                </span>
+
+                <span
+                    class="absolute right-0 top-0 flex h-4 w-4 -mr-1 -mt-1 items-center justify-center rounded-full bg-error text-[10px] font-semibold text-on-error"
+                >
+                    2
+                </span>
+
+            </button>
+
+
+            <!-- Profile -->
+            <button
+                type="button"
+                aria-label="Profile"
+                class="ml-2 flex h-8 w-8 items-center justify-center rounded-full border border-outline-variant bg-surface-container-high text-on-surface"
+            >
+                <span class="material-symbols-outlined text-[20px]">
+                    person
+                </span>
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- =========================================================
+     MAIN CONTENT
+========================================================== -->
+
+<main
+    class="mx-auto flex w-full max-w-screen-xl flex-grow flex-col gap-gutter px-margin-mobile py-lg md:flex-row md:px-margin-desktop md:py-xl"
+>
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="mb-8 w-full flex-shrink-0 md:mb-0 md:w-64">
+
+        <h1
+            class="headline mb-8 text-3xl font-semibold text-on-surface md:text-4xl"
+        >
+            My Account
+        </h1>
+
+
+        <nav class="flex flex-col gap-2">
+
+            <a
+                href="#"
+                class="flex items-center gap-3 rounded-DEFAULT px-4 py-3 text-on-surface-variant transition-colors hover:bg-surface-container-high"
+            >
+                <span class="material-symbols-outlined">
+                    person
+                </span>
+
+                Profile
+            </a>
+
+
+            <a
+                href="#"
+                class="flex items-center gap-3 rounded-DEFAULT px-4 py-3 text-on-surface-variant transition-colors hover:bg-surface-container-high"
+            >
+                <span class="material-symbols-outlined">
+                    inventory_2
+                </span>
+
+                My Orders
+            </a>
+
+
+            <a
+                href="#"
+                class="flex items-center gap-3 rounded-DEFAULT px-4 py-3 text-on-surface-variant transition-colors hover:bg-surface-container-high"
+            >
+                <span class="material-symbols-outlined">
+                    favorite
+                </span>
+
+                Wishlist
+            </a>
+
+
+            <a
+                href="#"
+                class="flex items-center gap-3 rounded-DEFAULT px-4 py-3 text-on-surface-variant transition-colors hover:bg-surface-container-high"
+            >
+                <span class="material-symbols-outlined">
+                    location_on
+                </span>
+
+                Addresses
+            </a>
+
+
+            <!-- Active -->
+            <a
+                href="#"
+                class="flex items-center gap-3 rounded-DEFAULT border-l-4 border-secondary bg-surface-container-high px-4 py-3 font-semibold text-on-surface"
+            >
+                <span class="material-symbols-outlined">
+                    payment
+                </span>
+
+                Payment Methods
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- =====================================================
+         PAYMENT SECTION
+    ====================================================== -->
+
+    <section class="min-w-0 flex-grow">
+
+        <div class="mb-8">
+
+            <h2 class="headline text-3xl font-semibold text-on-surface">
+                Payment Methods
+            </h2>
+
+            <p class="mt-2 max-w-2xl text-on-surface-variant">
+                Choose how you would like to pay. Your payment information
+                will be securely handled.
+            </p>
+
+        </div>
+
+
+        <!-- Payment Layout -->
+        <div class="grid grid-cols-1 gap-6 lg:grid-cols-[260px_minmax(0,1fr)]">
+
+
+            <!-- =================================================
+                 PAYMENT METHOD LIST
+            ================================================== -->
+
+            <div class="h-fit overflow-hidden rounded-lg border border-outline-variant bg-surface-container-lowest">
+
+                <div class="border-b border-outline-variant bg-surface-container-low px-4 py-3">
+
+                    <span class="text-sm font-semibold text-on-surface">
+                        Payment Options
+                    </span>
+
+                </div>
+
+
+                <div class="p-2">
+
+                    <!-- Card -->
+                    <button
+                        type="button"
+                        data-method="card"
+                        class="payment-method active flex w-full items-center gap-3 rounded-DEFAULT border border-transparent px-3 py-3 text-left"
+                    >
+
+                        <span class="method-radio"></span>
+
+                        <span class="material-symbols-outlined text-on-surface-variant">
+                            credit_card
+                        </span>
+
+                        <span class="flex-1 text-sm font-medium">
+                            Credit / Debit Card
+                        </span>
+
+                    </button>
+
+
+                    <!-- PayPal -->
+                    <button
+                        type="button"
+                        data-method="paypal"
+                        class="payment-method flex w-full items-center gap-3 rounded-DEFAULT border border-transparent px-3 py-3 text-left"
+                    >
+
+                        <span class="method-radio"></span>
+
+                        <span class="method-logo">
+                            PayPal
+                        </span>
+
+                        <span class="flex-1 text-sm font-medium">
+                            PayPal
+                        </span>
+
+                    </button>
+
+
+                    <!-- OVO -->
+                    <button
+                        type="button"
+                        data-method="ovo"
+                        class="payment-method flex w-full items-center gap-3 rounded-DEFAULT border border-transparent px-3 py-3 text-left"
+                    >
+
+                        <span class="method-radio"></span>
+
+                        <span class="method-logo">
+                            OVO
+                        </span>
+
+                        <span class="flex-1 text-sm font-medium">
+                            OVO
+                        </span>
+
+                    </button>
+
+
+                    <!-- LinkAja -->
+                    <button
+                        type="button"
+                        data-method="linkaja"
+                        class="payment-method flex w-full items-center gap-3 rounded-DEFAULT border border-transparent px-3 py-3 text-left"
+                    >
+
+                        <span class="method-radio"></span>
+
+                        <span class="method-logo">
+                            LinkAja
+                        </span>
+
+                        <span class="flex-1 text-sm font-medium">
+                            LinkAja
+                        </span>
+
+                    </button>
+
+
+                    <!-- GoPay -->
+                    <button
+                        type="button"
+                        data-method="gopay"
+                        class="payment-method flex w-full items-center gap-3 rounded-DEFAULT border border-transparent px-3 py-3 text-left"
+                    >
+
+                        <span class="method-radio"></span>
+
+                        <span class="method-logo">
+                            GoPay
+                        </span>
+
+                        <span class="flex-1 text-sm font-medium">
+                            GoPay
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 PAYMENT FORM CONTAINER
+            ================================================== -->
+
+            <div
+                id="payment-form-container"
+                class="overflow-hidden rounded-lg border border-outline-variant bg-surface-container-lowest"
+            >
+
+
+                <!-- =================================================
+                     CREDIT / DEBIT CARD
+                ================================================== -->
+
+                <form
+                    data-form="card"
+                    class="payment-form p-6 md:p-8"
+                >
+
+                    <div class="mb-6 flex items-start justify-between">
+
+                        <div>
+
+                            <h3 class="headline text-2xl font-semibold text-on-surface">
+                                Credit / Debit Card
+                            </h3>
+
+                            <p class="mt-1 text-on-surface-variant">
+                                Enter your card and billing information.
+                            </p>
+
+                        </div>
+
+                        <span class="material-symbols-outlined text-secondary">
+                            lock
+                        </span>
+
+                    </div>
+
+
+                    <div class="space-y-5">
+
+
+                        <!-- Card Provider -->
+                        <div>
+
+                            <label class="mb-2 block text-sm font-semibold">
+                                Card Provider
+                            </label>
+
+                            <select
+                                name="cardProvider"
+                                class="payment-input"
+                                required
+                            >
+
+                                <option value="" selected disabled>
+                                    Select card provider
+                                </option>
+
+                                <option value="visa">
+                                    VISA
+                                </option>
+
+                                <option value="mastercard">
+                                    Mastercard
+                                </option>
+
+                                <option value="jcb">
+                                    JCB
+                                </option>
+
+                                <option value="american-express">
+                                    American Express
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- Card Number -->
+                        <div>
+
+                            <label class="mb-2 block text-sm font-semibold">
+                                Card Number
+                            </label>
+
+                            <div class="relative">
+
+                                <input
+                                    type="text"
+                                    name="cardNumber"
+                                    inputmode="numeric"
+                                    autocomplete="cc-number"
+                                    maxlength="19"
+                                    placeholder="1234 5678 9012 3456"
+                                    class="payment-input pr-12"
+                                    required
+                                >
+
+                                <span
+                                    class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-on-surface-variant"
+                                >
+                                    credit_card
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Expiration -->
+                        <div>
+
+                            <label class="mb-2 block text-sm font-semibold">
+                                Expiration Date
+                            </label>
+
+                            <div class="grid grid-cols-2 gap-4">
+
+                                <select
+                                    name="expiryMonth"
+                                    class="payment-input"
+                                    required
+                                >
+
+                                    <option value="" selected disabled>
+                                        Month
+                                    </option>
+
+                                    <option value="01">01</option>
+                                    <option value="02">02</option>
+                                    <option value="03">03</option>
+                                    <option value="04">04</option>
+                                    <option value="05">05</option>
+                                    <option value="06">06</option>
+                                    <option value="07">07</option>
+                                    <option value="08">08</option>
+                                    <option value="09">09</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+
+                                </select>
+
+
+                                <select
+                                    name="expiryYear"
+                                    class="payment-input"
+                                    required
+                                >
+
+                                    <option value="" selected disabled>
+                                        Year
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Cardholder Name -->
+                        <div>
+
+                            <label class="mb-2 block text-sm font-semibold">
+                                Card Holder
+                            </label>
+
+                            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+
+                                <input
+                                    type="text"
+                                    name="firstName"
+                                    autocomplete="given-name"
+                                    placeholder="First name"
+                                    class="payment-input"
+                                    required
+                                >
+
+                                <input
+                                    type="text"
+                                    name="lastName"
+                                    autocomplete="family-name"
+                                    placeholder="Last name"
+                                    class="payment-input"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Address Line 1 -->
+                        <div>
+
+                            <label class="mb-2 block text-sm font-semibold">
+                                Address Line 1
+                            </label>
+
+                            <input
+                                type="text"
+                                name="addressLine1"
+                                autocomplete="address-line1"
+                                placeholder="Street address"
+                                class="payment-input"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- Address Line 2 -->
+                        <div>
+
+                            <label class="mb-2 block text-sm font-semibold">
+                                Address Line 2
+                                <span class="font-normal text-on-surface-variant">
+                                    (Optional)
+                                </span>
+                            </label>
+
+                            <input
+                                type="text"
+                                name="addressLine2"
+                                autocomplete="address-line2"
+                                placeholder="Apartment, suite, unit, etc."
+                                class="payment-input"
+                            >
+
+                        </div>
+
+
+                        <!-- City / State -->
+                        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+
+                            <div>
+
+                                <label class="mb-2 block text-sm font-semibold">
+                                    City
+                                </label>
+
+                                <input
+                                    type="text"
+                                    name="city"
+                                    autocomplete="address-level2"
+                                    placeholder="City"
+                                    class="payment-input"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div>
+
+                                <label class="mb-2 block text-sm font-semibold">
+                                    State
+                                </label>
+
+                                <input
+                                    type="text"
+                                    name="state"
+                                    autocomplete="address-level1"
+                                    placeholder="State / Province"
+                                    class="payment-input"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- ZIP / Country -->
+                        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+
+                            <div>
+
+                                <label class="mb-2 block text-sm font-semibold">
+                                    ZIP / Postal Code
+                                </label>
+
+                                <input
+                                    type="text"
+                                    name="postalCode"
+                                    autocomplete="postal-code"
+                                    placeholder="ZIP / Postal code"
+                                    class="payment-input"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div>
+
+                                <label class="mb-2 block text-sm font-semibold">
+                                    Country
+                                </label>
+
+                                <select
+                                    name="country"
+                                    autocomplete="country"
+                                    class="payment-input"
+                                    required
+                                >
+
+                                    <option value="" selected disabled>
+                                        Select country
+                                    </option>
+
+                                    <option value="ID">
+                                        Indonesia
+                                    </option>
+
+                                    <option value="US">
+                                        United States
+                                    </option>
+
+                                    <option value="CA">
+                                        Canada
+                                    </option>
+
+                                    <option value="GB">
+                                        United Kingdom
+                                    </option>
+
+                                    <option value="AU">
+                                        Australia
+                                    </option>
+
+                                    <option value="SG">
+                                        Singapore
+                                    </option>
+
+                                    <option value="MY">
+                                        Malaysia
+                                    </option>
+
+                                    <option value="JP">
+                                        Japan
+                                    </option>
+
+                                    <option value="KR">
+                                        South Korea
+                                    </option>
+
+                                    <option value="CN">
+                                        China
+                                    </option>
+
+                                    <option value="IN">
+                                        India
+                                    </option>
+
+                                    <option value="DE">
+                                        Germany
+                                    </option>
+
+                                    <option value="FR">
+                                        France
+                                    </option>
+
+                                    <option value="NL">
+                                        Netherlands
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Save -->
+                        <label class="flex cursor-pointer items-center gap-3 pt-1">
+
+                            <input
+                                type="checkbox"
+                                name="saveCard"
+                                class="h-4 w-4 rounded border-outline-variant text-secondary focus:ring-secondary"
+                            >
+
+                            <span class="text-sm text-on-surface-variant">
+                                Save this card for future purchases
+                            </span>
+
+                        </label>
+
+
+                        <button
+                            type="submit"
+                            class="primary-button"
+                        >
+                            Save Payment Method
+                        </button>
+
+                    </div>
+
+                </form>
+
+
+                <!-- =================================================
+                     PAYPAL
+                ================================================== -->
+
+                <form
+                    data-form="paypal"
+                    class="payment-form hidden p-6 md:p-8"
+                >
+
+                    <div class="mb-8 flex items-start justify-between">
+
+                        <div>
+
+                            <h3 class="headline text-2xl font-semibold">
+                                PayPal
+                            </h3>
+
+                            <p class="mt-1 text-on-surface-variant">
+                                Connect your PayPal account to use it for purchases.
+                            </p>
+
+                        </div>
+
+                        <span class="method-logo">
+                            PayPal
+                        </span>
+
+                    </div>
+
+
+                    <div class="space-y-5">
+
+                        <div>
+
+                            <label class="mb-2 block text-sm font-semibold">
+                                PayPal Email
+                            </label>
+
+                            <input
+                                type="email"
+                                name="paypalEmail"
+                                autocomplete="email"
+                                placeholder="you@example.com"
+                                class="payment-input"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div>
+
+                            <label class="mb-2 block text-sm font-semibold">
+                                PayPal Password
+                            </label>
+
+                            <input
+                                type="password"
+                                name="paypalPassword"
+                                autocomplete="current-password"
+                                placeholder="Enter your PayPal password"
+                                class="payment-input"
+                                required
+                            >
+
+                        </div>
+
+
+                        <p class="flex items-start gap-2 text-sm text-on-surface-variant">
+
+                            <span class="material-symbols-outlined text-[18px] text-secondary">
+                                info
+                            </span>
+
+                            You will be securely redirected to PayPal to complete authentication.
+
+                        </p>
+
+
+                        <button
+                            type="submit"
+                            class="primary-button"
+                        >
+                            Continue with PayPal
+                        </button>
+
+                    </div>
+
+                </form>
+
+
+                <!-- =================================================
+                     OVO
+                ================================================== -->
+
+                <form
+                    data-form="ovo"
+                    class="payment-form hidden p-6 md:p-8"
+                >
+
+                    <div class="mb-8 flex items-start justify-between">
+
+                        <div>
+
+                            <h3 class="headline text-2xl font-semibold">
+                                OVO
+                            </h3>
+
+                            <p class="mt-1 text-on-surface-variant">
+                                Enter your OVO account information.
+                            </p>
+
+                        </div>
+
+                        <span class="method-logo">
+                            OVO
+                        </span>
+
+                    </div>
+
+
+                    <div class="space-y-5">
+
+                        <div>
+
+                            <label class="mb-2 block text-sm font-semibold">
+                                OVO Phone Number
+                            </label>
+
+                            <input
+                                type="tel"
+                                name="ovoPhone"
+                                inputmode="tel"
+                                autocomplete="tel"
+                                placeholder="+62 812 3456 7890"
+                                class="payment-input"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div>
+
+                            <label class="mb-2 block text-sm font-semibold">
+                                OVO PIN
+                            </label>
+
+                            <input
+                                type="password"
+                                name="ovoPin"
+                                inputmode="numeric"
+                                maxlength="6"
+                                placeholder="Enter your 6-digit PIN"
+                                class="payment-input"
+                                required
+                            >
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="primary-button"
+                        >
+                            Continue with OVO
+                        </button>
+
+                    </div>
+
+                </form>
+
+
+                <!-- =================================================
+                     LINKAJA
+                ================================================== -->
+
+                <form
+                    data-form="linkaja"
+                    class="payment-form hidden p-6 md:p-8"
+                >
+
+                    <div class="mb-8 flex items-start justify-between">
+
+                        <div>
+
+                            <h3 class="headline text-2xl font-semibold">
+                                LinkAja
+                            </h3>
+
+                            <p class="mt-1 text-on-surface-variant">
+                                Enter your LinkAja account information.
+                            </p>
+
+                        </div>
+
+                        <span class="method-logo">
+                            LinkAja
+                        </span>
+
+                    </div>
+
+
+                    <div class="space-y-5">
+
+                        <div>
+
+                            <label class="mb-2 block text-sm font-semibold">
+                                Phone Number
+                            </label>
+
+                            <input
+                                type="tel"
+                                name="linkajaPhone"
+                                inputmode="tel"
+                                autocomplete="tel"
+                                placeholder="+62 812 3456 7890"
+                                class="payment-input"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div>
+
+                            <label class="mb-2 block text-sm font-semibold">
+                                LinkAja PIN
+                            </label>
+
+                            <input
+                                type="password"
+                                name="linkajaPin"
+                                inputmode="numeric"
+                                maxlength="6"
+                                placeholder="Enter your 6-digit PIN"
+                                class="payment-input"
+                                required
+                            >
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="primary-button"
+                        >
+                            Continue with LinkAja
+                        </button>
+
+                    </div>
+
+                </form>
+
+
+                <!-- =================================================
+                     GOPAY
+                ================================================== -->
+
+                <form
+                    data-form="gopay"
+                    class="payment-form hidden p-6 md:p-8"
+                >
+
+                    <div class="mb-8 flex items-start justify-between">
+
+                        <div>
+
+                            <h3 class="headline text-2xl font-semibold">
+                                GoPay
+                            </h3>
+
+                            <p class="mt-1 text-on-surface-variant">
+                                Enter your GoPay account information.
+                            </p>
+
+                        </div>
+
+                        <span class="method-logo">
+                            GoPay
+                        </span>
+
+                    </div>
+
+
+                    <div class="space-y-5">
+
+                        <div>
+
+                            <label class="mb-2 block text-sm font-semibold">
+                                GoPay Phone Number
+                            </label>
+
+                            <input
+                                type="tel"
+                                name="gopayPhone"
+                                inputmode="tel"
+                                autocomplete="tel"
+                                placeholder="+62 812 3456 7890"
+                                class="payment-input"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div>
+
+                            <label class="mb-2 block text-sm font-semibold">
+                                GoPay PIN
+                            </label>
+
+                            <input
+                                type="password"
+                                name="gopayPin"
+                                inputmode="numeric"
+                                maxlength="6"
+                                placeholder="Enter your 6-digit PIN"
+                                class="payment-input"
+                                required
+                            >
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="primary-button"
+                        >
+                            Continue with GoPay
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================== -->
+
+<footer class="bg-surface-container-low dark:bg-primary-container text-on-surface dark:text-on-primary-container font-label-md text-label-md w-full border-t border-outline-variant dark:border-outline mt-auto">
+<div class="w-full py-xl px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-md max-w-screen-2xl mx-auto">
+<div class="mb-4 md:mb-0 text-center md:text-left">
+<div class="font-headline-sm text-headline-sm font-black text-secondary dark:text-secondary-fixed-dim mb-2">MarketPlace</div>
+<p class="text-on-surface-variant dark:text-surface-variant text-sm">© 2024 MarketPlace Inc. All rights reserved.</p>
+</div>
+<nav class="flex flex-wrap justify-center gap-6">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-200" href="/marketplace/privacy/statement/">Privacy Policy</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-200" href="/marketplace/servicesagreement/">Terms of Service</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-200" href="#">Cookie Settings</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-200" href="/marketplace/support">Contact Support</a>
+</nav>
+</div>
+</footer>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================== -->
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+        const methodButtons =
+            document.querySelectorAll(".payment-method");
+
+        const paymentForms =
+            document.querySelectorAll(".payment-form");
+
+        const currentYear =
+            new Date().getFullYear();
+
+        const expiryYear =
+            document.querySelector('[name="expiryYear"]');
+
+
+        /*
+         * Generate expiration years dynamically.
+         *
+         * Current year + next 10 years.
+         */
+        for (let i = 0; i <= 10; i++) {
+
+            const year = currentYear + i;
+
+            const option =
+                document.createElement("option");
+
+            option.value = year;
+            option.textContent = year;
+
+            expiryYear.appendChild(option);
+        }
+
+
+        /*
+         * Clear every input/select in a form.
+         */
+        function clearForm(form) {
+
+            form.reset();
+
+        }
+
+
+        /*
+         * Switch payment method.
+         *
+         * The previous form is cleared before
+         * the new form is displayed.
+         */
+        function switchPaymentMethod(method) {
+
+            paymentForms.forEach(form => {
+
+                const isSelected =
+                    form.dataset.form === method;
+
+                if (isSelected) {
+
+                    form.classList.remove("hidden");
+
+                } else {
+
+                    clearForm(form);
+
+                    form.classList.add("hidden");
+
+                }
+
+            });
+
+
+            methodButtons.forEach(button => {
+
+                const isSelected =
+                    button.dataset.method === method;
+
+                button.classList.toggle(
+                    "active",
+                    isSelected
+                );
+
+            });
+
+        }
+
+
+        /*
+         * Payment method buttons.
+         */
+        methodButtons.forEach(button => {
+
+            button.addEventListener("click", () => {
+
+                const method =
+                    button.dataset.method;
+
+                switchPaymentMethod(method);
+
+            });
+
+        });
+
+
+        /*
+         * Prevent demo forms from submitting
+         * and reloading the page.
+         */
+        paymentForms.forEach(form => {
+
+            form.addEventListener("submit", event => {
+
+                event.preventDefault();
+
+                const button =
+                    form.querySelector(
+                        'button[type="submit"]'
+                    );
+
+                if (!button) {
+                    return;
+                }
+
+                const originalText =
+                    button.textContent;
+
+                button.textContent =
+                    "Payment Method Saved";
+
+                button.disabled = true;
+
+                setTimeout(() => {
+
+                    button.textContent =
+                        originalText;
+
+                    button.disabled = false;
+
+                }, 1800);
+
+            });
+
+        });
+
+
+        /*
+         * Format card number while typing.
+         *
+         * Example:
+         * 1234567890123456
+         * ->
+         * 1234 5678 9012 3456
+         */
+        const cardNumber =
+            document.querySelector(
+                '[name="cardNumber"]'
+            );
+
+        cardNumber.addEventListener("input", () => {
+
+            let value =
+                cardNumber.value
+                    .replace(/\D/g, "")
+                    .slice(0, 16);
+
+            value =
+                value.replace(
+                    /(.{4})/g,
+                    "$1 "
+                )
+                .trim();
+
+            cardNumber.value = value;
+
+        });
+
+    });
+</script>
+```
+
+</body>
+
+</html>

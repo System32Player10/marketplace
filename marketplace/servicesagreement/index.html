@@ -1,0 +1,463 @@
+<!DOCTYPE html><html class="light" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Terms of Service - MarketPlace</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&amp;family=Manrope:wght@600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-tertiary-container": "#818486",
+                        "tertiary": "#000000",
+                        "on-background": "#0b1c30",
+                        "on-surface-variant": "#45464d",
+                        "secondary-container": "#2170e4",
+                        "inverse-on-surface": "#eaf1ff",
+                        "primary-fixed": "#dae2fd",
+                        "surface-bright": "#f8f9ff",
+                        "surface-dim": "#cbdbf5",
+                        "surface-container": "#e5eeff",
+                        "surface-tint": "#565e74",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "tertiary-container": "#191c1e",
+                        "on-tertiary-fixed-variant": "#444749",
+                        "on-secondary": "#ffffff",
+                        "secondary": "#0058be",
+                        "inverse-surface": "#213145",
+                        "tertiary-fixed-dim": "#c4c7c9",
+                        "on-error": "#ffffff",
+                        "primary-fixed-dim": "#bec6e0",
+                        "primary-container": "#131b2e",
+                        "inverse-primary": "#bec6e0",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed-variant": "#004395",
+                        "surface-variant": "#d3e4fe",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed": "#131b2e",
+                        "on-tertiary-fixed": "#191c1e",
+                        "primary": "#000000",
+                        "surface": "#f8f9ff",
+                        "surface-container-low": "#eff4ff",
+                        "background": "#f8f9ff",
+                        "surface-container-high": "#dce9ff",
+                        "tertiary-fixed": "#e0e3e5",
+                        "on-surface": "#0b1c30",
+                        "on-secondary-container": "#fefcff",
+                        "on-secondary-fixed": "#001a42",
+                        "outline-variant": "#c6c6cd",
+                        "secondary-fixed-dim": "#adc6ff",
+                        "on-primary-container": "#7c839b",
+                        "on-error-container": "#93000a",
+                        "on-primary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "outline": "#76777d",
+                        "surface-container-highest": "#d3e4fe",
+                        "error": "#ba1a1a",
+                        "secondary-fixed": "#d8e2ff"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    spacing: {
+                        "sm": "16px",
+                        "xs": "8px",
+                        "md": "24px",
+                        "margin-desktop": "64px",
+                        "base": "4px",
+                        "margin-mobile": "16px",
+                        "xl": "80px",
+                        "gutter": "24px",
+                        "lg": "48px"
+                    },
+                    fontFamily: {
+                        "label-sm": ["Hanken Grotesk"],
+                        "headline-lg": ["Manrope"],
+                        "headline-md": ["Manrope"],
+                        "headline-xl": ["Manrope"],
+                        "headline-lg-mobile": ["Manrope"],
+                        "label-md": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"]
+                    },
+                    fontSize: {
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { scroll-behavior: smooth; }
+        .toc-link.active { font-weight: 600; color: #0058be; border-left-color: #0058be; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-surface-container-lowest border-b border-outline-variant docked full-width top-0 z-50 fixed w-full">
+<div class="flex justify-between items-center w-full px-margin-desktop py-base max-w-screen-2xl mx-auto h-16">
+<!-- Branding -->
+<div class="flex items-center gap-xs">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">MarketPlace</span>
+<span class="text-on-surface-variant px-2">|</span>
+<span class="font-[Segoe UI] font-bold text-lg">Services Agreement</span>
+</div>
+<!-- Actions -->
+<div class="flex items-center gap-md">
+<div class="relative hidden md:block">
+<select class="bg-surface-container-low border-outline-variant text-on-surface text-label-md rounded-lg pl-3 pr-8 py-1.5 focus:ring-secondary focus:border-secondary cursor-pointer">
+<option>English</option>
+<option>Español</option>
+<option>Français</option>
+<option>Deutsch</option>
+</select>
+</div>
+<button class="relative p-2 rounded-full hover:bg-surface-container-low transition-colors text-on-surface-variant hover:text-secondary group" id="inbox-button">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform">inbox</span>
+<span class="absolute top-1 right-1 w-2.5 h-2.5 bg-error rounded-full border-2 border-surface-container-lowest"></span>
+</button>
+</div>
+</div>
+</header>
+<!-- Inbox Drawer -->
+<aside class="fixed top-0 right-0 z-[100] h-full w-full max-w-md bg-surface-container-lowest shadow-2xl translate-x-full transition-transform duration-300 flex flex-col" id="inbox-drawer">
+<div class="flex items-center justify-between p-md border-b border-outline-variant">
+<div>
+<h2 class="font-headline-md text-headline-md font-semibold text-on-surface">Inbox</h2>
+<span class="text-label-sm text-on-surface-variant">1 unread notification</span>
+</div>
+<button class="p-xs rounded-full text-on-surface-variant hover:bg-surface-container-low transition-colors" id="close-inbox-button">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="flex-1 overflow-y-auto p-md flex flex-col gap-sm sidebar-scroll">
+<div class="p-sm bg-surface-container-low rounded-lg border border-outline-variant cursor-pointer hover:border-secondary transition-colors">
+<p class="font-label-md text-on-surface font-semibold mb-1">Welcome to Help Center</p>
+<p class="text-sm text-on-surface-variant">Learn how to navigate our support articles effectively.</p>
+<span class="text-xs text-on-surface-variant mt-2 block">Just now</span>
+</div>
+
+</div>
+<div class="border-t border-outline-variant p-md">
+<button class="w-full py-2 px-md bg-primary text-white font-label-md rounded-lg hover:bg-on-primary-fixed-variant transition-colors">Mark all as read</button>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-grow w-full max-w-screen-2xl mx-auto px-margin-mobile md:px-margin-desktop py-lg md:py-xl flex flex-col md:flex-row gap-gutter">
+<!-- Sticky TOC -->
+
+<!-- Document Content -->
+<article class="flex-grow">
+    <h1 class="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-on-background mb-sm text-center">Terms of Service</h1>
+    <p class="font-body-lg text-body-lg text-on-surface-variant mb-xl pb-md border-b border-outline-variant/30 text-center">
+        Last Updated: August 23, 2026
+    </p>
+<!-- Chapter 1 -->
+<section class="mb-xl scroll-mt-[100px]" id="ch1">
+    <h2 class="font-headline-lg text-headline-lg text-on-background mb-sm">1. Introduction</h2>
+    <div class="space-y-sm text-on-surface-variant font-body-md text-body-md">
+        <p><strong>1.1 Agreement Acceptance.</strong> Welcome to MarketPlace. By accessing, registering for, or using MarketPlace, you acknowledge that you have read, understood, and agreed to these Terms of Service. If you do not agree with any part of these Terms, you must not access or use the platform.</p>
+        <p><strong>1.2 Scope of Services.</strong> MarketPlace provides an online marketplace where eligible users may discover, list, offer, purchase, and sell goods. MarketPlace primarily provides the technology and infrastructure that facilitates interactions between buyers and sellers.</p>
+        <p><strong>1.3 Marketplace Role.</strong> Unless expressly stated otherwise, MarketPlace is not the owner, manufacturer, seller, buyer, or direct party to transactions between users. Users are responsible for understanding and complying with their obligations to one another.</p>
+        <p><strong>1.4 Definitions.</strong> In these Terms, "MarketPlace," "we," "us," and "our" refer to the MarketPlace service. "User," "you," and "your" refer to any person accessing or using the service. "Seller" refers to a user offering goods, while "Buyer" refers to a user purchasing or attempting to purchase goods.</p>
+    </div>
+</section>
+
+<!-- Chapter 2 -->
+<section class="mb-xl scroll-mt-[100px]" id="ch2">
+    <h2 class="font-headline-lg text-headline-lg text-on-background mb-sm">2. Account Eligibility and Registration</h2>
+    <div class="space-y-sm text-on-surface-variant font-body-md text-body-md">
+        <p><strong>2.1 Age Requirements.</strong> You must meet the minimum legal age required to create and operate an account on MarketPlace. Where MarketPlace requires users to be at least 18 years old, users below that age may not independently register unless the service expressly provides an alternative permitted by applicable law.</p>
+        <p><strong>2.2 Registration Information.</strong> You must provide accurate, current, and complete information when creating an account. Providing false, misleading, or materially incomplete information may result in restrictions, suspension, or termination of your account.</p>
+        <p><strong>2.3 One Account per User.</strong> Unless MarketPlace expressly permits otherwise, users should maintain only the accounts necessary for legitimate personal or business use. Creating accounts to evade restrictions or enforcement is prohibited.</p>
+        <p><strong>2.4 Account Security.</strong> You are responsible for protecting your password, authentication credentials, and other account information. You must promptly notify MarketPlace if you believe that your account has been accessed without authorization.</p>
+        <p><strong>2.5 Account Responsibility.</strong> Activity performed through your account may be attributed to you. You are responsible for taking reasonable steps to prevent unauthorized use of your account.</p>
+    </div>
+</section>
+
+<!-- Chapter 3 -->
+<section class="mb-xl scroll-mt-[100px]" id="ch3">
+    <h2 class="font-headline-lg text-headline-lg text-on-background mb-sm">3. User Conduct and Responsibilities</h2>
+    <div class="space-y-sm text-on-surface-variant font-body-md text-body-md">
+        <p><strong>3.1 Lawful Use.</strong> Users must use MarketPlace only for lawful purposes and in accordance with these Terms and applicable laws, regulations, and platform rules.</p>
+        <p><strong>3.2 Prohibited Activities.</strong> Users must not engage in fraud, deception, harassment, unauthorized access, manipulation of transactions, distribution of malware, or other conduct that could harm MarketPlace or its users.</p>
+        <p><strong>3.3 Respectful Communication.</strong> Buyers and sellers must communicate respectfully and must not use threats, discriminatory abuse, intimidation, or deliberately misleading statements when interacting with other users.</p>
+        <p><strong>3.4 Circumvention.</strong> Users must not intentionally circumvent MarketPlace's security mechanisms, fees, transaction systems, account restrictions, or enforcement procedures.</p>
+        <p><strong>3.5 User Content.</strong> Users are responsible for content they submit, including product descriptions, photographs, reviews, messages, and other materials. Such content must not violate the rights of others or applicable law.</p>
+    </div>
+</section>
+
+<!-- Chapter 4 -->
+<section class="mb-xl scroll-mt-[100px]" id="ch4">
+    <h2 class="font-headline-lg text-headline-lg text-on-background mb-sm">4. Marketplace Transactions and Fees</h2>
+    <div class="space-y-sm text-on-surface-variant font-body-md text-body-md">
+        <p><strong>4.1 Transaction Formation.</strong> A transaction may be formed when a Buyer completes the applicable purchasing process and the Seller accepts or otherwise fulfills the order in accordance with the platform's transaction flow.</p>
+        <p><strong>4.2 Seller Obligations.</strong> Sellers are responsible for accurately representing their goods, honoring valid orders, preparing purchased goods, and fulfilling their obligations to Buyers.</p>
+        <p><strong>4.3 Buyer Obligations.</strong> Buyers are responsible for providing accurate information, completing required payments, and following applicable purchasing and return procedures.</p>
+        <p><strong>4.4 Marketplace Fees.</strong> MarketPlace may charge listing fees, transaction fees, service fees, commissions, or other applicable charges. The applicable fee should be presented through the platform or applicable seller documentation.</p>
+        <p><strong>4.5 Taxes.</strong> Users are responsible for determining and fulfilling tax obligations arising from their use of MarketPlace, except where MarketPlace is legally required to collect or remit taxes.</p>
+    </div>
+</section>
+
+<!-- Chapter 5 -->
+<section class="mb-xl scroll-mt-[100px]" id="ch5">
+    <h2 class="font-headline-lg text-headline-lg text-on-background mb-sm">5. Product Listings and Prohibited Goods</h2>
+    <div class="space-y-sm text-on-surface-variant font-body-md text-body-md">
+        <p><strong>5.1 Accurate Descriptions.</strong> Sellers must provide truthful, accurate, and sufficiently detailed descriptions of listed goods, including relevant specifications, conditions, defects, limitations, and missing components.</p>
+        <p><strong>5.2 Authenticity.</strong> Sellers must not knowingly list counterfeit, stolen, unlawfully obtained, or falsely represented goods.</p>
+        <p><strong>5.3 Prohibited Goods.</strong> Goods that are illegal, hazardous, counterfeit, stolen, or otherwise prohibited by MarketPlace policy or applicable law may not be listed or sold through the platform.</p>
+        <p><strong>5.4 Listing Standards.</strong> Listings must use appropriate titles, descriptions, photographs, categories, prices, and other information. Sellers must not manipulate listings to mislead Buyers or improperly increase their visibility.</p>
+        <p><strong>5.5 Listing Removal.</strong> MarketPlace may remove, restrict, or disable listings that violate these Terms, applicable law, or marketplace policies.</p>
+    </div>
+</section>
+
+<!-- Chapter 6 -->
+<section class="mb-xl scroll-mt-[100px]" id="ch6">
+    <h2 class="font-headline-lg text-headline-lg text-on-background mb-sm">6. Orders, Returns, and Refunds</h2>
+    <div class="space-y-sm text-on-surface-variant font-body-md text-body-md">
+        <p><strong>6.1 Orders.</strong> Buyers may place orders using the purchasing functions made available by MarketPlace. An order is subject to availability, payment authorization, and any applicable seller or platform conditions.</p>
+        <p><strong>6.2 Order Cancellation.</strong> Orders may be canceled where permitted by MarketPlace policy, applicable law, or the relevant transaction conditions. A Seller must not improperly cancel valid orders.</p>
+        <p><strong>6.3 Returns.</strong> Returns are subject to the applicable return policy, the condition of the goods, the reason for the return, and any rights provided by applicable law.</p>
+        <p><strong>6.4 Refunds.</strong> Where a refund is approved, MarketPlace or the applicable Seller may process the refund through the original payment method or another permitted method.</p>
+        <p><strong>6.5 Disputes.</strong> MarketPlace may provide dispute-resolution mechanisms for eligible transactions. Users agree to provide accurate information and reasonable cooperation during an investigation.</p>
+    </div>
+</section>
+
+<!-- Chapter 7 -->
+<section class="mb-xl scroll-mt-[100px]" id="ch7">
+    <h2 class="font-headline-lg text-headline-lg text-on-background mb-sm">7. Payments and Billing</h2>
+    <div class="space-y-sm text-on-surface-variant font-body-md text-body-md">
+        <p><strong>7.1 Payment Methods.</strong> MarketPlace may support payment methods provided by MarketPlace or authorized payment providers. Users must provide valid payment information when required.</p>
+        <p><strong>7.2 Payment Authorization.</strong> By submitting a payment, you authorize the applicable payment provider to process the transaction according to the payment method's terms.</p>
+        <p><strong>7.3 Failed Payments.</strong> If a payment is declined, reversed, disputed, or otherwise unsuccessful, MarketPlace may delay, cancel, or restrict the relevant transaction.</p>
+        <p><strong>7.4 Billing Accuracy.</strong> Users are responsible for reviewing transaction and billing information and reporting suspected errors promptly.</p>
+        <p><strong>7.5 Payment Providers.</strong> Third-party payment providers may have their own terms and privacy practices. MarketPlace is not responsible for independent services operated by such providers.</p>
+    </div>
+</section>
+
+<!-- Chapter 8 -->
+<section class="mb-xl scroll-mt-[100px]" id="ch8">
+    <h2 class="font-headline-lg text-headline-lg text-on-background mb-sm">8. Shipping and Delivery</h2>
+    <div class="space-y-sm text-on-surface-variant font-body-md text-body-md">
+        <p><strong>8.1 Shipping Information.</strong> Sellers must provide accurate shipping information and select appropriate delivery options available through MarketPlace.</p>
+        <p><strong>8.2 Delivery Estimates.</strong> Delivery dates and estimates are provided for informational purposes and may be affected by carriers, weather, customs, operational disruptions, or circumstances outside MarketPlace's control.</p>
+        <p><strong>8.3 Shipping Responsibility.</strong> The Seller is responsible for properly preparing and handing over goods for shipment in accordance with the applicable transaction requirements.</p>
+        <p><strong>8.4 Delivery Problems.</strong> Buyers should report missing, damaged, or incorrectly delivered goods through the applicable MarketPlace support or dispute process.</p>
+    </div>
+</section>
+
+<!-- Chapter 9 -->
+<section class="mb-xl scroll-mt-[100px]" id="ch9">
+    <h2 class="font-headline-lg text-headline-lg text-on-background mb-sm">9. Intellectual Property and User Content</h2>
+    <div class="space-y-sm text-on-surface-variant font-body-md text-body-md">
+        <p><strong>9.1 MarketPlace Property.</strong> The MarketPlace name, branding, software, interface, designs, logos, and other platform materials are owned by or licensed to MarketPlace and may be protected by applicable intellectual property laws.</p>
+        <p><strong>9.2 Limited License.</strong> MarketPlace grants you a limited, non-exclusive, non-transferable right to access and use the platform for its intended purposes while you comply with these Terms.</p>
+        <p><strong>9.3 User Content Ownership.</strong> Users generally retain ownership of content they submit to MarketPlace, subject to the rights and licenses necessary for MarketPlace to operate the service.</p>
+        <p><strong>9.4 Content License.</strong> By submitting content, you grant MarketPlace a limited license to host, store, reproduce, display, and process that content as reasonably necessary to provide, maintain, secure, and improve the service.</p>
+        <p><strong>9.5 Intellectual Property Complaints.</strong> Users should not upload material that infringes another person's intellectual property rights and may report suspected infringement through MarketPlace's designated procedures.</p>
+    </div>
+</section>
+
+<!-- Chapter 10 -->
+<section class="mb-xl scroll-mt-[100px]" id="ch10">
+    <h2 class="font-headline-lg text-headline-lg text-on-background mb-sm">10. Privacy and Data Protection</h2>
+    <div class="space-y-sm text-on-surface-variant font-body-md text-body-md">
+        <p><strong>10.1 Personal Information.</strong> MarketPlace may collect and process information necessary to create accounts, operate transactions, provide support, maintain security, and deliver other platform functions.</p>
+        <p><strong>10.2 Privacy Policy.</strong> The collection and use of personal information is governed by MarketPlace's applicable Privacy Policy, which forms part of the overall framework governing use of the service.</p>
+        <p><strong>10.3 User Responsibilities.</strong> Users must not improperly collect, disclose, misuse, or distribute another user's personal information obtained through MarketPlace.</p>
+        <p><strong>10.4 Legal Compliance.</strong> MarketPlace may retain, disclose, or process information when reasonably necessary to comply with legal obligations, enforce these Terms, prevent fraud, or protect users and the platform.</p>
+    </div>
+</section>
+
+<!-- Chapter 11 -->
+<section class="mb-xl scroll-mt-[100px]" id="ch11">
+    <h2 class="font-headline-lg text-headline-lg text-on-background mb-sm">11. Security, Fraud, and Enforcement</h2>
+    <div class="space-y-sm text-on-surface-variant font-body-md text-body-md">
+        <p><strong>11.1 Security Measures.</strong> MarketPlace may implement technical and organizational measures designed to protect accounts, transactions, infrastructure, and user information.</p>
+        <p><strong>11.2 Fraud Prevention.</strong> MarketPlace may monitor activity and investigate transactions or accounts that appear suspicious, fraudulent, abusive, or inconsistent with legitimate marketplace use.</p>
+        <p><strong>11.3 Account Restrictions.</strong> MarketPlace may limit features, suspend accounts, remove listings, cancel transactions, or take other reasonable enforcement measures where violations or security concerns are identified.</p>
+        <p><strong>11.4 Cooperation.</strong> Users may be required to provide information reasonably necessary to verify account ownership, investigate suspicious activity, resolve disputes, or comply with legal requirements.</p>
+        <p><strong>11.5 No Circumvention.</strong> Users must not create or use another account, identity, payment method, or technical mechanism for the purpose of bypassing an enforcement action.</p>
+    </div>
+</section>
+
+<!-- Chapter 12 -->
+<section class="mb-xl scroll-mt-[100px]" id="ch12">
+    <h2 class="font-headline-lg text-headline-lg text-on-background mb-sm">12. Disclaimers, Liability, and Indemnification</h2>
+    <div class="space-y-sm text-on-surface-variant font-body-md text-body-md">
+        <p><strong>12.1 Service Availability.</strong> MarketPlace aims to provide a reliable service but does not guarantee that the platform will always be available, uninterrupted, secure, or free from errors.</p>
+        <p><strong>12.2 Third-Party Services.</strong> MarketPlace may depend on third-party services such as payment processors, hosting providers, delivery carriers, or communication services. Their independent failures may affect the availability or performance of MarketPlace features.</p>
+        <p><strong>12.3 Transactions.</strong> Because MarketPlace facilitates transactions between independent users, MarketPlace does not generally guarantee the quality, legality, authenticity, safety, availability, or suitability of goods offered by Sellers.</p>
+        <p><strong>12.4 Limitation of Liability.</strong> To the maximum extent permitted by applicable law, MarketPlace will not be responsible for indirect, incidental, special, consequential, or punitive losses arising from use of the service or transactions between users.</p>
+        <p><strong>12.5 Indemnification.</strong> To the extent permitted by applicable law, users may be responsible for claims, losses, liabilities, and reasonable expenses arising from their violation of these Terms, unlawful conduct, or infringement of another person's rights.</p>
+    </div>
+</section>
+
+<!-- Chapter 13 -->
+<section class="mb-xl scroll-mt-[100px]" id="ch13">
+    <h2 class="font-headline-lg text-headline-lg text-on-background mb-sm">13. Suspension, Termination, and Dispute Resolution</h2>
+    <div class="space-y-sm text-on-surface-variant font-body-md text-body-md">
+        <p><strong>13.1 Suspension.</strong> MarketPlace may temporarily suspend an account or specific functionality when reasonably necessary to protect users, investigate suspected violations, address security risks, or comply with legal obligations.</p>
+        <p><strong>13.2 Termination by MarketPlace.</strong> MarketPlace may terminate or permanently restrict an account where the user materially violates these Terms, repeatedly violates platform policies, engages in unlawful activity, or presents a significant security or safety risk.</p>
+        <p><strong>13.3 Termination by User.</strong> Users may stop using the service and may request account closure through available account-management or support procedures.</p>
+        <p><strong>13.4 Effect of Termination.</strong> Termination does not automatically eliminate obligations or liabilities that arose before termination. Certain provisions of these Terms may continue to apply where their nature requires continued effect.</p>
+        <p><strong>13.5 Dispute Resolution.</strong> Users should first attempt to resolve marketplace disputes through MarketPlace's available support and dispute-resolution procedures. Where a dispute cannot be resolved through those procedures, the parties may pursue any remedies available under applicable law.</p>
+    </div>
+</section>
+
+<!-- Chapter 14 -->
+<section class="mb-xl scroll-mt-[100px]" id="ch14">
+    <h2 class="font-headline-lg text-headline-lg text-on-background mb-sm">14. General Provisions and Updates to Terms</h2>
+    <div class="space-y-sm text-on-surface-variant font-body-md text-body-md">
+        <p><strong>14.1 Changes to the Terms.</strong> MarketPlace may modify, update, or replace these Terms when reasonably necessary to reflect changes to the service, business operations, legal requirements, security practices, or marketplace policies.</p>
+        <p><strong>14.2 Notice of Changes.</strong> Where appropriate, MarketPlace will provide reasonable notice of material changes through the platform, account notifications, email, or another suitable communication method.</p>
+        <p><strong>14.3 Continued Use.</strong> Unless applicable law requires otherwise, continued use of MarketPlace after updated Terms become effective constitutes acceptance of the revised Terms.</p>
+        <p><strong>14.4 Severability.</strong> If any provision of these Terms is determined to be invalid or unenforceable, the remaining provisions will continue to apply to the extent permitted by law.</p>
+        <p><strong>14.5 Entire Agreement.</strong> These Terms, together with applicable policies and agreements expressly incorporated into them, constitute the agreement governing your use of MarketPlace unless a separate written agreement expressly supersedes a provision.</p>
+        <p><strong>14.6 Governing Law.</strong> These Terms and disputes relating to MarketPlace are subject to the governing law and jurisdiction specified by MarketPlace or otherwise required by applicable law.</p>
+        <p><strong>14.7 Contact.</strong> Questions regarding these Terms or the MarketPlace service may be submitted through the official support channels provided on the platform.</p>
+    </div>
+</section>
+</article>
+
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-primary-container text-on-surface dark:text-on-primary-container font-label-md text-label-md w-full border-t border-outline-variant dark:border-outline mt-auto">
+<div class="w-full py-xl px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-md max-w-screen-2xl mx-auto">
+<div class="mb-4 md:mb-0 text-center md:text-left">
+<div class="font-headline-sm text-headline-sm font-black text-secondary dark:text-secondary-fixed-dim mb-2">MarketPlace</div>
+<p class="text-on-surface-variant dark:text-surface-variant text-sm">© 2024 MarketPlace Inc. All rights reserved.</p>
+</div>
+<nav class="flex flex-wrap justify-center gap-6">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-200" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-200 underline" href="#">Terms of Service</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-200" href="#">Cookie Settings</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-200" href="#">Contact Support</a>
+</nav>
+</div>
+</footer>
+<script>
+        // Simple Intersection Observer for TOC Highlighting
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.toc-link');
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px 0px -60% 0px',
+                threshold: 0
+            };
+
+            const observerCallback = (entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        navLinks.forEach(link => {
+                            link.classList.remove('active', 'border-secondary', 'text-secondary', 'font-semibold');
+                            link.classList.add('border-transparent');
+                            if (link.getAttribute('href') === `#${entry.target.id}`) {
+                                link.classList.add('active', 'border-secondary', 'text-secondary', 'font-semibold');
+                                link.classList.remove('border-transparent');
+                            }
+                        });
+                    }
+                });
+            };
+
+            const observer = new IntersectionObserver(observerCallback, observerOptions);
+            sections.forEach(sec => observer.observe(sec));
+        });
+
+        const inboxBtn = document.getElementById('inbox-button');
+        const closeInboxBtn = document.getElementById('close-inbox-button');
+        const inboxDrawer = document.getElementById('inbox-drawer');
+        const drawerOverlay = document.getElementById('drawer-overlay');
+
+        function toggleDrawer() {
+            const isClosed = inboxDrawer.classList.contains('translate-x-full');
+            if (isClosed) {
+                inboxDrawer.classList.remove('translate-x-full');
+                inboxDrawer.classList.add('translate-x-0');
+                drawerOverlay.classList.remove('hidden');
+                // slight delay for opacity transition
+                setTimeout(() => drawerOverlay.classList.remove('opacity-0'), 10);
+                document.body.style.overflow = 'hidden';
+            } else {
+                inboxDrawer.classList.add('translate-x-full');
+                inboxDrawer.classList.remove('translate-x-0');
+                drawerOverlay.classList.add('opacity-0');
+                setTimeout(() => {
+                    drawerOverlay.classList.add('hidden');
+                    document.body.style.overflow = '';
+                }, 300);
+            }
+        }
+
+        inboxBtn.addEventListener('click', toggleDrawer);
+        closeInboxBtn.addEventListener('click', toggleDrawer);
+        drawerOverlay.addEventListener('click', toggleDrawer);
+
+        // Sidebar Accordion Logic
+        function toggleCategory(button) {
+            const list = button.nextElementSibling;
+            const chevron = button.querySelector('.chevron');
+            
+            if (list && list.classList.contains('subcategory-list')) {
+                const isExpanded = list.classList.contains('expanded');
+                
+                // Close others (optional, comment out for independent opening)
+                // document.querySelectorAll('.subcategory-list.expanded').forEach(el => {
+                //    el.classList.remove('expanded');
+                //    el.previousElementSibling.querySelector('.chevron').style.transform = 'rotate(0deg)';
+                // });
+
+                if (!isExpanded) {
+                    list.classList.add('expanded');
+                    if(chevron) chevron.style.transform = 'rotate(180deg)';
+                } else {
+                    list.classList.remove('expanded');
+                    if(chevron) chevron.style.transform = 'rotate(0deg)';
+                }
+            }
+        }
+
+        // AI Search Fake Logic
+        const aiSearchBtn = document.getElementById('ai-search-btn');
+        const aiSearchInput = document.getElementById('ai-search-input');
+        const aiStatus = document.getElementById('ai-status');
+
+        function triggerFakeSearch() {
+            if(aiSearchInput.value.trim() === '') return;
+            
+            const originalText = aiSearchBtn.innerHTML;
+            aiSearchBtn.innerHTML = '<span class="material-symbols-outlined animate-spin">sync</span><span>Thinking...</span>';
+            aiSearchBtn.classList.add('opacity-80', 'cursor-not-allowed');
+            aiStatus.classList.remove('opacity-0');
+            
+            setTimeout(() => {
+                aiSearchBtn.innerHTML = originalText;
+                aiSearchBtn.classList.remove('opacity-80', 'cursor-not-allowed');
+                aiStatus.classList.add('opacity-0');
+                aiSearchInput.value = '';
+            }, 2500);
+        }
+
+        aiSearchBtn.addEventListener('click', triggerFakeSearch);
+        aiSearchInput.addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') triggerFakeSearch();
+        });
+    </script>
+</body></html>

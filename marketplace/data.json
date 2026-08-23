@@ -27,7 +27,27 @@
                 "Q2vK8pM5",
                 "L8tR3xN6",
                 "N3qP7mX4",
-                "T6kM2vR9"
+                "T6kM2vR9",
+                "H5xP8mQ2",
+                "J9kL4vR7",
+                "B3mX6qP8",
+                "W7rN2kM5",
+                "D4pL9xQ1",
+                "F8vK3mR6",
+                "G2qM7pX9",
+                "Y6nR4kL2",
+                "Z9xP5mV7",
+                "U3kQ8rM4",
+                "A7vL2pX6",
+                "E5mR9qK3",
+                "S8xN4pL7",
+                "C2qM6vR9",
+                "I4kP7xN2",
+                "O9mL3qV5",
+                "T5rK8pM1",
+                "V2xQ6mL9",
+                "R7pN4kX3",
+                "N8mP2vQ6"
             ]
         },
         "q7M2xK9P": {
@@ -88,7 +108,33 @@
                 "M3rL8qX5",
                 "V7kP2mR9",
                 "L2qN6xM8",
-                "P9mX4kR7"
+                "P9mX4kR7",
+                "A4vN8qL2",
+                "B7mK3xP9",
+                "C2rL6vQ5",
+                "D9pX4mK7",
+                "E5qN8rL3",
+                "F8kM2vP6",
+                "G3xR7qN9",
+                "H6pL4mK2",
+                "J9vQ5xR8",
+                "K2mP7nL4",
+                "L8qX3vM5",
+                "M4rK9pQ2",
+                "N7xL5mR8",
+                "Q3vP8kM6",
+                "R6mX2qL9",
+                "S9kN4vP7",
+                "T2qM6xR5",
+                "U8pL3kN7",
+                "V5mQ9rX2",
+                "W3kP7vL8",
+                "X9rM2qK6",
+                "Y4vL8pN3",
+                "Z7mK5xQ9",
+                "A8qR3vM6",
+                "B5pL9kX2",
+                "C7mN4qP8"
             ]
         },
         "T6rP0mX3": {
@@ -153,7 +199,27 @@
                 "P3xM8vQ6",
                 "N8rL2kM5",
                 "R5mQ9xP2",
-                "X4kV7mL1"
+                "X4kV7mL1",
+                "H2pQ8mR5",
+                "J7xL3vK9",
+                "B4mN8qP2",
+                "W6rK2xM9",
+                "D9pL5vQ3",
+                "F3xR7mK8",
+                "G8qM4pL1",
+                "Y5vN2kX7",
+                "Z2mP6rQ9",
+                "U7kL9xM4",
+                "A5qR3mV8",
+                "E8pK2xN6",
+                "S4mQ7vL2",
+                "C9xR5pM7",
+                "I6vK3qP8",
+                "O2mL8xR5",
+                "T4pN7kQ2",
+                "V9mX5rL3",
+                "R2qK6pM8",
+                "N7xP4vQ9"
             ]
         },
         "9cF3Yh7A": {
@@ -263,6 +329,96 @@
                 ["Water resistance", "IP68"]
             ]
         },
+        "L9vR3kP7": {
+            "name": "iPhone 17",
+            "brand": ["Apple", "T6rP0mX3"],
+            "description": "A powerful everyday iPhone with a bright 6.3-inch OLED display, A19 chip, and an advanced dual-camera system. It combines premium performance with a refined design.",
+            "product-href": ["", "", "", ""],
+            "price": {
+                "real": 799
+            },
+            "preferences": {
+                "rating": 4.8,
+                "reviews": [982.4, "k"],
+                "overall": [
+                [5, 78],
+                [4, 14],
+                [3, 5],
+                [2, 2],
+                [1, 1]
+                ]
+            },
+            "variants": {
+                "color": [
+                ["Black", "#1D1D1F"],
+                ["White", "#F5F5F0"],
+                ["Mist Blue", "#B7C9D6"],
+                ["Lavender", "#C7B8D9"]
+                ]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [24, "h"],
+                "max-amount": 5,
+                "free-shipping": true,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Display", "6.3-inch Super Retina XDR OLED"],
+                ["Refresh rate", "ProMotion adaptive up to 120Hz"],
+                ["Processor", "A19 chip"],
+                ["Camera", "48MP Fusion Main and 48MP Fusion Ultra Wide"],
+                ["Front camera", "18MP Center Stage camera"],
+                ["Connectivity", "5G, Wi-Fi 7, Bluetooth"],
+                ["Charging", "USB-C fast charging and MagSafe"],
+                ["Water resistance", "IP68"]
+            ]
+        },
+        "4mK9xR2v": {
+            "name": "iPhone 17",
+            "brand": ["Apple", "T6rP0mX3"],
+            "description": "A powerful everyday iPhone with a bright 6.3-inch OLED display, A19 chip, and an advanced dual-camera system. It combines premium performance with a refined design.",
+            "product-href": ["", "", "", ""],
+            "price": {
+                "real": 799
+            },
+            "preferences": {
+                "rating": 4.8,
+                "reviews": [982.4, "k"],
+                "overall": [
+                [5, 78],
+                [4, 14],
+                [3, 5],
+                [2, 2],
+                [1, 1]
+                ]
+            },
+            "variants": {
+                "color": [
+                ["Black", "#1D1D1F"],
+                ["White", "#F5F5F0"],
+                ["Mist Blue", "#B7C9D6"],
+                ["Lavender", "#C7B8D9"]
+                ]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [24, "h"],
+                "max-amount": 5,
+                "free-shipping": true,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Display", "6.3-inch Super Retina XDR OLED"],
+                ["Refresh rate", "ProMotion adaptive up to 120Hz"],
+                ["Processor", "A19 chip"],
+                ["Camera", "48MP Fusion Main and 48MP Fusion Ultra Wide"],
+                ["Front camera", "18MP Center Stage camera"],
+                ["Connectivity", "5G, Wi-Fi 7, Bluetooth"],
+                ["Charging", "USB-C fast charging and MagSafe"],
+                ["Water resistance", "IP68"]
+            ]
+        },
         "Q4mX8pL2": {
             "name": "iPhone 17 Air",
             "brand": ["Apple", "T6rP0mX3"],
@@ -312,6 +468,2446 @@
                 ["Thickness", "5.6 mm"],
                 ["Connectivity", "5G, Wi-Fi 7, Bluetooth"],
                 ["Charging", "USB-C and MagSafe"]
+            ]
+        },
+        "H2pQ8mR5": {
+            "name": "HP Pavilion 16",
+            "brand": ["Hewlett-Packard", "bK5wZ2nL"],
+            "description": "A versatile 16-inch laptop designed for productivity, entertainment, and everyday computing with a large high-resolution display and modern Intel Core processing.",
+            "product-href": ["", "", "", ""],
+            "price": {
+                "real": 899
+            },
+            "preferences": {
+                "rating": 4.7,
+                "reviews": [184.6, "k"],
+                "overall": [[5, 75], [4, 17], [3, 5], [2, 2], [1, 1]]
+            },
+            "variants": {
+                "color": [
+                    ["Natural Silver", "#C7C9CC"],
+                    ["Warm Gold", "#D8C6AA"]
+                ],
+                "variants": ["8GB / 512GB", "16GB / 512GB", "16GB / 1TB"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [24, "h"],
+                "max-amount": 5,
+                "free-shipping": true,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Display", "16-inch WUXGA IPS"],
+                ["Processor", "Intel Core i5"],
+                ["Memory", "Up to 16GB DDR4"],
+                ["Storage", "Up to 1TB NVMe SSD"],
+                ["Graphics", "Intel integrated graphics"],
+                ["Connectivity", "Wi-Fi 6, Bluetooth"],
+                ["Ports", "USB-C, USB-A, HDMI"],
+                ["Operating system", "Windows 11"]
+            ]
+        },
+
+        "J7xL3vK9": {
+            "name": "HP OmniBook X 14",
+            "brand": ["Hewlett-Packard", "bK5wZ2nL"],
+            "description": "A thin and portable laptop built for everyday productivity, featuring an efficient processor, long battery life, and a premium lightweight design.",
+            "product-href": ["", "", "", ""],
+            "price": {
+                "real": 1099
+            },
+            "preferences": {
+                "rating": 4.8,
+                "reviews": [126.7, "k"],
+                "overall": [[5, 79], [4, 14], [3, 4], [2, 2], [1, 1]]
+            },
+            "variants": {
+                "color": [
+                    ["Meteor Silver", "#B9BDC2"],
+                    ["Ceramic White", "#F1F0EC"]
+                ],
+                "variants": ["16GB / 512GB", "16GB / 1TB", "32GB / 1TB"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [2, "d"],
+                "max-amount": 5,
+                "free-shipping": true,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Display", "14-inch 2.8K OLED"],
+                ["Processor", "AMD Ryzen AI"],
+                ["Memory", "Up to 32GB"],
+                ["Storage", "Up to 1TB NVMe SSD"],
+                ["Graphics", "Integrated Radeon graphics"],
+                ["Battery", "Up to 20 hours"],
+                ["Connectivity", "Wi-Fi 7, Bluetooth"],
+                ["Operating system", "Windows 11"]
+            ]
+        },
+
+        "B4mN8qP2": {
+            "name": "HP Envy x360 14",
+            "brand": ["Hewlett-Packard", "bK5wZ2nL"],
+            "description": "A flexible 2-in-1 laptop with a touchscreen display and convertible hinge, designed for work, creativity, entertainment, and everyday productivity.",
+            "product-href": ["", "", "", ""],
+            "price": {
+                "real": 999
+            },
+            "preferences": {
+                "rating": 4.7,
+                "reviews": [143.2, "k"],
+                "overall": [[5, 76], [4, 16], [3, 5], [2, 2], [1, 1]]
+            },
+            "variants": {
+                "color": [
+                    ["Meteor Silver", "#B9BDC2"],
+                    ["Nightfall Black", "#242629"]
+                ],
+                "variants": ["16GB / 512GB", "16GB / 1TB"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [24, "h"],
+                "max-amount": 5,
+                "free-shipping": true,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Display", "14-inch 2.8K OLED Touch"],
+                ["Processor", "Intel Core Ultra 7"],
+                ["Memory", "16GB LPDDR5x"],
+                ["Storage", "512GB or 1TB NVMe SSD"],
+                ["Graphics", "Intel integrated graphics"],
+                ["Hinge", "360-degree convertible"],
+                ["Connectivity", "Wi-Fi 7, Bluetooth"],
+                ["Operating system", "Windows 11"]
+            ]
+        },
+
+        "W6rK2xM9": {
+            "name": "HP Spectre x360 14",
+            "brand": ["Hewlett-Packard", "bK5wZ2nL"],
+            "description": "A premium convertible notebook combining a high-resolution OLED display, powerful processing, and a sophisticated aluminum design.",
+            "product-href": ["", "", "", ""],
+            "price": {
+                "real": 1499
+            },
+            "preferences": {
+                "rating": 4.9,
+                "reviews": [98.4, "k"],
+                "overall": [[5, 84], [4, 11], [3, 3], [2, 1], [1, 1]]
+            },
+            "variants": {
+                "color": [
+                    ["Slate Blue", "#4D5B6A"],
+                    ["Natural Silver", "#C7C9CC"]
+                ],
+                "variants": ["16GB / 1TB", "32GB / 1TB"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [2, "d"],
+                "max-amount": 3,
+                "free-shipping": true,
+                "warranty": [2, "y"]
+            },
+            "specification": [
+                ["Display", "14-inch 2.8K OLED Touch"],
+                ["Processor", "Intel Core Ultra 7"],
+                ["Memory", "Up to 32GB LPDDR5x"],
+                ["Storage", "1TB NVMe SSD"],
+                ["Graphics", "Intel integrated graphics"],
+                ["Camera", "9MP IR camera"],
+                ["Connectivity", "Wi-Fi 7, Bluetooth"],
+                ["Operating system", "Windows 11"]
+            ]
+        },
+
+        "D9pL5vQ3": {
+            "name": "HP EliteBook 840 G11",
+            "brand": ["Hewlett-Packard", "bK5wZ2nL"],
+            "description": "A business-focused laptop designed for professional productivity with enterprise security, a durable chassis, and modern connectivity.",
+            "product-href": ["", "", "", ""],
+            "price": {
+                "real": 1399
+            },
+            "preferences": {
+                "rating": 4.8,
+                "reviews": [76.5, "k"],
+                "overall": [[5, 81], [4, 13], [3, 4], [2, 1], [1, 1]]
+            },
+            "variants": {
+                "color": [
+                    ["Pike Silver", "#AEB4BA"]
+                ],
+                "variants": ["16GB / 512GB", "32GB / 1TB"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [2, "d"],
+                "max-amount": 5,
+                "free-shipping": true,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Display", "14-inch WUXGA IPS"],
+                ["Processor", "Intel Core Ultra 7"],
+                ["Memory", "Up to 32GB DDR5"],
+                ["Storage", "Up to 1TB NVMe SSD"],
+                ["Security", "TPM 2.0 and biometric authentication"],
+                ["Connectivity", "Wi-Fi 6E, Bluetooth"],
+                ["Ports", "Thunderbolt 4, USB-A, HDMI"],
+                ["Operating system", "Windows 11 Pro"]
+            ]
+        },
+
+        "F3xR7mK8": {
+            "name": "HP ProBook 450 G10",
+            "brand": ["Hewlett-Packard", "bK5wZ2nL"],
+            "description": "A practical business laptop offering dependable performance, a spacious display, and essential connectivity for office and professional workloads.",
+            "product-href": ["", "", "", ""],
+            "price": {
+                "real": 799
+            },
+            "preferences": {
+                "rating": 4.6,
+                "reviews": [68.9, "k"],
+                "overall": [[5, 71], [4, 18], [3, 7], [2, 3], [1, 1]]
+            },
+            "variants": {
+                "color": [
+                    ["Pike Silver", "#AEB4BA"]
+                ],
+                "variants": ["8GB / 512GB", "16GB / 512GB", "16GB / 1TB"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [24, "h"],
+                "max-amount": 5,
+                "free-shipping": true,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Display", "15.6-inch FHD IPS"],
+                ["Processor", "Intel Core i5"],
+                ["Memory", "Up to 16GB DDR4"],
+                ["Storage", "Up to 1TB NVMe SSD"],
+                ["Graphics", "Intel integrated graphics"],
+                ["Connectivity", "Wi-Fi 6, Bluetooth"],
+                ["Ports", "USB-C, USB-A, HDMI"],
+                ["Operating system", "Windows 11 Pro"]
+            ]
+        },
+
+        "G8qM4pL1": {
+            "name": "HP Victus 16",
+            "brand": ["Hewlett-Packard", "bK5wZ2nL"],
+            "description": "A gaming laptop built for high-performance gaming and demanding workloads with a high-refresh-rate display and dedicated graphics.",
+            "product-href": ["", "", "", ""],
+            "price": {
+                "real": 1199
+            },
+            "preferences": {
+                "rating": 4.8,
+                "reviews": [152.3, "k"],
+                "overall": [[5, 79], [4, 14], [3, 4], [2, 2], [1, 1]]
+            },
+            "variants": {
+                "color": [
+                    ["Mica Silver", "#5A5B5E"],
+                    ["Performance Blue", "#354B63"]
+                ],
+                "variants": ["16GB / 512GB", "16GB / 1TB", "32GB / 1TB"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [2, "d"],
+                "max-amount": 5,
+                "free-shipping": true,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Display", "16.1-inch FHD IPS 144Hz"],
+                ["Processor", "AMD Ryzen 7"],
+                ["Memory", "Up to 32GB DDR5"],
+                ["Storage", "Up to 1TB NVMe SSD"],
+                ["Graphics", "NVIDIA GeForce RTX"],
+                ["Cooling", "Dual-fan cooling system"],
+                ["Connectivity", "Wi-Fi 6, Bluetooth"],
+                ["Operating system", "Windows 11"]
+            ]
+        },
+
+        "Y5vN2kX7": {
+            "name": "HP Omen 16",
+            "brand": ["Hewlett-Packard", "bK5wZ2nL"],
+            "description": "A premium gaming notebook designed for demanding games and creative workloads with powerful processing, dedicated graphics, and a fast display.",
+            "product-href": ["", "", "", ""],
+            "price": {
+                "real": 1799
+            },
+            "preferences": {
+                "rating": 4.9,
+                "reviews": [87.1, "k"],
+                "overall": [[5, 85], [4, 10], [3, 3], [2, 1], [1, 1]]
+            },
+            "variants": {
+                "color": [
+                    ["Shadow Black", "#191A1C"]
+                ],
+                "variants": ["16GB / 1TB", "32GB / 1TB"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [2, "d"],
+                "max-amount": 3,
+                "free-shipping": true,
+                "warranty": [2, "y"]
+            },
+            "specification": [
+                ["Display", "16.1-inch QHD 240Hz"],
+                ["Processor", "Intel Core Ultra 9"],
+                ["Memory", "Up to 32GB DDR5"],
+                ["Storage", "1TB NVMe SSD"],
+                ["Graphics", "NVIDIA GeForce RTX"],
+                ["Cooling", "Advanced dual-fan cooling"],
+                ["Connectivity", "Wi-Fi 7, Bluetooth"],
+                ["Operating system", "Windows 11"]
+            ]
+        },
+
+        "Z2mP6rQ9": {
+            "name": "HP 24 All-in-One",
+            "brand": ["Hewlett-Packard", "bK5wZ2nL"],
+            "description": "A compact all-in-one desktop that combines the computer, display, speakers, and webcam into a clean setup for home and office use.",
+            "product-href": ["", "", "", ""],
+            "price": {
+                "real": 649
+            },
+            "preferences": {
+                "rating": 4.6,
+                "reviews": [54.7, "k"],
+                "overall": [[5, 69], [4, 20], [3, 7], [2, 3], [1, 1]]
+            },
+            "variants": {
+                "color": [
+                    ["Snow White", "#F2F2EF"],
+                    ["Jet Black", "#222326"]
+                ],
+                "variants": ["8GB / 512GB", "16GB / 512GB"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [24, "h"],
+                "max-amount": 5,
+                "free-shipping": true,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Display", "23.8-inch FHD IPS"],
+                ["Processor", "Intel Core i5"],
+                ["Memory", "Up to 16GB"],
+                ["Storage", "512GB NVMe SSD"],
+                ["Camera", "1080p webcam"],
+                ["Audio", "Integrated stereo speakers"],
+                ["Connectivity", "Wi-Fi 6, Bluetooth"],
+                ["Operating system", "Windows 11"]
+            ]
+        },
+
+        "U7kL9xM4": {
+            "name": "HP ProDesk 400 G9",
+            "brand": ["Hewlett-Packard", "bK5wZ2nL"],
+            "description": "A compact business desktop designed for office productivity, administration, and everyday professional computing.",
+            "product-href": ["", "", "", ""],
+            "price": {
+                "real": 699
+            },
+            "preferences": {
+                "rating": 4.7,
+                "reviews": [43.8, "k"],
+                "overall": [[5, 74], [4, 17], [3, 6], [2, 2], [1, 1]]
+            },
+            "variants": {
+                "color": [
+                    ["Black", "#252525"]
+                ],
+                "variants": ["8GB / 512GB", "16GB / 512GB", "16GB / 1TB"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [2, "d"],
+                "max-amount": 5,
+                "free-shipping": true,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Processor", "Intel Core i5"],
+                ["Memory", "Up to 16GB DDR4"],
+                ["Storage", "Up to 1TB NVMe SSD"],
+                ["Graphics", "Intel integrated graphics"],
+                ["Connectivity", "Gigabit Ethernet, Wi-Fi 6"],
+                ["Ports", "USB-C, USB-A, DisplayPort"],
+                ["Form factor", "Small form factor"],
+                ["Operating system", "Windows 11 Pro"]
+            ]
+        },
+
+        "A5qR3mV8": {
+            "name": "HP Z2 Mini G9",
+            "brand": ["Hewlett-Packard", "bK5wZ2nL"],
+            "description": "A compact workstation designed for professional applications, engineering workflows, content creation, and demanding desktop workloads.",
+            "product-href": ["", "", "", ""],
+            "price": {
+                "real": 1599
+            },
+            "preferences": {
+                "rating": 4.9,
+                "reviews": [31.5, "k"],
+                "overall": [[5, 86], [4, 10], [3, 3], [2, 1], [1, 0]]
+            },
+            "variants": {
+                "color": [
+                    ["Black", "#252525"]
+                ],
+                "variants": ["16GB / 512GB", "32GB / 1TB", "64GB / 2TB"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [2, "d"],
+                "max-amount": 3,
+                "free-shipping": true,
+                "warranty": [3, "y"]
+            },
+            "specification": [
+                ["Processor", "Intel Core i7"],
+                ["Memory", "Up to 64GB DDR5"],
+                ["Storage", "Up to 2TB NVMe SSD"],
+                ["Graphics", "Professional dedicated graphics"],
+                ["Networking", "2.5Gb Ethernet, Wi-Fi"],
+                ["Ports", "USB-C, USB-A, DisplayPort"],
+                ["Form factor", "Mini workstation"],
+                ["Operating system", "Windows 11 Pro"]
+            ]
+        },
+
+        "E8pK2xN6": {
+            "name": "HP E27 G5 Monitor",
+            "brand": ["Hewlett-Packard", "bK5wZ2nL"],
+            "description": "A 27-inch business monitor designed for comfortable productivity with a sharp Full HD display and ergonomic adjustment.",
+            "product-href": ["", "", "", ""],
+            "price": {
+                "real": 249
+            },
+            "preferences": {
+                "rating": 4.7,
+                "reviews": [37.4, "k"],
+                "overall": [[5, 75], [4, 17], [3, 5], [2, 2], [1, 1]]
+            },
+            "variants": {
+                "color": [
+                    ["Black", "#262626"]
+                ],
+                "variants": ["FHD", "QHD"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [24, "h"],
+                "max-amount": 10,
+                "free-shipping": true,
+                "warranty": [3, "y"]
+            },
+            "specification": [
+                ["Display", "27-inch IPS"],
+                ["Resolution", "1920 × 1080"],
+                ["Refresh rate", "75Hz"],
+                ["Response time", "5ms"],
+                ["Connectivity", "HDMI, DisplayPort"],
+                ["Ergonomics", "Height, tilt, swivel, pivot"],
+                ["Eye comfort", "Low blue light"],
+                ["Panel", "Anti-glare"]
+            ]
+        },
+
+        "S4mQ7vL2": {
+            "name": "HP M27f Monitor",
+            "brand": ["Hewlett-Packard", "bK5wZ2nL"],
+            "description": "A slim 27-inch monitor designed for home offices, entertainment, and everyday computing with a minimalist three-sided borderless design.",
+            "product-href": ["", "", "", ""],
+            "price": {
+                "real": 199
+            },
+            "preferences": {
+                "rating": 4.6,
+                "reviews": [28.2, "k"],
+                "overall": [[5, 70], [4, 19], [3, 7], [2, 3], [1, 1]]
+            },
+            "variants": {
+                "color": [
+                    ["Natural Silver", "#C6C8C9"]
+                ],
+                "variants": ["FHD"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [24, "h"],
+                "max-amount": 10,
+                "free-shipping": true,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Display", "27-inch IPS"],
+                ["Resolution", "1920 × 1080"],
+                ["Refresh rate", "75Hz"],
+                ["Brightness", "300 nits"],
+                ["Connectivity", "HDMI, VGA"],
+                ["Design", "Three-sided micro-edge"],
+                ["Eye comfort", "Low blue light"],
+                ["Panel", "Anti-glare"]
+            ]
+        },
+
+        "C9xR5pM7": {
+            "name": "HP Omen 27q Gaming Monitor",
+            "brand": ["Hewlett-Packard", "bK5wZ2nL"],
+            "description": "A high-refresh-rate gaming monitor with a sharp QHD display, adaptive synchronization, and responsive performance for competitive gaming.",
+            "product-href": ["", "", "", ""],
+            "price": {
+                "real": 349
+            },
+            "preferences": {
+                "rating": 4.8,
+                "reviews": [41.9, "k"],
+                "overall": [[5, 81], [4, 13], [3, 4], [2, 1], [1, 1]]
+            },
+            "variants": {
+                "color": [
+                    ["Black", "#202124"]
+                ],
+                "variants": ["27-inch QHD"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [24, "h"],
+                "max-amount": 5,
+                "free-shipping": true,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Display", "27-inch IPS"],
+                ["Resolution", "2560 × 1440"],
+                ["Refresh rate", "165Hz"],
+                ["Response time", "1ms"],
+                ["Adaptive sync", "AMD FreeSync"],
+                ["Connectivity", "HDMI, DisplayPort"],
+                ["Brightness", "400 nits"],
+                ["HDR", "HDR400"]
+            ]
+        },
+
+        "I6vK3qP8": {
+            "name": "HP LaserJet Pro 4103fdw",
+            "brand": ["Hewlett-Packard", "bK5wZ2nL"],
+            "description": "A color multifunction laser printer designed for productive home offices and small businesses with printing, scanning, copying, and fax capabilities.",
+            "product-href": ["", "", "", ""],
+            "price": {
+                "real": 549
+            },
+            "preferences": {
+                "rating": 4.7,
+                "reviews": [22.6, "k"],
+                "overall": [[5, 76], [4, 16], [3, 5], [2, 2], [1, 1]]
+            },
+            "variants": {
+                "color": [
+                    ["White", "#E9E9E7"]
+                ],
+                "variants": ["Standard"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [2, "d"],
+                "max-amount": 3,
+                "free-shipping": true,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Type", "Color laser multifunction"],
+                ["Functions", "Print, scan, copy, fax"],
+                ["Print speed", "Up to 35 ppm"],
+                ["Resolution", "Up to 600 × 600 dpi"],
+                ["Duplex", "Automatic"],
+                ["Connectivity", "Wi-Fi, Ethernet, USB"],
+                ["Paper size", "Up to A4"],
+                ["Display", "Color touchscreen"]
+            ]
+        },
+
+        "O2mL8xR5": {
+            "name": "HP LaserJet M209dw",
+            "brand": ["Hewlett-Packard", "bK5wZ2nL"],
+            "description": "A compact monochrome laser printer designed for fast and reliable document printing in home offices and small workspaces.",
+            "product-href": ["", "", "", ""],
+            "price": {
+                "real": 229
+            },
+            "preferences": {
+                "rating": 4.6,
+                "reviews": [18.4, "k"],
+                "overall": [[5, 70], [4, 20], [3, 6], [2, 3], [1, 1]]
+            },
+            "variants": {
+                "color": [
+                    ["White", "#E9E9E7"]
+                ],
+                "variants": ["Standard"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [24, "h"],
+                "max-amount": 5,
+                "free-shipping": true,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Type", "Monochrome laser"],
+                ["Print speed", "Up to 30 ppm"],
+                ["Resolution", "Up to 1200 × 1200 dpi"],
+                ["Duplex", "Automatic"],
+                ["Connectivity", "Wi-Fi, Ethernet, USB"],
+                ["Paper size", "Up to A4"],
+                ["Mobile printing", "Supported"],
+                ["Display", "LED control panel"]
+            ]
+        },
+
+        "T4pN7kQ2": {
+            "name": "HP Smart Tank 7305",
+            "brand": ["Hewlett-Packard", "bK5wZ2nL"],
+            "description": "A refillable ink-tank all-in-one printer designed for high-volume home and small-office printing with low running costs.",
+            "product-href": ["", "", "", ""],
+            "price": {
+                "real": 329
+            },
+            "preferences": {
+                "rating": 4.8,
+                "reviews": [34.5, "k"],
+                "overall": [[5, 79], [4, 14], [3, 4], [2, 2], [1, 1]]
+            },
+            "variants": {
+                "color": [
+                    ["White", "#E8E8E5"]
+                ],
+                "variants": ["Standard"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [24, "h"],
+                "max-amount": 5,
+                "free-shipping": true,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Type", "Color ink tank multifunction"],
+                ["Functions", "Print, scan, copy"],
+                ["Print speed", "Up to 15 ppm"],
+                ["Duplex", "Automatic"],
+                ["Connectivity", "Wi-Fi, USB"],
+                ["Ink system", "Refillable ink tanks"],
+                ["Paper size", "Up to A4"],
+                ["Mobile printing", "HP Smart app"]
+            ]
+        },
+
+        "V9mX5rL3": {
+            "name": "HP 150 Wired Keyboard and Mouse",
+            "brand": ["Hewlett-Packard", "bK5wZ2nL"],
+            "description": "A straightforward wired keyboard and mouse combination designed for reliable everyday desktop use at home, school, and work.",
+            "product-href": ["", "", "", ""],
+            "price": {
+                "real": 29
+            },
+            "preferences": {
+                "rating": 4.5,
+                "reviews": [12.8, "k"],
+                "overall": [[5, 65], [4, 22], [3, 8], [2, 4], [1, 1]]
+            },
+            "variants": {
+                "color": [
+                    ["Black", "#242424"]
+                ],
+                "variants": ["US Layout", "UK Layout"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [24, "h"],
+                "max-amount": 20,
+                "free-shipping": false,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Keyboard", "Full-size wired keyboard"],
+                ["Mouse", "Optical wired mouse"],
+                ["Connection", "USB-A"],
+                ["Keyboard layout", "Full-size"],
+                ["Mouse sensor", "Optical"],
+                ["Compatibility", "Windows"],
+                ["Cable", "Wired"],
+                ["Color", "Black"]
+            ]
+        },
+
+        "R2qK6pM8": {
+            "name": "HP 930 Creator Wireless Mouse",
+            "brand": ["Hewlett-Packard", "bK5wZ2nL"],
+            "description": "A premium wireless mouse designed for creators and professionals with customizable controls, precise tracking, and multi-device connectivity.",
+            "product-href": ["", "", "", ""],
+            "price": {
+                "real": 89
+            },
+            "preferences": {
+                "rating": 4.7,
+                "reviews": [9.6, "k"],
+                "overall": [[5, 76], [4, 16], [3, 5], [2, 2], [1, 1]]
+            },
+            "variants": {
+                "color": [
+                    ["Silver", "#BFC2C4"],
+                    ["Black", "#222222"]
+                ],
+                "variants": ["Standard"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [24, "h"],
+                "max-amount": 10,
+                "free-shipping": true,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Sensor", "High-precision optical sensor"],
+                ["DPI", "Up to 4000 DPI"],
+                ["Connectivity", "Bluetooth and USB receiver"],
+                ["Battery", "Rechargeable"],
+                ["Buttons", "Programmable buttons"],
+                ["Devices", "Multi-device support"],
+                ["Tracking", "Glass-compatible tracking"],
+                ["Compatibility", "Windows and macOS"]
+            ]
+        },
+
+        "N7xP4vQ9": {
+            "name": "HP USB-C Dock G5",
+            "brand": ["Hewlett-Packard", "bK5wZ2nL"],
+            "description": "A versatile USB-C docking station that expands compatible laptops with display, networking, USB, and peripheral connectivity.",
+            "product-href": ["", "", "", ""],
+            "price": {
+                "real": 179
+            },
+            "preferences": {
+                "rating": 4.7,
+                "reviews": [15.3, "k"],
+                "overall": [[5, 74], [4, 18], [3, 5], [2, 2], [1, 1]]
+            },
+            "variants": {
+                "color": [
+                    ["Black", "#262626"]
+                ],
+                "variants": ["Standard"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [24, "h"],
+                "max-amount": 10,
+                "free-shipping": true,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Connection", "USB-C"],
+                ["Display output", "DisplayPort"],
+                ["USB", "USB-C and USB-A"],
+                ["Networking", "Gigabit Ethernet"],
+                ["Audio", "3.5mm audio"],
+                ["Power delivery", "Up to 100W"],
+                ["Security", "Kensington lock support"],
+                ["Compatibility", "Compatible USB-C laptops"]
+            ]
+        },
+        "H5xP8mQ2": {
+            "name": "Nike Air Max Dn",
+            "brand": ["Nike", "a7Kp2Xq9"],
+            "description": "A modern Air Max sneaker featuring responsive cushioning and a bold futuristic design for everyday wear.",
+            "product-href": ["", "", "", ""],
+            "price": {
+                "real": 160
+            },
+            "preferences": {
+                "rating": 4.8,
+                "reviews": [84.6, "k"],
+                "overall": [[5, 79], [4, 14], [3, 4], [2, 2], [1, 1]]
+            },
+            "variants": {
+                "color": [
+                    ["Black", "#171717"],
+                    ["White", "#F5F5F5"],
+                    ["Photon Dust", "#D7D5D0"]
+                ],
+                "variants": ["US 7", "US 8", "US 9", "US 10", "US 11", "US 12"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [24, "h"],
+                "max-amount": 5,
+                "free-shipping": true,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Category", "Lifestyle sneakers"],
+                ["Upper", "Engineered mesh"],
+                ["Midsole", "Dual-chamber Air cushioning"],
+                ["Outsole", "Rubber"],
+                ["Closure", "Lace-up"],
+                ["Fit", "Regular"],
+                ["Cushioning", "Responsive"],
+                ["Use", "Everyday wear"]
+            ]
+        },
+
+        "J9kL4vR7": {
+            "name": "Nike Air Force 1 '07",
+            "brand": ["Nike", "a7Kp2Xq9"],
+            "description": "A classic basketball-inspired sneaker with a clean silhouette, durable construction, and signature Air cushioning.",
+            "product-href": ["", "", "", ""],
+            "price": {
+                "real": 115
+            },
+            "preferences": {
+                "rating": 4.9,
+                "reviews": [216.4, "k"],
+                "overall": [[5, 84], [4, 11], [3, 3], [2, 1], [1, 1]]
+            },
+            "variants": {
+                "color": [
+                    ["White", "#F5F5F5"],
+                    ["Black", "#171717"],
+                    ["White / Black", "#F5F5F5"]
+                ],
+                "variants": ["US 7", "US 8", "US 9", "US 10", "US 11", "US 12"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [24, "h"],
+                "max-amount": 5,
+                "free-shipping": true,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Category", "Lifestyle sneakers"],
+                ["Upper", "Leather"],
+                ["Midsole", "Foam with Nike Air cushioning"],
+                ["Outsole", "Rubber"],
+                ["Closure", "Lace-up"],
+                ["Collar", "Padded"],
+                ["Tongue", "Padded textile"],
+                ["Use", "Lifestyle"]
+            ]
+        },
+
+        "B3mX6qP8": {
+            "name": "Nike Dunk Low",
+            "brand": ["Nike", "a7Kp2Xq9"],
+            "description": "A low-profile sneaker inspired by basketball heritage, combining classic color blocking with everyday comfort.",
+            "product-href": ["", "", "", ""],
+            "price": {
+                "real": 120
+            },
+            "preferences": {
+                "rating": 4.8,
+                "reviews": [174.2, "k"],
+                "overall": [[5, 80], [4, 13], [3, 4], [2, 2], [1, 1]]
+            },
+            "variants": {
+                "color": [
+                    ["White / Black", "#F5F5F5"],
+                    ["Grey / White", "#BFC1C3"],
+                    ["Blue / White", "#4B78B8"]
+                ],
+                "variants": ["US 7", "US 8", "US 9", "US 10", "US 11", "US 12"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [2, "d"],
+                "max-amount": 5,
+                "free-shipping": true,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Category", "Lifestyle sneakers"],
+                ["Upper", "Leather and synthetic materials"],
+                ["Midsole", "Foam"],
+                ["Outsole", "Rubber"],
+                ["Closure", "Lace-up"],
+                ["Profile", "Low-top"],
+                ["Cushioning", "Lightweight"],
+                ["Use", "Everyday wear"]
+            ]
+        },
+
+        "W7rN2kM5": {
+            "name": "Nike Air Jordan 1 Low",
+            "brand": ["Nike", "a7Kp2Xq9"],
+            "description": "A low-top Jordan sneaker bringing the iconic Air Jordan 1 design into a versatile everyday silhouette.",
+            "product-href": ["", "", "", ""],
+            "price": {
+                "real": 125
+            },
+            "preferences": {
+                "rating": 4.9,
+                "reviews": [193.7, "k"],
+                "overall": [[5, 83], [4, 12], [3, 3], [2, 1], [1, 1]]
+            },
+            "variants": {
+                "color": [
+                    ["Black / Red", "#171717"],
+                    ["White / Black", "#F5F5F5"],
+                    ["White / Blue", "#507CB9"]
+                ],
+                "variants": ["US 7", "US 8", "US 9", "US 10", "US 11", "US 12"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [24, "h"],
+                "max-amount": 5,
+                "free-shipping": true,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Category", "Jordan lifestyle sneakers"],
+                ["Upper", "Leather and synthetic materials"],
+                ["Midsole", "Foam with Air cushioning"],
+                ["Outsole", "Rubber"],
+                ["Closure", "Lace-up"],
+                ["Profile", "Low-top"],
+                ["Collar", "Padded"],
+                ["Use", "Lifestyle"]
+            ]
+        },
+
+        "D4pL9xQ1": {
+            "name": "Nike Pegasus 41",
+            "brand": ["Nike", "a7Kp2Xq9"],
+            "description": "A versatile daily running shoe designed with responsive cushioning and a breathable upper for everyday training.",
+            "product-href": ["", "", "", ""],
+            "price": {
+                "real": 140
+            },
+            "preferences": {
+                "rating": 4.8,
+                "reviews": [112.5, "k"],
+                "overall": [[5, 78], [4, 15], [3, 4], [2, 2], [1, 1]]
+            },
+            "variants": {
+                "color": [
+                    ["Black / White", "#171717"],
+                    ["White / Black", "#F5F5F5"],
+                    ["Blue / White", "#4D78B5"]
+                ],
+                "variants": ["US 7", "US 8", "US 9", "US 10", "US 11", "US 12"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [24, "h"],
+                "max-amount": 5,
+                "free-shipping": true,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Category", "Road running"],
+                ["Upper", "Engineered mesh"],
+                ["Midsole", "ReactX foam"],
+                ["Outsole", "Rubber"],
+                ["Cushioning", "Responsive"],
+                ["Drop", "10mm"],
+                ["Closure", "Lace-up"],
+                ["Use", "Daily running"]
+            ]
+        },
+
+        "F8vK3mR6": {
+            "name": "Nike Vomero 18",
+            "brand": ["Nike", "a7Kp2Xq9"],
+            "description": "A cushioned running shoe designed for soft, comfortable miles with a plush feel and supportive construction.",
+            "product-href": ["", "", "", ""],
+            "price": {
+                "real": 150
+            },
+            "preferences": {
+                "rating": 4.8,
+                "reviews": [67.8, "k"],
+                "overall": [[5, 80], [4, 13], [3, 4], [2, 2], [1, 1]]
+            },
+            "variants": {
+                "color": [
+                    ["White / Black", "#F5F5F5"],
+                    ["Black / Anthracite", "#222222"]
+                ],
+                "variants": ["US 7", "US 8", "US 9", "US 10", "US 11", "US 12"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [2, "d"],
+                "max-amount": 5,
+                "free-shipping": true,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Category", "Road running"],
+                ["Upper", "Engineered mesh"],
+                ["Midsole", "Cushlon 3.0 foam"],
+                ["Outsole", "Rubber"],
+                ["Cushioning", "Plush"],
+                ["Drop", "10mm"],
+                ["Closure", "Lace-up"],
+                ["Use", "Long-distance running"]
+            ]
+        },
+
+        "G2qM7pX9": {
+            "name": "Nike Invincible 3",
+            "brand": ["Nike", "a7Kp2Xq9"],
+            "description": "A highly cushioned running shoe built around responsive foam to provide a soft and energetic ride for everyday runs.",
+            "product-href": ["", "", "", ""],
+            "price": {
+                "real": 180
+            },
+            "preferences": {
+                "rating": 4.7,
+                "reviews": [54.3, "k"],
+                "overall": [[5, 76], [4, 16], [3, 5], [2, 2], [1, 1]]
+            },
+            "variants": {
+                "color": [
+                    ["Black / White", "#171717"],
+                    ["Sail / Black", "#E7E3D8"]
+                ],
+                "variants": ["US 7", "US 8", "US 9", "US 10", "US 11", "US 12"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [2, "d"],
+                "max-amount": 5,
+                "free-shipping": true,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Category", "Road running"],
+                ["Upper", "Engineered knit"],
+                ["Midsole", "ZoomX foam"],
+                ["Outsole", "Rubber"],
+                ["Cushioning", "Maximum"],
+                ["Drop", "9mm"],
+                ["Closure", "Lace-up"],
+                ["Use", "Daily running"]
+            ]
+        },
+
+        "Y6nR4kL2": {
+            "name": "Nike Metcon 10",
+            "brand": ["Nike", "a7Kp2Xq9"],
+            "description": "A versatile training shoe designed for strength workouts, conditioning, and high-intensity gym sessions.",
+            "product-href": ["", "", "", ""],
+            "price": {
+                "real": 150
+            },
+            "preferences": {
+                "rating": 4.7,
+                "reviews": [43.7, "k"],
+                "overall": [[5, 75], [4, 16], [3, 5], [2, 3], [1, 1]]
+            },
+            "variants": {
+                "color": [
+                    ["Black / White", "#171717"],
+                    ["White / Black", "#F5F5F5"]
+                ],
+                "variants": ["US 7", "US 8", "US 9", "US 10", "US 11", "US 12"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [24, "h"],
+                "max-amount": 5,
+                "free-shipping": true,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Category", "Training"],
+                ["Upper", "Breathable engineered mesh"],
+                ["Midsole", "Responsive foam"],
+                ["Outsole", "Durable rubber"],
+                ["Heel", "Stable heel platform"],
+                ["Traction", "Multi-directional"],
+                ["Closure", "Lace-up"],
+                ["Use", "Gym and training"]
+            ]
+        },
+
+        "Z9xP5mV7": {
+            "name": "Nike Alphafly 3",
+            "brand": ["Nike", "a7Kp2Xq9"],
+            "description": "A competition-focused road racing shoe engineered for high-energy return and efficient performance over long distances.",
+            "product-href": ["", "", "", ""],
+            "price": {
+                "real": 285
+            },
+            "preferences": {
+                "rating": 4.9,
+                "reviews": [31.6, "k"],
+                "overall": [[5, 87], [4, 9], [3, 3], [2, 1], [1, 0]]
+            },
+            "variants": {
+                "color": [
+                    ["Bright Crimson", "#D92727"],
+                    ["White / Black", "#F5F5F5"]
+                ],
+                "variants": ["US 7", "US 8", "US 9", "US 10", "US 11", "US 12"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [2, "d"],
+                "max-amount": 2,
+                "free-shipping": true,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Category", "Road racing"],
+                ["Upper", "AtomKnit"],
+                ["Midsole", "ZoomX foam"],
+                ["Plate", "Carbon-fiber plate"],
+                ["Air units", "Dual Air Zoom units"],
+                ["Outsole", "Rubber"],
+                ["Weight", "Lightweight racing construction"],
+                ["Use", "Competition"]
+            ]
+        },
+
+        "U3kQ8rM4": {
+            "name": "Nike Tech Fleece Joggers",
+            "brand": ["Nike", "a7Kp2Xq9"],
+            "description": "Comfortable joggers made with lightweight fleece and a streamlined fit for everyday wear and casual activity.",
+            "product-href": ["", "", "", ""],
+            "price": {
+                "real": 110
+            },
+            "preferences": {
+                "rating": 4.7,
+                "reviews": [38.5, "k"],
+                "overall": [[5, 76], [4, 16], [3, 5], [2, 2], [1, 1]]
+            },
+            "variants": {
+                "color": [
+                    ["Black", "#171717"],
+                    ["Grey", "#8B8B8B"],
+                    ["Navy", "#1E2B40"]
+                ],
+                "variants": ["S", "M", "L", "XL", "2XL"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [24, "h"],
+                "max-amount": 5,
+                "free-shipping": true,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Category", "Sportswear"],
+                ["Material", "Cotton-blend fleece"],
+                ["Fit", "Standard"],
+                ["Waist", "Elastic waistband"],
+                ["Pockets", "Side zip pockets"],
+                ["Cuffs", "Elastic cuffs"],
+                ["Closure", "Drawcord"],
+                ["Use", "Lifestyle and training"]
+            ]
+        },
+
+        "A7vL2pX6": {
+            "name": "Nike Dri-FIT Academy Top",
+            "brand": ["Nike", "a7Kp2Xq9"],
+            "description": "A lightweight training top featuring moisture-managing fabric to help keep athletes comfortable during workouts and practice.",
+            "product-href": ["", "", "", ""],
+            "price": {
+                "real": 45
+            },
+            "preferences": {
+                "rating": 4.6,
+                "reviews": [27.4, "k"],
+                "overall": [[5, 71], [4, 19], [3, 6], [2, 3], [1, 1]]
+            },
+            "variants": {
+                "color": [
+                    ["Black", "#171717"],
+                    ["White", "#F5F5F5"],
+                    ["University Red", "#C8102E"]
+                ],
+                "variants": ["S", "M", "L", "XL", "2XL"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [24, "h"],
+                "max-amount": 10,
+                "free-shipping": false,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Category", "Training apparel"],
+                ["Material", "Polyester"],
+                ["Technology", "Dri-FIT"],
+                ["Fit", "Standard"],
+                ["Sleeves", "Short sleeve"],
+                ["Neck", "Crew neck"],
+                ["Care", "Machine washable"],
+                ["Use", "Training"]
+            ]
+        },
+
+        "E5mR9qK3": {
+            "name": "Nike Sportswear Club Fleece Hoodie",
+            "brand": ["Nike", "a7Kp2Xq9"],
+            "description": "A classic fleece hoodie designed for everyday comfort with a soft interior and relaxed casual styling.",
+            "product-href": ["", "", "", ""],
+            "price": {
+                "real": 65
+            },
+            "preferences": {
+                "rating": 4.8,
+                "reviews": [61.7, "k"],
+                "overall": [[5, 79], [4, 14], [3, 4], [2, 2], [1, 1]]
+            },
+            "variants": {
+                "color": [
+                    ["Black", "#171717"],
+                    ["Grey", "#8A8A8A"],
+                    ["Dark Green", "#30483B"],
+                    ["Blue", "#365B88"]
+                ],
+                "variants": ["S", "M", "L", "XL", "2XL"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [24, "h"],
+                "max-amount": 10,
+                "free-shipping": false,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Category", "Lifestyle apparel"],
+                ["Material", "Cotton-blend fleece"],
+                ["Fit", "Standard"],
+                ["Hood", "Adjustable drawcord"],
+                ["Pocket", "Front kangaroo pocket"],
+                ["Cuffs", "Ribbed"],
+                ["Closure", "Pullover"],
+                ["Use", "Everyday wear"]
+            ]
+        },
+
+        "S8xN4pL7": {
+            "name": "Nike Academy Team Backpack",
+            "brand": ["Nike", "a7Kp2Xq9"],
+            "description": "A practical sports backpack with dedicated storage for training essentials, featuring durable construction and comfortable shoulder straps.",
+            "product-href": ["", "", "", ""],
+            "price": {
+                "real": 55
+            },
+            "preferences": {
+                "rating": 4.7,
+                "reviews": [18.3, "k"],
+                "overall": [[5, 76], [4, 16], [3, 5], [2, 2], [1, 1]]
+            },
+            "variants": {
+                "color": [
+                    ["Black", "#171717"],
+                    ["Black / White", "#171717"]
+                ],
+                "variants": ["Standard"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [24, "h"],
+                "max-amount": 10,
+                "free-shipping": false,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Category", "Sports bag"],
+                ["Material", "Polyester"],
+                ["Capacity", "Approximately 30L"],
+                ["Main compartment", "Zip closure"],
+                ["Laptop compartment", "Padded"],
+                ["Shoulder straps", "Adjustable"],
+                ["Additional storage", "Front and side pockets"],
+                ["Use", "School, gym, travel"]
+            ]
+        },
+
+        "C2qM6vR9": {
+            "name": "Nike Brasilia 9.5 Training Duffel",
+            "brand": ["Nike", "a7Kp2Xq9"],
+            "description": "A durable training duffel bag with spacious storage and separate compartments for gym equipment, clothing, and footwear.",
+            "product-href": ["", "", "", ""],
+            "price": {
+                "real": 60
+            },
+            "preferences": {
+                "rating": 4.8,
+                "reviews": [24.9, "k"],
+                "overall": [[5, 80], [4, 14], [3, 4], [2, 1], [1, 1]]
+            },
+            "variants": {
+                "color": [
+                    ["Black", "#171717"],
+                    ["Grey", "#737373"]
+                ],
+                "variants": ["Small", "Medium", "Large"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [24, "h"],
+                "max-amount": 10,
+                "free-shipping": false,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Category", "Training bag"],
+                ["Material", "Polyester"],
+                ["Main compartment", "Large zip compartment"],
+                ["Shoe compartment", "Separate ventilated compartment"],
+                ["Handles", "Reinforced"],
+                ["Shoulder strap", "Adjustable"],
+                ["Base", "Water-resistant"],
+                ["Use", "Gym and training"]
+            ]
+        },
+
+        "I4kP7xN2": {
+            "name": "Nike Everyday Plus Cushioned Socks",
+            "brand": ["Nike", "a7Kp2Xq9"],
+            "description": "Cushioned everyday socks designed for comfort and support during daily activities, workouts, and casual wear.",
+            "product-href": ["", "", "", ""],
+            "price": {
+                "real": 22
+            },
+            "preferences": {
+                "rating": 4.7,
+                "reviews": [15.6, "k"],
+                "overall": [[5, 77], [4, 15], [3, 5], [2, 2], [1, 1]]
+            },
+            "variants": {
+                "color": [
+                    ["White", "#F5F5F5"],
+                    ["Black", "#171717"]
+                ],
+                "variants": ["S-M", "M-L", "L-XL"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [24, "h"],
+                "max-amount": 20,
+                "free-shipping": false,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Category", "Socks"],
+                ["Material", "Cotton blend"],
+                ["Cushioning", "Medium"],
+                ["Support", "Arch support"],
+                ["Length", "Crew"],
+                ["Pack", "6 pairs"],
+                ["Fit", "Standard"],
+                ["Use", "Everyday and training"]
+            ]
+        },
+
+        "O9mL3qV5": {
+            "name": "Nike Dri-FIT Running Shorts",
+            "brand": ["Nike", "a7Kp2Xq9"],
+            "description": "Lightweight running shorts with moisture-managing fabric and a flexible design for comfortable movement during runs and workouts.",
+            "product-href": ["", "", "", ""],
+            "price": {
+                "real": 50
+            },
+            "preferences": {
+                "rating": 4.7,
+                "reviews": [21.4, "k"],
+                "overall": [[5, 75], [4, 17], [3, 5], [2, 2], [1, 1]]
+            },
+            "variants": {
+                "color": [
+                    ["Black", "#171717"],
+                    ["Grey", "#888888"],
+                    ["Blue", "#416A9A"]
+                ],
+                "variants": ["S", "M", "L", "XL", "2XL"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [24, "h"],
+                "max-amount": 10,
+                "free-shipping": false,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Category", "Running apparel"],
+                ["Material", "Polyester"],
+                ["Technology", "Dri-FIT"],
+                ["Fit", "Standard"],
+                ["Waist", "Elastic waistband"],
+                ["Pockets", "Side pockets"],
+                ["Liner", "Built-in brief"],
+                ["Use", "Running and training"]
+            ]
+        },
+
+        "T5rK8pM1": {
+            "name": "Nike Air Max 270",
+            "brand": ["Nike", "a7Kp2Xq9"],
+            "description": "A lifestyle sneaker featuring a prominent Air unit and a comfortable upper designed for everyday movement and casual styling.",
+            "product-href": ["", "", "", ""],
+            "price": {
+                "real": 150
+            },
+            "preferences": {
+                "rating": 4.8,
+                "reviews": [92.8, "k"],
+                "overall": [[5, 80], [4, 14], [3, 4], [2, 1], [1, 1]]
+            },
+            "variants": {
+                "color": [
+                    ["Black / White", "#171717"],
+                    ["White / Grey", "#F2F2F0"]
+                ],
+                "variants": ["US 7", "US 8", "US 9", "US 10", "US 11", "US 12"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [2, "d"],
+                "max-amount": 5,
+                "free-shipping": true,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Category", "Lifestyle sneakers"],
+                ["Upper", "Mesh and synthetic materials"],
+                ["Midsole", "Foam"],
+                ["Air unit", "270-degree visible Air"],
+                ["Outsole", "Rubber"],
+                ["Closure", "Lace-up"],
+                ["Fit", "Regular"],
+                ["Use", "Everyday wear"]
+            ]
+        },
+
+        "V2xQ6mL9": {
+            "name": "Nike Pegasus Trail 5",
+            "brand": ["Nike", "a7Kp2Xq9"],
+            "description": "A versatile trail-running shoe designed to transition between paved roads and off-road paths with responsive cushioning and durable traction.",
+            "product-href": ["", "", "", ""],
+            "price": {
+                "real": 150
+            },
+            "preferences": {
+                "rating": 4.7,
+                "reviews": [29.8, "k"],
+                "overall": [[5, 76], [4, 16], [3, 5], [2, 2], [1, 1]]
+            },
+            "variants": {
+                "color": [
+                    ["Black / Anthracite", "#202124"],
+                    ["Sail / Green", "#DCD9CF"]
+                ],
+                "variants": ["US 7", "US 8", "US 9", "US 10", "US 11", "US 12"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [2, "d"],
+                "max-amount": 5,
+                "free-shipping": true,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Category", "Trail running"],
+                ["Upper", "Engineered mesh"],
+                ["Midsole", "ReactX foam"],
+                ["Outsole", "Trail rubber"],
+                ["Traction", "Multi-directional lugs"],
+                ["Cushioning", "Responsive"],
+                ["Closure", "Lace-up"],
+                ["Use", "Trail and road"]
+            ]
+        },
+
+        "R7pN4kX3": {
+            "name": "Nike Windrunner Jacket",
+            "brand": ["Nike", "a7Kp2Xq9"],
+            "description": "A lightweight running and lifestyle jacket inspired by Nike's classic Windrunner design, providing lightweight coverage for changing conditions.",
+            "product-href": ["", "", "", ""],
+            "price": {
+                "real": 90
+            },
+            "preferences": {
+                "rating": 4.6,
+                "reviews": [19.7, "k"],
+                "overall": [[5, 72], [4, 18], [3, 6], [2, 3], [1, 1]]
+            },
+            "variants": {
+                "color": [
+                    ["Black / White", "#171717"],
+                    ["Blue / White", "#466D9C"],
+                    ["Red / Black", "#A92129"]
+                ],
+                "variants": ["S", "M", "L", "XL", "2XL"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [24, "h"],
+                "max-amount": 5,
+                "free-shipping": true,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Category", "Running jacket"],
+                ["Material", "Lightweight woven fabric"],
+                ["Fit", "Standard"],
+                ["Hood", "Attached hood"],
+                ["Pockets", "Side zip pockets"],
+                ["Closure", "Full zip"],
+                ["Weather protection", "Light wind resistance"],
+                ["Use", "Running and lifestyle"]
+            ]
+        },
+
+        "N8mP2vQ6": {
+            "name": "Nike Club Cap",
+            "brand": ["Nike", "a7Kp2Xq9"],
+            "description": "A classic everyday baseball cap featuring a curved brim, adjustable closure, and embroidered Nike branding.",
+            "product-href": ["", "", "", ""],
+            "price": {
+                "real": 30
+            },
+            "preferences": {
+                "rating": 4.7,
+                "reviews": [13.9, "k"],
+                "overall": [[5, 76], [4, 16], [3, 5], [2, 2], [1, 1]]
+            },
+            "variants": {
+                "color": [
+                    ["Black", "#171717"],
+                    ["White", "#F5F5F5"],
+                    ["Navy", "#202C3E"]
+                ],
+                "variants": ["One Size"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [24, "h"],
+                "max-amount": 20,
+                "free-shipping": false,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Category", "Headwear"],
+                ["Material", "Cotton"],
+                ["Closure", "Adjustable strap"],
+                ["Brim", "Curved"],
+                ["Crown", "Six-panel"],
+                ["Branding", "Embroidered Nike logo"],
+                ["Fit", "Adjustable"],
+                ["Use", "Everyday wear"]
+            ]
+        },
+        "A4vN8qL2": {
+            "name": "KALLAX Shelf Unit",
+            "brand": ["IKEA", "4vN8aQ1z"],
+            "description": "A versatile cube shelf unit suitable for books, storage boxes, decorations, and everyday organization.",
+            "product-href": ["", "", "", ""],
+            "price": {"real": 89},
+            "preferences": {
+                "rating": 4.8,
+                "reviews": [84.7, "k"],
+                "overall": [[5, 80], [4, 14], [3, 4], [2, 1], [1, 1]]
+            },
+            "variants": {
+                "color": [["White", "#F5F5F0"], ["Black-Brown", "#3A3028"], ["Oak Effect", "#C9A77A"]],
+                "variants": ["2x2", "4x2", "4x4"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [2, "d"],
+                "max-amount": 5,
+                "free-shipping": true,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Category", "Storage furniture"],
+                ["Material", "Particleboard and fibreboard"],
+                ["Compartments", "8"],
+                ["Width", "77 cm"],
+                ["Height", "147 cm"],
+                ["Depth", "39 cm"],
+                ["Assembly", "Required"],
+                ["Use", "Living room and bedroom"]
+            ]
+        },
+
+        "B7mK3xP9": {
+            "name": "BILLY Bookcase",
+            "brand": ["IKEA", "4vN8aQ1z"],
+            "description": "A simple and adaptable bookcase designed for books, decorations, and storage throughout the home.",
+            "product-href": ["", "", "", ""],
+            "price": {"real": 69},
+            "preferences": {
+                "rating": 4.7,
+                "reviews": [126.5, "k"],
+                "overall": [[5, 77], [4, 16], [3, 5], [2, 1], [1, 1]]
+            },
+            "variants": {
+                "color": [["White", "#F5F5F0"], ["Black-Brown", "#3A3028"], ["Oak Effect", "#C9A77A"]],
+                "variants": ["40x28x106 cm", "80x28x202 cm"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [24, "h"],
+                "max-amount": 5,
+                "free-shipping": true,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Category", "Bookcase"],
+                ["Material", "Particleboard"],
+                ["Shelves", "Adjustable"],
+                ["Width", "80 cm"],
+                ["Height", "202 cm"],
+                ["Depth", "28 cm"],
+                ["Assembly", "Required"],
+                ["Use", "Books and storage"]
+            ]
+        },
+
+        "C2rL6vQ5": {
+            "name": "MALM 6-Drawer Chest",
+            "brand": ["IKEA", "4vN8aQ1z"],
+            "description": "A clean-lined six-drawer chest providing generous storage for clothing, linens, and personal belongings.",
+            "product-href": ["", "", "", ""],
+            "price": {"real": 179},
+            "preferences": {
+                "rating": 4.6,
+                "reviews": [72.4, "k"],
+                "overall": [[5, 72], [4, 18], [3, 6], [2, 3], [1, 1]]
+            },
+            "variants": {
+                "color": [["White", "#F5F5F0"], ["Black-Brown", "#3A3028"], ["Oak Veneer", "#B58B5A"]],
+                "variants": ["6 drawers"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [2, "d"],
+                "max-amount": 3,
+                "free-shipping": true,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Category", "Bedroom storage"],
+                ["Material", "Particleboard and fibreboard"],
+                ["Drawers", "6"],
+                ["Width", "160 cm"],
+                ["Height", "78 cm"],
+                ["Depth", "48 cm"],
+                ["Assembly", "Required"],
+                ["Use", "Bedroom"]
+            ]
+        },
+
+        "D9pX4mK7": {
+            "name": "LACK Side Table",
+            "brand": ["IKEA", "4vN8aQ1z"],
+            "description": "A lightweight and affordable side table with a simple design that works beside sofas, beds, and armchairs.",
+            "product-href": ["", "", "", ""],
+            "price": {"real": 19},
+            "preferences": {
+                "rating": 4.5,
+                "reviews": [91.3, "k"],
+                "overall": [[5, 68], [4, 20], [3, 8], [2, 3], [1, 1]]
+            },
+            "variants": {
+                "color": [["White", "#F5F5F0"], ["Black", "#171717"], ["Oak Effect", "#C9A77A"]],
+                "variants": ["35x35 cm", "55x55 cm"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [24, "h"],
+                "max-amount": 10,
+                "free-shipping": false,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Category", "Table"],
+                ["Material", "Particleboard"],
+                ["Shape", "Square"],
+                ["Height", "45 cm"],
+                ["Width", "55 cm"],
+                ["Depth", "55 cm"],
+                ["Assembly", "Required"],
+                ["Use", "Living room and bedroom"]
+            ]
+        },
+
+        "E5qN8rL3": {
+            "name": "POÄNG Armchair",
+            "brand": ["IKEA", "4vN8aQ1z"],
+            "description": "A comfortable armchair with a flexible frame and supportive high back, designed for relaxing and reading.",
+            "product-href": ["", "", "", ""],
+            "price": {"real": 149},
+            "preferences": {
+                "rating": 4.8,
+                "reviews": [108.2, "k"],
+                "overall": [[5, 82], [4, 12], [3, 4], [2, 1], [1, 1]]
+            },
+            "variants": {
+                "color": [["Birch / Beige", "#D7C7A7"], ["Black / Grey", "#555555"], ["Oak / Green", "#65705C"]],
+                "variants": ["Standard"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [2, "d"],
+                "max-amount": 3,
+                "free-shipping": true,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Category", "Armchair"],
+                ["Frame", "Layer-glued bent wood"],
+                ["Cover", "Removable fabric"],
+                ["Seat", "Cushioned"],
+                ["Back", "High back"],
+                ["Armrests", "Integrated"],
+                ["Assembly", "Required"],
+                ["Use", "Living room"]
+            ]
+        },
+
+        "F8kM2vP6": {
+            "name": "EKTORP 3-Seat Sofa",
+            "brand": ["IKEA", "4vN8aQ1z"],
+            "description": "A spacious three-seat sofa with deep cushions and removable covers designed for comfortable everyday use.",
+            "product-href": ["", "", "", ""],
+            "price": {"real": 499},
+            "preferences": {
+                "rating": 4.7,
+                "reviews": [48.5, "k"],
+                "overall": [[5, 77], [4, 15], [3, 5], [2, 2], [1, 1]]
+            },
+            "variants": {
+                "color": [["Light Beige", "#D8D0C0"], ["Dark Grey", "#555555"], ["Blue", "#536D89"]],
+                "variants": ["3-seat"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [3, "d"],
+                "max-amount": 2,
+                "free-shipping": true,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Category", "Sofa"],
+                ["Seats", "3"],
+                ["Cover", "Removable and washable"],
+                ["Frame", "Wood and fibreboard"],
+                ["Cushion", "Foam and fibre"],
+                ["Width", "218 cm"],
+                ["Depth", "88 cm"],
+                ["Use", "Living room"]
+            ]
+        },
+
+        "G3xR7qN9": {
+            "name": "HEMNES Bed Frame",
+            "brand": ["IKEA", "4vN8aQ1z"],
+            "description": "A traditional-style bed frame with a sturdy construction and timeless design for bedrooms.",
+            "product-href": ["", "", "", ""],
+            "price": {"real": 299},
+            "preferences": {
+                "rating": 4.6,
+                "reviews": [63.1, "k"],
+                "overall": [[5, 73], [4, 17], [3, 6], [2, 3], [1, 1]]
+            },
+            "variants": {
+                "color": [["White", "#F5F5F0"], ["Black-Brown", "#3A3028"]],
+                "variants": ["90x200 cm", "140x200 cm", "160x200 cm", "180x200 cm"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [3, "d"],
+                "max-amount": 3,
+                "free-shipping": true,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Category", "Bed frame"],
+                ["Material", "Solid pine"],
+                ["Headboard", "Slatted"],
+                ["Footboard", "Included"],
+                ["Mattress", "Sold separately"],
+                ["Height", "Approx. 100 cm"],
+                ["Assembly", "Required"],
+                ["Use", "Bedroom"]
+            ]
+        },
+
+        "H6pL4mK2": {
+            "name": "MALM Bed Frame",
+            "brand": ["IKEA", "4vN8aQ1z"],
+            "description": "A minimalist bed frame with a clean silhouette and practical under-bed space for bedroom storage.",
+            "product-href": ["", "", "", ""],
+            "price": {"real": 249},
+            "preferences": {
+                "rating": 4.7,
+                "reviews": [97.8, "k"],
+                "overall": [[5, 78], [4, 15], [3, 4], [2, 2], [1, 1]]
+            },
+            "variants": {
+                "color": [["White", "#F5F5F0"], ["Black-Brown", "#3A3028"], ["Oak Veneer", "#B58B5A"]],
+                "variants": ["140x200 cm", "160x200 cm", "180x200 cm"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [3, "d"],
+                "max-amount": 3,
+                "free-shipping": true,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Category", "Bed frame"],
+                ["Material", "Particleboard and fibreboard"],
+                ["Storage", "Under-bed space"],
+                ["Headboard", "Integrated"],
+                ["Mattress", "Sold separately"],
+                ["Height", "Approx. 100 cm"],
+                ["Assembly", "Required"],
+                ["Use", "Bedroom"]
+            ]
+        },
+
+        "J9vQ5xR8": {
+            "name": "MICKE Desk",
+            "brand": ["IKEA", "4vN8aQ1z"],
+            "description": "A compact desk with integrated cable management and storage, suitable for studying, working, or computing.",
+            "product-href": ["", "", "", ""],
+            "price": {"real": 99},
+            "preferences": {
+                "rating": 4.6,
+                "reviews": [54.9, "k"],
+                "overall": [[5, 73], [4, 17], [3, 6], [2, 3], [1, 1]]
+            },
+            "variants": {
+                "color": [["White", "#F5F5F0"], ["Black-Brown", "#3A3028"]],
+                "variants": ["73x50 cm", "105x50 cm", "142x50 cm"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [2, "d"],
+                "max-amount": 5,
+                "free-shipping": true,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Category", "Desk"],
+                ["Material", "Particleboard"],
+                ["Cable management", "Integrated"],
+                ["Storage", "Drawer and cabinet"],
+                ["Width", "105 cm"],
+                ["Depth", "50 cm"],
+                ["Assembly", "Required"],
+                ["Use", "Study and office"]
+            ]
+        },
+
+        "K2mP7nL4": {
+            "name": "BEKANT Desk",
+            "brand": ["IKEA", "4vN8aQ1z"],
+            "description": "A spacious work desk designed for offices and home workspaces, providing generous room for computers and accessories.",
+            "product-href": ["", "", "", ""],
+            "price": {"real": 279},
+            "preferences": {
+                "rating": 4.5,
+                "reviews": [31.8, "k"],
+                "overall": [[5, 68], [4, 20], [3, 8], [2, 3], [1, 1]]
+            },
+            "variants": {
+                "color": [["White", "#F5F5F0"], ["Black-Brown", "#3A3028"], ["Birch", "#C8A77A"]],
+                "variants": ["120x80 cm", "160x80 cm"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [3, "d"],
+                "max-amount": 3,
+                "free-shipping": true,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Category", "Office desk"],
+                ["Material", "Particleboard and veneer"],
+                ["Legs", "Steel"],
+                ["Shape", "Rectangular"],
+                ["Width", "160 cm"],
+                ["Depth", "80 cm"],
+                ["Cable management", "Available"],
+                ["Use", "Office and home workspace"]
+            ]
+        },
+
+        "L8qX3vM5": {
+            "name": "MARKUS Office Chair",
+            "brand": ["IKEA", "4vN8aQ1z"],
+            "description": "An ergonomic office chair with a tall backrest, adjustable features, and breathable mesh for extended desk work.",
+            "product-href": ["", "", "", ""],
+            "price": {"real": 249},
+            "preferences": {
+                "rating": 4.6,
+                "reviews": [86.1, "k"],
+                "overall": [[5, 72], [4, 18], [3, 6], [2, 3], [1, 1]]
+            },
+            "variants": {
+                "color": [["Black", "#171717"], ["Dark Grey", "#555555"]],
+                "variants": ["Standard"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [2, "d"],
+                "max-amount": 3,
+                "free-shipping": true,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Category", "Office chair"],
+                ["Backrest", "Mesh"],
+                ["Armrests", "Fixed"],
+                ["Height", "Adjustable"],
+                ["Tilt", "Adjustable"],
+                ["Base", "Five-star"],
+                ["Wheels", "Casters"],
+                ["Use", "Office and study"]
+            ]
+        },
+
+        "M4rK9pQ2": {
+            "name": "BÄCKEN Office Chair",
+            "brand": ["IKEA", "4vN8aQ1z"],
+            "description": "A compact office chair with a supportive backrest and adjustable seat height for everyday desk work.",
+            "product-href": ["", "", "", ""],
+            "price": {"real": 129},
+            "preferences": {
+                "rating": 4.4,
+                "reviews": [19.5, "k"],
+                "overall": [[5, 65], [4, 21], [3, 9], [2, 3], [1, 2]]
+            },
+            "variants": {
+                "color": [["Black", "#171717"], ["Beige", "#D7C8B2"]],
+                "variants": ["Standard"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [2, "d"],
+                "max-amount": 5,
+                "free-shipping": false,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Category", "Office chair"],
+                ["Seat", "Padded"],
+                ["Backrest", "Fabric"],
+                ["Height", "Adjustable"],
+                ["Base", "Five-star"],
+                ["Wheels", "Casters"],
+                ["Assembly", "Required"],
+                ["Use", "Study and office"]
+            ]
+        },
+
+        "N7xL5mR8": {
+            "name": "LISABO Dining Table",
+            "brand": ["IKEA", "4vN8aQ1z"],
+            "description": "A lightweight-looking dining table with a clean Scandinavian-inspired design for everyday meals and gatherings.",
+            "product-href": ["", "", "", ""],
+            "price": {"real": 299},
+            "preferences": {
+                "rating": 4.7,
+                "reviews": [37.6, "k"],
+                "overall": [[5, 78], [4, 15], [3, 4], [2, 2], [1, 1]]
+            },
+            "variants": {
+                "color": [["Ash", "#D0B891"], ["Black", "#171717"]],
+                "variants": ["140 cm", "180 cm"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [3, "d"],
+                "max-amount": 3,
+                "free-shipping": true,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Category", "Dining table"],
+                ["Material", "Ash veneer"],
+                ["Seats", "4-6"],
+                ["Shape", "Rectangular"],
+                ["Length", "140 cm"],
+                ["Width", "78 cm"],
+                ["Assembly", "Required"],
+                ["Use", "Dining room"]
+            ]
+        },
+
+        "Q3vP8kM6": {
+            "name": "INGO Dining Table",
+            "brand": ["IKEA", "4vN8aQ1z"],
+            "description": "A simple solid wood dining table offering a practical surface for everyday meals and activities.",
+            "product-href": ["", "", "", ""],
+            "price": {"real": 199},
+            "preferences": {
+                "rating": 4.5,
+                "reviews": [21.7, "k"],
+                "overall": [[5, 69], [4, 20], [3, 7], [2, 3], [1, 1]]
+            },
+            "variants": {
+                "color": [["Pine", "#C89B63"]],
+                "variants": ["120x75 cm"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [2, "d"],
+                "max-amount": 4,
+                "free-shipping": false,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Category", "Dining table"],
+                ["Material", "Solid pine"],
+                ["Seats", "4"],
+                ["Shape", "Rectangular"],
+                ["Length", "120 cm"],
+                ["Width", "75 cm"],
+                ["Assembly", "Required"],
+                ["Use", "Dining and kitchen"]
+            ]
+        },
+
+        "R6mX2qL9": {
+            "name": "ODGER Chair",
+            "brand": ["IKEA", "4vN8aQ1z"],
+            "description": "A lightweight dining chair with a molded seat and comfortable curved shape designed for everyday dining.",
+            "product-href": ["", "", "", ""],
+            "price": {"real": 89},
+            "preferences": {
+                "rating": 4.6,
+                "reviews": [26.4, "k"],
+                "overall": [[5, 74], [4, 17], [3, 6], [2, 2], [1, 1]]
+            },
+            "variants": {
+                "color": [["Anthracite", "#353535"], ["White", "#F5F5F0"], ["Brown", "#7A5A3A"]],
+                "variants": ["Standard"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [24, "h"],
+                "max-amount": 8,
+                "free-shipping": false,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Category", "Dining chair"],
+                ["Seat", "Molded composite"],
+                ["Backrest", "Curved"],
+                ["Material", "Wood and recycled plastic composite"],
+                ["Armrests", "None"],
+                ["Stackable", "No"],
+                ["Assembly", "Required"],
+                ["Use", "Dining room"]
+            ]
+        },
+
+        "S9kN4vP7": {
+            "name": "NORDEN Gateleg Table",
+            "brand": ["IKEA", "4vN8aQ1z"],
+            "description": "A flexible dining table with foldable leaves that can be expanded or compacted according to available space.",
+            "product-href": ["", "", "", ""],
+            "price": {"real": 349},
+            "preferences": {
+                "rating": 4.7,
+                "reviews": [34.2, "k"],
+                "overall": [[5, 78], [4, 15], [3, 4], [2, 2], [1, 1]]
+            },
+            "variants": {
+                "color": [["Birch", "#C9A878"], ["White", "#F5F5F0"]],
+                "variants": ["26/89/152x80 cm"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [3, "d"],
+                "max-amount": 3,
+                "free-shipping": true,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Category", "Extendable dining table"],
+                ["Material", "Solid wood"],
+                ["Leaves", "2 folding leaves"],
+                ["Seats", "2-6"],
+                ["Width", "80 cm"],
+                ["Length", "26-152 cm"],
+                ["Assembly", "Required"],
+                ["Use", "Small dining spaces"]
+            ]
+        },
+
+        "T2qM6xR5": {
+            "name": "RÅVAROR Sofa Bed",
+            "brand": ["IKEA", "4vN8aQ1z"],
+            "description": "A compact modular furniture piece that can function as both seating and a sleeping surface in smaller spaces.",
+            "product-href": ["", "", "", ""],
+            "price": {"real": 399},
+            "preferences": {
+                "rating": 4.5,
+                "reviews": [12.7, "k"],
+                "overall": [[5, 69], [4, 19], [3, 7], [2, 3], [1, 2]]
+            },
+            "variants": {
+                "color": [["Grey", "#777777"], ["Blue", "#4D637C"]],
+                "variants": ["Single"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [3, "d"],
+                "max-amount": 2,
+                "free-shipping": true,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Category", "Sofa bed"],
+                ["Frame", "Steel"],
+                ["Cover", "Fabric"],
+                ["Function", "Sofa and bed"],
+                ["Storage", "Under-seat storage"],
+                ["Mattress", "Included"],
+                ["Assembly", "Required"],
+                ["Use", "Small apartments"]
+            ]
+        },
+
+        "U8pL3kN7": {
+            "name": "BRIMNES TV Bench",
+            "brand": ["IKEA", "4vN8aQ1z"],
+            "description": "A practical TV bench with enclosed storage and cable-management features for living-room entertainment setups.",
+            "product-href": ["", "", "", ""],
+            "price": {"real": 149},
+            "preferences": {
+                "rating": 4.6,
+                "reviews": [42.8, "k"],
+                "overall": [[5, 72], [4, 18], [3, 6], [2, 3], [1, 1]]
+            },
+            "variants": {
+                "color": [["White", "#F5F5F0"], ["Black", "#171717"]],
+                "variants": ["120 cm", "180 cm"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [2, "d"],
+                "max-amount": 5,
+                "free-shipping": true,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Category", "TV furniture"],
+                ["Material", "Particleboard"],
+                ["Storage", "Cabinets and shelves"],
+                ["Cable management", "Integrated"],
+                ["Width", "120 cm"],
+                ["Height", "53 cm"],
+                ["Depth", "41 cm"],
+                ["Use", "Living room"]
+            ]
+        },
+
+        "V5mQ9rX2": {
+            "name": "BESTÅ Storage Combination",
+            "brand": ["IKEA", "4vN8aQ1z"],
+            "description": "A modular storage combination offering flexible cabinets and shelves for organizing living-room belongings and media equipment.",
+            "product-href": ["", "", "", ""],
+            "price": {"real": 399},
+            "preferences": {
+                "rating": 4.6,
+                "reviews": [29.4, "k"],
+                "overall": [[5, 73], [4, 17], [3, 6], [2, 3], [1, 1]]
+            },
+            "variants": {
+                "color": [["White", "#F5F5F0"], ["Black-Brown", "#3A3028"]],
+                "variants": ["120 cm", "180 cm", "240 cm"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [3, "d"],
+                "max-amount": 3,
+                "free-shipping": true,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Category", "Storage system"],
+                ["Material", "Particleboard"],
+                ["Doors", "Included"],
+                ["Shelves", "Adjustable"],
+                ["Width", "180 cm"],
+                ["Height", "192 cm"],
+                ["Depth", "40 cm"],
+                ["Use", "Living room"]
+            ]
+        },
+
+        "W3kP7vL8": {
+            "name": "BROR Shelving Unit",
+            "brand": ["IKEA", "4vN8aQ1z"],
+            "description": "A sturdy open shelving system designed for garages, utility rooms, storage areas, and workshops.",
+            "product-href": ["", "", "", ""],
+            "price": {"real": 249},
+            "preferences": {
+                "rating": 4.7,
+                "reviews": [18.6, "k"],
+                "overall": [[5, 78], [4, 15], [3, 4], [2, 2], [1, 1]]
+            },
+            "variants": {
+                "color": [["Black", "#171717"], ["Galvanized", "#B7B7B7"]],
+                "variants": ["85x40x190 cm", "170x40x190 cm"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [3, "d"],
+                "max-amount": 5,
+                "free-shipping": true,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Category", "Shelving"],
+                ["Material", "Steel"],
+                ["Shelves", "Adjustable"],
+                ["Load capacity", "Up to 70 kg per shelf"],
+                ["Width", "85 cm"],
+                ["Height", "190 cm"],
+                ["Depth", "40 cm"],
+                ["Use", "Garage and storage"]
+            ]
+        },
+
+        "X9rM2qK6": {
+            "name": "TROFAST Storage Combination",
+            "brand": ["IKEA", "4vN8aQ1z"],
+            "description": "A practical children's storage system with accessible bins designed to keep toys, books, and games organized.",
+            "product-href": ["", "", "", ""],
+            "price": {"real": 129},
+            "preferences": {
+                "rating": 4.8,
+                "reviews": [47.2, "k"],
+                "overall": [[5, 81], [4, 13], [3, 4], [2, 1], [1, 1]]
+            },
+            "variants": {
+                "color": [["White / Grey", "#E8E8E5"], ["Pine / White", "#C69B67"]],
+                "variants": ["Small", "Large"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [2, "d"],
+                "max-amount": 5,
+                "free-shipping": true,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Category", "Children's storage"],
+                ["Material", "Pine and particleboard"],
+                ["Bins", "Included"],
+                ["Shelves", "Accessible"],
+                ["Height", "Variable"],
+                ["Assembly", "Required"],
+                ["Safety", "Rounded edges"],
+                ["Use", "Children's room"]
+            ]
+        },
+
+        "Y4vL8pN3": {
+            "name": "SMÅSTAD Storage Bench",
+            "brand": ["IKEA", "4vN8aQ1z"],
+            "description": "A multifunctional children's storage bench that provides seating and organized storage for toys and clothing.",
+            "product-href": ["", "", "", ""],
+            "price": {"real": 119},
+            "preferences": {
+                "rating": 4.6,
+                "reviews": [16.8, "k"],
+                "overall": [[5, 74], [4, 17], [3, 6], [2, 2], [1, 1]]
+            },
+            "variants": {
+                "color": [["White", "#F5F5F0"], ["White / Green", "#D8E2D4"]],
+                "variants": ["60 cm", "90 cm"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [2, "d"],
+                "max-amount": 5,
+                "free-shipping": false,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Category", "Children's storage"],
+                ["Material", "Particleboard"],
+                ["Storage", "Cabinet"],
+                ["Seat", "Integrated"],
+                ["Width", "90 cm"],
+                ["Height", "50 cm"],
+                ["Assembly", "Required"],
+                ["Use", "Children's room"]
+            ]
+        },
+
+        "Z7mK5xQ9": {
+            "name": "FÄRGSTARK Rug",
+            "brand": ["IKEA", "4vN8aQ1z"],
+            "description": "A soft decorative rug designed to add warmth, texture, and visual interest to living spaces.",
+            "product-href": ["", "", "", ""],
+            "price": {"real": 79},
+            "preferences": {
+                "rating": 4.5,
+                "reviews": [14.8, "k"],
+                "overall": [[5, 69], [4, 20], [3, 7], [2, 3], [1, 1]]
+            },
+            "variants": {
+                "color": [["Beige", "#D5C6AE"], ["Grey", "#888888"], ["Blue", "#637A94"]],
+                "variants": ["133x195 cm", "160x230 cm"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [2, "d"],
+                "max-amount": 5,
+                "free-shipping": false,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Category", "Rug"],
+                ["Material", "Polypropylene"],
+                ["Pile", "Low pile"],
+                ["Backing", "Latex"],
+                ["Width", "160 cm"],
+                ["Length", "230 cm"],
+                ["Care", "Vacuum regularly"],
+                ["Use", "Living room and bedroom"]
+            ]
+        },
+
+        "A8qR3vM6": {
+            "name": "STOCKHOLM Mirror",
+            "brand": ["IKEA", "4vN8aQ1z"],
+            "description": "A large decorative mirror with a simple frame that can visually expand and brighten a room.",
+            "product-href": ["", "", "", ""],
+            "price": {"real": 149},
+            "preferences": {
+                "rating": 4.7,
+                "reviews": [22.1, "k"],
+                "overall": [[5, 78], [4, 15], [3, 4], [2, 2], [1, 1]]
+            },
+            "variants": {
+                "color": [["Walnut Effect", "#6B4B35"], ["Black", "#171717"]],
+                "variants": ["80x180 cm"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [3, "d"],
+                "max-amount": 3,
+                "free-shipping": true,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Category", "Mirror"],
+                ["Frame", "Wood veneer"],
+                ["Shape", "Rectangular"],
+                ["Width", "80 cm"],
+                ["Height", "180 cm"],
+                ["Glass", "Safety-backed"],
+                ["Mounting", "Wall mounting"],
+                ["Use", "Bedroom and hallway"]
+            ]
+        },
+
+        "B5pL9kX2": {
+            "name": "RANARP Work Lamp",
+            "brand": ["IKEA", "4vN8aQ1z"],
+            "description": "An adjustable task lamp with an industrial-inspired appearance, suitable for desks, worktops, and study areas.",
+            "product-href": ["", "", "", ""],
+            "price": {"real": 39},
+            "preferences": {
+                "rating": 4.6,
+                "reviews": [28.3, "k"],
+                "overall": [[5, 74], [4, 17], [3, 6], [2, 2], [1, 1]]
+            },
+            "variants": {
+                "color": [["Black", "#171717"], ["White", "#F5F5F0"]],
+                "variants": ["Table lamp", "Clamp lamp"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [24, "h"],
+                "max-amount": 10,
+                "free-shipping": false,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Category", "Desk lamp"],
+                ["Material", "Steel"],
+                ["Bulb", "LED recommended"],
+                ["Shade", "Adjustable"],
+                ["Switch", "On/off switch"],
+                ["Cord", "Included"],
+                ["Base", "Weighted"],
+                ["Use", "Desk and workspace"]
+            ]
+        },
+
+        "C7mN4qP8": {
+            "name": "FADO Table Lamp",
+            "brand": ["IKEA", "4vN8aQ1z"],
+            "description": "A simple spherical table lamp designed to provide soft ambient lighting in bedrooms, living rooms, and other spaces.",
+            "product-href": ["", "", "", ""],
+            "price": {"real": 29},
+            "preferences": {
+                "rating": 4.7,
+                "reviews": [33.6, "k"],
+                "overall": [[5, 79], [4, 14], [3, 4], [2, 2], [1, 1]]
+            },
+            "variants": {
+                "color": [["White", "#F5F5F5"], ["Black", "#171717"]],
+                "variants": ["Standard"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [24, "h"],
+                "max-amount": 10,
+                "free-shipping": false,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Category", "Table lamp"],
+                ["Shade", "Glass"],
+                ["Shape", "Sphere"],
+                ["Light", "Diffused"],
+                ["Bulb", "LED"],
+                ["Switch", "Cord switch"],
+                ["Diameter", "25 cm"],
+                ["Use", "Ambient lighting"]
             ]
         }
     }

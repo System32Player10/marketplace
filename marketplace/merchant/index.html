@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MarketPlace Merchant Login</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "primary-fixed": "#dae2fd",
+                "surface-bright": "#f8f9ff",
+                "on-primary-fixed-variant": "#3f465c",
+                "background": "#f8f9ff",
+                "primary-fixed-dim": "#bec6e0",
+                "surface-tint": "#565e74",
+                "surface-variant": "#d3e4fe",
+                "on-secondary-fixed-variant": "#004395",
+                "on-primary": "#ffffff",
+                "on-error": "#ffffff",
+                "inverse-on-surface": "#eaf1ff",
+                "on-primary-fixed": "#131b2e",
+                "surface-container-lowest": "#ffffff",
+                "on-tertiary": "#ffffff",
+                "on-surface-variant": "#45464d",
+                "on-secondary-container": "#fefcff",
+                "tertiary-fixed": "#e0e3e5",
+                "surface": "#f8f9ff",
+                "surface-container": "#e5eeff",
+                "primary-container": "#131b2e",
+                "on-tertiary-fixed": "#191c1e",
+                "surface-container-low": "#eff4ff",
+                "error-container": "#ffdad6",
+                "secondary-container": "#2170e4",
+                "error": "#ba1a1a",
+                "tertiary-container": "#191c1e",
+                "secondary-fixed-dim": "#adc6ff",
+                "on-secondary-fixed": "#001a42",
+                "inverse-primary": "#bec6e0",
+                "tertiary": "#000000",
+                "surface-container-highest": "#d3e4fe",
+                "outline-variant": "#c6c6cd",
+                "primary": "#000000",
+                "tertiary-fixed-dim": "#c4c7c9",
+                "on-background": "#0b1c30",
+                "inverse-surface": "#213145",
+                "on-error-container": "#93000a",
+                "outline": "#76777d",
+                "on-secondary": "#ffffff",
+                "on-tertiary-fixed-variant": "#444749",
+                "secondary": "#0058be",
+                "secondary-fixed": "#d8e2ff",
+                "on-primary-container": "#7c839b",
+                "on-surface": "#0b1c30",
+                "surface-container-high": "#dce9ff",
+                "on-tertiary-container": "#818486",
+                "surface-dim": "#cbdbf5"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+        },
+        "spacing": {
+                "margin-mobile": "16px",
+                "md": "24px",
+                "xl": "80px",
+                "base": "4px",
+                "lg": "48px",
+                "sm": "16px",
+                "xs": "8px",
+                "gutter": "24px",
+                "margin-desktop": "64px"
+        },
+        "fontFamily": {
+                "label-md": [
+                        "Hanken Grotesk"
+                ],
+                "headline-lg": [
+                        "Manrope"
+                ],
+                "body-md": [
+                        "Hanken Grotesk"
+                ],
+                "body-lg": [
+                        "Hanken Grotesk"
+                ],
+                "headline-md": [
+                        "Manrope"
+                ],
+                "headline-lg-mobile": [
+                        "Manrope"
+                ],
+                "label-sm": [
+                        "Hanken Grotesk"
+                ],
+                "headline-xl": [
+                        "Manrope"
+                ],
+                "segoe": ["Segoe UI Semibold", "Segoe UI", "sans-serif"]
+        },
+        "fontSize": {
+                "label-md": [
+                        "14px",
+                        {
+                                "lineHeight": "20px",
+                                "letterSpacing": "0.01em",
+                                "fontWeight": "500"
+                        }
+                ],
+                "headline-lg": [
+                        "32px",
+                        {
+                                "lineHeight": "40px",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-md": [
+                        "24px",
+                        {
+                                "lineHeight": "32px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-lg-mobile": [
+                        "28px",
+                        {
+                                "lineHeight": "36px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "label-sm": [
+                        "12px",
+                        {
+                                "lineHeight": "16px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-xl": [
+                        "48px",
+                        {
+                                "lineHeight": "56px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+      </style>
+</head>
+<body class="bg-surface-container-lowest text-on-surface antialiased min-h-screen flex flex-col font-body-md text-body-md">
+<!-- Navbar -->
+<header class="w-full flex justify-between items-center px-margin-mobile md:px-margin-desktop py-md border-b border-surface-variant bg-surface-container-lowest/80 backdrop-blur-md z-50 fixed top-0">
+<div class="flex items-center gap-2">
+<span class="font-body-lg text-headline-md font-bold text-on-surface tracking-tight" style="font-family: 'Hanken Grotesk', sans-serif;">MarketPlace</span>
+<span class="font-segoe text-headline-md font-semibold text-secondary">Merchant</span>
+</div>
+<div class="flex items-center gap-sm">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors py-2 px-4 rounded" href="#">Login</a>
+<a class="font-label-md text-label-md bg-primary text-on-primary hover:bg-primary-container transition-colors py-2 px-4 rounded-lg shadow-sm" href="#">Register</a>
+</div>
+</header>
+<!-- Main Content -->
+<main id="body-main" class="flex-grow flex items-center justify-center relative w-full h-screen overflow-hidden pt-[80px]">
+<!-- Background Image -->
+<div class="absolute inset-0 z-0">
+<div id="bg" class="w-full h-full" style="background-image: url(img0.jpg); background-size: 150%;"></div>
+<div class="absolute inset-0 bg-surface-container-low/10 backdrop-blur-[1px]"></div>
+</div>
+<div class="relative z-10 w-full h-full flex flex-col md:flex-row px-margin-mobile md:px-margin-desktop">
+<!-- Left Side: Branding & Value Prop -->
+<div class="flex-1 flex flex-col justify-center text-white p-8 md:p-12">
+<div class="mb-8">
+<h1 class="flex items-baseline gap-2 mb-6">
+<span class="font-headline-xl text-headline-xl font-bold tracking-tight" style="font-family: 'Hanken Grotesk', sans-serif;">MarketPlace</span>
+<span class="font-segoe font-headline-xl text-headline-xl font-semibold text-secondary-fixed">Merchant</span>
+</h1>
+<p class="font-body-lg text-body-lg text-surface-bright max-w-lg mb-6 leading-relaxed">
+                Unlock the power of your business with our intuitive merchant platform. Manage inventory, track sales, and connect with millions of customers effortlessly.
+            </p>
+<p class="font-body-lg text-body-lg text-surface-bright max-w-lg leading-relaxed">
+                Join a community of successful sellers and take your store to the next level. We provide the tools; you bring the vision.
+            </p>
+</div>
+</div>
+<!-- Right Side: Floating Login Card -->
+<div class="flex-1 flex items-center justify-center md:justify-end p-4 md:p-8">
+<div class="w-full max-w-[480px] p-10 md:p-12 bg-white/70 backdrop-blur-xl rounded-3xl border border-white/40 shadow-[0_32px_64px_rgba(0,0,0,0.1),0_16px_32px_rgba(0,0,0,0.05)]">
+<div class="mb-8 text-center">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-2 font-segoe">Welcome back</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Sign in to your MarketPlace Merchant account to manage your store.</p>
+</div>
+<form class="space-y-6" id="login-form">
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-2" for="email">Email or Username</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant/70">mail</span>
+<input class="w-full pl-10 pr-4 py-3 bg-white/50 border border-outline-variant/30 focus:border-secondary focus:bg-white/80 rounded-xl hover:bg-white/60 transition-all font-body-md text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-secondary/20 shadow-sm" id="email" name="email" placeholder="merchant@example.com" required="" type="email"/>
+</div>
+</div>
+<div>
+<div class="flex justify-between items-center mb-2">
+<label class="block font-label-md text-label-md text-on-surface" for="password">Password</label>
+<a class="font-label-sm text-label-sm text-secondary hover:text-secondary-container transition-colors" href="#">Forgot Password?</a>
+</div>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant/70">lock</span>
+<input id="password-box" class="w-full pl-10 pr-10 py-3 bg-white/50 border border-outline-variant/30 focus:border-secondary focus:bg-white/80 rounded-xl hover:bg-white/60 transition-all font-body-md text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-secondary/20 shadow-sm" id="password" name="password" placeholder="••••••••" required="" type="password"/>
+<button id="show-pass" class="absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant hover:text-on-surface focus:outline-none" type="button">
+<span class="material-symbols-outlined">visibility_off</span>
+</button>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-2">
+<input class="w-4 h-4 rounded border-outline-variant text-secondary focus:ring-secondary/20 cursor-pointer" id="remember" name="remember" type="checkbox"/>
+<label class="font-body-md text-body-md text-on-surface-variant cursor-pointer select-none" for="remember">Remember me for 30 days</label>
+</div>
+<button id="login-btn" class="w-full bg-primary text-on-primary font-label-md text-label-md py-3 mt-4 rounded-xl hover:bg-primary-container transition-all shadow-md hover:shadow-lg active:scale-[0.98]">
+                                    Sign In
+                                </button>
+</form>
+<div class="mt-8 text-center border-t border-outline-variant/20 pt-6">
+<p class="font-body-md text-body-md text-on-surface-variant">
+                                    Don't have an account? <a class="text-secondary font-semibold hover:underline" href="#">Register now</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<script>
+document.getElementById("login-btn").addEventListener("click", function (event) {
+    window.location.href = "../store/?er=error_page_not_found";
+});
+
+const PASS = document.getElementById("password-box");
+
+document.getElementById("show-pass").addEventListener("click", () => {
+    let show = PASS.type === "password";
+    PASS.type = show ? "text" : "password";
+});
+</script>
+<!-- Footer from JSON (Contextually hidden as this is a transactional page, but included per instructions if mandatory, however instruction says to exclude shell if linear/transactional. Suppressing footer per Semantic Shell Mandate) -->
+</body></html>
