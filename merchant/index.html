@@ -245,10 +245,10 @@
 <input class="w-4 h-4 rounded border-outline-variant text-secondary focus:ring-secondary/20 cursor-pointer" id="remember" name="remember" type="checkbox"/>
 <label class="font-body-md text-body-md text-on-surface-variant cursor-pointer select-none" for="remember">Remember me for 30 days</label>
 </div>
+</form>
 <button id="login-btn" class="w-full bg-primary text-on-primary font-label-md text-label-md py-3 mt-4 rounded-xl hover:bg-primary-container transition-all shadow-md hover:shadow-lg active:scale-[0.98]">
                                     Sign In
                                 </button>
-</form>
 <div class="mt-8 text-center border-t border-outline-variant/20 pt-6">
 <p class="font-body-md text-body-md text-on-surface-variant">
                                     Don't have an account? <a class="text-secondary font-semibold hover:underline" href="#">Register now</a>
@@ -259,7 +259,7 @@
 </div>
 </main>
 <script>
-document.getElementById("login-btn").addEventListener("click", function (event) {
+document.getElementById("login-btn").addEventListener("click", () => {
     window.location.href = "../store/?er=error_page_not_found";
 });
 

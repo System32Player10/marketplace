@@ -1,366 +1,2941 @@
 <!DOCTYPE html>
 
-<html lang="en"><head>
+<html class="light" lang="en">
+
+<head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>My Items - MarketPlace</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-          darkMode: "class",
-          theme: {
-            extend: {
-              "colors": {
-                      "secondary-container": "#2170e4",
-                      "primary": "#000000",
-                      "surface-bright": "#f8f9ff",
-                      "inverse-surface": "#213145",
-                      "surface-dim": "#cbdbf5",
-                      "on-surface": "#0b1c30",
-                      "on-primary-container": "#7c839b",
-                      "on-tertiary-fixed": "#191c1e",
-                      "on-background": "#0b1c30",
-                      "tertiary": "#000000",
-                      "surface-tint": "#565e74",
-                      "secondary-fixed": "#d8e2ff",
-                      "error-container": "#ffdad6",
-                      "primary-fixed-dim": "#bec6e0",
-                      "inverse-primary": "#bec6e0",
-                      "on-surface-variant": "#45464d",
-                      "error": "#ba1a1a",
-                      "tertiary-fixed": "#e0e3e5",
-                      "outline-variant": "#c6c6cd",
-                      "on-error": "#ffffff",
-                      "on-primary-fixed-variant": "#3f465c",
-                      "secondary-fixed-dim": "#adc6ff",
-                      "on-tertiary": "#ffffff",
-                      "on-primary-fixed": "#131b2e",
-                      "secondary": "#0058be",
-                      "surface-variant": "#d3e4fe",
-                      "on-secondary-fixed-variant": "#004395",
-                      "inverse-on-surface": "#eaf1ff",
-                      "on-secondary": "#ffffff",
-                      "surface-container-highest": "#d3e4fe",
-                      "on-secondary-fixed": "#001a42",
-                      "surface-container-high": "#dce9ff",
-                      "on-primary": "#ffffff",
-                      "surface-container-low": "#eff4ff",
-                      "on-error-container": "#93000a",
-                      "background": "#f8f9ff",
-                      "on-tertiary-container": "#818486",
-                      "surface": "#f8f9ff",
-                      "surface-container-lowest": "#ffffff",
-                      "on-tertiary-fixed-variant": "#444749",
-                      "primary-fixed": "#dae2fd",
-                      "primary-container": "#131b2e",
-                      "tertiary-fixed-dim": "#c4c7c9",
-                      "outline": "#76777d",
-                      "surface-container": "#e5eeff",
-                      "on-secondary-container": "#fefcff",
-                      "tertiary-container": "#191c1e"
-              },
-              "borderRadius": {
-                      "DEFAULT": "0.125rem",
-                      "lg": "0.25rem",
-                      "xl": "0.5rem",
-                      "full": "0.75rem"
-              },
-              "spacing": {
-                      "xl": "80px",
-                      "margin-desktop": "64px",
-                      "lg": "48px",
-                      "sm": "16px",
-                      "margin-mobile": "16px",
-                      "md": "24px",
-                      "xs": "8px",
-                      "gutter": "24px",
-                      "base": "4px"
-              },
-              "fontFamily": {
-                      "headline-lg": ["Manrope"],
-                      "body-lg": ["Hanken Grotesk"],
-                      "headline-xl": ["Manrope"],
-                      "headline-md": ["Manrope"],
-                      "headline-lg-mobile": ["Manrope"],
-                      "label-md": ["Hanken Grotesk"],
-                      "label-sm": ["Hanken Grotesk"],
-                      "body-md": ["Hanken Grotesk"]
-              },
-              "fontSize": {
-                      "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
-                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
-                      "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-                      "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
-                      "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
-                      "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
-                      "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
-                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
-              }
-            },
-          }
-        }
-    </script>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .material-symbols-outlined.fill {
-            font-variation-settings: 'FILL' 1;
-        }
-        
-        /* Tab transitions */
-        .tab-content { display: none; }
-        .tab-content.active { display: block; animation: fadeIn 0.3s ease-in-out; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
-    </style>
-</head>
-<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col antialiased">
-<!-- TopNavBar (Shared Component) -->
-<header class="bg-surface-container-lowest dark:bg-inverse-surface border-b border-outline-variant dark:border-outline w-full top-0 z-50 sticky transition-all">
-<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-base max-w-screen-2xl mx-auto z-50 h-[72px]">
-<div class="flex items-center gap-md">
-<!-- Brand Logo -->
-<a class="font-headline-md text-headline-md font-bold text-on-surface dark:text-inverse-on-surface tracking-tight" href="#">MarketPlace</a>
-<!-- Desktop Navigation Links -->
-<nav class="hidden md:flex items-center gap-md ml-lg">
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors font-label-md text-label-md" href="#">Categories</a>
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors font-label-md text-label-md" href="#">Deals</a>
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors font-label-md text-label-md" href="#">Sell</a>
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors font-label-md text-label-md" href="#">Help</a>
-</nav>
-</div>
-<!-- Search (on_left logic, placed centrally here for balance) -->
-<div class="hidden md:flex flex-1 max-w-md mx-md">
-<div class="relative w-full group">
-<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline-variant group-focus-within:text-secondary transition-colors">search</span>
-<input class="w-full bg-surface hover:bg-surface-container-lowest focus:bg-surface-container-lowest border border-outline-variant focus:border-secondary focus:ring-2 focus:ring-secondary/20 rounded-DEFAULT py-2 pl-10 pr-4 text-body-md text-on-surface placeholder-on-surface-variant transition-all outline-none" placeholder="Search products..." type="text"/>
-</div>
-</div>
-<div class="flex items-center gap-sm">
-<!-- Trailing Icons -->
-<button class="p-2 rounded-full text-secondary dark:text-secondary-fixed hover:bg-surface-variant dark:hover:bg-inverse-primary/10 transition-colors cursor-pointer active:opacity-80">
-<span class="material-symbols-outlined">notifications</span>
-</button>
-<button class="p-2 rounded-full text-secondary dark:text-secondary-fixed hover:bg-surface-variant dark:hover:bg-inverse-primary/10 transition-colors cursor-pointer active:opacity-80">
-<span class="material-symbols-outlined">favorite</span>
-</button>
-<button aria-label="Cart" class="p-2 rounded-full text-secondary font-bold border-b-2 border-secondary pb-1 dark:text-secondary-fixed dark:border-secondary-fixed transition-colors cursor-pointer active:opacity-80 relative">
-<span class="material-symbols-outlined">shopping_cart</span>
-<span class="absolute top-1 right-1 w-2 h-2 bg-error rounded-full"></span>
-</button>
-<!-- Profile Image -->
-<div class="w-8 h-8 rounded-full bg-surface-variant overflow-hidden ml-sm border border-outline-variant cursor-pointer">
-<img alt="User Profile" class="w-full h-full object-cover" data-alt="A professional headshot of a user smiling lightly against a neutral background. The lighting is soft and even, highlighting their features. The aesthetic is clean, modern, and suitable for a corporate marketplace avatar." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqmlD4A-bdvrdoHso1fpdOTGVFj6yxVZRDtgcIrHjyEzN11CNb1jDY0nsu0jyez8yy3M5AXkn5qdQej-JUtwph3C1-RCqlfKskg8Bp8JkigLCxIE3kKq2Ng8bsGMIgXrFU7D5WOvorA6T9bPd5SPwseoz_OPWuOHe9NXB-JxeJyo0Ch0sMzTf1UrWxCCuFOmj9w1-CsDKyiKj4d4Um6NniRR3QJDSB4eiV8WHwDhdi_VpW1lm22nPbog"/>
-</div>
-</div>
-</div>
-</header>
-<!-- Main Content Area -->
-<main class="flex-1 w-full max-w-screen-2xl mx-auto px-margin-mobile md:px-margin-desktop py-lg grid grid-cols-1 lg:grid-cols-12 gap-gutter">
-<!-- Header & Tabs -->
-<div class="col-span-1 lg:col-span-12 mb-md">
-<h1 class="font-headline-xl text-headline-xl text-on-surface mb-sm">My Items</h1>
-<div class="flex border-b border-outline-variant mt-md">
-<button class="px-md py-sm font-label-md text-label-md text-secondary font-bold border-b-2 border-secondary transition-all" id="tab-cart" onclick="switchTab('cart')">Cart (3)</button>
-<button class="px-md py-sm font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-all" id="tab-saved" onclick="switchTab('saved')">Saved for Later (2)</button>
-<button class="px-md py-sm font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-all" id="tab-favorites" onclick="switchTab('favorites')">Favorites (5)</button>
-</div>
-</div>
-<!-- Left Column: Items Lists -->
-<div class="col-span-1 lg:col-span-8 flex flex-col gap-md">
-<!-- Cart Section (Active by default) -->
-<div class="tab-content active" id="content-cart">
-<!-- Cart Item 1 -->
-<div class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT p-sm md:p-md flex flex-col sm:flex-row gap-md items-start group hover:shadow-sm transition-shadow">
-<div class="w-full sm:w-32 h-32 bg-surface-variant rounded-DEFAULT overflow-hidden shrink-0 border border-outline-variant/50">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A sleek, modern wireless noise-canceling headphone in matte black resting on a clean white surface. Soft, diffused lighting highlights the premium texture and minimalist design of the product, fitting a high-end corporate marketplace aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkvzcCU4buaXExWlVERj7ya4Z9_TDdwgvObPvBThv4RNF407o1qCIk7XoIJ5BZlg0npGinCJd9aBnAq_vgsSde1h9jcC-nwRDU4IZFAmSMJWTslCMAXtQzmLYRLcvH8ELfxwV1SO25Pfyd-zy3EbKrvDGOx3JmFUkdfE9ic1d-RhuSdneR3qLz7Rt_w8fEOAVuueh5GfBG6YwDUm4aMliSlPuc4bQSYCtCbTlTT-s5aOH6j1emn2X10Q"/>
-</div>
-<div class="flex-1 flex flex-col justify-between h-full min-h-[128px]">
-<div class="flex justify-between items-start gap-sm">
-<div>
-<h3 class="font-headline-md text-headline-md text-on-surface line-clamp-2">Premium Noise-Canceling Headphones</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mt-xs">Matte Black • Wireless</p>
-<div class="mt-2 inline-block px-2 py-1 bg-surface-variant text-on-surface font-label-sm text-label-sm rounded-DEFAULT">In Stock</div>
-</div>
-<div class="text-right">
-<span class="font-headline-md text-headline-md text-on-surface">$299.00</span>
-</div>
-</div>
-<div class="flex items-center justify-between mt-md pt-sm border-t border-outline-variant/30">
-<div class="flex items-center border border-outline-variant rounded-DEFAULT overflow-hidden">
-<button aria-label="Decrease quantity" class="px-3 py-1 bg-surface hover:bg-surface-variant text-on-surface transition-colors font-bold">-</button>
-<input aria-label="Quantity" class="w-12 text-center border-none bg-surface-container-lowest text-body-md font-body-md p-1 focus:ring-0 appearance-none m-0" min="1" type="number" value="1"/>
-<button aria-label="Increase quantity" class="px-3 py-1 bg-surface hover:bg-surface-variant text-on-surface transition-colors font-bold">+</button>
-</div>
-<div class="flex gap-sm">
-<button class="text-on-surface-variant hover:text-secondary font-label-md text-label-md transition-colors flex items-center gap-1">
-<span class="material-symbols-outlined text-[18px]">bookmark</span> Save
-                                </button>
-<span class="text-outline-variant">|</span>
-<button class="text-on-surface-variant hover:text-error font-label-md text-label-md transition-colors flex items-center gap-1">
-<span class="material-symbols-outlined text-[18px]">delete</span> Remove
-                                </button>
-</div>
-</div>
-</div>
-</div>
-<!-- Cart Item 2 -->
-<div class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT p-sm md:p-md flex flex-col sm:flex-row gap-md items-start group hover:shadow-sm transition-shadow mt-md">
-<div class="w-full sm:w-32 h-32 bg-surface-variant rounded-DEFAULT overflow-hidden shrink-0 border border-outline-variant/50">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A minimalist mechanical keyboard with white and gray keycaps on an aluminum chassis, positioned on a light gray desk mat. The lighting is crisp and overhead, casting minimal shadows to emphasize the clean, professional engineering of the peripheral." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1yYG2ekJropDcoTbZb4EtZH6TZTh4OhcVcfXu51wlJHJLJ3K7DSYc67ypay5UmXKUYjsrhMVtes9BTQEaZOK3CTrHueQk-i3hrMhv5D_8Vw68oaz6OpR5Mw9bYPubrsNCNizOwdRbJhUvMcZn-0TSTDAue5gy0Og4Z0mEezuM4mMZcnAa7qJNoOVsPEMY5LieFjMIWjDY45oe0KNToBDcpClw0_Sk8XeemvEv8p8wRYvH33xxYnaimA"/>
-</div>
-<div class="flex-1 flex flex-col justify-between h-full min-h-[128px]">
-<div class="flex justify-between items-start gap-sm">
-<div>
-<h3 class="font-headline-md text-headline-md text-on-surface line-clamp-2">Mechanical Productivity Keyboard</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mt-xs">Tactile Switches • Aluminum Frame</p>
-<div class="mt-2 inline-block px-2 py-1 bg-surface-variant text-on-surface font-label-sm text-label-sm rounded-DEFAULT">In Stock</div>
-</div>
-<div class="text-right">
-<span class="font-headline-md text-headline-md text-on-surface">$145.50</span>
-</div>
-</div>
-<div class="flex items-center justify-between mt-md pt-sm border-t border-outline-variant/30">
-<div class="flex items-center border border-outline-variant rounded-DEFAULT overflow-hidden">
-<button aria-label="Decrease quantity" class="px-3 py-1 bg-surface hover:bg-surface-variant text-on-surface transition-colors font-bold">-</button>
-<input aria-label="Quantity" class="w-12 text-center border-none bg-surface-container-lowest text-body-md font-body-md p-1 focus:ring-0 appearance-none m-0" min="1" type="number" value="1"/>
-<button aria-label="Increase quantity" class="px-3 py-1 bg-surface hover:bg-surface-variant text-on-surface transition-colors font-bold">+</button>
-</div>
-<div class="flex gap-sm">
-<button class="text-on-surface-variant hover:text-secondary font-label-md text-label-md transition-colors flex items-center gap-1">
-<span class="material-symbols-outlined text-[18px]">bookmark</span> Save
-                                </button>
-<span class="text-outline-variant">|</span>
-<button class="text-on-surface-variant hover:text-error font-label-md text-label-md transition-colors flex items-center gap-1">
-<span class="material-symbols-outlined text-[18px]">delete</span> Remove
-                                </button>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- Saved for Later Section -->
-<div class="tab-content" id="content-saved">
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-md">
-<!-- Saved Item Card -->
-<div class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT overflow-hidden group hover:border-outline hover:shadow-[0_4px_15px_rgba(0,0,0,0.04)] transition-all duration-300 flex flex-col">
-<div class="h-48 bg-surface-variant overflow-hidden relative">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="An elegant, modern desk lamp crafted from brushed steel, illuminating a clean workspace setting. The warm, focused light creates a sophisticated contrast against the bright, light-mode background, ideal for a premium corporate marketplace." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZ1KTf-Dgoc0IZmv8UGNOMLRqHVX2iV4vm4YREAa6n9bK0EvGxSutMB4PYcS9vnHFAINog1-GcfhfOEOiv5R1pHTAM91MIabbt-31MOzhfzCUXy5FQ1DA-cZxczsDA_BbFG5NmkP7nOt1mAuLN1TufCgWOyn1-uoINXFrZB5r2bw1imxzWNc9uT-tX42n7mphJVaH3VZk-14aq-wM1feSCqmEW6P0l7kZhbacHP_gJ-noHGH_qcYgpmw"/>
-<button aria-label="Remove" class="absolute top-2 right-2 p-1.5 bg-surface-container-lowest/80 backdrop-blur-sm rounded-full text-on-surface hover:text-secondary transition-colors">
-<span class="material-symbols-outlined text-[20px]">close</span>
-</button>
-</div>
-<div class="p-sm flex flex-col flex-1">
-<h4 class="font-body-lg text-body-lg text-on-surface line-clamp-1">Brushed Steel Desk Lamp</h4>
-<p class="font-headline-md text-headline-md text-on-surface mt-xs">$85.00</p>
-<div class="mt-auto pt-sm flex gap-sm">
-<button class="flex-1 bg-transparent border border-secondary text-secondary hover:bg-surface-variant font-label-md text-label-md py-2 px-4 rounded-DEFAULT transition-colors text-center">Move to Cart</button>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- Favorites Section -->
-<div class="tab-content" id="content-favorites">
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-md">
-<!-- Favorite Item Card -->
-<div class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT overflow-hidden group hover:border-outline hover:shadow-[0_4px_15px_rgba(0,0,0,0.04)] transition-all duration-300 flex flex-col relative">
-<div class="h-40 bg-surface-variant overflow-hidden relative">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A high-quality leather folio portfolio case in tan brown, standing slightly open to reveal a structured interior. Shot in a bright, modern studio setting with sharp, clean lighting that emphasizes the premium texture of the leather." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5OtDb0h1bycjIve2NL8XpWLwXzKNkqYm03ftuxEFFew28AJxeiSZwuhGoaxQJQpb4smFLkg8_EXwLeGkw8t6KfqlHEpyQ6CRq3bA12aihv-l9GV0CZ4hQoiW2nDMt15CGuxH5USZgAnLoeFRkVJOdJsrHoozMMv9jHtMas-CKBt08CNPtxMtB465yWLuFnuOOt4_Cvc1_BWBuNKhJ6yUMj_wC6UnhMHkxmQJsXNqCY94BoIdPFVojMA"/>
-<button aria-label="Remove from favorites" class="absolute top-2 right-2 p-1.5 bg-surface-container-lowest/80 backdrop-blur-sm rounded-full text-secondary transition-colors">
-<span class="material-symbols-outlined fill text-[20px]">favorite</span>
-</button>
-</div>
-<div class="p-sm flex flex-col flex-1">
-<h4 class="font-body-lg text-body-lg text-on-surface line-clamp-2 leading-snug mb-xs">Executive Leather Folio</h4>
-<p class="font-headline-md text-headline-md text-on-surface mt-auto">$120.00</p>
-<button class="w-full bg-secondary text-on-secondary hover:shadow-[0_4px_15px_rgba(0,0,0,0.04)] hover:-translate-y-0.5 font-label-md text-label-md py-2 px-4 rounded-DEFAULT transition-all mt-sm">Add to Cart</button>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- Right Column: Order Summary (Sticky) -->
-<div class="col-span-1 lg:col-span-4">
-<!-- Render summary only if Cart is active (handled vaguely by design, but typically always visible on this page structure) -->
-<div class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT p-md sticky top-24" id="order-summary">
-<h2 class="font-headline-md text-headline-md text-on-surface border-b border-outline-variant/50 pb-sm mb-sm">Order Summary</h2>
-<div class="flex flex-col gap-sm py-sm font-body-md text-body-md">
-<div class="flex justify-between text-on-surface-variant">
-<span>Subtotal (2 items)</span>
-<span class="text-on-surface">$444.50</span>
-</div>
-<div class="flex justify-between text-on-surface-variant">
-<span>Shipping Estimate</span>
-<span class="text-on-surface">$15.00</span>
-</div>
-<div class="flex justify-between text-on-surface-variant">
-<span>Tax</span>
-<span class="text-on-surface">Calculated at checkout</span>
-</div>
-</div>
-<div class="border-t border-outline-variant/50 pt-sm mt-sm mb-lg flex justify-between items-center">
-<span class="font-headline-md text-headline-md text-on-surface">Total</span>
-<span class="font-headline-lg text-headline-lg text-on-surface">$459.50</span>
-</div>
-<button class="w-full bg-secondary text-on-secondary hover:shadow-[0_4px_15px_rgba(0,0,0,0.04)] hover:-translate-y-0.5 font-label-md text-label-md py-3 px-4 rounded-DEFAULT transition-all flex justify-center items-center gap-xs">
-                    Checkout Now
-                    <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
-</button>
-<p class="font-label-sm text-label-sm text-on-surface-variant text-center mt-sm flex items-center justify-center gap-1">
-<span class="material-symbols-outlined text-[16px]">lock</span> Secure Checkout Guarantee
-                </p>
-</div>
-</div>
-</main>
-<!-- Footer (Shared Component) -->
-<footer class="bg-surface-container-low dark:bg-primary-container text-on-surface dark:text-on-primary-container font-label-md text-label-md w-full border-t border-outline-variant dark:border-outline mt-auto">
-<div class="w-full py-xl px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-md max-w-screen-2xl mx-auto">
-<div class="mb-4 md:mb-0 text-center md:text-left">
-<div class="font-headline-sm text-headline-sm font-black text-secondary dark:text-secondary-fixed-dim mb-2">MarketPlace</div>
-<p class="text-on-surface-variant dark:text-surface-variant text-sm">© 2024 MarketPlace Inc. All rights reserved.</p>
-</div>
-<nav class="flex flex-wrap justify-center gap-6">
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-200" href="/marketplace/privacy/statement/">Privacy Policy</a>
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-200" href="/marketplace/servicesagreement/">Terms of Service</a>
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-200" href="#">Cookie Settings</a>
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-200" href="/marketplace/support">Contact Support</a>
-</nav>
-</div>
-</footer>
-<script>
-        function switchTab(tabId) {
-            // Hide all tab contents
-            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
-            // Show selected tab content
-            document.getElementById('content-' + tabId).classList.add('active');
-            
-            // Reset all tab buttons
-            const defaultClasses = 'px-md py-sm font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-all'.split(' ');
-            const activeClasses = 'px-md py-sm font-label-md text-label-md text-secondary font-bold border-b-2 border-secondary transition-all'.split(' ');
-            
-            ['cart', 'saved', 'favorites'].forEach(id => {
-                const btn = document.getElementById('tab-' + id);
-                btn.className = ''; // clear
-                btn.classList.add(...defaultClasses);
-            });
-            
-            // Set active tab button
-            const activeBtn = document.getElementById('tab-' + tabId);
-            activeBtn.className = '';
-            activeBtn.classList.add(...activeClasses);
 
-            // Toggle summary visibility based on context (optional UX enhancement)
-            const summary = document.getElementById('order-summary');
-            if (tabId === 'cart') {
-                summary.style.display = 'block';
-                summary.style.animation = 'fadeIn 0.3s ease-in-out';
-            } else {
-                summary.style.display = 'none';
+<title>Payment Processing - MarketPlace</title>
+
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Manrope:wght@600;700;800&family=Material+Symbols+Outlined&display=swap" rel="stylesheet"/>
+
+<script id="tailwind-config">
+tailwind.config = {
+    darkMode: "class",
+
+    theme: {
+        extend: {
+
+            colors: {
+                "error": "#ba1a1a",
+                "on-tertiary-fixed-variant": "#444749",
+                "outline-variant": "#c6c6cd",
+                "inverse-on-surface": "#eaf1ff",
+                "surface-container": "#e5eeff",
+                "on-secondary-container": "#fefcff",
+                "background": "#f8f9ff",
+                "primary": "#000000",
+                "secondary-fixed": "#d8e2ff",
+                "on-secondary": "#ffffff",
+                "inverse-surface": "#213145",
+                "primary-fixed": "#dae2fd",
+                "tertiary": "#000000",
+                "tertiary-fixed-dim": "#c4c7c9",
+                "surface-tint": "#565e74",
+                "secondary-container": "#2170e4",
+                "surface-container-high": "#dce9ff",
+                "surface-container-lowest": "#ffffff",
+                "on-secondary-fixed-variant": "#004395",
+                "tertiary-container": "#191c1e",
+                "secondary-fixed-dim": "#adc6ff",
+                "on-primary": "#ffffff",
+                "on-surface-variant": "#45464d",
+                "primary-fixed-dim": "#bec6e0",
+                "on-error-container": "#93000a",
+                "on-primary-container": "#7c839b",
+                "surface-dim": "#cbdbf5",
+                "on-error": "#ffffff",
+                "on-primary-fixed-variant": "#3f465c",
+                "on-background": "#0b1c30",
+                "on-tertiary-fixed": "#191c1e",
+                "surface-container-low": "#eff4ff",
+                "on-surface": "#0b1c30",
+                "outline": "#76777d",
+                "surface": "#f8f9ff",
+                "error-container": "#ffdad6",
+                "on-primary-fixed": "#131b2e",
+                "on-tertiary-container": "#818486",
+                "primary-container": "#131b2e",
+                "inverse-primary": "#bec6e0",
+                "on-secondary-fixed": "#001a42",
+                "surface-container-highest": "#d3e4fe",
+                "surface-variant": "#d3e4fe",
+                "on-tertiary": "#ffffff",
+                "tertiary-fixed": "#e0e3e5",
+                "secondary": "#0058be"
+            },
+
+            borderRadius: {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+
+            spacing: {
+                "xs": "8px",
+                "base": "4px",
+                "md": "24px",
+                "gutter": "24px",
+                "lg": "48px",
+                "sm": "16px",
+                "xl": "80px",
+                "margin-mobile": "16px",
+                "margin-desktop": "64px"
+            },
+
+            fontFamily: {
+                "label-md": ["Hanken Grotesk"],
+                "headline-md": ["Manrope"],
+                "headline-xl": ["Manrope"],
+                "headline-lg": ["Manrope"],
+                "headline-lg-mobile": ["Manrope"],
+                "label-sm": ["Hanken Grotesk"],
+                "body-md": ["Hanken Grotesk"],
+                "body-lg": ["Hanken Grotesk"]
+            },
+
+            fontSize: {
+                "label-md": [
+                    "14px",
+                    {
+                        lineHeight: "20px",
+                        letterSpacing: "0.01em",
+                        fontWeight: "500"
+                    }
+                ],
+
+                "headline-md": [
+                    "24px",
+                    {
+                        lineHeight: "32px",
+                        fontWeight: "600"
+                    }
+                ],
+
+                "headline-xl": [
+                    "48px",
+                    {
+                        lineHeight: "56px",
+                        letterSpacing: "-0.02em",
+                        fontWeight: "700"
+                    }
+                ],
+
+                "headline-lg": [
+                    "32px",
+                    {
+                        lineHeight: "40px",
+                        letterSpacing: "-0.01em",
+                        fontWeight: "600"
+                    }
+                ],
+
+                "headline-lg-mobile": [
+                    "28px",
+                    {
+                        lineHeight: "36px",
+                        fontWeight: "600"
+                    }
+                ],
+
+                "label-sm": [
+                    "12px",
+                    {
+                        lineHeight: "16px",
+                        fontWeight: "600"
+                    }
+                ],
+
+                "body-md": [
+                    "16px",
+                    {
+                        lineHeight: "24px",
+                        fontWeight: "400"
+                    }
+                ],
+
+                "body-lg": [
+                    "18px",
+                    {
+                        lineHeight: "28px",
+                        fontWeight: "400"
+                    }
+                ]
             }
         }
-    </script>
-</body></html>
+    }
+}
+</script>
+
+<style>
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24;
+}
+
+.material-symbols-outlined[data-weight="fill"] {
+    font-variation-settings: 'FILL' 1;
+}
+
+/* ---------------------------------------------------------
+   INPUTS
+--------------------------------------------------------- */
+
+.input-field {
+    width: 100%;
+    padding: 8px 16px;
+    border: 1px solid #c6c6cd;
+    border-radius: 0.25rem;
+    background: #ffffff;
+    color: #0b1c30;
+    font-size: 16px;
+    line-height: 24px;
+    transition: all 0.2s ease;
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: #0058be;
+    box-shadow: 0 0 0 2px rgba(0, 88, 190, 0.2);
+}
+
+/* ---------------------------------------------------------
+   PAYMENT LAYOUT
+--------------------------------------------------------- */
+
+#payment-details-section {
+    display: none;
+    animation: fadeIn 0.3s ease-out;
+}
+
+#payment-details-section.active {
+    display: grid;
+}
+
+.payment-method-content,
+.wallet-form-content {
+    display: none;
+}
+
+.payment-method-content.active,
+.wallet-form-content.active {
+    display: block;
+    animation: slideIn 0.3s ease-out;
+}
+
+/* ---------------------------------------------------------
+   REVIEW SECTION
+--------------------------------------------------------- */
+
+#review-section {
+    display: none;
+    animation: reviewFadeIn 0.45s ease-out;
+}
+
+#review-section.active {
+    display: block;
+}
+
+.review-check-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 9999px;
+    background: #dcfce7;
+    color: #16a34a;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 24px;
+
+    animation: checkPop 0.45s ease-out;
+}
+
+.review-check-circle span {
+    font-size: 44px;
+}
+
+.review-message {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* ---------------------------------------------------------
+   ANIMATIONS
+--------------------------------------------------------- */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes reviewFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes checkPop {
+    0% {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+
+    70% {
+        transform: scale(1.08);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* ---------------------------------------------------------
+   VALIDATION
+--------------------------------------------------------- */
+
+.error-message {
+    display: none;
+    color: #ba1a1a;
+    font-size: 12px;
+    line-height: 16px;
+    margin-top: 4px;
+}
+
+.input-error {
+    border-color: #ba1a1a !important;
+}
+
+/* ---------------------------------------------------------
+   MODAL
+--------------------------------------------------------- */
+
+#confirmation-modal {
+    display: none;
+}
+
+#confirmation-modal.active {
+    display: flex;
+}
+
+/* ---------------------------------------------------------
+   COMPLETED STEPPER
+--------------------------------------------------------- */
+
+.step-completed {
+    background: #16a34a !important;
+    border-color: #16a34a !important;
+    color: white !important;
+}
+
+.step-completed-label {
+    color: #16a34a !important;
+    font-weight: 700 !important;
+}
+
+</style>
+
+</head>
+
+
+<body class="bg-background text-on-background min-h-screen flex flex-col antialiased relative">
+
+
+<!-- =========================================================
+     TOP NAVIGATION
+========================================================= -->
+
+<header class="bg-surface-container-lowest dark:bg-inverse-surface w-full sticky top-0 z-50 border-b border-outline-variant dark:border-outline">
+
+    <div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-base max-w-screen-2xl mx-auto">
+
+        <div class="flex items-center gap-md">
+
+            <a
+                class="font-headline-md text-headline-md font-bold text-on-surface dark:text-inverse-on-surface"
+                href="#"
+            >
+                MarketPlace
+            </a>
+
+        </div>
+
+
+        <div class="hidden md:flex flex-1 max-w-lg mx-md relative">
+
+            <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">
+                search
+            </span>
+
+            <input
+                class="w-full pl-10 pr-4 py-2 bg-surface-container-low border border-outline-variant rounded-full text-on-surface focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-all font-body-md"
+                placeholder="Search for products, brands and more"
+                type="text"
+            />
+
+        </div>
+
+
+        <nav class="hidden md:flex items-center gap-gutter">
+
+            <a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md" href="#">
+                Store
+            </a>
+
+            <a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md" href="#">
+                Product
+            </a>
+
+            <a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md" href="../merchant/">
+                Sell
+            </a>
+
+            <a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md" href="../help/">
+                Help
+            </a>
+
+        </nav>
+
+
+        <div class="flex items-center gap-sm mt-2">
+
+            <button
+                aria-label="notifications"
+                class="p-2 text-on-surface-variant hover:text-secondary transition-colors"
+            >
+                <span class="material-symbols-outlined">
+                    notifications
+                </span>
+            </button>
+
+        </div>
+
+
+        <button class="md:hidden p-2 text-on-surface-variant ml-2">
+            <span class="material-symbols-outlined">
+                menu
+            </span>
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     MAIN CONTENT
+========================================================= -->
+
+<main class="flex-grow w-full max-w-screen-xl mx-auto px-margin-mobile md:px-margin-desktop py-lg">
+
+
+<!-- =========================================================
+     PROGRESS STEPPER
+========================================================= -->
+
+<div class="mb-lg max-w-2xl mx-auto">
+
+    <div class="flex items-center justify-between relative">
+
+        <div
+            class="absolute left-0 top-1/2 w-full h-0.5 bg-outline-variant -z-10 -translate-y-1/2"
+            id="stepper-line"
+        ></div>
+
+
+        <!-- STEP 1 -->
+
+        <div class="flex flex-col items-center gap-base bg-background px-sm">
+
+            <div
+                id="step-shipping-circle"
+                class="w-8 h-8 rounded-full flex items-center justify-center font-label-md step-completed"
+            >
+                <span class="material-symbols-outlined text-[20px]">
+                    check
+                </span>
+            </div>
+
+            <span
+                id="step-shipping-label"
+                class="font-label-md text-on-surface-variant"
+            >
+                Shipping
+            </span>
+
+        </div>
+
+
+        <!-- STEP 2 -->
+
+        <div class="flex flex-col items-center gap-base bg-background px-sm">
+
+            <div
+                id="step-payment-circle"
+                class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-md shadow-md"
+            >
+                2
+            </div>
+
+            <span
+                id="step-payment-label"
+                class="font-label-md text-on-surface font-bold"
+            >
+                Payment
+            </span>
+
+        </div>
+
+
+        <!-- STEP 3 -->
+
+        <div
+            class="flex flex-col items-center gap-base bg-background px-sm"
+            id="step-review"
+        >
+
+            <div
+                id="step-review-circle"
+                class="w-8 h-8 rounded-full bg-surface-container-high border border-outline-variant text-on-surface-variant flex items-center justify-center font-label-md transition-all"
+            >
+                3
+            </div>
+
+            <span
+                id="step-review-label"
+                class="font-label-md text-on-surface-variant transition-all"
+            >
+                Review
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     PAYMENT TITLE
+========================================================= -->
+
+<div id="payment-page-content">
+
+    <h1
+        class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-md"
+    >
+        Payment Processing
+    </h1>
+
+
+    <!-- =====================================================
+         COUNTRY SELECTOR
+    ===================================================== -->
+
+    <div
+        id="country-section"
+        class="bg-surface-container-lowest border border-outline-variant rounded-xl p-md mb-lg shadow-sm"
+    >
+
+        <label
+            class="block font-label-md text-on-surface mb-xs"
+            for="country-select"
+        >
+            Select your country/region for available payment methods
+        </label>
+
+
+        <div class="relative w-full md:w-1/2 lg:w-1/3">
+
+            <select
+                class="input-field appearance-none cursor-pointer pr-10"
+                id="country-select"
+            >
+
+                <option disabled selected value="">
+                    Choose a country...
+                </option>
+
+                <option value="AU">Australia</option>
+                <option value="CA">Canada</option>
+                <option value="FR">France</option>
+                <option value="DE">Germany</option>
+                <option value="ID">Indonesia</option>
+                <option value="JP">Japan</option>
+                <option value="SG">Singapore</option>
+                <option value="UK">United Kingdom</option>
+                <option value="US">United States</option>
+
+            </select>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         PAYMENT DETAILS
+    ===================================================== -->
+
+    <div
+        class="grid-cols-1 lg:grid-cols-12 gap-gutter items-start"
+        id="payment-details-section"
+    >
+
+
+        <!-- LEFT SIDE -->
+
+        <div class="lg:col-span-8 flex flex-col md:flex-row gap-gutter">
+
+
+            <!-- PAYMENT TABS -->
+
+            <div class="w-full md:w-1/3 bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden shadow-sm flex flex-col self-start sticky top-[100px]">
+
+                <div class="p-sm bg-surface-container-low border-b border-outline-variant">
+
+                    <h2 class="font-label-md text-on-surface font-bold uppercase tracking-wider text-xs">
+                        Payment Method
+                    </h2>
+
+                </div>
+
+
+                <!-- CARD -->
+
+                <button
+                    class="payment-tab active text-left px-sm py-md border-b border-outline-variant hover:bg-surface-container transition-colors flex items-center justify-between"
+                    data-target="method-card"
+                >
+
+                    <div class="flex items-center gap-sm">
+
+                        <span class="material-symbols-outlined text-secondary">
+                            credit_card
+                        </span>
+
+                        <span class="font-body-md text-on-surface font-medium">
+                            Credit / Debit Card
+                        </span>
+
+                    </div>
+
+                    <div class="w-2 h-2 rounded-full bg-secondary indicator opacity-100"></div>
+
+                </button>
+
+
+                <!-- PAYPAL -->
+
+                <button
+                    class="payment-tab text-left px-sm py-md border-b border-outline-variant hover:bg-surface-container transition-colors flex items-center justify-between"
+                    data-target="method-paypal"
+                >
+
+                    <div class="flex items-center gap-sm">
+
+                        <span class="material-symbols-outlined text-secondary">
+                            payments
+                        </span>
+
+                        <span class="font-body-md text-on-surface font-medium">
+                            PayPal
+                        </span>
+
+                    </div>
+
+                    <div class="w-2 h-2 rounded-full bg-secondary indicator opacity-0"></div>
+
+                </button>
+
+
+                <!-- INDONESIAN WALLETS -->
+
+                <button
+                    class="payment-tab text-left px-sm py-md border-b border-outline-variant hover:bg-surface-container transition-colors flex items-center justify-between hidden"
+                    data-target="method-id-wallets"
+                    id="tab-id-wallets"
+                >
+
+                    <div class="flex items-center gap-sm">
+
+                        <span class="material-symbols-outlined text-secondary">
+                            account_balance_wallet
+                        </span>
+
+                        <span class="font-body-md text-on-surface font-medium">
+                            Digital Wallets
+                        </span>
+
+                    </div>
+
+                    <div class="w-2 h-2 rounded-full bg-secondary indicator opacity-0"></div>
+
+                </button>
+
+            </div>
+
+
+
+            <!-- PAYMENT FORMS -->
+
+            <div class="w-full md:w-2/3 bg-surface-container-lowest border border-outline-variant rounded-xl p-md shadow-sm min-h-[400px]">
+
+
+                <!-- CARD FORM -->
+
+                <div
+                    class="payment-method-content active"
+                    id="method-card"
+                >
+
+                    <div class="flex items-center justify-between mb-md">
+
+                        <h3 class="font-headline-md text-on-surface">
+                            Card Details
+                        </h3>
+
+
+                        <div class="flex items-center gap-2">
+
+                            <div class="w-10 h-7 bg-white rounded border border-outline-variant flex items-center justify-center p-1">
+                                <img
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Visa_Inc._logo_%282021%E2%80%93present%29.svg/960px-Visa_Inc._logo_%282021%E2%80%93present%29.svg.png"
+                                    alt="Visa"
+                                    class="max-w-full max-h-full object-contain"
+                                />
+                            </div>
+
+                            <div class="w-10 h-7 bg-white rounded border border-outline-variant flex items-center justify-center p-1">
+                                <img
+                                    src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Mastercard_2019_logo.svg"
+                                    alt="Mastercard"
+                                    class="max-w-full max-h-full object-contain"
+                                />
+                            </div>
+
+                            <div class="w-10 h-7 bg-white rounded border border-outline-variant flex items-center justify-center p-1">
+                                <img
+                                    src="https://upload.wikimedia.org/wikipedia/commons/4/40/JCB_logo.svg"
+                                    alt="JCB"
+                                    class="max-w-full max-h-full object-contain"
+                                />
+                            </div>
+
+                            <div class="w-10 h-7 bg-white rounded border border-outline-variant flex items-center justify-center p-1">
+                                <img
+                                    src="https://upload.wikimedia.org/wikipedia/commons/f/fa/American_Express_logo_%282018%29.svg"
+                                    alt="American Express"
+                                    class="max-w-full max-h-full object-contain"
+                                />
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <form class="flex flex-col gap-sm" id="form-card">
+
+
+                        <div>
+
+                            <label class="block font-label-md text-on-surface-variant mb-xs">
+                                Card Number
+                            </label>
+
+                            <div class="relative">
+
+                                <input
+                                    class="input-field pl-10 validate-required"
+                                    maxlength="19"
+                                    placeholder="0000 0000 0000 0000"
+                                    type="text"
+                                />
+
+                                <span class="material-symbols-outlined absolute left-sm top-1/2 -translate-y-1/2 text-on-surface-variant">
+                                    credit_card
+                                </span>
+
+                            </div>
+
+                            <span class="error-message">
+                                Card number is required
+                            </span>
+
+                        </div>
+
+
+                        <div class="flex gap-sm">
+
+                            <div class="w-1/2">
+
+                                <label class="block font-label-md text-on-surface-variant mb-xs">
+                                    First Name
+                                </label>
+
+                                <input
+                                    class="input-field validate-required"
+                                    placeholder="John"
+                                    type="text"
+                                />
+
+                                <span class="error-message">
+                                    First name is required
+                                </span>
+
+                            </div>
+
+
+                            <div class="w-1/2">
+
+                                <label class="block font-label-md text-on-surface-variant mb-xs">
+                                    Last Name
+                                </label>
+
+                                <input
+                                    class="input-field validate-required"
+                                    placeholder="Doe"
+                                    type="text"
+                                />
+
+                                <span class="error-message">
+                                    Last name is required
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="flex gap-sm">
+
+                            <div class="w-1/2">
+
+                                <label class="block font-label-md text-on-surface-variant mb-xs">
+                                    Expiration Date
+                                </label>
+
+                                <input
+                                    class="input-field validate-required"
+                                    maxlength="5"
+                                    placeholder="MM/YY"
+                                    type="text"
+                                />
+
+                                <span class="error-message">
+                                    Expiration date is required
+                                </span>
+
+                            </div>
+
+
+                            <div class="w-1/2">
+
+                                <label class="block font-label-md text-on-surface-variant mb-xs">
+                                    CVV
+                                </label>
+
+                                <div class="relative">
+
+                                    <input
+                                        class="input-field validate-required"
+                                        maxlength="4"
+                                        placeholder="123"
+                                        type="text"
+                                    />
+
+                                    <span class="material-symbols-outlined absolute right-sm top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">
+                                        info
+                                    </span>
+
+                                </div>
+
+                                <span class="error-message">
+                                    CVV is required
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="mt-md pt-md border-t border-outline-variant">
+
+                            <h4 class="font-label-md text-on-surface font-bold mb-sm">
+                                Billing Address
+                            </h4>
+
+
+                            <div class="flex gap-sm">
+
+                                <div class="w-1/2">
+
+                                    <label class="block font-label-md text-on-surface-variant mb-xs">
+                                        Address Line 1
+                                    </label>
+
+                                    <input
+                                        class="input-field validate-required"
+                                        placeholder="Address"
+                                        type="text"
+                                    />
+
+                                    <span class="error-message">
+                                        Address Line 1 is required
+                                    </span>
+
+                                </div>
+
+
+                                <div class="w-1/2">
+
+                                    <label class="block font-label-md text-on-surface-variant mb-xs">
+                                        Address Line 2 (optional)
+                                    </label>
+
+                                    <input
+                                        class="input-field"
+                                        placeholder="Address"
+                                        type="text"
+                                    />
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="flex gap-sm mt-sm">
+
+                                <div class="w-1/2">
+
+                                    <label class="block font-label-md text-on-surface-variant mb-xs">
+                                        City
+                                    </label>
+
+                                    <input
+                                        class="input-field validate-required"
+                                        placeholder="City"
+                                        type="text"
+                                    />
+
+                                    <span class="error-message">
+                                        City is required
+                                    </span>
+
+                                </div>
+
+
+                                <div class="w-1/2">
+
+                                    <label class="block font-label-md text-on-surface-variant mb-xs">
+                                        ZIP code
+                                    </label>
+
+                                    <input
+                                        class="input-field validate-required"
+                                        maxlength="10"
+                                        placeholder="ZIP code"
+                                        type="text"
+                                    />
+
+                                    <span class="error-message">
+                                        ZIP code is required
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="mt-xs">
+
+                            <label class="flex items-center gap-xs cursor-pointer">
+
+                                <input
+                                    class="w-4 h-4 rounded border-outline-variant text-secondary focus:ring-secondary/20"
+                                    type="checkbox"
+                                />
+
+                                <span class="font-body-md text-on-surface-variant text-sm">
+                                    Save this card for future purchases
+                                </span>
+
+                            </label>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+
+
+                <!-- PAYPAL -->
+
+                <div
+                    class="payment-method-content py-lg"
+                    id="method-paypal"
+                >
+
+                    <div class="flex items-center mb-md pb-xs border-b border-outline-variant">
+
+                        <span class="material-symbols-outlined text-[32px] text-secondary mr-sm">
+                            payments
+                        </span>
+
+                        <h3 class="font-headline-md text-on-surface">
+                            PayPal
+                        </h3>
+
+                    </div>
+
+
+                    <form class="flex flex-col gap-sm" id="form-paypal">
+
+                        <div>
+
+                            <label class="block font-label-md text-on-surface-variant mb-xs">
+                                PayPal Email
+                            </label>
+
+                            <input
+                                class="input-field validate-required"
+                                placeholder="email@example.com"
+                                type="email"
+                            />
+
+                            <span class="error-message">
+                                PayPal email is required
+                            </span>
+
+                        </div>
+
+
+                        <p class="font-body-md text-on-surface-variant mt-sm text-sm">
+                            You will be securely redirected to PayPal to complete your purchase after clicking Pay Now.
+                        </p>
+
+                    </form>
+
+                </div>
+
+
+
+                <!-- INDONESIAN WALLETS -->
+
+                <div
+                    class="payment-method-content"
+                    id="method-id-wallets"
+                >
+
+                    <h3 class="font-headline-md text-on-surface mb-md">
+                        Select Digital Wallet
+                    </h3>
+
+                    <p class="font-body-md text-on-surface-variant mb-md">
+                        Choose your preferred local wallet to complete payment in IDR.
+                    </p>
+
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-sm mb-md">
+
+
+                        <div
+                            class="wallet-option border border-outline-variant rounded-lg p-sm flex flex-col items-center justify-center hover:border-secondary transition-all cursor-pointer bg-surface-container-lowest h-32 relative group"
+                            data-wallet="gopay"
+                        >
+
+                            <div class="absolute inset-0 bg-secondary/5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+
+                            <div class="w-12 h-12 bg-[#00AED6] rounded-full flex items-center justify-center text-white font-bold text-xs mb-xs z-10 pointer-events-none">
+                                GP
+                            </div>
+
+                            <span class="font-label-md text-on-surface z-10 pointer-events-none">
+                                GoPay
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            class="wallet-option border border-outline-variant rounded-lg p-sm flex flex-col items-center justify-center hover:border-secondary transition-all cursor-pointer bg-surface-container-lowest h-32 relative group"
+                            data-wallet="shopeepay"
+                        >
+
+                            <div class="absolute inset-0 bg-secondary/5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+
+                            <div class="w-12 h-12 bg-[#EE4D2D] rounded-full flex items-center justify-center text-white font-bold text-xs mb-xs z-10 pointer-events-none">
+                                SP
+                            </div>
+
+                            <span class="font-label-md text-on-surface z-10 pointer-events-none">
+                                ShopeePay
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            class="wallet-option border border-outline-variant rounded-lg p-sm flex flex-col items-center justify-center hover:border-secondary transition-all cursor-pointer bg-surface-container-lowest h-32 relative group"
+                            data-wallet="linkaja"
+                        >
+
+                            <div class="absolute inset-0 bg-secondary/5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+
+                            <div class="w-12 h-12 bg-[#E31E24] rounded-full flex items-center justify-center text-white font-bold text-xs mb-xs z-10 pointer-events-none">
+                                LA
+                            </div>
+
+                            <span class="font-label-md text-on-surface z-10 pointer-events-none">
+                                LinkAja
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="mt-md pt-md border-t border-outline-variant min-h-[150px]">
+
+                        <p class="text-on-surface-variant font-body-md text-center wallet-placeholder">
+                            Please select a digital wallet above.
+                        </p>
+
+
+                        <form
+                            class="wallet-form-content"
+                            id="form-gopay"
+                        >
+
+                            <h4 class="font-label-md text-on-surface font-bold mb-sm">
+                                GoPay Details
+                            </h4>
+
+                            <label class="block font-label-md text-on-surface-variant mb-xs">
+                                GoPay Phone Number
+                            </label>
+
+                            <input
+                                class="input-field validate-required"
+                                placeholder="+62 812 3456 7890"
+                                type="tel"
+                            />
+
+                            <span class="error-message">
+                                Phone number is required
+                            </span>
+
+                        </form>
+
+
+                        <form
+                            class="wallet-form-content"
+                            id="form-shopeepay"
+                        >
+
+                            <h4 class="font-label-md text-on-surface font-bold mb-sm">
+                                ShopeePay Details
+                            </h4>
+
+                            <label class="block font-label-md text-on-surface-variant mb-xs">
+                                ShopeePay Registered Phone Number
+                            </label>
+
+                            <input
+                                class="input-field validate-required"
+                                placeholder="+62 812 3456 7890"
+                                type="tel"
+                            />
+
+                            <span class="error-message">
+                                Phone number is required
+                            </span>
+
+                        </form>
+
+
+                        <form
+                            class="wallet-form-content"
+                            id="form-linkaja"
+                        >
+
+                            <h4 class="font-label-md text-on-surface font-bold mb-sm">
+                                LinkAja Details
+                            </h4>
+
+                            <label class="block font-label-md text-on-surface-variant mb-xs">
+                                LinkAja ID / Phone Number
+                            </label>
+
+                            <input
+                                class="input-field validate-required"
+                                placeholder="+62 812 3456 7890"
+                                type="tel"
+                            />
+
+                            <span class="error-message">
+                                ID/Phone number is required
+                            </span>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             ORDER SUMMARY
+        ================================================== -->
+        <div class="lg:col-span-4">
+
+            <div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-md shadow-sm sticky top-[100px]">
+
+                <h3 class="font-headline-md text-on-surface mb-md pb-xs border-b border-outline-variant">
+                    Order Summary
+                </h3>
+
+                <div
+                    id="order-summary-items"
+                    class="flex flex-col gap-sm mb-md pb-md border-b border-outline-variant"
+                >
+                    <p class="font-body-md text-on-surface-variant text-sm">
+                        Loading cart...
+                    </p>
+                </div>
+
+                <div class="flex flex-col gap-xs mb-md">
+
+                    <div class="flex justify-between font-body-md text-on-surface-variant">
+                        <span>Subtotal</span>
+                        <span id="order-summary-subtotal">$0.00</span>
+                    </div>
+
+                    <div class="flex justify-between font-body-md text-on-surface-variant">
+                        <span>Shipping</span>
+                        <span id="order-summary-shipping">$15.00</span>
+                    </div>
+
+                    <div class="flex justify-between font-body-md text-on-surface-variant">
+                        <span>Tax (Calculated)</span>
+                        <span id="order-summary-tax">$12.50</span>
+                    </div>
+
+                </div>
+
+                <div class="flex justify-between items-end mb-lg pt-sm border-t border-outline-variant">
+
+                    <span class="font-headline-md text-on-surface">
+                        Total
+                    </span>
+
+                    <span
+                        id="order-summary-total"
+                        class="font-headline-lg text-primary font-bold"
+                    >
+                        $0.00
+                    </span>
+
+                </div>
+
+                <button
+                    class="w-full bg-primary hover:bg-primary/90 text-on-primary font-label-md py-sm rounded-lg shadow-sm transition-all flex items-center justify-center gap-xs"
+                    id="btn-pay-now"
+                >
+
+                    <span class="material-symbols-outlined">
+                        lock
+                    </span>
+
+                    Pay Now
+
+                </button>
+
+                <div class="mt-sm text-center font-body-md text-on-surface-variant text-xs flex items-center justify-center gap-1">
+
+                    <span class="material-symbols-outlined text-[14px]">
+                        shield
+                    </span>
+
+                    Your payment is 256-bit encrypted.
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     REVIEW / ORDER COMPLETED SECTION
+========================================================= -->
+
+<div
+    id="review-section"
+    class="max-w-4xl mx-auto"
+>
+
+    <div class="bg-surface-container-lowest border border-outline-variant rounded-xl shadow-sm p-lg md:p-xl text-center">
+
+        <!-- GREEN CHECK -->
+
+        <div class="review-check-circle">
+
+            <span class="material-symbols-outlined">
+                check
+            </span>
+
+        </div>
+
+
+        <!-- TITLE -->
+
+        <h1 class="font-headline-xl text-on-surface mb-sm">
+            Order Confirmed
+        </h1>
+
+
+        <!-- MAIN MESSAGE -->
+
+        <div class="review-message">
+
+            <p class="font-body-lg text-on-surface-variant mb-md">
+                Your payment has been processed and your order has been placed successfully.
+            </p>
+
+            <p class="font-body-md text-on-surface-variant">
+                Thank you for shopping with MarketPlace.
+            </p>
+
+        </div>
+
+
+        <!-- EMAIL REMINDER -->
+
+        <div class="mt-lg bg-surface-container-low border border-outline-variant rounded-xl p-md text-left flex gap-sm items-start">
+
+            <div class="w-10 h-10 rounded-full bg-secondary/10 text-secondary flex items-center justify-center flex-shrink-0">
+
+                <span class="material-symbols-outlined">
+                    mail
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <h3 class="font-label-md font-bold text-on-surface mb-xs">
+                    Check your email
+                </h3>
+
+                <p class="font-body-md text-on-surface-variant text-sm">
+                    We've sent an order confirmation and purchase details to your email address.
+                    Please check your inbox, and your spam or junk folder if you don't see it.
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- DONE BUTTON -->
+
+        <button
+            id="btn-review-done"
+            class="mt-lg w-full md:w-auto md:min-w-[220px] bg-primary hover:bg-primary/90 text-on-primary font-label-md py-sm px-lg rounded-lg shadow-sm transition-all"
+        >
+            Continue Shopping
+        </button>
+
+    </div>
+
+</div>
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="bg-surface-container-low dark:bg-primary-container text-on-surface dark:text-on-primary-container font-label-md w-full border-t border-outline-variant dark:border-outline mt-auto">
+
+    <div class="w-full py-xl px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-md max-w-screen-2xl mx-auto">
+
+        <div class="mb-4 md:mb-0 text-center md:text-left">
+
+            <div class="font-black text-secondary dark:text-secondary-fixed-dim mb-2">
+                MarketPlace
+            </div>
+
+            <p class="text-on-surface-variant dark:text-surface-variant text-sm">
+                © 2024 MarketPlace Inc. All rights reserved.
+            </p>
+
+        </div>
+
+
+        <nav class="flex flex-wrap justify-center gap-6">
+
+            <a
+                class="text-on-surface-variant hover:text-secondary transition-all"
+                href="/marketplace/privacy/statement/"
+            >
+                Privacy Policy
+            </a>
+
+            <a
+                class="text-on-surface-variant hover:text-secondary transition-all"
+                href="/marketplace/servicesagreement/"
+            >
+                Terms of Service
+            </a>
+
+            <a
+                class="text-on-surface-variant hover:text-secondary transition-all"
+                href="#"
+            >
+                Cookie Settings
+            </a>
+
+            <a
+                class="text-on-surface-variant hover:text-secondary transition-all"
+                href="/marketplace/help"
+            >
+                Contact Support
+            </a>
+
+        </nav>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     CONFIRMATION MODAL
+========================================================= -->
+
+<div
+    class="fixed inset-0 bg-on-background/50 z-[100] items-center justify-center backdrop-blur-sm"
+    id="confirmation-modal"
+>
+
+    <div class="bg-surface-container-lowest rounded-xl p-lg shadow-lg max-w-md w-full mx-margin-mobile text-center flex flex-col items-center">
+
+        <div class="w-14 h-14 rounded-full bg-secondary/10 text-secondary flex items-center justify-center mb-md">
+
+            <span class="material-symbols-outlined text-[30px]">
+                shopping_bag
+            </span>
+
+        </div>
+
+
+        <h2 class="font-headline-lg text-on-surface mb-sm">
+            Confirm Purchase
+        </h2>
+
+
+        <p class="font-body-md text-on-surface-variant mb-lg">
+            Are you sure you want to proceed with the payment?
+        </p>
+
+
+        <div class="flex gap-sm w-full">
+
+            <button
+                class="flex-1 border border-outline-variant text-on-surface font-label-md py-sm rounded-lg hover:bg-surface-container-low transition-colors"
+                id="btn-cancel-purchase"
+            >
+                Cancel
+            </button>
+
+
+            <button
+                class="flex-1 bg-primary text-on-primary font-label-md py-sm rounded-lg hover:bg-primary/90 transition-colors"
+                id="btn-confirm-purchase"
+            >
+                Confirm
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+document.addEventListener('DOMContentLoaded', () => {
+
+
+    /* =========================================================
+       ELEMENTS
+    ========================================================= */
+
+    const countrySelect =
+        document.getElementById('country-select');
+
+    const countrySection =
+        document.getElementById('country-section');
+
+    const detailsSection =
+        document.getElementById('payment-details-section');
+
+    const paymentPageContent =
+        document.getElementById('payment-page-content');
+
+    const reviewSection =
+        document.getElementById('review-section');
+
+    const idWalletsTab =
+        document.getElementById('tab-id-wallets');
+
+
+    const tabs =
+        document.querySelectorAll('.payment-tab');
+
+    const contents =
+        document.querySelectorAll('.payment-method-content');
+
+
+    const walletOptions =
+        document.querySelectorAll('.wallet-option');
+
+    const walletForms =
+        document.querySelectorAll('.wallet-form-content');
+
+    const walletPlaceholder =
+        document.querySelector('.wallet-placeholder');
+
+
+    const btnPayNow =
+        document.getElementById('btn-pay-now');
+
+
+    const confirmationModal =
+        document.getElementById('confirmation-modal');
+
+    const btnCancelPurchase =
+        document.getElementById('btn-cancel-purchase');
+
+    const btnConfirmPurchase =
+        document.getElementById('btn-confirm-purchase');
+
+
+    const btnReviewDone =
+        document.getElementById('btn-review-done');
+
+
+    /* =========================================================
+       STEPPER ELEMENTS
+    ========================================================= */
+
+    const paymentCircle =
+        document.getElementById('step-payment-circle');
+
+    const paymentLabel =
+        document.getElementById('step-payment-label');
+
+    const reviewCircle =
+        document.getElementById('step-review-circle');
+
+    const reviewLabel =
+        document.getElementById('step-review-label');
+
+    /* =========================================================
+    ORDER SUMMARY
+    ========================================================= */
+
+    const orderSummaryItems =
+        document.getElementById('order-summary-items');
+
+    const orderSummarySubtotal =
+        document.getElementById('order-summary-subtotal');
+
+    const orderSummaryShipping =
+        document.getElementById('order-summary-shipping');
+
+    const orderSummaryTax =
+        document.getElementById('order-summary-tax');
+
+    const orderSummaryTotal =
+        document.getElementById('order-summary-total');
+
+
+    function formatCurrency(value) {
+
+        return '$' + Number(value).toFixed(2);
+
+    }
+
+
+    async function loadOrderSummary() {
+
+        try {
+
+            /* -------------------------------------------------
+            GET CART SESSION
+            ------------------------------------------------- */
+
+            const cartSession =
+                JSON.parse(
+                    sessionStorage.getItem('cartSession') || '{}'
+                );
+
+
+            const cart =
+                Array.isArray(cartSession.cart)
+                    ? cartSession.cart
+                    : [];
+
+
+            /* -------------------------------------------------
+            EMPTY CART
+            ------------------------------------------------- */
+
+            if (cart.length === 0) {
+
+                orderSummaryItems.innerHTML = `
+                    <p class="font-body-md text-on-surface-variant text-sm">
+                        Your cart is empty.
+                    </p>
+                `;
+
+                updateOrderTotals(0);
+
+                return;
+
+            }
+
+
+            /* -------------------------------------------------
+            FETCH DATA
+            ------------------------------------------------- */
+
+            const response =
+                await fetch('../data.json');
+
+
+            if (!response.ok) {
+
+                throw new Error(
+                    `Failed to fetch data.json: ${response.status}`
+                );
+
+            }
+
+
+            const data =
+                await response.json();
+
+
+            /* -------------------------------------------------
+            RENDER CART
+            ------------------------------------------------- */
+
+            orderSummaryItems.innerHTML = '';
+
+            let subtotal = 0;
+
+
+            cart.forEach(cartItem => {
+
+                const productId =
+                    cartItem.productId;
+
+                const amount =
+                    Number(cartItem.amount) || 0;
+
+
+                /*
+                * Product ID is directly the key
+                * inside data.catalogs.
+                */
+
+                const product =
+                    data.catalogs?.[productId];
+
+
+                /* ---------------------------------------------
+                PRODUCT NOT FOUND
+                --------------------------------------------- */
+
+                if (!product) {
+
+                    console.warn(
+                        `Product not found: ${productId}`
+                    );
+
+                    return;
+
+                }
+
+
+                /* ---------------------------------------------
+                PRODUCT INFORMATION
+                --------------------------------------------- */
+
+                const name =
+                    product.name || 'Unnamed Product';
+
+
+                const price =
+                    Number(
+                        product.price?.real
+                    ) || 0;
+
+
+                const itemTotal =
+                    price * amount;
+
+
+                subtotal +=
+                    itemTotal;
+
+
+                /* ---------------------------------------------
+                CREATE ITEM
+                --------------------------------------------- */
+
+                const item =
+                    document.createElement('div');
+
+
+                item.className =
+                    'flex justify-between items-start gap-sm';
+
+
+                item.innerHTML = `
+
+                    <div class="min-w-0 flex-grow">
+
+                        <h4 class="font-label-md text-on-surface line-clamp-2">
+                            ${name}
+                        </h4>
+
+                        <p class="font-body-md text-on-surface-variant text-sm mt-xs">
+                            Qty: ${amount}
+                        </p>
+
+                        <p class="font-body-md text-on-surface-variant text-xs mt-xs">
+                            ${formatCurrency(price)} each
+                        </p>
+
+                    </div>
+
+
+                    <div class="font-label-md text-on-surface text-right whitespace-nowrap">
+                        ${formatCurrency(itemTotal)}
+                    </div>
+
+                `;
+
+
+                orderSummaryItems.appendChild(
+                    item
+                );
+
+            });
+
+
+            /* -------------------------------------------------
+            UPDATE TOTALS
+            ------------------------------------------------- */
+
+            updateOrderTotals(subtotal);
+
+        }
+
+        catch (error) {
+
+            console.error(
+                'Failed to load order summary:',
+                error
+            );
+
+
+            orderSummaryItems.innerHTML = `
+                <p class="font-body-md text-error text-sm">
+                    Failed to load cart items.
+                </p>
+            `;
+
+        }
+
+    }
+
+
+    function updateOrderTotals(subtotal) {
+
+        const shipping =
+            15.00;
+
+        const tax =
+            12.50;
+
+        const total =
+            subtotal +
+            shipping +
+            tax;
+
+
+        orderSummarySubtotal.textContent =
+            formatCurrency(subtotal);
+
+        orderSummaryShipping.textContent =
+            formatCurrency(shipping);
+
+        orderSummaryTax.textContent =
+            formatCurrency(tax);
+
+        orderSummaryTotal.textContent =
+            formatCurrency(total);
+
+    }
+
+
+    /* Load order summary */
+
+    loadOrderSummary();
+
+
+    /* =========================================================
+       STATE
+    ========================================================= */
+
+    let currentActiveFormId = 'form-card';
+
+
+    /* =========================================================
+       COUNTRY SELECTION
+    ========================================================= */
+
+    countrySelect.addEventListener('change', (e) => {
+
+        const selectedCountry =
+            e.target.value;
+
+
+        detailsSection.classList.add('active');
+
+
+        if (selectedCountry === 'ID') {
+
+            idWalletsTab.classList.remove('hidden');
+            idWalletsTab.classList.add('flex');
+
+        } else {
+
+            idWalletsTab.classList.add('hidden');
+            idWalletsTab.classList.remove('flex');
+
+
+            if (
+                idWalletsTab.classList.contains('active')
+            ) {
+
+                activateTab(tabs[0]);
+
+            }
+
+        }
+
+    });
+
+
+    /* =========================================================
+       PAYMENT TAB SWITCHING
+    ========================================================= */
+
+    tabs.forEach(tab => {
+
+        tab.addEventListener('click', () => {
+
+            activateTab(tab);
+
+        });
+
+    });
+
+
+    function activateTab(selectedTab) {
+
+        /* Reset tabs */
+
+        tabs.forEach(tab => {
+
+            tab.classList.remove(
+                'active',
+                'bg-surface-container'
+            );
+
+
+            const indicator =
+                tab.querySelector('.indicator');
+
+
+            indicator.classList.remove(
+                'opacity-100'
+            );
+
+            indicator.classList.add(
+                'opacity-0'
+            );
+
+        });
+
+
+        /* Hide all payment forms */
+
+        contents.forEach(content => {
+
+            content.classList.remove('active');
+
+        });
+
+
+        /* Activate selected tab */
+
+        selectedTab.classList.add(
+            'active',
+            'bg-surface-container'
+        );
+
+
+        const indicator =
+            selectedTab.querySelector('.indicator');
+
+
+        indicator.classList.remove(
+            'opacity-0'
+        );
+
+        indicator.classList.add(
+            'opacity-100'
+        );
+
+
+        /* Show target content */
+
+        const targetId =
+            selectedTab.getAttribute('data-target');
+
+
+        const targetContent =
+            document.getElementById(targetId);
+
+
+        targetContent.classList.add('active');
+
+
+        /* Determine active form */
+
+        if (targetId === 'method-card') {
+
+            currentActiveFormId =
+                'form-card';
+
+        }
+
+        else if (targetId === 'method-paypal') {
+
+            currentActiveFormId =
+                'form-paypal';
+
+        }
+
+        else if (targetId === 'method-id-wallets') {
+
+            const activeWalletForm =
+                document.querySelector(
+                    '.wallet-form-content.active'
+                );
+
+
+            currentActiveFormId =
+                activeWalletForm
+                    ? activeWalletForm.id
+                    : null;
+
+        }
+
+    }
+
+
+    /* =========================================================
+       WALLET SELECTION
+    ========================================================= */
+
+    walletOptions.forEach(option => {
+
+        option.addEventListener('click', () => {
+
+
+            walletOptions.forEach(opt => {
+
+                opt.classList.remove(
+                    'border-secondary',
+                    'ring-1',
+                    'ring-secondary'
+                );
+
+            });
+
+
+            option.classList.add(
+                'border-secondary',
+                'ring-1',
+                'ring-secondary'
+            );
+
+
+            walletPlaceholder.style.display =
+                'none';
+
+
+            walletForms.forEach(form => {
+
+                form.classList.remove('active');
+
+            });
+
+
+            const walletId =
+                option.getAttribute('data-wallet');
+
+
+            const targetForm =
+                document.getElementById(
+                    `form-${walletId}`
+                );
+
+
+            targetForm.classList.add('active');
+
+
+            currentActiveFormId =
+                targetForm.id;
+
+        });
+
+    });
+
+
+    /* =========================================================
+       CARD NUMBER FORMATTING
+    ========================================================= */
+
+    const cardNumberInput =
+        document.querySelector(
+            '#form-card input[placeholder="0000 0000 0000 0000"]'
+        );
+
+
+    if (cardNumberInput) {
+
+        cardNumberInput.addEventListener(
+            'input',
+            function () {
+
+                let value =
+                    this.value.replace(/\D/g, '');
+
+
+                value =
+                    value.substring(0, 16);
+
+
+                value =
+                    value.replace(
+                        /(\d{4})(?=\d)/g,
+                        '$1 '
+                    );
+
+
+                this.value =
+                    value;
+
+            }
+        );
+
+    }
+
+
+    /* =========================================================
+       EXPIRATION DATE
+    ========================================================= */
+
+    const expirationInput =
+        document.querySelector(
+            '#form-card input[placeholder="MM/YY"]'
+        );
+
+
+    if (expirationInput) {
+
+        expirationInput.addEventListener(
+            'input',
+            function () {
+
+                let value =
+                    this.value.replace(/\D/g, '');
+
+
+                value =
+                    value.substring(0, 4);
+
+
+                if (value.length > 2) {
+
+                    value =
+                        value.substring(0, 2) +
+                        '/' +
+                        value.substring(2);
+
+                }
+
+
+                this.value =
+                    value;
+
+            }
+        );
+
+    }
+
+
+    /* =========================================================
+       CVV
+    ========================================================= */
+
+    const cvvInput =
+        document.querySelector(
+            '#form-card input[placeholder="123"]'
+        );
+
+
+    if (cvvInput) {
+
+        cvvInput.addEventListener(
+            'input',
+            function () {
+
+                this.value =
+                    this.value
+                        .replace(/\D/g, '')
+                        .substring(0, 4);
+
+            }
+        );
+
+    }
+
+
+    /* =========================================================
+       ZIP CODE
+    ========================================================= */
+
+    const zipInput =
+        document.querySelector(
+            '#form-card input[placeholder="ZIP code"]'
+        );
+
+
+    if (zipInput) {
+
+        zipInput.addEventListener(
+            'input',
+            function () {
+
+                this.value =
+                    this.value
+                        .replace(/\D/g, '')
+                        .substring(0, 10);
+
+            }
+        );
+
+    }
+
+
+    /* =========================================================
+       PHONE NUMBERS
+    ========================================================= */
+
+    document
+        .querySelectorAll('input[type="tel"]')
+        .forEach(input => {
+
+            input.addEventListener(
+                'input',
+                function () {
+
+                    this.value =
+                        this.value.replace(
+                            /[^\d+\s()-]/g,
+                            ''
+                        );
+
+                }
+            );
+
+        });
+
+
+    /* =========================================================
+       ERROR HELPERS
+    ========================================================= */
+
+    function findErrorMessage(input) {
+
+        let parent =
+            input.parentElement;
+
+
+        for (
+            let i = 0;
+            i < 3 && parent;
+            i++
+        ) {
+
+            const error =
+                parent.querySelector(
+                    '.error-message'
+                );
+
+
+            if (error) {
+
+                return error;
+
+            }
+
+
+            parent =
+                parent.parentElement;
+
+        }
+
+
+        return null;
+
+    }
+
+
+    function showError(input, message) {
+
+        input.classList.add(
+            'input-error'
+        );
+
+
+        const errorMessage =
+            findErrorMessage(input);
+
+
+        if (errorMessage) {
+
+            if (message) {
+
+                errorMessage.textContent =
+                    message;
+
+            }
+
+
+            errorMessage.style.display =
+                'block';
+
+        }
+
+    }
+
+
+    function hideError(input) {
+
+        input.classList.remove(
+            'input-error'
+        );
+
+
+        const errorMessage =
+            findErrorMessage(input);
+
+
+        if (errorMessage) {
+
+            errorMessage.style.display =
+                'none';
+
+        }
+
+    }
+
+
+    function getRequiredMessage(input) {
+
+        const label =
+            input.closest('div')
+                ?.querySelector('label');
+
+
+        if (!label) {
+
+            return 'This field is required';
+
+        }
+
+
+        const text =
+            label.textContent
+                .trim()
+                .replace('(optional)', '')
+                .trim();
+
+
+        return `${text} is required`;
+
+    }
+
+
+    /* =========================================================
+       LIVE VALIDATION
+    ========================================================= */
+
+    document
+        .querySelectorAll('.validate-required')
+        .forEach(input => {
+
+
+            input.addEventListener(
+                'input',
+                function () {
+
+                    if (
+                        this.value.trim() !== ''
+                    ) {
+
+                        hideError(this);
+
+                    }
+
+                }
+            );
+
+
+            input.addEventListener(
+                'blur',
+                function () {
+
+                    if (
+                        this.value.trim() === ''
+                    ) {
+
+                        showError(
+                            this,
+                            getRequiredMessage(this)
+                        );
+
+                    }
+
+                }
+            );
+
+        });
+
+
+    /* =========================================================
+       CARD VALIDATION
+    ========================================================= */
+
+    function validateCardForm() {
+
+        const form =
+            document.getElementById(
+                'form-card'
+            );
+
+
+        let isValid =
+            true;
+
+        let firstInvalid =
+            null;
+
+
+        const inputs =
+            form.querySelectorAll(
+                '.validate-required'
+            );
+
+
+        inputs.forEach(input => {
+
+            if (
+                !input.value.trim()
+            ) {
+
+                isValid =
+                    false;
+
+
+                showError(
+                    input,
+                    getRequiredMessage(input)
+                );
+
+
+                if (!firstInvalid) {
+
+                    firstInvalid =
+                        input;
+
+                }
+
+            }
+
+        });
+
+
+        /* Card number */
+
+        if (
+            cardNumberInput &&
+            cardNumberInput.value.trim()
+        ) {
+
+            const digits =
+                cardNumberInput.value
+                    .replace(/\D/g, '');
+
+
+            if (
+                digits.length < 16
+            ) {
+
+                isValid =
+                    false;
+
+
+                showError(
+                    cardNumberInput,
+                    'Card number must contain 16 digits'
+                );
+
+
+                if (!firstInvalid) {
+
+                    firstInvalid =
+                        cardNumberInput;
+
+                }
+
+            }
+
+        }
+
+
+        /* Expiration */
+
+        if (
+            expirationInput &&
+            expirationInput.value.trim()
+        ) {
+
+            const value =
+                expirationInput.value;
+
+
+            if (
+                !/^\d{2}\/\d{2}$/.test(value)
+            ) {
+
+                isValid =
+                    false;
+
+
+                showError(
+                    expirationInput,
+                    'Enter expiration date as MM/YY'
+                );
+
+
+                if (!firstInvalid) {
+
+                    firstInvalid =
+                        expirationInput;
+
+                }
+
+            }
+
+            else {
+
+                const [month, year] =
+                    value
+                        .split('/')
+                        .map(Number);
+
+
+                if (
+                    month < 1 ||
+                    month > 12
+                ) {
+
+                    isValid =
+                        false;
+
+
+                    showError(
+                        expirationInput,
+                        'Enter a valid expiration month'
+                    );
+
+
+                    if (!firstInvalid) {
+
+                        firstInvalid =
+                            expirationInput;
+
+                    }
+
+                }
+
+            }
+
+        }
+
+
+        /* CVV */
+
+        if (
+            cvvInput &&
+            cvvInput.value.trim()
+        ) {
+
+            if (
+                cvvInput.value.length < 3
+            ) {
+
+                isValid =
+                    false;
+
+
+                showError(
+                    cvvInput,
+                    'CVV must contain at least 3 digits'
+                );
+
+
+                if (!firstInvalid) {
+
+                    firstInvalid =
+                        cvvInput;
+
+                }
+
+            }
+
+        }
+
+
+        if (firstInvalid) {
+
+            firstInvalid.focus();
+
+        }
+
+
+        return isValid;
+
+    }
+
+
+    /* =========================================================
+       GENERAL FORM VALIDATION
+    ========================================================= */
+
+    function validateForm(formId) {
+
+        if (!formId) {
+
+            return false;
+
+        }
+
+
+        if (
+            formId === 'form-card'
+        ) {
+
+            return validateCardForm();
+
+        }
+
+
+        const form =
+            document.getElementById(
+                formId
+            );
+
+
+        if (!form) {
+
+            return false;
+
+        }
+
+
+        const requiredInputs =
+            form.querySelectorAll(
+                '.validate-required'
+            );
+
+
+        let isValid =
+            true;
+
+        let firstInvalid =
+            null;
+
+
+        requiredInputs.forEach(input => {
+
+            if (
+                !input.value.trim()
+            ) {
+
+                isValid =
+                    false;
+
+
+                showError(
+                    input,
+                    getRequiredMessage(input)
+                );
+
+
+                if (!firstInvalid) {
+
+                    firstInvalid =
+                        input;
+
+                }
+
+            }
+
+        });
+
+
+        if (firstInvalid) {
+
+            firstInvalid.focus();
+
+        }
+
+
+        return isValid;
+
+    }
+
+
+    /* =========================================================
+       PAY NOW
+    ========================================================= */
+
+    btnPayNow.addEventListener(
+        'click',
+        () => {
+
+
+            const walletMethod =
+                document.getElementById(
+                    'method-id-wallets'
+                );
+
+
+            if (
+                walletMethod.classList.contains(
+                    'active'
+                ) &&
+                currentActiveFormId === null
+            ) {
+
+                alert(
+                    'Please select a digital wallet.'
+                );
+
+                return;
+
+            }
+
+
+            if (
+                validateForm(
+                    currentActiveFormId
+                )
+            ) {
+
+                confirmationModal.classList.add(
+                    'active'
+                );
+
+            }
+
+        }
+    );
+
+
+    /* =========================================================
+       CANCEL CONFIRMATION
+    ========================================================= */
+
+    btnCancelPurchase.addEventListener(
+        'click',
+        () => {
+
+            confirmationModal.classList.remove(
+                'active'
+            );
+
+        }
+    );
+
+
+    /* =========================================================
+    CONFIRM PURCHASE
+    ========================================================= */
+
+    btnConfirmPurchase.addEventListener(
+        'click',
+        () => {
+
+            /* ---------------------------------------------
+            CLOSE MODAL
+            --------------------------------------------- */
+
+            confirmationModal.classList.remove(
+                'active'
+            );
+
+
+            /* ---------------------------------------------
+            CLEAR CART
+            --------------------------------------------- */
+
+            try {
+
+                const cartSession =
+                    JSON.parse(
+                        sessionStorage.getItem('cartSession') || '{}'
+                    );
+
+
+                /*
+                Remove only the "cart" object.
+                Other properties inside cartSession
+                remain untouched.
+                */
+
+                delete cartSession.cart;
+
+
+                sessionStorage.setItem(
+                    'cartSession',
+                    JSON.stringify(cartSession)
+                );
+
+            }
+
+            catch (error) {
+
+                console.error(
+                    'Failed to clear cart:',
+                    error
+                );
+
+            }
+
+
+            /* ---------------------------------------------
+            PAYMENT STEP → COMPLETED
+            --------------------------------------------- */
+
+            paymentCircle.innerHTML = `
+                <span class="material-symbols-outlined text-[20px]">
+                    check
+                </span>
+            `;
+
+
+            paymentCircle.classList.remove(
+                'bg-primary',
+                'text-on-primary',
+                'shadow-md'
+            );
+
+
+            paymentCircle.classList.add(
+                'step-completed'
+            );
+
+
+            paymentLabel.classList.remove(
+                'text-on-surface'
+            );
+
+
+            paymentLabel.classList.add(
+                'step-completed-label'
+            );
+
+
+            /* ---------------------------------------------
+            REVIEW STEP → ACTIVE / COMPLETED
+            --------------------------------------------- */
+
+            reviewCircle.innerHTML = `
+                <span class="material-symbols-outlined text-[20px]">
+                    check
+                </span>
+            `;
+
+
+            reviewCircle.classList.remove(
+                'bg-surface-container-high',
+                'border-outline-variant',
+                'text-on-surface-variant'
+            );
+
+
+            reviewCircle.classList.add(
+                'step-completed'
+            );
+
+
+            reviewLabel.classList.remove(
+                'text-on-surface-variant'
+            );
+
+
+            reviewLabel.classList.add(
+                'step-completed-label'
+            );
+
+
+            /* ---------------------------------------------
+            HIDE PAYMENT PAGE
+            --------------------------------------------- */
+
+            paymentPageContent.style.display =
+                'none';
+
+
+            /* ---------------------------------------------
+            SHOW REVIEW
+            --------------------------------------------- */
+
+            reviewSection.classList.add(
+                'active'
+            );
+
+
+            /* ---------------------------------------------
+            SCROLL TO TOP
+            --------------------------------------------- */
+
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+
+        }
+    );
+
+
+    /* =========================================================
+       CONTINUE SHOPPING
+    ========================================================= */
+
+    btnReviewDone.addEventListener(
+        'click',
+        () => {
+
+            /*
+               Replace this with your actual marketplace
+               homepage URL when ready.
+            */
+
+            window.location.href =
+                '/marketplace/';
+
+        }
+    );
+
+
+});
+
+</script>
+
+</body>
+</html>

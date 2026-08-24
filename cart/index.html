@@ -1,0 +1,2239 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>My Items - MarketPlace</title>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Manrope:wght@600;700&display=swap"
+        rel="stylesheet"
+    />
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet"
+    />
+
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+
+            theme: {
+                extend: {
+                    colors: {
+                        "secondary-fixed": "#d8e2ff",
+                        "tertiary-container": "#191c1e",
+                        "surface-dim": "#cbdbf5",
+                        "surface-container-low": "#eff4ff",
+                        "primary-container": "#131b2e",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed-dim": "#adc6ff",
+                        "on-secondary-fixed-variant": "#004395",
+                        "on-secondary-fixed": "#001a42",
+                        "outline-variant": "#c6c6cd",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "background": "#f8f9ff",
+                        "on-primary-fixed": "#131b2e",
+                        "on-tertiary-container": "#818486",
+                        "tertiary-fixed-dim": "#c4c7c9",
+                        "secondary": "#0058be",
+                        "surface-variant": "#d3e4fe",
+                        "on-error": "#ffffff",
+                        "outline": "#76777d",
+                        "on-tertiary-fixed-variant": "#444749",
+                        "surface-container": "#e5eeff",
+                        "error": "#ba1a1a",
+                        "inverse-primary": "#bec6e0",
+                        "primary": "#000000",
+                        "on-surface": "#0b1c30",
+                        "inverse-on-surface": "#eaf1ff",
+                        "on-error-container": "#93000a",
+                        "surface-tint": "#565e74",
+                        "surface-bright": "#f8f9ff",
+                        "on-tertiary-fixed": "#191c1e",
+                        "primary-fixed": "#dae2fd",
+                        "surface-container-lowest": "#ffffff",
+                        "on-background": "#0b1c30",
+                        "tertiary-fixed": "#e0e3e5",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#fefcff",
+                        "primary-fixed-dim": "#bec6e0",
+                        "secondary-container": "#2170e4",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#d3e4fe",
+                        "error-container": "#ffdad6",
+                        "on-primary-container": "#7c839b",
+                        "surface-container-high": "#dce9ff",
+                        "inverse-surface": "#213145",
+                        "tertiary": "#000000",
+                        "on-surface-variant": "#45464d"
+                    },
+
+                    borderRadius: {
+                        DEFAULT: "0.125rem",
+                        lg: "0.25rem",
+                        xl: "0.5rem",
+                        full: "0.75rem"
+                    },
+
+                    spacing: {
+                        base: "4px",
+                        xs: "8px",
+                        gutter: "24px",
+                        sm: "16px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "16px",
+                        xl: "80px",
+                        lg: "48px",
+                        md: "24px"
+                    },
+
+                    fontFamily: {
+                        "headline-lg": ["Manrope"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-xl": ["Manrope"],
+                        "headline-md": ["Manrope"],
+                        "label-sm": ["Hanken Grotesk"],
+                        "label-md": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Manrope"]
+                    },
+
+                    fontSize: {
+                        "headline-lg": [
+                            "32px",
+                            {
+                                lineHeight: "40px",
+                                letterSpacing: "-0.01em",
+                                fontWeight: "600"
+                            }
+                        ],
+
+                        "body-lg": [
+                            "18px",
+                            {
+                                lineHeight: "28px",
+                                fontWeight: "400"
+                            }
+                        ],
+
+                        "body-md": [
+                            "16px",
+                            {
+                                lineHeight: "24px",
+                                fontWeight: "400"
+                            }
+                        ],
+
+                        "headline-xl": [
+                            "48px",
+                            {
+                                lineHeight: "56px",
+                                letterSpacing: "-0.02em",
+                                fontWeight: "700"
+                            }
+                        ],
+
+                        "headline-md": [
+                            "24px",
+                            {
+                                lineHeight: "32px",
+                                fontWeight: "600"
+                            }
+                        ],
+
+                        "label-sm": [
+                            "12px",
+                            {
+                                lineHeight: "16px",
+                                fontWeight: "600"
+                            }
+                        ],
+
+                        "label-md": [
+                            "14px",
+                            {
+                                lineHeight: "20px",
+                                letterSpacing: "0.01em",
+                                fontWeight: "500"
+                            }
+                        ],
+
+                        "headline-lg-mobile": [
+                            "28px",
+                            {
+                                lineHeight: "36px",
+                                fontWeight: "600"
+                            }
+                        ]
+                    }
+                }
+            }
+        };
+    </script>
+
+    <style>
+        body {
+            font-family: 'Hanken Grotesk', sans-serif;
+            background-color: #f8f9ff;
+            color: #0b1c30;
+        }
+
+        .tab-active {
+            border-bottom: 2px solid #0058be;
+            color: #0058be;
+            font-weight: 600;
+        }
+
+        .tab-inactive {
+            color: #45464d;
+        }
+
+        .tab-inactive:hover {
+            color: #0058be;
+        }
+
+        .product-card {
+            transition: all 0.2s ease-in-out;
+        }
+
+        .product-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-background antialiased flex flex-col min-h-screen">
+
+<!-- ============================================================
+     TOP NAVBAR
+============================================================ -->
+
+<header
+    class="bg-surface-container-lowest w-full sticky top-0 z-50 border-b border-outline-variant"
+>
+    <div
+        class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-base max-w-screen-2xl mx-auto"
+    >
+
+        <!-- LOGO -->
+
+        <div class="flex items-center gap-md">
+            <a
+                class="font-headline-md text-headline-md font-bold text-on-surface"
+                href="/marketplace/"
+            >
+                MarketPlace
+            </a>
+        </div>
+
+
+        <!-- SEARCH -->
+
+        <div class="hidden md:flex flex-1 max-w-lg mx-md relative">
+
+            <span
+                class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant"
+            >
+                search
+            </span>
+
+            <input
+                class="w-full pl-10 pr-4 py-2 bg-surface-container-low border border-outline-variant rounded-full text-on-surface focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-all font-body-md text-body-md"
+                placeholder="Search for products, brands and more"
+                type="text"
+            />
+
+        </div>
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="hidden md:flex items-center gap-gutter">
+
+            <a
+                class="text-on-surface-variant hover:text-secondary transition-colors cursor-pointer active:opacity-80 font-body-md text-body-md"
+                href="#"
+            >
+                Store
+            </a>
+
+            <a
+                class="text-on-surface-variant hover:text-secondary transition-colors cursor-pointer active:opacity-80 font-body-md text-body-md"
+                href="#"
+            >
+                Product
+            </a>
+
+            <a
+                class="text-on-surface-variant hover:text-secondary transition-colors cursor-pointer active:opacity-80 font-body-md text-body-md"
+                href="../merchant/"
+            >
+                Sell
+            </a>
+
+            <a
+                class="text-on-surface-variant hover:text-secondary transition-colors cursor-pointer active:opacity-80 font-body-md text-body-md"
+                href="../help/"
+            >
+                Help
+            </a>
+
+        </nav>
+
+
+        <!-- ICONS -->
+
+        <div class="flex items-center gap-sm mt-2">
+
+            <button
+                aria-label="notifications"
+                class="p-2 text-on-surface-variant hover:text-secondary transition-colors"
+            >
+                <span class="material-symbols-outlined">
+                    notifications
+                </span>
+            </button>
+
+
+            <button
+                aria-label="favorite"
+                class="p-2 text-on-surface-variant hover:text-secondary transition-colors"
+            >
+                <span class="material-symbols-outlined">
+                    favorite
+                </span>
+            </button>
+
+
+            <button
+                id="shopping-cart-button"
+                aria-label="shopping_cart"
+                class="p-2 text-on-surface-variant hover:text-secondary transition-colors"
+            >
+                <span class="material-symbols-outlined">
+                    shopping_cart
+                </span>
+            </button>
+
+        </div>
+
+
+        <!-- MOBILE MENU -->
+
+        <button
+            class="md:hidden p-2 text-on-surface-variant ml-2"
+        >
+            <span class="material-symbols-outlined">
+                menu
+            </span>
+        </button>
+
+    </div>
+</header>
+
+
+<!-- ============================================================
+     MAIN
+============================================================ -->
+
+<main
+    class="flex-grow w-full max-w-screen-2xl mx-auto px-margin-mobile md:px-margin-desktop py-lg"
+>
+
+    <div
+        class="grid grid-cols-1 lg:grid-cols-12 gap-gutter"
+    >
+
+        <!-- ====================================================
+             SIDEBAR
+        ===================================================== -->
+
+        <aside class="lg:col-span-3">
+
+            <h1
+                class="mb-8 text-3xl font-semibold text-on-surface md:text-4xl"
+            >
+                My Account
+            </h1>
+
+
+            <nav class="flex flex-col gap-2">
+
+                <a
+                    href="#"
+                    class="flex items-center gap-3 rounded-DEFAULT px-4 py-3 text-on-surface-variant transition-colors hover:bg-surface-container-high"
+                >
+                    <span class="material-symbols-outlined">
+                        person
+                    </span>
+
+                    Profile
+                </a>
+
+
+                <!-- ACTIVE -->
+
+                <a
+                    href="/marketplace/items/"
+                    class="flex items-center gap-3 rounded-DEFAULT border-l-4 border-secondary bg-surface-container-high px-4 py-3 font-semibold text-on-surface"
+                >
+                    <span class="material-symbols-outlined">
+                        inventory_2
+                    </span>
+
+                    My Orders
+                </a>
+
+                <a
+                    href="#"
+                    class="flex items-center gap-3 rounded-DEFAULT px-4 py-3 text-on-surface-variant transition-colors hover:bg-surface-container-high"
+                >
+                    <span class="material-symbols-outlined">
+                        location_on
+                    </span>
+
+                    Addresses
+                </a>
+
+
+                <a
+                    href="#"
+                    class="flex items-center gap-3 rounded-DEFAULT px-4 py-3 text-on-surface-variant transition-colors hover:bg-surface-container-high"
+                >
+                    <span class="material-symbols-outlined">
+                        payment
+                    </span>
+
+                    Payment Methods
+                </a>
+
+            </nav>
+
+        </aside>
+
+
+        <!-- ====================================================
+             ITEMS
+        ===================================================== -->
+
+        <section
+            class="lg:col-span-6 flex flex-col gap-sm"
+        >
+
+            <h1
+                class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-sm"
+            >
+                My Orders
+            </h1>
+
+
+            <!-- TABS -->
+
+            <div
+                class="flex border-b border-outline-variant mb-md gap-lg"
+            >
+
+                <button
+                    id="tab-cart"
+                    class="pb-2 font-body-md text-body-md tab-active transition-colors flex items-center gap-2"
+                >
+                    Cart
+
+                    <span
+                        id="tab-cart-count"
+                        class="bg-surface-container text-on-surface text-xs py-0.5 px-2 rounded-full font-bold"
+                    >
+                        0
+                    </span>
+                </button>
+
+
+                <button
+                    id="tab-wishlist"
+                    class="pb-2 font-body-md text-body-md tab-inactive transition-colors flex items-center gap-2"
+                >
+                    Wishlist
+
+                    <span
+                        id="tab-wishlist-count"
+                        class="bg-surface-container text-on-surface text-xs py-0.5 px-2 rounded-full font-bold"
+                    >
+                        0
+                    </span>
+                </button>
+
+            </div>
+
+
+            <!-- CONTENT -->
+
+            <div
+                id="content-area"
+                class="flex flex-col gap-sm min-h-[400px]"
+            >
+
+                <div
+                    class="flex items-center justify-center h-full text-on-surface-variant font-body-lg text-body-lg"
+                >
+                    Loading...
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ====================================================
+             ORDER SUMMARY
+        ===================================================== -->
+
+        <aside
+            id="order-summary-container"
+            class="lg:col-span-3"
+        >
+
+            <div
+                class="bg-surface-container-lowest border border-outline-variant rounded-xl p-md sticky top-24"
+            >
+
+                <h2
+                    class="font-headline-md text-headline-md text-on-surface mb-md"
+                >
+                    Order Summary
+                </h2>
+
+
+                <div class="flex flex-col gap-sm mb-md">
+
+                    <div
+                        class="flex justify-between font-body-md text-body-md text-on-surface-variant"
+                    >
+                        <span>
+                            Subtotal
+                        </span>
+
+                        <span
+                            class="font-semibold text-on-surface"
+                            id="summary-subtotal"
+                        >
+                            $0.00
+                        </span>
+                    </div>
+
+
+                    <div
+                        class="flex justify-between font-body-md text-body-md text-on-surface-variant"
+                    >
+                        <span>
+                            Shipping
+                        </span>
+
+                        <span
+                            class="font-semibold text-on-surface"
+                            id="summary-shipping"
+                        >
+                            Calculated at checkout
+                        </span>
+                    </div>
+
+
+                    <div
+                        class="border-t border-outline-variant pt-sm mt-xs"
+                    >
+
+                        <div
+                            class="flex justify-between font-headline-sm font-bold text-on-surface"
+                        >
+                            <span>
+                                Total
+                            </span>
+
+                            <span id="summary-total">
+                                $0.00
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    id="checkout-button"
+                    class="w-full bg-primary text-on-primary font-body-md text-body-md font-semibold py-3 rounded-lg hover:bg-surface-tint hover:shadow-md transition-all active:scale-[0.98]"
+                    >
+                    Proceed to Checkout
+                </button>
+
+
+                <p
+                    class="font-label-sm text-label-sm text-on-surface-variant mt-sm text-center"
+                >
+                    Secure checkout powered by MarketPlace.
+                </p>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+</main>
+
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+
+<footer
+    class="bg-surface-container-low text-on-surface font-label-md text-label-md w-full border-t border-outline-variant mt-auto"
+>
+
+    <div
+        class="w-full py-xl px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-md max-w-screen-2xl mx-auto"
+    >
+
+        <div
+            class="mb-4 md:mb-0 text-center md:text-left"
+        >
+
+            <div
+                class="font-headline-sm font-black text-secondary mb-2"
+            >
+                MarketPlace
+            </div>
+
+            <p
+                class="text-on-surface-variant text-sm"
+            >
+                © 2024 MarketPlace Inc. All rights reserved.
+            </p>
+
+        </div>
+
+
+        <nav class="flex flex-wrap justify-center gap-6">
+
+            <a
+                class="text-on-surface-variant hover:text-secondary transition-all duration-200"
+                href="/marketplace/privacy/statement/"
+            >
+                Privacy Policy
+            </a>
+
+            <a
+                class="text-on-surface-variant hover:text-secondary transition-all duration-200"
+                href="/marketplace/servicesagreement/"
+            >
+                Terms of Service
+            </a>
+
+            <a
+                class="text-on-surface-variant hover:text-secondary transition-all duration-200"
+                href="#"
+            >
+                Cookie Settings
+            </a>
+
+            <a
+                class="text-on-surface-variant hover:text-secondary transition-all duration-200"
+                href="/marketplace/help"
+            >
+                Contact Support
+            </a>
+
+        </nav>
+
+    </div>
+
+</footer>
+
+
+<!-- ============================================================
+     JAVASCRIPT
+============================================================ -->
+
+<script>
+
+    // ============================================================
+    // STATE
+    // ============================================================
+
+    let catalog = {};
+    let currentTab = "cart";
+
+
+    // ============================================================
+    // ELEMENTS
+    // ============================================================
+
+    const contentArea =
+        document.getElementById("content-area");
+
+    const tabCartBtn =
+        document.getElementById("tab-cart");
+
+    const tabWishlistBtn =
+        document.getElementById("tab-wishlist");
+
+    const tabCartCount =
+        document.getElementById("tab-cart-count");
+
+    const tabWishlistCount =
+        document.getElementById("tab-wishlist-count");
+
+    const orderSummary =
+        document.getElementById("order-summary-container");
+
+    const summarySubtotal =
+        document.getElementById("summary-subtotal");
+
+    const summaryTotal =
+        document.getElementById("summary-total");
+
+
+    // ============================================================
+    // SESSION STORAGE
+    // ============================================================
+
+    function getCartSession() {
+
+        try {
+
+            const raw =
+                sessionStorage.getItem("cartSession");
+
+
+            if (!raw) {
+
+                return {
+                    sessionId: null,
+                    cart: [],
+                    wishlist: []
+                };
+
+            }
+
+
+            const parsed =
+                JSON.parse(raw);
+
+
+            /*
+             * ----------------------------------------------------
+             * CART
+             *
+             * New format:
+             *
+             * {
+             *     productId: "...",
+             *     amount: 2
+             * }
+             * ----------------------------------------------------
+             */
+
+            const cart =
+                Array.isArray(parsed.cart)
+                    ? parsed.cart
+                        .filter(
+                            item =>
+                                item &&
+                                typeof item.productId === "string"
+                        )
+                        .map(
+                            item => ({
+                                productId: item.productId,
+                                amount:
+                                    Math.max(
+                                        1,
+                                        Number(item.amount) || 1
+                                    )
+                            })
+                        )
+                    : [];
+
+
+            /*
+             * ----------------------------------------------------
+             * WISHLIST
+             *
+             * NEW FORMAT:
+             *
+             * wishlist: [
+             *     "productId1",
+             *     "productId2"
+             * ]
+             *
+             * We also support the OLD format temporarily:
+             *
+             * wishlist: [
+             *     { productId: "productId1" }
+             * ]
+             *
+             * so existing sessionStorage doesn't break.
+             * ----------------------------------------------------
+             */
+
+            const wishlist =
+                Array.isArray(parsed.wishlist)
+                    ? parsed.wishlist
+                        .map(item => {
+
+                            if (
+                                typeof item === "string"
+                            ) {
+                                return item;
+                            }
+
+                            if (
+                                item &&
+                                typeof item.productId === "string"
+                            ) {
+                                return item.productId;
+                            }
+
+                            return null;
+
+                        })
+                        .filter(Boolean)
+                    : [];
+
+
+            /*
+             * Remove duplicate wishlist IDs.
+             */
+
+            const uniqueWishlist =
+                [...new Set(wishlist)];
+
+
+            return {
+                sessionId:
+                    parsed.sessionId || null,
+
+                cart,
+
+                wishlist:
+                    uniqueWishlist
+            };
+
+        } catch (error) {
+
+            console.error(
+                "Failed to parse cartSession:",
+                error
+            );
+
+
+            return {
+                sessionId: null,
+                cart: [],
+                wishlist: []
+            };
+
+        }
+
+    }
+
+
+    function saveCartSession(session) {
+
+        sessionStorage.setItem(
+            "cartSession",
+            JSON.stringify(session)
+        );
+
+    }
+
+
+    // ============================================================
+    // LOAD DATA.JSON
+    // ============================================================
+
+    async function loadCatalog() {
+
+        try {
+
+            const response =
+                await fetch(
+                    "../data.json",
+                    {
+                        cache: "no-store"
+                    }
+                );
+
+
+            if (!response.ok) {
+
+                throw new Error(
+                    `Failed to load ../data.json (${response.status})`
+                );
+
+            }
+
+
+            const data =
+                await response.json();
+
+
+            catalog =
+                data.catalogs || {};
+
+
+            console.log(
+                "Loaded",
+                Object.keys(catalog).length,
+                "products from data.json"
+            );
+
+
+        } catch (error) {
+
+            console.error(
+                error
+            );
+
+
+            contentArea.innerHTML = `
+                <div class="text-center py-xl text-error">
+                    Failed to load product data.
+                </div>
+            `;
+
+        }
+
+    }
+
+
+    // ============================================================
+    // GET PRODUCT
+    // ============================================================
+
+    function getProduct(productId) {
+
+        return catalog[productId] || null;
+
+    }
+
+
+    // ============================================================
+    // HELPERS
+    // ============================================================
+
+    function escapeHTML(value) {
+
+        return String(value ?? "")
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+
+    }
+
+
+    function formatPrice(value) {
+
+        return "$" +
+            Number(value || 0).toFixed(2);
+
+    }
+
+
+    function getProductImage(product) {
+
+        if (
+            product &&
+            Array.isArray(product["product-href"]) &&
+            product["product-href"].length > 0
+        ) {
+
+            return (
+                product["product-href"][0] ||
+                ""
+            );
+
+        }
+
+        return "";
+
+    }
+
+
+    function getProductPrice(product) {
+
+        return Number(
+            product?.price?.real || 0
+        );
+
+    }
+
+
+    function getProductStock(product) {
+
+        return (
+            product?.availability?.["in-stock"] === true
+        );
+
+    }
+
+
+    // ============================================================
+    // PRODUCT LINK
+    // ============================================================
+
+    function openProduct(productId) {
+
+        window.location.href =
+            "/marketplace/product/?productId=" +
+            encodeURIComponent(productId);
+
+    }
+
+
+    // ============================================================
+    // STOCK
+    // ============================================================
+
+    function createStockHTML(product) {
+
+        if (
+            getProductStock(product)
+        ) {
+
+            return `
+                <span
+                    class="text-[#004395] font-label-sm text-label-sm flex items-center gap-1"
+                >
+                    <span class="material-symbols-outlined text-[16px]">
+                        check_circle
+                    </span>
+
+                    In Stock
+                </span>
+            `;
+
+        }
+
+
+        return `
+            <span
+                class="text-error font-label-sm text-label-sm flex items-center gap-1"
+            >
+                <span class="material-symbols-outlined text-[16px]">
+                    error
+                </span>
+
+                Out of Stock
+            </span>
+        `;
+
+    }
+
+
+    // ============================================================
+    // VARIANTS
+    // ============================================================
+
+    function createVariantHTML(product) {
+
+        const variants =
+            product?.variants;
+
+
+        if (!variants) {
+            return "";
+        }
+
+
+        const output = [];
+
+
+        // COLOR
+
+        if (
+            Array.isArray(variants.color) &&
+            variants.color.length > 0
+        ) {
+
+            const colors =
+                variants.color
+                    .map(item => {
+
+                        if (
+                            Array.isArray(item)
+                        ) {
+                            return item[0];
+                        }
+
+                        return item;
+
+                    })
+                    .filter(Boolean);
+
+
+            if (colors.length > 0) {
+
+                output.push(`
+                    <span>
+                        Color:
+                        ${escapeHTML(
+                            colors.join(", ")
+                        )}
+                    </span>
+                `);
+
+            }
+
+        }
+
+
+        // VARIANTS
+
+        if (
+            Array.isArray(variants.variants) &&
+            variants.variants.length > 0
+        ) {
+
+            output.push(`
+                <span>
+                    Variant:
+                    ${escapeHTML(
+                        variants.variants.join(", ")
+                    )}
+                </span>
+            `);
+
+        }
+
+
+        if (
+            output.length === 0
+        ) {
+            return "";
+        }
+
+
+        return `
+            <div
+                class="text-sm text-on-surface-variant"
+            >
+                ${output.join(" · ")}
+            </div>
+        `;
+
+    }
+
+
+    // ============================================================
+    // CART CARD
+    // ============================================================
+
+    function createCartCard(cartItem) {
+
+        const productId =
+            cartItem.productId;
+
+
+        const product =
+            getProduct(productId);
+
+
+        if (!product) {
+
+            return `
+                <div
+                    class="bg-error-container border border-error rounded-xl p-md"
+                >
+                    Product
+                    <strong>
+                        ${escapeHTML(productId)}
+                    </strong>
+                    could not be found in data.json.
+                </div>
+            `;
+
+        }
+
+
+        const name =
+            product.name ||
+            "Unknown Product";
+
+
+        const image =
+            getProductImage(product);
+
+
+        const unitPrice =
+            getProductPrice(product);
+
+
+        const amount =
+            Math.max(
+                1,
+                Number(cartItem.amount) || 1
+            );
+
+
+        const totalPrice =
+            unitPrice * amount;
+
+
+        return `
+            <div
+                class="
+                    product-card
+                    bg-surface-container-lowest
+                    border
+                    border-outline-variant
+                    rounded-xl
+                    p-sm
+                    flex
+                    flex-col
+                    sm:flex-row
+                    gap-sm
+                    items-start
+                    sm:items-center
+                    relative
+                "
+                data-product-id="${escapeHTML(productId)}"
+            >
+
+                <!-- IMAGE -->
+
+                ${
+                    image
+                        ? `
+                            <img
+                                src="${escapeHTML(image)}"
+                                alt="${escapeHTML(name)}"
+                                class="
+                                    w-24
+                                    h-24
+                                    object-cover
+                                    rounded-lg
+                                    bg-surface-container
+                                    cursor-pointer
+                                "
+                                onclick="openProduct('${escapeHTML(productId)}')"
+                            >
+                        `
+                        : `
+                            <div
+                                class="
+                                    w-24
+                                    h-24
+                                    rounded-lg
+                                    bg-surface-container
+                                    flex
+                                    items-center
+                                    justify-center
+                                    cursor-pointer
+                                "
+                                onclick="openProduct('${escapeHTML(productId)}')"
+                            >
+                                <span class="material-symbols-outlined text-3xl">
+                                    image
+                                </span>
+                            </div>
+                        `
+                }
+
+
+                <!-- INFORMATION -->
+
+                <div
+                    class="
+                        flex-grow
+                        flex
+                        flex-col
+                        gap-xs
+                        cursor-pointer
+                    "
+                    onclick="openProduct('${escapeHTML(productId)}')"
+                >
+
+                    <h3
+                        class="
+                            font-body-lg
+                            text-body-lg
+                            font-semibold
+                            text-on-surface
+                            line-clamp-2
+                        "
+                    >
+                        ${escapeHTML(name)}
+                    </h3>
+
+
+                    ${createVariantHTML(product)}
+
+
+                    <div
+                        class="
+                            font-body-md
+                            text-body-md
+                            text-on-surface-variant
+                            font-medium
+                        "
+                    >
+                        ${formatPrice(unitPrice)}
+                    </div>
+
+
+                    ${createStockHTML(product)}
+
+                </div>
+
+
+                <!-- QUANTITY -->
+
+                <div
+                    class="
+                        flex
+                        sm:flex-col
+                        items-center
+                        sm:items-end
+                        justify-between
+                        w-full
+                        sm:w-auto
+                        gap-sm
+                        mt-sm
+                        sm:mt-0
+                    "
+                >
+
+                    <div
+                        class="
+                            bg-surface-container
+                            px-3
+                            py-1
+                            rounded-md
+                            font-body-md
+                            text-body-md
+                            text-on-surface
+                            flex
+                            items-center
+                            gap-2
+                            mt-10
+                        "
+                    >
+                        <span
+                            class="text-on-surface-variant text-sm"
+                        >
+                            Qty:
+                        </span>
+
+                        ${amount}
+
+                    </div>
+
+
+                    <div
+                        class="
+                            font-headline-sm
+                            font-bold
+                            text-on-surface
+                        "
+                    >
+                        ${formatPrice(totalPrice)}
+                    </div>
+
+                </div>
+
+
+                <!-- REMOVE -->
+
+                <button
+                    type="button"
+                    class="
+                        remove-cart
+                        absolute
+                        top-sm
+                        right-sm
+                        text-outline
+                        hover:text-error
+                        transition-colors
+                        p-1
+                    "
+                    data-product-id="${escapeHTML(productId)}"
+                    title="Remove from cart"
+                >
+
+                    <span style="height: 20px" class="material-symbols-outlined text-lg">
+                        close
+                    </span>
+
+                </button>
+
+            </div>
+        `;
+
+    }
+
+
+    // ============================================================
+    // WISHLIST CARD
+    // ============================================================
+
+    function createWishlistCard(productId) {
+
+        /*
+         * IMPORTANT:
+         *
+         * wishlist contains ONLY:
+         *
+         * "productId"
+         *
+         * Product data comes from data.json.
+         */
+
+        const product =
+            getProduct(productId);
+
+
+        if (!product) {
+
+            return `
+                <div
+                    class="bg-error-container border border-error rounded-xl p-md"
+                >
+                    Product
+                    <strong>
+                        ${escapeHTML(productId)}
+                    </strong>
+                    could not be found in data.json.
+                </div>
+            `;
+
+        }
+
+
+        const name =
+            product.name ||
+            "Unknown Product";
+
+
+        const image =
+            getProductImage(product);
+
+
+        const price =
+            getProductPrice(product);
+
+
+        return `
+            <div
+                class="
+                    product-card
+                    bg-surface-container-lowest
+                    border
+                    border-outline-variant
+                    rounded-xl
+                    p-sm
+                    flex
+                    flex-col
+                    sm:flex-row
+                    gap-sm
+                    items-start
+                    sm:items-center
+                "
+                data-product-id="${escapeHTML(productId)}"
+            >
+
+                <!-- IMAGE -->
+
+                ${
+                    image
+                        ? `
+                            <img
+                                src="${escapeHTML(image)}"
+                                alt="${escapeHTML(name)}"
+                                class="
+                                    w-24
+                                    h-24
+                                    object-cover
+                                    rounded-lg
+                                    bg-surface-container
+                                    cursor-pointer
+                                "
+                                onclick="openProduct('${escapeHTML(productId)}')"
+                            >
+                        `
+                        : `
+                            <div
+                                class="
+                                    w-24
+                                    h-24
+                                    rounded-lg
+                                    bg-surface-container
+                                    flex
+                                    items-center
+                                    justify-center
+                                    cursor-pointer
+                                "
+                                onclick="openProduct('${escapeHTML(productId)}')"
+                            >
+                                <span class="material-symbols-outlined text-3xl">
+                                    image
+                                </span>
+                            </div>
+                        `
+                }
+
+
+                <!-- INFORMATION -->
+
+                <div
+                    class="flex-grow flex flex-col gap-xs"
+                >
+
+                    <div
+                        class="cursor-pointer"
+                        onclick="openProduct('${escapeHTML(productId)}')"
+                    >
+
+                        <h3
+                            class="
+                                font-body-lg
+                                text-body-lg
+                                font-semibold
+                                text-on-surface
+                                line-clamp-2
+                            "
+                        >
+                            ${escapeHTML(name)}
+                        </h3>
+
+
+                        ${createVariantHTML(product)}
+
+
+                        <div
+                            class="
+                                font-body-md
+                                text-body-md
+                                text-on-surface-variant
+                                font-medium
+                            "
+                        >
+                            ${formatPrice(price)}
+                        </div>
+
+
+                        ${createStockHTML(product)}
+
+                    </div>
+
+
+                    <!-- ACTIONS -->
+
+                    <div
+                        class="flex gap-2 w-full mt-sm"
+                    >
+
+                        <!-- VIEW PRODUCT -->
+
+                        <button
+                            type="button"
+                            class="
+                                view-item
+                                flex-1
+                                px-3
+                                py-2
+                                bg-secondary
+                                text-on-secondary
+                                rounded-lg
+                                font-label-md
+                                text-label-md
+                                hover:bg-[#004395]
+                                transition-colors
+                                flex
+                                items-center
+                                justify-center
+                                gap-2
+                            "
+                            data-product-id="${escapeHTML(productId)}"
+                        >
+
+                            <span
+                                class="material-symbols-outlined text-[18px]"
+                            >
+                                open_in_new
+                            </span>
+
+                            View Product
+
+                        </button>
+
+
+                        <!-- REMOVE -->
+
+                        <button
+                            type="button"
+                            class="
+                                remove-wishlist
+                                px-3
+                                py-2
+                                border
+                                border-outline-variant
+                                text-error
+                                rounded-lg
+                                font-label-md
+                                text-label-md
+                                hover:bg-error-container
+                                transition-colors
+                            "
+                            data-product-id="${escapeHTML(productId)}"
+                        >
+                            Remove
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+        `;
+
+    }
+
+
+    // ============================================================
+    // UPDATE COUNTS
+    // ============================================================
+
+    function updateCounts() {
+
+        const session =
+            getCartSession();
+
+
+        tabCartCount.textContent =
+            session.cart.length;
+
+
+        tabWishlistCount.textContent =
+            session.wishlist.length;
+
+    }
+
+
+    // ============================================================
+    // ORDER SUMMARY
+    // ============================================================
+
+    function updateSummary(cart) {
+
+        let subtotal = 0;
+
+
+        for (
+            const item of cart
+        ) {
+
+            const product =
+                getProduct(item.productId);
+
+
+            if (!product) {
+                continue;
+            }
+
+
+            const price =
+                getProductPrice(product);
+
+
+            const amount =
+                Math.max(
+                    1,
+                    Number(item.amount) || 1
+                );
+
+
+            subtotal +=
+                price * amount;
+
+        }
+
+
+        summarySubtotal.textContent =
+            formatPrice(subtotal);
+
+
+        summaryTotal.textContent =
+            formatPrice(subtotal);
+
+    }
+
+
+    // ============================================================
+    // EMPTY STATE
+    // ============================================================
+
+    function createEmptyState(
+        icon,
+        text
+    ) {
+
+        return `
+            <div
+                class="
+                    text-center
+                    py-xl
+                    text-on-surface-variant
+                    font-body-lg
+                    text-body-lg
+                    flex
+                    flex-col
+                    items-center
+                    gap-4
+                "
+            >
+
+                <span
+                    class="
+                        material-symbols-outlined
+                        text-4xl
+                        opacity-50
+                    "
+                >
+                    ${icon}
+                </span>
+
+                ${text}
+
+            </div>
+        `;
+
+    }
+
+
+    // ============================================================
+    // RENDER
+    // ============================================================
+
+    function renderContent() {
+
+        const session =
+            getCartSession();
+
+        updateCounts();
+        updateCheckoutButton();
+
+        contentArea.innerHTML = "";
+
+
+        // ========================================================
+        // CART
+        // ========================================================
+
+        if (
+            currentTab === "cart"
+        ) {
+
+            orderSummary.style.display =
+                "block";
+
+
+            updateSummary(
+                session.cart
+            );
+
+
+            if (
+                session.cart.length === 0
+            ) {
+
+                contentArea.innerHTML =
+                    createEmptyState(
+                        "shopping_cart",
+                        "Your cart is empty."
+                    );
+
+                return;
+            }
+
+
+            contentArea.innerHTML =
+                session.cart
+                    .map(
+                        item =>
+                            createCartCard(item)
+                    )
+                    .join("");
+
+
+            return;
+
+        }
+
+
+        // ========================================================
+        // WISHLIST
+        // ========================================================
+
+        orderSummary.style.display =
+            "none";
+
+
+        if (
+            session.wishlist.length === 0
+        ) {
+
+            contentArea.innerHTML =
+                createEmptyState(
+                    "favorite",
+                    "Your wishlist is empty."
+                );
+
+            return;
+
+        }
+
+
+        /*
+         * IMPORTANT:
+         *
+         * item is already the productId.
+         *
+         * NOT:
+         *
+         * item.productId
+         */
+
+        contentArea.innerHTML =
+            session.wishlist
+                .map(
+                    productId =>
+                        createWishlistCard(
+                            productId
+                        )
+                )
+                .join("");
+
+    }
+
+
+    // ============================================================
+    // SWITCH TAB
+    // ============================================================
+
+    function switchTab(tab) {
+
+        currentTab =
+            tab;
+
+
+        if (
+            tab === "cart"
+        ) {
+
+            tabCartBtn.classList.replace(
+                "tab-inactive",
+                "tab-active"
+            );
+
+            tabWishlistBtn.classList.replace(
+                "tab-active",
+                "tab-inactive"
+            );
+
+        } else {
+
+            tabWishlistBtn.classList.replace(
+                "tab-inactive",
+                "tab-active"
+            );
+
+            tabCartBtn.classList.replace(
+                "tab-active",
+                "tab-inactive"
+            );
+
+        }
+
+
+        renderContent();
+
+    }
+
+
+    tabCartBtn.addEventListener(
+        "click",
+        () =>
+            switchTab("cart")
+    );
+
+
+    tabWishlistBtn.addEventListener(
+        "click",
+        () =>
+            switchTab("wishlist")
+    );
+
+
+    // ============================================================
+    // REMOVE FROM CART
+    // ============================================================
+
+    function removeFromCart(productId) {
+
+        const session =
+            getCartSession();
+
+
+        session.cart =
+            session.cart.filter(
+                item =>
+                    item.productId !== productId
+            );
+
+
+        saveCartSession(
+            session
+        );
+
+
+        renderContent();
+
+    }
+
+
+    // ============================================================
+    // REMOVE FROM WISHLIST
+    // ============================================================
+
+    function removeFromWishlist(productId) {
+
+        const session =
+            getCartSession();
+
+
+        /*
+         * wishlist contains strings.
+         *
+         * Therefore:
+         *
+         * id !== productId
+         */
+
+        session.wishlist =
+            session.wishlist.filter(
+                id =>
+                    id !== productId
+            );
+
+
+        saveCartSession(
+            session
+        );
+
+
+        renderContent();
+
+    }
+
+
+    // ============================================================
+    // EVENT DELEGATION
+    // ============================================================
+
+    contentArea.addEventListener(
+        "click",
+        function(event) {
+
+
+            // ----------------------------------------------------
+            // REMOVE CART
+            // ----------------------------------------------------
+
+            const removeCart =
+                event.target.closest(
+                    ".remove-cart"
+                );
+
+
+            if (removeCart) {
+
+                removeFromCart(
+                    removeCart.dataset.productId
+                );
+
+                return;
+
+            }
+
+
+            // ----------------------------------------------------
+            // REMOVE WISHLIST
+            // ----------------------------------------------------
+
+            const removeWishlist =
+                event.target.closest(
+                    ".remove-wishlist"
+                );
+
+
+            if (removeWishlist) {
+
+                removeFromWishlist(
+                    removeWishlist.dataset.productId
+                );
+
+                return;
+
+            }
+
+
+            // ----------------------------------------------------
+            // VIEW PRODUCT
+            // ----------------------------------------------------
+
+            const viewItem =
+                event.target.closest(
+                    ".view-item"
+                );
+
+
+            if (viewItem) {
+
+                openProduct(
+                    viewItem.dataset.productId
+                );
+
+                return;
+
+            }
+
+        }
+    );
+
+
+    // ============================================================
+    // READ TAB FROM URL
+    // ============================================================
+
+    function initializeTabFromURL() {
+
+        const params =
+            new URLSearchParams(
+                window.location.search
+            );
+
+
+        const tab =
+            params.get("tab");
+
+
+        if (
+            tab === "wishlist"
+        ) {
+
+            currentTab =
+                "wishlist";
+
+        } else {
+
+            currentTab =
+                "cart";
+
+        }
+
+    }
+
+
+    // ============================================================
+    // INITIALIZE
+    // ============================================================
+
+    async function initialize() {
+
+        contentArea.innerHTML = `
+            <div
+                class="
+                    flex
+                    items-center
+                    justify-center
+                    h-full
+                    text-on-surface-variant
+                    font-body-lg
+                    text-body-lg
+                "
+            >
+                Loading...
+            </div>
+        `;
+
+
+        initializeTabFromURL();
+
+
+        await loadCatalog();
+
+
+        /*
+         * Normalize existing sessionStorage.
+         *
+         * This also converts old wishlist objects:
+         *
+         * { productId: "abc" }
+         *
+         * into:
+         *
+         * "abc"
+         *
+         */
+
+        const session =
+            getCartSession();
+
+
+        saveCartSession(
+            session
+        );
+
+
+        renderContent();
+
+    }
+
+
+    initialize();
+
+    // ============================================================
+    // CHECKOUT
+    // ============================================================
+
+    const checkoutButton =
+        document.getElementById("checkout-button");
+
+
+    function updateCheckoutButton() {
+
+        const session =
+            getCartSession();
+
+        let subtotal = 0;
+
+
+        // Calculate subtotal
+        for (const item of session.cart) {
+
+            const product =
+                getProduct(item.productId);
+
+            if (!product) {
+                continue;
+            }
+
+            const price =
+                getProductPrice(product);
+
+            const amount =
+                Math.max(
+                    1,
+                    Number(item.amount) || 1
+                );
+
+            subtotal +=
+                price * amount;
+
+        }
+
+
+        // Enable only if:
+        // 1. Cart has at least one item
+        // 2. Subtotal is greater than $0
+
+        const canCheckout =
+            session.cart.length > 0 &&
+            subtotal > 0;
+
+
+        checkoutButton.disabled =
+            !canCheckout;
+
+
+        if (canCheckout) {
+
+            checkoutButton.classList.remove(
+                "opacity-50",
+                "cursor-not-allowed"
+            );
+
+        } else {
+
+            checkoutButton.classList.add(
+                "opacity-50",
+                "cursor-not-allowed"
+            );
+
+        }
+
+    }
+
+
+    // ============================================================
+    // CHECKOUT BUTTON CLICK
+    // ============================================================
+
+    checkoutButton.addEventListener(
+        "click",
+        function () {
+
+            const session =
+                getCartSession();
+
+            let subtotal = 0;
+
+
+            for (const item of session.cart) {
+
+                const product =
+                    getProduct(item.productId);
+
+                if (!product) {
+                    continue;
+                }
+
+                const price =
+                    getProductPrice(product);
+
+                const amount =
+                    Math.max(
+                        1,
+                        Number(item.amount) || 1
+                    );
+
+                subtotal +=
+                    price * amount;
+
+            }
+
+
+            if (
+                session.cart.length > 0 &&
+                subtotal > 0
+            ) {
+
+                window.location.href =
+                    "../checkout/";
+
+            }
+
+        }
+    );
+</script>
+
+</body>
+</html>

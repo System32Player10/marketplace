@@ -1,0 +1,378 @@
+<!DOCTYPE html><html class="light" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>About - MarketPlace</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-error": "#ffffff",
+                      "tertiary-fixed": "#e0e3e5",
+                      "secondary-fixed-dim": "#adc6ff",
+                      "surface-bright": "#f8f9ff",
+                      "background": "#f8f9ff",
+                      "surface": "#f8f9ff",
+                      "on-secondary": "#ffffff",
+                      "secondary-container": "#2170e4",
+                      "tertiary-fixed-dim": "#c4c7c9",
+                      "surface-container": "#e5eeff",
+                      "inverse-on-surface": "#eaf1ff",
+                      "surface-container-highest": "#d3e4fe",
+                      "outline-variant": "#c6c6cd",
+                      "on-surface-variant": "#45464d",
+                      "on-error-container": "#93000a",
+                      "on-tertiary-fixed": "#191c1e",
+                      "error-container": "#ffdad6",
+                      "on-surface": "#0b1c30",
+                      "primary-fixed": "#dae2fd",
+                      "tertiary-container": "#191c1e",
+                      "on-secondary-fixed-variant": "#004395",
+                      "on-primary": "#ffffff",
+                      "surface-variant": "#d3e4fe",
+                      "on-secondary-container": "#fefcff",
+                      "secondary": "#0058be",
+                      "outline": "#76777d",
+                      "inverse-surface": "#213145",
+                      "surface-dim": "#cbdbf5",
+                      "surface-container-high": "#dce9ff",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-tint": "#565e74",
+                      "primary-fixed-dim": "#bec6e0",
+                      "on-tertiary-container": "#818486",
+                      "on-background": "#0b1c30",
+                      "on-secondary-fixed": "#001a42",
+                      "secondary-fixed": "#d8e2ff",
+                      "inverse-primary": "#bec6e0",
+                      "on-tertiary": "#ffffff",
+                      "on-primary-fixed-variant": "#3f465c",
+                      "error": "#ba1a1a",
+                      "on-primary-fixed": "#131b2e",
+                      "on-tertiary-fixed-variant": "#444749",
+                      "primary": "#000000",
+                      "surface-container-low": "#eff4ff",
+                      "tertiary": "#000000",
+                      "on-primary-container": "#7c839b",
+                      "primary-container": "#131b2e"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "xl": "80px",
+                      "sm": "16px",
+                      "margin-desktop": "64px",
+                      "xs": "8px",
+                      "margin-mobile": "16px",
+                      "base": "4px",
+                      "gutter": "24px",
+                      "md": "24px",
+                      "lg": "48px"
+              },
+              "fontFamily": {
+                      "headline-lg-mobile": [
+                              "Manrope"
+                      ],
+                      "label-sm": [
+                              "Hanken Grotesk"
+                      ],
+                      "label-md": [
+                              "Hanken Grotesk"
+                      ],
+                      "body-md": [
+                              "Hanken Grotesk"
+                      ],
+                      "headline-xl": [
+                              "Manrope"
+                      ],
+                      "headline-md": [
+                              "Manrope"
+                      ],
+                      "headline-lg": [
+                              "Manrope"
+                      ],
+                      "body-lg": [
+                              "Hanken Grotesk"
+                      ]
+              },
+              "fontSize": {
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-xl": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased selection:bg-secondary selection:text-on-secondary min-h-screen flex flex-col">
+<!-- Header Navigation -->
+<header class="bg-surface-container-lowest dark:bg-inverse-surface w-full sticky top-0 z-50 border-b border-outline-variant dark:border-outline">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-base max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-md">
+<a class="font-headline-md text-headline-md font-bold text-on-surface dark:text-inverse-on-surface" href="#">MarketPlace</a>
+</div>
+<!-- Search Bar (on_left logic implemented but placed centrally for balance in this layout, typical of modern marketplaces) -->
+<div class="hidden md:flex flex-1 max-w-lg mx-md relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface-container-low border border-outline-variant rounded-full text-on-surface focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-all-200 font-body-md text-body-md" placeholder="Search for products, brands and more" type="text"/>
+</div>
+<nav class="hidden md:flex items-center gap-gutter">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors cursor-pointer active:opacity-80 font-body-md text-body-md" href="#">Store</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors cursor-pointer active:opacity-80 font-body-md text-body-md" href="#">Product</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors cursor-pointer active:opacity-80 font-body-md text-body-md" href="../merchant/">Sell</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors cursor-pointer active:opacity-80 font-body-md text-body-md" href="../help/">Help</a>
+</nav>
+<div class="flex items-center gap-sm mt-2">
+<button aria-label="notifications" class="p-2 text-on-surface-variant hover:text-secondary transition-colors transparent">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</div>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden p-2 text-on-surface-variant ml-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="py-xl px-margin-mobile md:px-margin-desktop max-w-screen-2xl mx-auto flex flex-col md:flex-row gap-lg items-center">
+<div class="w-full md:w-1/2 flex flex-col gap-md">
+<div class="flex items-center gap-sm">
+<span class="font-label-md text-label-md text-secondary uppercase tracking-widest">About Us</span>
+<span class="bg-secondary/10 text-secondary px-3 py-1 rounded-full font-label-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">emoji_events</span> #1 Website in Europe
+</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface">Redefining the Digital Commerce Ecosystem</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">MarketPlace is a premier global platform connecting millions of buyers and sellers. We leverage cutting-edge technology to build a seamless, secure, and intuitive environment where businesses thrive and consumers discover extraordinary value. Our commitment is to elevate the standard of digital trade.</p>
+</div>
+<div class="w-full md:w-1/2 h-96 bg-surface-container-low rounded-xl overflow-hidden shadow-sm border border-outline-variant/30">
+<img alt="Corporate Office" class="w-full h-full object-cover" data-alt="A modern, high-tech corporate office space with large glass windows overlooking a sleek, futuristic cityscape during golden hour. The interior features minimalist furniture in deep navy and bright white tones, reflecting a professional and high-end corporate identity. Clean lines, generous natural lighting, and a serene, trusting atmosphere permeate the scene, embodying a premium utility aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHyq-sSZ7AzxWXC6C7M96CeI0VoBADsw7-P-3CWNT_zSF16FUcY5fjjbdmpSPQfK9w4-hPS3mbN4Ovy_Xt6jZow3yENeK57qiAyrAv9COiYjpcR8hu5KGFO5XzD07qy2pXeD3EB17RtwESScl_05xPy4s2GPDsBPIuvJZpHaIXlpdKaGm7Y7EXl76DEMTEOKxah67NDWMrIKrGqfmbOB36AHavVX3UW9HZbL6Pii6520mXieBgY9fx">
+</div>
+</section>
+<!-- Vision & Mission Consolidated Section -->
+<section class="py-xl bg-surface-container-lowest px-margin-mobile md:px-margin-desktop"><div class="max-w-screen-2xl mx-auto">
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-lg items-center bg-surface-container-low rounded-xl p-lg md:p-xl border border-outline-variant/30 shadow-sm">
+    <div class="lg:col-span-1 text-center lg:text-left">
+      <h2 class="font-headline-lg text-headline-lg text-on-surface mb-sm">Our Core Foundation</h2>
+      <p class="font-body-md text-body-md text-on-surface-variant">The principles guiding our continuous innovation and service to the global community.</p>
+    </div>
+    <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-md">
+      <!-- Mission Card -->
+      <div class="bg-surface-container-lowest p-lg rounded-xl border border-outline-variant/50 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1 group">
+        <div class="w-12 h-12 bg-secondary/10 text-secondary rounded-full flex items-center justify-center mb-md transition-colors group-hover:bg-secondary group-hover:text-on-secondary">
+          <span class="material-symbols-outlined text-[24px]">rocket_launch</span>
+        </div>
+        <h3 class="font-headline-md text-headline-md text-on-surface mb-xs">Mission</h3>
+        <p class="font-body-lg text-body-lg text-on-surface-variant">"To empower global commerce through innovation and accessibility."</p>
+      </div>
+      <!-- Vision Card -->
+      <div class="bg-surface-container-lowest p-lg rounded-xl border border-outline-variant/50 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1 group">
+        <div class="w-12 h-12 bg-secondary/10 text-secondary rounded-full flex items-center justify-center mb-md transition-colors group-hover:bg-secondary group-hover:text-on-secondary">
+          <span class="material-symbols-outlined text-[24px]">visibility</span>
+        </div>
+        <h3 class="font-headline-md text-headline-md text-on-surface mb-xs">Vision</h3>
+        <p class="font-body-lg text-body-lg text-on-surface-variant">"To be the world's most trusted and community-centric marketplace."</p>
+      </div>
+    </div>
+  </div>
+</div></section>
+<!-- Educational Principles Section -->
+<section class="py-xl px-margin-mobile md:px-margin-desktop max-w-screen-2xl mx-auto">
+<div class="mb-lg text-center md:text-left">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-xs">Educational Principles</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">Empowering our users with the knowledge to succeed in digital commerce.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md">
+<div class="bg-surface-container-low rounded-xl p-md border border-outline-variant/50">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs">Transparency</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Providing clear, accessible information on transactions, fees, and seller performance to build trust.</p>
+</div>
+<div class="bg-surface-container-low rounded-xl p-md border border-outline-variant/50">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs">Security Awareness</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Educating users on best practices for safe digital trading and protecting personal information.</p>
+</div>
+<div class="bg-surface-container-low rounded-xl p-md border border-outline-variant/50">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs">Sustainable Commerce</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Guiding sellers and buyers towards environmentally friendly choices and responsible consumption.</p>
+</div>
+</div>
+</section>
+<!-- Global Ranking Section -->
+<section class="py-xl bg-surface-container-lowest px-margin-mobile md:px-margin-desktop">
+<div class="max-w-screen-lg mx-auto">
+<div class="text-center mb-lg">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-xs">Global Market Position</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">Ranked #4 worldwide among the top online retail platforms.</p>
+</div>
+<div class="bg-surface-bright rounded-xl p-lg border border-outline-variant shadow-sm">
+  <div class="flex flex-col gap-lg">
+    <!-- Amazon -->
+    <div class="flex flex-col gap-xs">
+      <div class="flex justify-between items-end">
+        <div class="flex flex-col">
+          <span class="font-label-md text-on-surface font-bold">Amazon</span>
+          <span class="font-label-sm text-on-surface-variant">Global Retail &amp; Cloud</span>
+        </div>
+        <span class="font-label-md text-on-surface-variant">100%</span>
+      </div>
+      <div class="w-full h-4 bg-surface-container rounded-full overflow-hidden">
+        <div class="h-full bg-secondary/40 rounded-full" style="width: 100%"></div>
+      </div>
+    </div>
+
+    <!-- Walmart -->
+    <div class="flex flex-col gap-xs">
+      <div class="flex justify-between items-end">
+        <div class="flex flex-col">
+          <span class="font-label-md text-on-surface font-bold">Walmart</span>
+          <span class="font-label-sm text-on-surface-variant">Omnichannel Retail</span>
+        </div>
+        <span class="font-label-md text-on-surface-variant">85%</span>
+      </div>
+      <div class="w-full h-4 bg-surface-container rounded-full overflow-hidden">
+        <div class="h-full bg-secondary/30 rounded-full" style="width: 85%"></div>
+      </div>
+    </div>
+
+    <!-- eBay -->
+    <div class="flex flex-col gap-xs">
+      <div class="flex justify-between items-end">
+        <div class="flex flex-col">
+          <span class="font-label-md text-on-surface font-bold">eBay</span>
+          <span class="font-label-sm text-on-surface-variant">Global Auction &amp; Retail</span>
+        </div>
+        <span class="font-label-md text-on-surface-variant">70%</span>
+      </div>
+      <div class="w-full h-4 bg-surface-container rounded-full overflow-hidden">
+        <div class="h-full bg-secondary/20 rounded-full" style="width: 70%"></div>
+      </div>
+    </div>
+
+    <!-- MarketPlace -->
+    <div class="flex flex-col gap-xs">
+      <div class="flex justify-between items-end">
+        <div class="flex flex-col">
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+            <span class="font-label-md text-secondary font-bold">MarketPlace</span>
+          </div>
+          <span class="font-label-sm text-secondary">Community-Driven Commerce</span>
+        </div>
+        <span class="font-label-md text-secondary font-bold">60%</span>
+      </div>
+      <div class="w-full h-6 bg-secondary/10 rounded-full overflow-hidden border border-secondary/20">
+        <div class="h-full bg-secondary rounded-full shadow-sm" style="width: 60%"></div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+<!-- Featured Article / Future Outlook -->
+<section class="py-xl px-margin-mobile md:px-margin-desktop max-w-screen-lg mx-auto">
+<article class="prose max-w-none text-on-surface-variant font-body-md text-body-md">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-md">The Future of Community-Driven Commerce</h2>
+<div class="float-right ml-lg mb-md w-1/3 aspect-[4/3] rounded-lg overflow-hidden border border-outline-variant shadow-sm hidden md:block">
+<img alt="Future of Commerce" class="w-full h-full object-cover" data-alt="A macro shot of a sleek smartphone screen displaying an advanced shopping interface. The device rests on a pristine white marble table, illuminated by soft, diffused daylight. A glowing, subtle secondary blue accent highlights a 'purchase' interaction on the screen, communicating modern, secure, and effortless digital transactions." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCocpkACrz4dA8A_UXNtHp15D4xNNFwYoshx7Xk-LhlzEeVmajDpaWQS3RGqh24RKsYh6ui0xMCACyNmTlIuXKfQgWDS5ugFtmlAftKwN2rAQz_x5MYwq4sYfZJ-zc5AZZw2TP32y_AoTTZoBp3v3X02DSahdehkXNGOCKmhs1x83xw5Pvg2IkejAjvukqp-JvGf5w3nAmKv57Mvdowg9qZQbb7hYORBihaxN0txkqrP7hS4c9M8yx8">
+</div>
+<p class="mb-sm">As digital landscapes evolve, the traditional transaction model is yielding to more integrated, community-focused experiences. We believe the future of shopping isn't just about utility; it's about connection.</p>
+<p class="mb-sm">By harnessing the power of shared interests and transparent feedback loops, marketplaces are transforming into thriving digital neighborhoods. Our platform is designed to facilitate these interactions, ensuring that every purchase is informed, secure, and supported by a robust network of peers and verified merchants.</p>
+<p class="">The integration of advanced logistical algorithms with intuitive user interfaces means that the distance between desire and fulfillment is shorter than ever. Yet, amidst this speed, we prioritize trust—building tools that verify authenticity, protect data, and elevate the standard of customer care across all global touchpoints.</p>
+</article>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-primary-container border-t border-outline-variant dark:border-outline w-full py-xl px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-md mt-auto">
+<div class="flex flex-col gap-xs text-center md:text-left">
+<span class="font-headline-sm text-headline-sm font-black text-secondary dark:text-secondary-fixed-dim">MarketPlace</span>
+<span class="font-label-md text-label-md text-on-surface dark:text-on-primary-container">© 2024 MarketPlace Inc. All rights reserved.</span>
+</div>
+<nav aria-label="Footer Navigation" class="flex flex-wrap justify-center gap-md">
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-200" href="/marketplace/privacy/statement/">Privacy Policy</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-200" href="/marketplace/servicesagreement/">Terms of Service</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-200" href="#">Cookie Settings</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-200" href="/marketplace/help/">Contact Support</a>
+</nav>
+<!-- Project Signature Area -->
+<div class="w-full mt-lg pt-md border-t border-outline-variant/30 flex flex-col items-center justify-center text-center gap-xs">
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Project for Subject Artificial Intelligence &amp; Coding (KKA19 - Manuel Kristo Jeftoran, S.Kom.)</p>
+<p class="font-body-md text-body-md text-on-surface">Made by: Alvaro Oliver Sena, Chandra Matheus Parlinggoman, Jason Lie, Joshua Edward Anwar, & Kevin Laurentius <br><span class="font-bold">Saint Angela Senior High School - CLASS X-3 - Academic Year 2026/2027</span></p>
+</div>
+</footer>
+
+
+</body></html>

@@ -208,10 +208,10 @@
 <input class="w-full pl-10 pr-4 py-2 bg-surface-container-low border border-outline-variant rounded-full text-on-surface focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-all-200 font-body-md text-body-md" placeholder="Search for products, brands and more" type="text"/>
 </div>
 <nav class="hidden md:flex items-center gap-gutter">
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors cursor-pointer active:opacity-80 font-body-md text-body-md" href="#">Categories</a>
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors cursor-pointer active:opacity-80 font-body-md text-body-md" href="#">Deals</a>
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors cursor-pointer active:opacity-80 font-body-md text-body-md" href="#">Sell</a>
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors cursor-pointer active:opacity-80 font-body-md text-body-md" href="#">Help</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors cursor-pointer active:opacity-80 font-body-md text-body-md" href="#">Store</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors cursor-pointer active:opacity-80 font-body-md text-body-md" href="#">Product</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors cursor-pointer active:opacity-80 font-body-md text-body-md" href="./merchant/">Sell</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors cursor-pointer active:opacity-80 font-body-md text-body-md" href="./help/">Help</a>
 </nav>
 <div class="flex items-center gap-sm mt-2">
 <button aria-label="notifications" class="p-2 text-on-surface-variant hover:text-secondary transition-colors">
@@ -492,10 +492,10 @@ View Store
 <p class="text-on-surface-variant dark:text-surface-variant text-sm">© 2024 MarketPlace Inc. All rights reserved.</p>
 </div>
 <nav class="flex flex-wrap justify-center gap-6">
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-200" href="#">Privacy Policy</a>
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-200" href="#">Terms of Service</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-200" href="/marketplace/privacy/statement/">Privacy Policy</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-200" href="/marketplace/servicesagreement/">Terms of Service</a>
 <a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-200" href="#">Cookie Settings</a>
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-200" href="#">Contact Support</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-200" href="/marketplace/help">Contact Support</a>
 </nav>
 </div>
 </footer>
@@ -554,6 +554,7 @@ View Store
         <button
             id="view-cart-button"
             class="w-full py-sm px-md bg-primary-container text-white font-label-md rounded-lg hover:opacity-90 transition-all"
+            onclick="window.location.href = './cart';"
         >
             View Cart
         </button>

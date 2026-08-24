@@ -123,9 +123,9 @@
     </div>
     <nav class="hidden md:flex items-center gap-gutter">
     <a class="text-secondary font-bold border-b-2 border-secondary pb-1 dark:text-secondary-fixed dark:border-secondary-fixed hover:text-secondary dark:hover:text-secondary-fixed transition-colors cursor-pointer active:opacity-80" href="#">Store</a>
-    <a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors cursor-pointer active:opacity-80 font-body-md text-body-md" href="#">Deals</a>
-    <a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors cursor-pointer active:opacity-80 font-body-md text-body-md" href="#">Sell</a>
-    <a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors cursor-pointer active:opacity-80 font-body-md text-body-md" href="#">Help</a>
+    <a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors cursor-pointer active:opacity-80 font-body-md text-body-md" href="#">Product</a>
+    <a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors cursor-pointer active:opacity-80 font-body-md text-body-md" href="../merchant/">Sell</a>
+    <a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors cursor-pointer active:opacity-80 font-body-md text-body-md" href="../help/">Help</a>
     </nav>
     <div class="flex items-center gap-sm mt-2">
     <button aria-label="notifications" class="p-2 text-on-surface-variant hover:text-secondary transition-colors">
@@ -264,7 +264,7 @@
 <a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-200" href="/marketplace/privacy/statement/">Privacy Policy</a>
 <a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-200" href="/marketplace/servicesagreement/">Terms of Service</a>
 <a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-200" href="#">Cookie Settings</a>
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-200" href="/marketplace/support">Contact Support</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-200" href="/marketplace/help">Contact Support</a>
 </nav>
 </div>
 </footer>
@@ -342,11 +342,31 @@
         <button
             id="view-cart-button"
             class="w-full py-sm px-md bg-primary-container text-white font-label-md rounded-lg hover:opacity-90 transition-all"
+            onclick="window.location.href = '../cart';"
         >
             View Cart
         </button>
     </div>
 </aside>
+<!-- Wishlist Notification -->
+<div
+    id="wishlist-popup"
+    class="fixed bottom-6 left-1/2 -translate-x-1/2 z-[100] bg-surface-container-lowest border border-outline-variant rounded-xl shadow-lg px-md py-sm flex items-center gap-sm translate-y-20 opacity-0 pointer-events-none transition-all duration-300"
+>
+    <span
+        id="wishlist-popup-icon"
+        class="material-symbols-outlined text-error"
+        style="font-variation-settings: 'FILL' 1;"
+    >
+        favorite
+    </span>
+
+    <span
+        id="wishlist-popup-text"
+        class="font-label-md text-label-md text-on-surface"
+    ></span>
+</div>
+
 <script src="../script/cart.js"></script>
 <script src="../script/store.js"></script>
 </body></html>

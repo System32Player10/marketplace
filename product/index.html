@@ -1,401 +1,950 @@
 <!DOCTYPE html>
 
-<html class="light" lang="en"><head>
+<html class="light" lang="en">
+<head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
 <title>Product Detail - MarketPlace</title>
+
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet"/>
+
 <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "inverse-on-surface": "#eaf1ff",
-                        "surface-tint": "#565e74",
-                        "on-secondary-fixed": "#001a42",
-                        "secondary-fixed": "#d8e2ff",
-                        "on-tertiary": "#ffffff",
-                        "surface-container-highest": "#d3e4fe",
-                        "primary-fixed": "#dae2fd",
-                        "surface-variant": "#d3e4fe",
-                        "surface-dim": "#cbdbf5",
-                        "tertiary-fixed": "#e0e3e5",
-                        "surface-bright": "#f8f9ff",
-                        "on-tertiary-container": "#818486",
-                        "surface-container-high": "#dce9ff",
-                        "tertiary": "#000000",
-                        "outline-variant": "#c6c6cd",
-                        "surface": "#f8f9ff",
-                        "secondary-fixed-dim": "#adc6ff",
-                        "primary-container": "#131b2e",
-                        "on-tertiary-fixed-variant": "#444749",
-                        "background": "#f8f9ff",
-                        "error": "#ba1a1a",
-                        "inverse-primary": "#bec6e0",
-                        "surface-container": "#e5eeff",
-                        "on-background": "#0b1c30",
-                        "surface-container-low": "#eff4ff",
-                        "on-error-container": "#93000a",
-                        "on-primary-fixed-variant": "#3f465c",
-                        "on-primary-container": "#7c839b",
-                        "error-container": "#ffdad6",
-                        "on-primary": "#ffffff",
-                        "on-error": "#ffffff",
-                        "on-surface-variant": "#45464d",
-                        "primary": "#000000",
-                        "outline": "#76777d",
-                        "secondary-container": "#2170e4",
-                        "secondary": "#0058be",
-                        "on-secondary": "#ffffff",
-                        "surface-container-lowest": "#ffffff",
-                        "on-secondary-fixed-variant": "#004395",
-                        "tertiary-container": "#191c1e",
-                        "on-tertiary-fixed": "#191c1e",
-                        "on-secondary-container": "#fefcff",
-                        "on-surface": "#0b1c30",
-                        "inverse-surface": "#213145",
-                        "tertiary-fixed-dim": "#c4c7c9",
-                        "on-primary-fixed": "#131b2e",
-                        "primary-fixed-dim": "#bec6e0"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.125rem",
-                        "lg": "0.25rem",
-                        "xl": "0.5rem",
-                        "full": "0.75rem"
-                    },
-                    "spacing": {
-                        "base": "4px",
-                        "lg": "48px",
-                        "xs": "8px",
-                        "xl": "80px",
-                        "md": "24px",
-                        "margin-desktop": "64px",
-                        "sm": "16px",
-                        "gutter": "24px",
-                        "margin-mobile": "16px"
-                    },
-                    "fontFamily": {
-                        "headline-xl": ["Manrope"],
-                        "label-sm": ["Hanken Grotesk"],
-                        "body-lg": ["Hanken Grotesk"],
-                        "body-md": ["Hanken Grotesk"],
-                        "headline-lg-mobile": ["Manrope"],
-                        "headline-lg": ["Manrope"],
-                        "label-md": ["Hanken Grotesk"],
-                        "headline-md": ["Manrope"]
-                    },
-                    "fontSize": {
-                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
-                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "600" }],
-                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
-                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
-                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
-                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
-                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }],
-                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }]
-                    }
-                }
+tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            colors: {
+                "inverse-on-surface": "#eaf1ff",
+                "surface-tint": "#565e74",
+                "on-secondary-fixed": "#001a42",
+                "secondary-fixed": "#d8e2ff",
+                "on-tertiary": "#ffffff",
+                "surface-container-highest": "#d3e4fe",
+                "primary-fixed": "#dae2fd",
+                "surface-variant": "#d3e4fe",
+                "surface-dim": "#cbdbf5",
+                "tertiary-fixed": "#e0e3e5",
+                "surface-bright": "#f8f9ff",
+                "on-tertiary-container": "#818486",
+                "surface-container-high": "#dce9ff",
+                "tertiary": "#000000",
+                "outline-variant": "#c6c6cd",
+                "surface": "#f8f9ff",
+                "secondary-fixed-dim": "#adc6ff",
+                "primary-container": "#131b2e",
+                "on-tertiary-fixed-variant": "#444749",
+                "error": "#ba1a1a",
+                "inverse-primary": "#bec6e0",
+                "surface-container": "#e5eeff",
+                "on-background": "#0b1c30",
+                "surface-container-low": "#eff4ff",
+                "on-error-container": "#93000a",
+                "on-primary-fixed-variant": "#3f465c",
+                "error-container": "#ffdad6",
+                "on-primary": "#ffffff",
+                "on-error": "#ffffff",
+                "on-surface-variant": "#45464d",
+                "primary": "#000000",
+                "outline": "#76777d",
+                "secondary-container": "#2170e4",
+                "secondary": "#0058be",
+                "on-secondary": "#ffffff",
+                "surface-container-lowest": "#ffffff",
+                "on-secondary-fixed-variant": "#004395",
+                "tertiary-container": "#191c1e",
+                "on-tertiary-fixed": "#191c1e",
+                "on-secondary-container": "#fefcff",
+                "on-surface": "#0b1c30",
+                "inverse-surface": "#213145",
+                "tertiary-fixed-dim": "#c4c7c9",
+                "on-primary-fixed": "#131b2e",
+                "primary-fixed-dim": "#bec6e0"
+            },
+
+            borderRadius: {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+
+            spacing: {
+                "base": "4px",
+                "lg": "48px",
+                "xs": "8px",
+                "xl": "80px",
+                "md": "24px",
+                "margin-desktop": "64px",
+                "sm": "16px",
+                "gutter": "24px",
+                "margin-mobile": "16px"
+            },
+
+            fontFamily: {
+                "headline-xl": ["Manrope"],
+                "label-sm": ["Hanken Grotesk"],
+                "body-lg": ["Hanken Grotesk"],
+                "body-md": ["Hanken Grotesk"],
+                "headline-lg-mobile": ["Manrope"],
+                "headline-lg": ["Manrope"],
+                "label-md": ["Hanken Grotesk"],
+                "headline-md": ["Manrope"]
+            },
+
+            fontSize: {
+                "headline-xl": ["48px", {
+                    "lineHeight": "56px",
+                    "letterSpacing": "-0.02em",
+                    "fontWeight": "700"
+                }],
+
+                "label-sm": ["12px", {
+                    "lineHeight": "16px",
+                    "fontWeight": "600"
+                }],
+
+                "body-lg": ["18px", {
+                    "lineHeight": "28px",
+                    "fontWeight": "400"
+                }],
+
+                "body-md": ["16px", {
+                    "lineHeight": "24px",
+                    "fontWeight": "400"
+                }],
+
+                "headline-lg-mobile": ["28px", {
+                    "lineHeight": "36px",
+                    "fontWeight": "600"
+                }],
+
+                "headline-lg": ["32px", {
+                    "lineHeight": "40px",
+                    "letterSpacing": "-0.01em",
+                    "fontWeight": "600"
+                }],
+
+                "label-md": ["14px", {
+                    "lineHeight": "20px",
+                    "letterSpacing": "0.01em",
+                    "fontWeight": "500"
+                }],
+
+                "headline-md": ["24px", {
+                    "lineHeight": "32px",
+                    "fontWeight": "600"
+                }]
             }
         }
-    </script>
+    }
+};
+</script>
+
 <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .material-symbols-outlined[data-weight="fill"] {
-            font-variation-settings: 'FILL' 1;
-        }
-    </style>
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.material-symbols-outlined[data-weight="fill"] {
+    font-variation-settings: 'FILL' 1;
+}
+</style>
 </head>
+
 <body class="bg-background text-on-surface font-body-md antialiased min-h-screen flex flex-col">
-<!-- TopNavBar (Destination: Marketplace Browsing) -->
+
+<!-- Top Navigation -->
 <header class="bg-surface-container-lowest dark:bg-inverse-surface w-full sticky top-0 z-50 border-b border-outline-variant dark:border-outline">
+
     <div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-base max-w-screen-2xl mx-auto">
-    <div class="flex items-center gap-md">
-    <a class="font-headline-md text-headline-md font-bold text-on-surface dark:text-inverse-on-surface" href="#">MarketPlace</a>
+
+        <div class="flex items-center gap-md">
+            <a
+                class="font-headline-md text-headline-md font-bold text-on-surface dark:text-inverse-on-surface"
+                href="#"
+            >
+                MarketPlace
+            </a>
+        </div>
+
+        <div class="hidden md:flex flex-1 max-w-lg mx-md relative">
+
+            <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">
+                search
+            </span>
+
+            <input
+                class="w-full pl-10 pr-4 py-2 bg-surface-container-low border border-outline-variant rounded-full text-on-surface focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-all-200 font-body-md text-body-md"
+                placeholder="Search for products, brands and more"
+                type="text"
+            />
+
+        </div>
+
+        <nav class="hidden md:flex items-center gap-gutter">
+
+            <a
+                class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors cursor-pointer active:opacity-80 font-body-md text-body-md"
+                href="#"
+            >
+                Store
+            </a>
+
+            <a
+                class="text-secondary font-bold border-b-2 border-secondary pb-1 dark:text-secondary-fixed dark:border-secondary-fixed hover:text-secondary dark:hover:text-secondary-fixed transition-colors cursor-pointer active:opacity-80"
+                href="#"
+            >
+                Product
+            </a>
+
+            <a
+                class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors cursor-pointer active:opacity-80 font-body-md text-body-md"
+                href="../merchant/"
+            >
+                Sell
+            </a>
+
+            <a
+                class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors cursor-pointer active:opacity-80 font-body-md text-body-md"
+                href="../help/"
+            >
+                Help
+            </a>
+
+        </nav>
+
+        <div class="flex items-center gap-sm mt-2">
+
+            <button
+                aria-label="notifications"
+                class="p-2 text-on-surface-variant hover:text-secondary transition-colors"
+            >
+                <span class="material-symbols-outlined">
+                    notifications
+                </span>
+            </button>
+
+            <button
+                aria-label="favorite"
+                class="p-2 text-on-surface-variant hover:text-secondary transition-colors"
+            >
+                <span class="material-symbols-outlined">
+                    favorite
+                </span>
+            </button>
+
+            <button
+                id="shopping-cart-button"
+                aria-label="shopping_cart"
+                class="p-2 text-on-surface-variant hover:text-secondary transition-colors"
+            >
+                <span class="material-symbols-outlined">
+                    shopping_cart
+                </span>
+            </button>
+
+        </div>
+
+        <button class="md:hidden p-2 text-on-surface-variant ml-2">
+            <span class="material-symbols-outlined">
+                menu
+            </span>
+        </button>
+
     </div>
-    <!-- Search Bar (on_left logic implemented but placed centrally for balance in this layout, typical of modern marketplaces) -->
-    <div class="hidden md:flex flex-1 max-w-lg mx-md relative">
-    <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
-    <input class="w-full pl-10 pr-4 py-2 bg-surface-container-low border border-outline-variant rounded-full text-on-surface focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-all-200 font-body-md text-body-md" placeholder="Search for products, brands and more" type="text"/>
-    </div>
-    <nav class="hidden md:flex items-center gap-gutter">
-    <a class="text-secondary font-bold border-b-2 border-secondary pb-1 dark:text-secondary-fixed dark:border-secondary-fixed hover:text-secondary dark:hover:text-secondary-fixed transition-colors cursor-pointer active:opacity-80" href="#">Store</a>
-    <a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors cursor-pointer active:opacity-80 font-body-md text-body-md" href="#">Deals</a>
-    <a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors cursor-pointer active:opacity-80 font-body-md text-body-md" href="#">Sell</a>
-    <a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors cursor-pointer active:opacity-80 font-body-md text-body-md" href="#">Help</a>
-    </nav>
-    <div class="flex items-center gap-sm mt-2">
-    <button aria-label="notifications" class="p-2 text-on-surface-variant hover:text-secondary transition-colors">
-    <span class="material-symbols-outlined" data-icon="notifications">notifications</span>
-    </button>
-    <button aria-label="favorite" class="p-2 text-on-surface-variant hover:text-secondary transition-colors">
-    <span class="material-symbols-outlined" data-icon="favorite">favorite</span>
-    </button>
-    <button id="shopping-cart-button" aria-label="shopping_cart" class="p-2 text-on-surface-variant hover:text-secondary transition-colors">
-    <span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
-    </button>
-    </div>
-    <!-- Mobile Menu Toggle -->
-    <button class="md:hidden p-2 text-on-surface-variant ml-2">
-    <span class="material-symbols-outlined">menu</span>
-    </button>
-    </div>
-    </header>
+
+</header>
+
+
 <!-- Mobile Header -->
 <header class="md:hidden bg-surface-container-lowest border-b border-outline-variant p-sm flex justify-between items-center sticky top-0 z-50">
-<button class="p-xs"><span class="material-symbols-outlined">arrow_back</span></button>
-<span class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-on-surface">Details</span>
-<button class="p-xs"><span class="material-symbols-outlined">shopping_cart</span></button>
+
+    <button class="p-xs">
+        <span class="material-symbols-outlined">
+            arrow_back
+        </span>
+    </button>
+
+    <span class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-on-surface">
+        Details
+    </span>
+
+    <button class="p-xs">
+        <span class="material-symbols-outlined">
+            shopping_cart
+        </span>
+    </button>
+
 </header>
+
+
 <div id="body-main">
-<!-- Main Content Canvas -->
+
+<!-- Main Content -->
 <main class="flex-1 w-full max-w-screen-2xl mx-auto px-margin-mobile md:px-margin-desktop py-lg grid grid-cols-4 md:grid-cols-12 gap-gutter">
-<!-- Breadcrumbs -->
-<div class="col-span-4 md:col-span-12 flex items-center gap-xs text-label-sm font-label-sm text-on-surface-variant mb-sm">
-<a id="store-url" class="hover:text-secondary cursor-pointer">Apple</a>
-<span class="material-symbols-outlined text-[16px]">chevron_right</span>
-<span id="product-name-small" class="text-on-surface font-semibold">Premium Noise-Canceling Headphones</span>
-</div>
-<!-- Product Gallery (Left) -->
-<section class="col-span-4 md:col-span-7 lg:col-span-8 flex flex-col gap-sm">
-<div class="w-full aspect-[4/3] md:aspect-video rounded-xl border border-surface-container-highest bg-surface-container-low overflow-hidden relative">
-<img alt="Main Product Image" class="product-images w-full h-full object-cover" data-alt="High-quality, large hero image of sleek, modern black over-ear noise-canceling headphones resting on a pristine white minimalist pedestal. The lighting is soft and studio-quality, highlighting the premium matte finish and plush leather earcups. The background is a very subtle light gray gradient, fitting a premium utility light-mode aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9jTdYSPtRBQJOXkm4XOZu5xSmrgo-BBXwIzy2DCrShMSh5jK8ZDue-GKHXAJglkkKbVYQ-g2ryhZBlTKCy8nJ3l-lRXLW3uT62WBk6li4fDXdUHdOIJoUY6cgYV04C5GR3IqdZjTJddeQ5gQlnk8tkIeALdTCZi25APOvnN6LOyCMEjXcoe888RcRAjDgWrOCf2tm6Cx84bsoOar_729SBEWJUi_IWJqv_Crl-wXbQ0Ap9Ojk6-C_TA"/>
-<!-- Image Gallery Thumbnails (Overlay on mobile, below on desktop) -->
-<div class="absolute bottom-sm left-1/2 -translate-x-1/2 flex gap-xs md:hidden">
-<button class="w-2 h-2 rounded-full bg-secondary"></button>
-<button class="w-2 h-2 rounded-full bg-outline-variant"></button>
-<button class="w-2 h-2 rounded-full bg-outline-variant"></button>
-</div>
-</div>
-<div class="hidden md:grid grid-cols-4 gap-sm">
-<div class="aspect-square rounded-lg border-2 border-secondary overflow-hidden cursor-pointer">
-<img class="product-images w-full h-full object-cover" data-alt="Thumbnail image of sleek black over-ear headphones, side profile showing the textured earcup and brand logo. Clean white background, premium lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJEBujliGoqIspE-Hg1VNC-TfOkm0gnvMqkRiywqGev6C01bHyQGR8rVEaAgXjhVIjizFNdS3KJWk5R8ntDA8NiLf-X5JwxEvQrDm67wo3U3chwy6oWajQNNA94GG9Y0NxhN_bCQJXCNbbSn7Pm2nzPhDveO7W4Ng5oqq5cJwLrw8K8dA46ENpM6_dMO7kIJ82Rqq2Jp5xAvkgtlhc9NmYp7qDHd5QCrqeBvGLDK099FHW9Gq-bC8k3g"/>
-</div>
-<div class="aspect-square rounded-lg border border-surface-container-highest overflow-hidden cursor-pointer hover:border-outline-variant transition-colors">
-<img class="product-images w-full h-full object-cover" data-alt="Thumbnail image of sleek black over-ear headphones folded neatly in a premium rigid carrying case. Clean white background, soft studio lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIPNhWq_f1F0fPjJrL8M8p8-zvtXRuEZc5GcMUsF3Lx84iIW1yjoLeOlYcK2h005vWKVDpIKHnIcxGMhalxnCYRRD6HFm7drCq2CDnn9BbLjmoVjznvGpUtwu2eJ0j9564TCC0rx_S8WysFYMOtX8qbEXyNSfIaMiPE8WA2vuRsi77mbGCsBLBp4qAMMzUhc7XPj3n-0oojH1ibxJcMd7UfMIaFG4-l82bPmMWaYchrJUUZ4o7VHl7XA"/>
-</div>
-<div class="aspect-square rounded-lg border border-surface-container-highest overflow-hidden cursor-pointer hover:border-outline-variant transition-colors">
-<img class="product-images w-full h-full object-cover" data-alt="Thumbnail image showing a close-up macro shot of the plush leather earpad and brushed metal hinge of premium black headphones. High detail, light neutral background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGS3hIBkmIH-0toLQNU3SKqZgATh_2c9feEOjArLQ8W6-RcQyCBIm2sJpHOP4fUwB96pRwMFD3Ers9dJcJZOhrhtKPgKSp9OrZje49VwnRBdFciEm4Vn1sKwKbkTZojUu8TIY6dadhr-W3n6O_wuqsJ-R6uTGcGN2UqvkE_jpQ8uUryP-NNteX87T8Glsr7CZsgXFognfKQ01cpzhxYbLGQt65ioRWvoc-RtY0YzF5fAwYVQQxV5l4fg"/>
-</div>
-<div class="aspect-square rounded-lg border border-surface-container-highest overflow-hidden cursor-pointer hover:border-outline-variant transition-colors">
-<img class="product-images w-full h-full object-cover" data-alt="Thumbnail image showing a close-up macro shot of the plush leather earpad and brushed metal hinge of premium black headphones. High detail, light neutral background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGS3hIBkmIH-0toLQNU3SKqZgATh_2c9feEOjArLQ8W6-RcQyCBIm2sJpHOP4fUwB96pRwMFD3Ers9dJcJZOhrhtKPgKSp9OrZje49VwnRBdFciEm4Vn1sKwKbkTZojUu8TIY6dadhr-W3n6O_wuqsJ-R6uTGcGN2UqvkE_jpQ8uUryP-NNteX87T8Glsr7CZsgXFognfKQ01cpzhxYbLGQt65ioRWvoc-RtY0YzF5fAwYVQQxV5l4fg"/>
-</div>
-</div>
-</section>
-<!-- Product Info & Actions (Right) -->
-<section class="col-span-4 md:col-span-5 lg:col-span-4 flex flex-col gap-md sticky top-xl self-start">
-<div>
-<div class="flex items-center justify-between mb-xs">
-<span class="px-xs py-1 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm border border-outline-variant">Top Rated</span>
-<button class="text-outline hover:text-error transition-colors"><span class="material-symbols-outlined">favorite_border</span></button>
-</div>
-<h1 id="product-name" class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-xs">Aura Pro Wireless Headphones</h1>
-<div class="flex items-center gap-xs mb-sm">
-<div class="flex items-center text-[#F59E0B]">
-<span class="material-symbols-outlined text-[20px]" data-weight="fill">star</span>
-<span class="material-symbols-outlined text-[20px]" data-weight="fill">star</span>
-<span class="material-symbols-outlined text-[20px]" data-weight="fill">star</span>
-<span class="material-symbols-outlined text-[20px]" data-weight="fill">star</span>
-<span class="material-symbols-outlined text-[20px]">star_half</span>
-</div>
-<span id="product-rating" class="text-body-md font-body-md text-on-surface font-medium">4.8</span>
-</div>
-<div class="flex items-end gap-sm mb-md">
-<span id="price-span" class="font-headline-xl text-headline-xl text-on-surface"></span>
-<span id="real-price-span" class="text-body-md font-body-md text-on-surface-variant line-through mb-1"></span>
-</div>
-</div>
-<p id="product-description" class="text-body-md font-body-md text-on-surface-variant border-b border-surface-container-highest pb-md">
-                Experience industry-leading active noise cancellation with the Aura Pro. Featuring custom 40mm drivers for rich, spatial audio, and up to 40 hours of battery life. Designed for all-day comfort with plush memory foam earcups.
-            </p>
-<div class="flex flex-col gap-sm py-sm">
-<div id="availability" class="flex items-center gap-sm">
-<span class="material-symbols-outlined text-[20px] text-secondary">check_circle</span>
-<span class="font-label-md text-label-md text-on-surface font-semibold text-emerald-700">In Stock</span>
-<span id="ships-within" class="text-body-md font-body-md text-on-surface-variant text-sm">| Ships within 24 hours</span>
-</div>
-<div class="flex flex-col gap-xs mt-sm">
-<label class="font-label-md text-label-md text-on-surface">Color: <span class="font-semibold" id="selected-color">Midnight Black</span></label>
-<div id="colors" class="flex gap-sm">
-<button class="w-10 h-10 rounded-full bg-[#111111] border-2 border-secondary shadow-sm ring-2 ring-transparent focus:ring-secondary/20 transition-all"></button>
-<button class="w-10 h-10 rounded-full bg-[#E5E5E5] border border-outline-variant hover:border-outline shadow-sm transition-all"></button>
-<button class="w-10 h-10 rounded-full bg-[#1e3a8a] border border-outline-variant hover:border-outline shadow-sm transition-all"></button>
-</div>
-<div id="variant-selector" class="flex flex-col gap-xs mt-sm">
-    <label for="variant-select" class="font-label-md text-label-md text-on-surface">
-        Variant
-    </label>
 
-    <select
-        id="variant-select"
-        class="w-full px-sm py-sm bg-surface-container-lowest border border-outline-variant rounded-lg text-on-surface font-body-md focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-all"
-    ></select>
-</div>
-</div>
-</div>
-<div class="flex flex-col gap-sm mt-md">
-<div id="quality-control" class="flex items-center border border-outline-variant rounded-lg w-max bg-surface-container-lowest">
-<button id="quantity-minus" class="p-xs text-on-surface hover:bg-surface-container-low rounded-l-lg transition-colors">
-    <span class="material-symbols-outlined">remove</span>
-</button>
+    <!-- Breadcrumbs -->
+    <div class="col-span-4 md:col-span-12 flex items-center gap-xs text-label-sm font-label-sm text-on-surface-variant mb-sm">
 
-<input id="quantity-input" class="w-12 text-center border-none focus:ring-0 text-body-md font-body-md bg-transparent p-0 m-0 appearance-none" min="1" type="number" value="1" readonly/>
+        <a
+            id="store-url"
+            class="hover:text-secondary cursor-pointer"
+        >
+            Apple
+        </a>
 
-<button id="quantity-plus" class="p-xs text-on-surface hover:bg-surface-container-low rounded-r-lg transition-colors">
-    <span class="material-symbols-outlined">add</span>
-</button>
-</div>
-<button
-    style="color: white;"
-    id="add-to-cart"
-    class="w-full py-sm px-md bg-primary-container text-on-primary-container font-label-md text-label-md rounded-lg flex items-center justify-center gap-xs hover:bg-primary-container/90 hover:shadow-md transition-all"
->
-    <span class="material-symbols-outlined">shopping_cart</span>
-    Add to Cart
-</button>
-<button class="w-full py-sm px-md bg-surface-container-lowest text-on-surface border border-primary-container font-label-md text-label-md rounded-lg flex items-center justify-center gap-xs hover:bg-surface-container-low transition-all">
-                    Buy Now
+        <span class="material-symbols-outlined text-[16px]">
+            chevron_right
+        </span>
+
+        <span
+            id="product-name-small"
+            class="text-on-surface font-semibold"
+        >
+            Premium Noise-Canceling Headphones
+        </span>
+
+    </div>
+
+
+    <!-- Product Gallery -->
+    <section class="col-span-4 md:col-span-7 lg:col-span-8 flex flex-col gap-sm">
+
+        <div class="w-full aspect-[4/3] md:aspect-video rounded-xl border border-surface-container-highest bg-surface-container-low overflow-hidden relative">
+
+            <img
+                alt="Main Product Image"
+                class="product-images w-full h-full object-cover"
+                data-alt="High-quality, large hero image of sleek, modern black over-ear noise-canceling headphones resting on a pristine white minimalist pedestal."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9jTdYSPtRBQJOXkm4XOZu5xSmrgo-BBXwIzy2DCrShMSh5jK8ZDue-GKHXAJglkkKbVYQ-g2ryhZBlTKCy8nJ3l-lRXLW3uT62WBk6li4fDXdUHdOIJoUY6cgYV04C5GR3IqdZjTJddeQ5gQlnk8tkIeALdTCZi25APOvnN6LOyCMEjXcoe888RcRAjDgWrOCf2tm6Cx84bsoOar_729SBEWJUi_IWJqv_Crl-wXbQ0Ap9Ojk6-C_TA"
+            />
+
+            <div class="absolute bottom-sm left-1/2 -translate-x-1/2 flex gap-xs md:hidden">
+
+                <button class="w-2 h-2 rounded-full bg-secondary"></button>
+                <button class="w-2 h-2 rounded-full bg-outline-variant"></button>
+                <button class="w-2 h-2 rounded-full bg-outline-variant"></button>
+
+            </div>
+
+        </div>
+
+
+        <div class="hidden md:grid grid-cols-4 gap-sm">
+
+            <div class="aspect-square rounded-lg border-2 border-secondary overflow-hidden cursor-pointer">
+
+                <img
+                    class="product-images w-full h-full object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJEBujliGoqIspE-Hg1VNC-TfOkm0gnvMqkRiywqGev6C01bHyQGR8rVEaAgXjhVIjizFNdS3KJWk5R8ntDA8NiLf-X5JwxEvQrDm67wo3U3chwy6oWajQNNA94GG9Y0NxhN_bCQJXCNbbSn7Pm2nzPhDveO7W4Ng5oqq5cJwLrw8K8dA46ENpM6_dMO7kIJ82Rqq2Jp5xAvkgtlhc9NmYp7qDHd5QCrqeBvGLDK099FHW9Gq-bC8k3g"
+                />
+
+            </div>
+
+            <div class="aspect-square rounded-lg border border-surface-container-highest overflow-hidden cursor-pointer hover:border-outline-variant transition-colors">
+
+                <img
+                    class="product-images w-full h-full object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIPNhWq_f1F0fPjJrL8M8p8-zvtXRuEZc5GcMUsF3Lx84iIW1yjoLeOlYcK2h005vWKVDpIKHnIcxGMhalxnCYRRD6HFm7drCq2CDnn9BbLjmoVjznvGpUtwu2eJ0j9564TCC0rx_S8WysFYMOtX8qbEXyNSfIaMiPE8WA2vuRsi77mbGCsBLBp4qAMMzUhc7XPj3n-0oojH1ibxJcMd7UfMIaFG4-l82bPmMWaYchrJUUZ4o7VHl7XA"
+                />
+
+            </div>
+
+            <div class="aspect-square rounded-lg border border-surface-container-highest overflow-hidden cursor-pointer hover:border-outline-variant transition-colors">
+
+                <img
+                    class="product-images w-full h-full object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGS3hIBkmIH-0toLQNU3SKqZgATh_2c9feEOjArLQ8W6-RcQyCBIm2sJpHOP4fUwB96pRwMFD3Ers9dJcJZOhrhtKPgKSp9OrZje49VwnRBdFciEm4Vn1sKwKbkTZojUu8TIY6dadhr-W3n6O_wuqsJ-R6uTGcGN2UqvkE_jpQ8uUryP-NNteX87T8Glsr7CZsgXFognfKQ01cpzhxYbLGQt65ioRWvoc-RtY0YzF5fAwYVQQxV5l4fg"
+                />
+
+            </div>
+
+            <div class="aspect-square rounded-lg border border-surface-container-highest overflow-hidden cursor-pointer hover:border-outline-variant transition-colors">
+
+                <img
+                    class="product-images w-full h-full object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGS3hIBkmIH-0toLQNU3SKqZgATh_2c9feEOjArLQ8W6-RcQyCBIm2sJpHOP4fUwB96pRwMFD3Ers9dJcJZOhrhtKPgKSp9OrZje49VwnRBdFciEm4Vn1sKwKbkTZojUu8TIY6dadhr-W3n6O_wuqsJ-R6uTGcGN2UqvkE_jpQ8uUryP-NNteX87T8Glsr7CZsgXFognfKQ01cpzhxYbLGQt65ioRWvoc-RtY0YzF5fAwYVQQxV5l4fg"
+                />
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Product Info -->
+    <section class="col-span-4 md:col-span-5 lg:col-span-4 flex flex-col gap-md sticky top-xl self-start">
+
+        <div>
+
+            <div class="flex items-center justify-between mb-xs">
+
+                <span class="px-xs py-1 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm border border-outline-variant">
+                    Top Rated
+                </span>
+
+
+                <!-- WISHLIST BUTTON -->
+                <button
+                    id="wishlist-button"
+                    type="button"
+                    aria-label="Add to wishlist"
+                    class="text-outline hover:text-error transition-colors"
+                >
+                    <span
+                        id="wishlist-icon"
+                        class="material-symbols-outlined"
+                    >
+                        favorite_border
+                    </span>
                 </button>
-</div>
-<div id="shipping-info" class="mt-sm flex items-center justify-center gap-md text-label-sm font-label-sm text-on-surface-variant">
-    <div id="free-shipping" class="flex items-center gap-xs">
-        <span class="material-symbols-outlined text-[16px]">local_shipping</span> Free Shipping
-    </div>
-    <div id="warranty" class="flex items-center gap-xs">
-        <span class="material-symbols-outlined text-[16px]">assignment_return</span> 30-Day Warranty
-    </div>
-</div>
-</section>
+
+            </div>
+
+
+            <h1
+                id="product-name"
+                class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-xs"
+            >
+                Aura Pro Wireless Headphones
+            </h1>
+
+
+            <div class="flex items-center gap-xs mb-sm">
+
+                <div class="flex items-center text-[#F59E0B]">
+
+                    <span class="material-symbols-outlined text-[20px]" data-weight="fill">
+                        star
+                    </span>
+
+                    <span class="material-symbols-outlined text-[20px]" data-weight="fill">
+                        star
+                    </span>
+
+                    <span class="material-symbols-outlined text-[20px]" data-weight="fill">
+                        star
+                    </span>
+
+                    <span class="material-symbols-outlined text-[20px]" data-weight="fill">
+                        star
+                    </span>
+
+                    <span class="material-symbols-outlined text-[20px]">
+                        star_half
+                    </span>
+
+                </div>
+
+                <span
+                    id="product-rating"
+                    class="text-body-md font-body-md text-on-surface font-medium"
+                >
+                    4.8
+                </span>
+
+            </div>
+
+
+            <div class="flex items-end gap-sm mb-md">
+
+                <span
+                    id="price-span"
+                    class="font-headline-xl text-headline-xl text-on-surface"
+                ></span>
+
+                <span
+                    id="real-price-span"
+                    class="text-body-md font-body-md text-on-surface-variant line-through mb-1"
+                ></span>
+
+            </div>
+
+        </div>
+
+
+        <p
+            id="product-description"
+            class="text-body-md font-body-md text-on-surface-variant border-b border-surface-container-highest pb-md"
+        >
+            Experience industry-leading active noise cancellation with the Aura Pro.
+            Featuring custom 40mm drivers for rich, spatial audio, and up to 40 hours
+            of battery life. Designed for all-day comfort with plush memory foam earcups.
+        </p>
+
+
+        <div class="flex flex-col gap-sm py-sm">
+
+            <div id="availability" class="flex items-center gap-sm">
+
+                <span class="material-symbols-outlined text-[20px] text-secondary">
+                    check_circle
+                </span>
+
+                <span class="font-label-md text-label-md text-on-surface font-semibold text-emerald-700">
+                    In Stock
+                </span>
+
+                <span
+                    id="ships-within"
+                    class="text-body-md font-body-md text-on-surface-variant text-sm"
+                >
+                    | Ships within 24 hours
+                </span>
+
+            </div>
+
+
+            <div class="flex flex-col gap-xs mt-sm">
+
+                <label class="font-label-md text-label-md text-on-surface">
+                    Color:
+                    <span
+                        class="font-semibold"
+                        id="selected-color"
+                    >
+                        Midnight Black
+                    </span>
+                </label>
+
+
+                <div id="colors" class="flex gap-sm">
+
+                    <button class="w-10 h-10 rounded-full bg-[#111111] border-2 border-secondary shadow-sm ring-2 ring-transparent focus:ring-secondary/20 transition-all"></button>
+
+                    <button class="w-10 h-10 rounded-full bg-[#E5E5E5] border border-outline-variant hover:border-outline shadow-sm transition-all"></button>
+
+                    <button class="w-10 h-10 rounded-full bg-[#1e3a8a] border border-outline-variant hover:border-outline shadow-sm transition-all"></button>
+
+                </div>
+
+
+                <div id="variant-selector" class="flex flex-col gap-xs mt-sm">
+
+                    <label
+                        for="variant-select"
+                        class="font-label-md text-label-md text-on-surface"
+                    >
+                        Variant
+                    </label>
+
+                    <select
+                        id="variant-select"
+                        class="w-full px-sm py-sm bg-surface-container-lowest border border-outline-variant rounded-lg text-on-surface font-body-md focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-all"
+                    ></select>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="flex flex-col gap-sm mt-md">
+
+            <div
+                id="quality-control"
+                class="flex items-center border border-outline-variant rounded-lg w-max bg-surface-container-lowest"
+            >
+
+                <button
+                    id="quantity-minus"
+                    class="p-xs text-on-surface hover:bg-surface-container-low rounded-l-lg transition-colors"
+                >
+                    <span class="material-symbols-outlined">
+                        remove
+                    </span>
+                </button>
+
+                <input
+                    id="quantity-input"
+                    class="w-12 text-center border-none focus:ring-0 text-body-md font-body-md bg-transparent p-0 m-0 appearance-none"
+                    min="1"
+                    type="number"
+                    value="1"
+                    readonly
+                />
+
+                <button
+                    id="quantity-plus"
+                    class="p-xs text-on-surface hover:bg-surface-container-low rounded-r-lg transition-colors"
+                >
+                    <span class="material-symbols-outlined">
+                        add
+                    </span>
+                </button>
+
+            </div>
+
+
+            <button
+                style="color: white;"
+                id="add-to-cart"
+                class="w-full py-sm px-md bg-primary-container text-on-primary-container font-label-md text-label-md rounded-lg flex items-center justify-center gap-xs hover:bg-primary-container/90 hover:shadow-md transition-all"
+            >
+
+                <span class="material-symbols-outlined">
+                    shopping_cart
+                </span>
+
+                Add to Cart
+
+            </button>
+
+        </div>
+
+
+        <div
+            id="shipping-info"
+            class="mt-sm flex items-center justify-center gap-md text-label-sm font-label-sm text-on-surface-variant"
+        >
+
+            <div
+                id="free-shipping"
+                class="flex items-center gap-xs"
+            >
+                <span class="material-symbols-outlined text-[16px]">
+                    local_shipping
+                </span>
+                Free Shipping
+            </div>
+
+            <div
+                id="warranty"
+                class="flex items-center gap-xs"
+            >
+                <span class="material-symbols-outlined text-[16px]">
+                    assignment_return
+                </span>
+                30-Day Warranty
+            </div>
+
+        </div>
+
+    </section>
+
 </main>
+
+
 <div class="w-full border-t border-surface-container-highest mt-xl"></div>
-<!-- Below the Fold: Specifications & Reviews -->
+
+
+<!-- Specifications & Reviews -->
 <section class="w-full max-w-screen-2xl mx-auto px-margin-mobile md:px-margin-desktop py-xl grid grid-cols-4 md:grid-cols-12 gap-gutter">
-<!-- Specifications Table -->
-<div class="col-span-4 md:col-span-12 lg:col-span-6 flex flex-col gap-md">
-<h2 class="font-headline-md text-headline-md text-on-surface">Technical Specifications</h2>
-<div class="border border-outline-variant rounded-xl overflow-hidden bg-surface-container-lowest">
-<table id="specification" class="w-full text-left border-collapse">
-<tbody class="font-body-md text-body-md">
-<tr class="border-b border-surface-container-highest bg-surface-bright">
-<th class="py-sm px-md font-semibold text-on-surface w-1/3">Form Factor</th>
-<td class="py-sm px-md text-on-surface-variant">Over-ear</td>
-</tr>
-<tr class="border-b border-surface-container-highest">
-<th class="py-sm px-md font-semibold text-on-surface">Connectivity</th>
-<td class="py-sm px-md text-on-surface-variant">Bluetooth 5.3, 3.5mm Aux</td>
-</tr>
-<tr class="border-b border-surface-container-highest bg-surface-bright">
-<th class="py-sm px-md font-semibold text-on-surface">Battery Life</th>
-<td class="py-sm px-md text-on-surface-variant">Up to 40 hours (ANC on)</td>
-</tr>
-<tr class="border-b border-surface-container-highest">
-<th class="py-sm px-md font-semibold text-on-surface">Charging Time</th>
-<td class="py-sm px-md text-on-surface-variant">2 hours (Full), 15 min (3 hours playback)</td>
-</tr>
-<tr class="bg-surface-bright">
-<th class="py-sm px-md font-semibold text-on-surface">Weight</th>
-<td class="py-sm px-md text-on-surface-variant">250g</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<!-- Customer Reviews Summary -->
-<div class="col-span-4 md:col-span-12 lg:col-span-6 flex flex-col gap-md" id="reviews">
-<h2 class="font-headline-md text-headline-md text-on-surface">Customer Reviews</h2>
-<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-md flex flex-col md:flex-row gap-lg">
-<div class="flex flex-col items-center justify-center min-w-[120px]">
-<span id="overall-rating" class="font-headline-xl text-headline-xl text-on-surface">4.8</span>
-<div class="flex items-center text-[#F59E0B] my-xs">
-<span class="material-symbols-outlined text-[20px]" data-weight="fill">star</span>
-<span class="material-symbols-outlined text-[20px]" data-weight="fill">star</span>
-<span class="material-symbols-outlined text-[20px]" data-weight="fill">star</span>
-<span class="material-symbols-outlined text-[20px]" data-weight="fill">star</span>
-<span class="material-symbols-outlined text-[20px]">star_half</span>
-</div>
-<span id="overall-reviews" class="text-label-sm font-label-sm text-on-surface-variant">1,284 global ratings</span>
-</div>
-<div class="flex-1 flex flex-col gap-xs justify-center">
-<!-- Rating Bars -->
-<div class="flex items-center gap-sm">
-    <span class="text-label-sm font-label-sm w-8">5 star</span>
-    <div class="flex-1 min-w-0 h-2 bg-surface-container-highest rounded-full overflow-hidden">
-        <div id="percentage-bar-5" class="percentage-bar h-full bg-[#F59E0B]"></div>
-    </div>
-    <span id="percentage-5" class="text-label-sm font-label-sm w-8 text-right"></span>
-</div>
 
-<div class="flex items-center gap-sm">
-    <span class="text-label-sm font-label-sm w-8">4 star</span>
-    <div class="flex-1 min-w-0 h-2 bg-surface-container-highest rounded-full overflow-hidden">
-        <div id="percentage-bar-4" class="percentage-bar h-full bg-[#F59E0B]"></div>
-    </div>
-    <span id="percentage-4" class="text-label-sm font-label-sm w-8 text-right"></span>
-</div>
+    <div class="col-span-4 md:col-span-12 lg:col-span-6 flex flex-col gap-md">
 
-<div class="flex items-center gap-sm">
-    <span class="text-label-sm font-label-sm w-8">3 star</span>
-    <div class="flex-1 min-w-0 h-2 bg-surface-container-highest rounded-full overflow-hidden">
-        <div id="percentage-bar-3" class="percentage-bar h-full bg-[#F59E0B]"></div>
-    </div>
-    <span id="percentage-3" class="text-label-sm font-label-sm w-8 text-right"></span>
-</div>
+        <h2 class="font-headline-md text-headline-md text-on-surface">
+            Technical Specifications
+        </h2>
 
-<div class="flex items-center gap-sm">
-    <span class="text-label-sm font-label-sm w-8">2 star</span>
-    <div class="flex-1 min-w-0 h-2 bg-surface-container-highest rounded-full overflow-hidden">
-        <div id="percentage-bar-2" class="percentage-bar h-full bg-[#F59E0B]"></div>
-    </div>
-    <span id="percentage-2" class="text-label-sm font-label-sm w-8 text-right"></span>
-</div>
+        <div class="border border-outline-variant rounded-xl overflow-hidden bg-surface-container-lowest">
 
-<div class="flex items-center gap-sm">
-    <span class="text-label-sm font-label-sm w-8">1 star</span>
-    <div class="flex-1 min-w-0 h-2 bg-surface-container-highest rounded-full overflow-hidden">
-        <div id="percentage-bar-1" class="percentage-bar h-full bg-[#F59E0B]"></div>
+            <table id="specification" class="w-full text-left border-collapse">
+
+                <tbody class="font-body-md text-body-md">
+
+                    <tr class="border-b border-surface-container-highest bg-surface-bright">
+                        <th class="py-sm px-md font-semibold text-on-surface w-1/3">
+                            Form Factor
+                        </th>
+                        <td class="py-sm px-md text-on-surface-variant">
+                            Over-ear
+                        </td>
+                    </tr>
+
+                    <tr class="border-b border-surface-container-highest">
+                        <th class="py-sm px-md font-semibold text-on-surface">
+                            Connectivity
+                        </th>
+                        <td class="py-sm px-md text-on-surface-variant">
+                            Bluetooth 5.3, 3.5mm Aux
+                        </td>
+                    </tr>
+
+                    <tr class="border-b border-surface-container-highest bg-surface-bright">
+                        <th class="py-sm px-md font-semibold text-on-surface">
+                            Battery Life
+                        </th>
+                        <td class="py-sm px-md text-on-surface-variant">
+                            Up to 40 hours (ANC on)
+                        </td>
+                    </tr>
+
+                    <tr class="border-b border-surface-container-highest">
+                        <th class="py-sm px-md font-semibold text-on-surface">
+                            Charging Time
+                        </th>
+                        <td class="py-sm px-md text-on-surface-variant">
+                            2 hours (Full), 15 min (3 hours playback)
+                        </td>
+                    </tr>
+
+                    <tr class="bg-surface-bright">
+                        <th class="py-sm px-md font-semibold text-on-surface">
+                            Weight
+                        </th>
+                        <td class="py-sm px-md text-on-surface-variant">
+                            250g
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
     </div>
-    <span id="percentage-1" class="text-label-sm font-label-sm w-8 text-right"></span>
-</div>
-</div>
-</div>
-<button class="self-start text-secondary font-label-md text-label-md hover:underline">Read all reviews</button>
-</div>
+
+
+    <div
+        class="col-span-4 md:col-span-12 lg:col-span-6 flex flex-col gap-md"
+        id="reviews"
+    >
+
+        <h2 class="font-headline-md text-headline-md text-on-surface">
+            Customer Reviews
+        </h2>
+
+        <div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-md flex flex-col md:flex-row gap-lg">
+
+            <div class="flex flex-col items-center justify-center min-w-[120px]">
+
+                <span
+                    id="overall-rating"
+                    class="font-headline-xl text-headline-xl text-on-surface"
+                >
+                    4.8
+                </span>
+
+                <div class="flex items-center text-[#F59E0B] my-xs">
+
+                    <span class="material-symbols-outlined text-[20px]" data-weight="fill">
+                        star
+                    </span>
+
+                    <span class="material-symbols-outlined text-[20px]" data-weight="fill">
+                        star
+                    </span>
+
+                    <span class="material-symbols-outlined text-[20px]" data-weight="fill">
+                        star
+                    </span>
+
+                    <span class="material-symbols-outlined text-[20px]" data-weight="fill">
+                        star
+                    </span>
+
+                    <span class="material-symbols-outlined text-[20px]">
+                        star_half
+                    </span>
+
+                </div>
+
+                <span
+                    id="overall-reviews"
+                    class="text-label-sm font-label-sm text-on-surface-variant"
+                >
+                    1,284 global ratings
+                </span>
+
+            </div>
+
+
+            <div class="flex-1 flex flex-col gap-xs justify-center">
+
+                <div class="flex items-center gap-sm">
+                    <span class="text-label-sm font-label-sm w-8">5 star</span>
+
+                    <div class="flex-1 min-w-0 h-2 bg-surface-container-highest rounded-full overflow-hidden">
+                        <div
+                            id="percentage-bar-5"
+                            class="percentage-bar h-full bg-[#F59E0B]"
+                        ></div>
+                    </div>
+
+                    <span
+                        id="percentage-5"
+                        class="text-label-sm font-label-sm w-8 text-right"
+                    ></span>
+                </div>
+
+
+                <div class="flex items-center gap-sm">
+                    <span class="text-label-sm font-label-sm w-8">4 star</span>
+
+                    <div class="flex-1 min-w-0 h-2 bg-surface-container-highest rounded-full overflow-hidden">
+                        <div
+                            id="percentage-bar-4"
+                            class="percentage-bar h-full bg-[#F59E0B]"
+                        ></div>
+                    </div>
+
+                    <span
+                        id="percentage-4"
+                        class="text-label-sm font-label-sm w-8 text-right"
+                    ></span>
+                </div>
+
+
+                <div class="flex items-center gap-sm">
+                    <span class="text-label-sm font-label-sm w-8">3 star</span>
+
+                    <div class="flex-1 min-w-0 h-2 bg-surface-container-highest rounded-full overflow-hidden">
+                        <div
+                            id="percentage-bar-3"
+                            class="percentage-bar h-full bg-[#F59E0B]"
+                        ></div>
+                    </div>
+
+                    <span
+                        id="percentage-3"
+                        class="text-label-sm font-label-sm w-8 text-right"
+                    ></span>
+                </div>
+
+
+                <div class="flex items-center gap-sm">
+                    <span class="text-label-sm font-label-sm w-8">2 star</span>
+
+                    <div class="flex-1 min-w-0 h-2 bg-surface-container-highest rounded-full overflow-hidden">
+                        <div
+                            id="percentage-bar-2"
+                            class="percentage-bar h-full bg-[#F59E0B]"
+                        ></div>
+                    </div>
+
+                    <span
+                        id="percentage-2"
+                        class="text-label-sm font-label-sm w-8 text-right"
+                    ></span>
+                </div>
+
+
+                <div class="flex items-center gap-sm">
+                    <span class="text-label-sm font-label-sm w-8">1 star</span>
+
+                    <div class="flex-1 min-w-0 h-2 bg-surface-container-highest rounded-full overflow-hidden">
+                        <div
+                            id="percentage-bar-1"
+                            class="percentage-bar h-full bg-[#F59E0B]"
+                        ></div>
+                    </div>
+
+                    <span
+                        id="percentage-1"
+                        class="text-label-sm font-label-sm w-8 text-right"
+                    ></span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <button class="self-start text-secondary font-label-md text-label-md hover:underline">
+            Read all reviews
+        </button>
+
+    </div>
+
 </section>
+
+
 <!-- Footer -->
 <footer class="bg-surface-container-low dark:bg-primary-container text-on-surface dark:text-on-primary-container font-label-md text-label-md w-full border-t border-outline-variant dark:border-outline mt-auto">
-<div class="w-full py-xl px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-md max-w-screen-2xl mx-auto">
-<div class="mb-4 md:mb-0 text-center md:text-left">
-<div class="font-headline-sm text-headline-sm font-black text-secondary dark:text-secondary-fixed-dim mb-2">MarketPlace</div>
-<p class="text-on-surface-variant dark:text-surface-variant text-sm">© 2024 MarketPlace Inc. All rights reserved.</p>
-</div>
-<nav class="flex flex-wrap justify-center gap-6">
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-200" href="/marketplace/privacy/statement/">Privacy Policy</a>
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-200" href="/marketplace/servicesagreement/">Terms of Service</a>
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-200" href="#">Cookie Settings</a>
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-200" href="/marketplace/support">Contact Support</a>
-</nav>
-</div>
-</footer>
-</div>
-    <div style="font-family: 'Segoe UI'; margin-top: 100px;" id="body-error" class="d-flex flex-column justify-content-center align-items-center vh-100 text-center" hidden>
-        <h1 style="font-size: 7.5rem;" class="display-1 mb-3">:(</h1>
-        <h3 style="font-size: 1.5rem;" class="mb-4">
-            Oops, something's went wrong...
-        </h3>
-        <button id="redirect" onclick="window.location.href = '../';" class="p-2 rounded-full border border-secondary text-secondary items-center justify-center hover:bg-secondary hover:text-on-secondary transition-colors">
-            Return to Home Page
-        </button>
+
+    <div class="w-full py-xl px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-md max-w-screen-2xl mx-auto">
+
+        <div class="mb-4 md:mb-0 text-center md:text-left">
+
+            <div class="font-headline-sm text-headline-sm font-black text-secondary dark:text-secondary-fixed-dim mb-2">
+                MarketPlace
+            </div>
+
+            <p class="text-on-surface-variant dark:text-surface-variant text-sm">
+                © 2024 MarketPlace Inc. All rights reserved.
+            </p>
+
+        </div>
+
+        <nav class="flex flex-wrap justify-center gap-6">
+
+            <a
+                class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-200"
+                href="/marketplace/privacy/statement/"
+            >
+                Privacy Policy
+            </a>
+
+            <a
+                class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-200"
+                href="/marketplace/servicesagreement/"
+            >
+                Terms of Service
+            </a>
+
+            <a
+                class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-200"
+                href="#"
+            >
+                Cookie Settings
+            </a>
+
+            <a
+                class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-200"
+                href="/marketplace/help"
+            >
+                Contact Support
+            </a>
+
+        </nav>
+
     </div>
+
+</footer>
+
+</div>
+
+
+<!-- Error Page -->
+<div
+    style="font-family: 'Segoe UI'; margin-top: 100px;"
+    id="body-error"
+    class="d-flex flex-column justify-content-center align-items-center vh-100 text-center"
+    hidden
+>
+
+    <h1 style="font-size: 7.5rem;" class="display-1 mb-3">
+        :(
+    </h1>
+
+    <h3 style="font-size: 1.5rem;" class="mb-4">
+        Oops, something's went wrong...
+    </h3>
+
+    <button
+        id="redirect"
+        onclick="window.location.href = '../';"
+        class="p-2 rounded-full border border-secondary text-secondary items-center justify-center hover:bg-secondary hover:text-on-secondary transition-colors"
+    >
+        Return to Home Page
+    </button>
+
+</div>
+
+
+<!-- Cart Popup -->
 <div
     id="cart-popup"
     class="fixed bottom-6 left-1/2 -translate-x-1/2 z-[100] bg-surface-container-lowest border border-outline-variant rounded-xl shadow-lg px-md py-sm flex items-center gap-sm translate-y-20 opacity-0 pointer-events-none transition-all duration-300"
 >
+
     <span class="material-symbols-outlined text-secondary">
         check_circle
     </span>
@@ -404,21 +953,49 @@
         id="cart-popup-text"
         class="font-label-md text-label-md text-on-surface"
     ></span>
+
 </div>
+
+
+<!-- Wishlist Popup -->
+<div
+    id="wishlist-popup"
+    class="fixed bottom-6 left-1/2 -translate-x-1/2 z-[100] bg-surface-container-lowest border border-outline-variant rounded-xl shadow-lg px-md py-sm flex items-center gap-sm translate-y-20 opacity-0 pointer-events-none transition-all duration-300"
+>
+
+    <span
+        id="wishlist-popup-icon"
+        class="material-symbols-outlined text-error"
+        style="font-variation-settings: 'FILL' 1;"
+    >
+        favorite
+    </span>
+
+    <span
+        id="wishlist-popup-text"
+        class="font-label-md text-label-md text-on-surface"
+    ></span>
+
+</div>
+
+
 <!-- Cart Overlay -->
 <div
     id="cart-overlay"
     class="fixed inset-0 z-[90] bg-black/30 opacity-0 pointer-events-none transition-opacity duration-300"
 ></div>
 
+
 <!-- Cart Drawer -->
 <aside
     id="cart-drawer"
     class="fixed top-0 right-0 z-[100] h-full w-full max-w-md bg-surface-container-lowest shadow-2xl translate-x-full transition-transform duration-300 flex flex-col"
 >
-    <!-- Header -->
+
     <div class="flex items-center justify-between p-md border-b border-outline-variant">
+
         <div>
+
             <h2 class="font-headline-md text-headline-md font-semibold text-on-surface">
                 Shopping Cart
             </h2>
@@ -429,6 +1006,7 @@
             >
                 0 items
             </span>
+
         </div>
 
         <button
@@ -436,21 +1014,26 @@
             class="p-xs rounded-full text-on-surface-variant hover:bg-surface-container-low hover:text-secondary transition-colors"
             aria-label="Close shopping cart"
         >
+
             <span class="material-symbols-outlined">
                 close
             </span>
+
         </button>
+
     </div>
 
-    <!-- Items -->
+
     <div
         id="cart-items"
         class="flex-1 overflow-y-auto p-md flex flex-col gap-sm"
     ></div>
 
-    <!-- Footer -->
+
     <div class="border-t border-outline-variant p-md">
+
         <div class="flex justify-between items-center mb-md">
+
             <span class="font-label-md text-label-md text-on-surface-variant">
                 Subtotal
             </span>
@@ -461,16 +1044,365 @@
             >
                 $0
             </span>
+
         </div>
 
         <button
             id="view-cart-button"
             class="w-full py-sm px-md bg-primary-container text-white font-label-md rounded-lg hover:opacity-90 transition-all"
+            onclick="window.location.href = '../cart';"
         >
             View Cart
         </button>
+
     </div>
+
 </aside>
 <script src="../script/cart.js"></script>
+
+
+<!-- ========================================================= -->
+<!-- WISHLIST LOGIC                                            -->
+<!-- ========================================================= -->
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const wishlistButton =
+        document.getElementById("wishlist-button");
+
+    const wishlistIcon =
+        document.getElementById("wishlist-icon");
+
+    const wishlistPopup =
+        document.getElementById("wishlist-popup");
+
+    const wishlistPopupIcon =
+        document.getElementById("wishlist-popup-icon");
+
+    const wishlistPopupText =
+        document.getElementById("wishlist-popup-text");
+
+
+    if (!wishlistButton || !wishlistIcon) {
+        return;
+    }
+
+
+    /*
+     * Get productId from URL.
+     *
+     * Example:
+     *
+     * product/?productId=A7Kp2Xq9
+     */
+    const params =
+        new URLSearchParams(window.location.search);
+
+    const productId =
+        params.get("productId");
+
+
+    /*
+     * Validate the product ID.
+     *
+     * Product IDs are exactly 8 characters.
+     */
+    if (
+        !productId ||
+        !/^[A-Za-z0-9+/]{8}$/.test(productId)
+    ) {
+
+        console.error(
+            "Invalid or missing productId:",
+            productId
+        );
+
+        return;
+    }
+
+
+    /*
+     * Read cartSession.
+     */
+    function getCartSession() {
+
+        let session;
+
+        try {
+
+            session = JSON.parse(
+                sessionStorage.getItem("cartSession") || "{}"
+            );
+
+        } catch (error) {
+
+            console.error(
+                "Failed to parse cartSession:",
+                error
+            );
+
+            session = {};
+        }
+
+
+        if (
+            !session ||
+            typeof session !== "object"
+        ) {
+            session = {};
+        }
+
+
+        /*
+         * Make sure wishlist exists.
+         */
+        if (!Array.isArray(session.wishlist)) {
+            session.wishlist = [];
+        }
+
+
+        return session;
+    }
+
+
+    /*
+     * Save cartSession.
+     */
+    function saveCartSession(session) {
+
+        sessionStorage.setItem(
+            "cartSession",
+            JSON.stringify(session)
+        );
+    }
+
+
+    /*
+     * Check whether this product is
+     * currently wishlisted.
+     */
+    function isWishlisted() {
+
+        const session =
+            getCartSession();
+
+        return session.wishlist.includes(
+            productId
+        );
+    }
+
+
+    /*
+     * Update heart appearance.
+     */
+    function updateWishlistButton() {
+
+        const wishlisted =
+            isWishlisted();
+
+
+        if (wishlisted) {
+
+            /*
+             * Filled red heart.
+             */
+            wishlistIcon.textContent =
+                "favorite";
+
+            wishlistIcon.style.fontVariationSettings =
+                "'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24";
+
+
+            wishlistButton.classList.remove(
+                "text-outline"
+            );
+
+            wishlistButton.classList.add(
+                "text-error"
+            );
+
+
+            wishlistButton.setAttribute(
+                "aria-label",
+                "Remove from wishlist"
+            );
+
+        } else {
+
+            /*
+             * Empty heart.
+             */
+            wishlistIcon.textContent =
+                "favorite_border";
+
+            wishlistIcon.style.fontVariationSettings =
+                "'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24";
+
+
+            wishlistButton.classList.remove(
+                "text-error"
+            );
+
+            wishlistButton.classList.add(
+                "text-outline"
+            );
+
+
+            wishlistButton.setAttribute(
+                "aria-label",
+                "Add to wishlist"
+            );
+        }
+    }
+
+
+    /*
+     * Show popup notification.
+     */
+    let popupTimeout;
+
+
+    function showWishlistPopup(
+        message,
+        added
+    ) {
+
+        clearTimeout(popupTimeout);
+
+
+        wishlistPopupText.textContent =
+            message;
+
+        wishlistPopupIcon.textContent =
+            "favorite";
+
+        wishlistPopupIcon.classList.remove(
+            "text-outline"
+        );
+
+        wishlistPopupIcon.classList.add(
+            "text-error"
+        );
+
+        wishlistPopupIcon.style.fontVariationSettings =
+            "'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24";
+
+        /*
+         * Show popup.
+         */
+        wishlistPopup.classList.remove(
+            "translate-y-20",
+            "opacity-0",
+            "pointer-events-none"
+        );
+
+        wishlistPopup.classList.add(
+            "translate-y-0",
+            "opacity-100"
+        );
+
+
+        /*
+         * Hide popup after 2.5 seconds.
+         */
+        popupTimeout = setTimeout(() => {
+
+            wishlistPopup.classList.remove(
+                "translate-y-0",
+                "opacity-100"
+            );
+
+            wishlistPopup.classList.add(
+                "translate-y-20",
+                "opacity-0",
+                "pointer-events-none"
+            );
+
+        }, 2500);
+    }
+
+
+    /*
+     * Toggle wishlist.
+     */
+    wishlistButton.addEventListener(
+        "click",
+        () => {
+
+            const session =
+                getCartSession();
+
+
+            const index =
+                session.wishlist.indexOf(
+                    productId
+                );
+
+
+            /*
+             * Product isn't wishlisted.
+             * Add it.
+             */
+            if (index === -1) {
+
+                session.wishlist.push(
+                    productId
+                );
+
+                saveCartSession(
+                    session
+                );
+
+                updateWishlistButton();
+
+                showWishlistPopup(
+                    "Added to wishlist",
+                    true
+                );
+
+            }
+
+            /*
+             * Product is already wishlisted.
+             * Remove it.
+             */
+            else {
+
+                session.wishlist.splice(
+                    index,
+                    1
+                );
+
+                saveCartSession(
+                    session
+                );
+
+                updateWishlistButton();
+
+                showWishlistPopup(
+                    "Removed from wishlist",
+                    false
+                );
+            }
+
+        }
+    );
+
+
+    /*
+     * Initialize the button based on
+     * the current sessionStorage state.
+     */
+    updateWishlistButton();
+
+});
+</script>
+
+
+<!-- Existing scripts -->
+<script src="../script/cart.js"></script>
 <script src="../script/product.js"></script>
-</body></html>
+
+</body>
+</html>
