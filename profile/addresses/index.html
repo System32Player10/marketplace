@@ -1,0 +1,1536 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>Addresses - MarketPlace</title>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Manrope:wght@600;700&display=swap"
+        rel="stylesheet"
+    />
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:FILL@0..1&display=swap"
+        rel="stylesheet"
+    />
+
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+
+            theme: {
+                extend: {
+                    colors: {
+                        "secondary-fixed": "#d8e2ff",
+                        "tertiary-container": "#191c1e",
+                        "surface-dim": "#cbdbf5",
+                        "surface-container-low": "#eff4ff",
+                        "primary-container": "#131b2e",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed-dim": "#adc6ff",
+                        "on-secondary-fixed-variant": "#004395",
+                        "on-secondary-fixed": "#001a42",
+                        "outline-variant": "#c6c6cd",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "background": "#f8f9ff",
+                        "on-primary-fixed": "#131b2e",
+                        "on-tertiary-container": "#818486",
+                        "tertiary-fixed-dim": "#c4c7c9",
+                        "secondary": "#0058be",
+                        "surface-variant": "#d3e4fe",
+                        "on-error": "#ffffff",
+                        "outline": "#76777d",
+                        "on-tertiary-fixed-variant": "#444749",
+                        "surface-container": "#e5eeff",
+                        "error": "#ba1a1a",
+                        "inverse-primary": "#bec6e0",
+                        "primary": "#000000",
+                        "on-surface": "#0b1c30",
+                        "inverse-on-surface": "#eaf1ff",
+                        "on-error-container": "#93000a",
+                        "surface-tint": "#565e74",
+                        "surface-bright": "#f8f9ff",
+                        "on-tertiary-fixed": "#191c1e",
+                        "primary-fixed": "#dae2fd",
+                        "surface-container-lowest": "#ffffff",
+                        "on-background": "#0b1c30",
+                        "tertiary-fixed": "#e0e3e5",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#fefcff",
+                        "primary-fixed-dim": "#bec6e0",
+                        "secondary-container": "#2170e4",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#d3e4fe",
+                        "error-container": "#ffdad6",
+                        "on-primary-container": "#7c839b",
+                        "surface-container-high": "#dce9ff",
+                        "inverse-surface": "#213145",
+                        "tertiary": "#000000",
+                        "on-surface-variant": "#45464d"
+                    },
+
+                    borderRadius: {
+                        DEFAULT: "0.125rem",
+                        lg: "0.25rem",
+                        xl: "0.5rem",
+                        full: "0.75rem"
+                    },
+
+                    spacing: {
+                        base: "4px",
+                        xs: "8px",
+                        gutter: "24px",
+                        sm: "16px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "16px",
+                        xl: "80px",
+                        lg: "48px",
+                        md: "24px"
+                    },
+
+                    fontFamily: {
+                        "headline-lg": ["Manrope"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-xl": ["Manrope"],
+                        "headline-md": ["Manrope"],
+                        "label-sm": ["Hanken Grotesk"],
+                        "label-md": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Manrope"]
+                    },
+
+                    fontSize: {
+                        "headline-lg": [
+                            "32px",
+                            {
+                                lineHeight: "40px",
+                                letterSpacing: "-0.01em",
+                                fontWeight: "600"
+                            }
+                        ],
+
+                        "body-lg": [
+                            "18px",
+                            {
+                                lineHeight: "28px",
+                                fontWeight: "400"
+                            }
+                        ],
+
+                        "body-md": [
+                            "16px",
+                            {
+                                lineHeight: "24px",
+                                fontWeight: "400"
+                            }
+                        ],
+
+                        "headline-xl": [
+                            "48px",
+                            {
+                                lineHeight: "56px",
+                                letterSpacing: "-0.02em",
+                                fontWeight: "700"
+                            }
+                        ],
+
+                        "headline-md": [
+                            "24px",
+                            {
+                                lineHeight: "32px",
+                                fontWeight: "600"
+                            }
+                        ],
+
+                        "label-sm": [
+                            "12px",
+                            {
+                                lineHeight: "16px",
+                                fontWeight: "600"
+                            }
+                        ],
+
+                        "label-md": [
+                            "14px",
+                            {
+                                lineHeight: "20px",
+                                letterSpacing: "0.01em",
+                                fontWeight: "500"
+                            }
+                        ],
+
+                        "headline-lg-mobile": [
+                            "28px",
+                            {
+                                lineHeight: "36px",
+                                fontWeight: "600"
+                            }
+                        ]
+                    }
+                }
+            }
+        };
+    </script>
+
+    <style>
+        body {
+            font-family: 'Hanken Grotesk', sans-serif;
+            background-color: #f8f9ff;
+            color: #0b1c30;
+        }
+
+        .address-card {
+            transition: all 0.2s ease-in-out;
+        }
+
+        .address-card:hover {
+            border-color: #0058be;
+        }
+
+        .address-input {
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .address-input:focus {
+            outline: none;
+            border-color: #0058be;
+            box-shadow: 0 0 0 2px rgba(0, 88, 190, 0.12);
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-background antialiased flex flex-col min-h-screen">
+
+<!-- ============================================================
+     TOP NAVBAR
+============================================================ -->
+
+<header
+    class="bg-surface-container-lowest w-full sticky top-0 z-50 border-b border-outline-variant"
+>
+    <div
+        class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-base max-w-screen-2xl mx-auto"
+    >
+
+        <!-- LOGO -->
+
+        <div class="flex items-center gap-md">
+
+            <a
+                class="font-headline-md text-headline-md font-bold text-on-surface"
+                href="/marketplace/"
+            >
+                MarketPlace
+            </a>
+
+        </div>
+
+
+        <!-- SEARCH -->
+
+        <div class="hidden md:flex flex-1 max-w-lg mx-md relative">
+
+            <span
+                class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant"
+            >
+                search
+            </span>
+
+            <input
+                class="w-full pl-10 pr-4 py-2 bg-surface-container-low border border-outline-variant rounded-full text-on-surface focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-all font-body-md text-body-md"
+                placeholder="Search for products, brands and more"
+                type="text"
+            />
+
+        </div>
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="hidden md:flex items-center gap-gutter">
+
+            <a
+                class="text-on-surface-variant hover:text-secondary transition-colors cursor-pointer active:opacity-80 font-body-md text-body-md"
+                href="#"
+            >
+                Store
+            </a>
+
+            <a
+                class="text-on-surface-variant hover:text-secondary transition-colors cursor-pointer active:opacity-80 font-body-md text-body-md"
+                href="#"
+            >
+                Product
+            </a>
+
+            <a
+                class="text-on-surface-variant hover:text-secondary transition-colors cursor-pointer active:opacity-80 font-body-md text-body-md"
+                href="../merchant/"
+            >
+                Sell
+            </a>
+
+            <a
+                class="text-on-surface-variant hover:text-secondary transition-colors cursor-pointer active:opacity-80 font-body-md text-body-md"
+                href="../help/"
+            >
+                Help
+            </a>
+
+        </nav>
+
+
+        <!-- ICONS -->
+
+        <div class="flex items-center gap-sm mt-2">
+
+            <button
+                aria-label="notifications"
+                class="p-2 text-on-surface-variant hover:text-secondary transition-colors"
+            >
+                <span class="material-symbols-outlined">
+                    notifications
+                </span>
+            </button>
+
+
+            <button
+                aria-label="favorite"
+                class="p-2 text-on-surface-variant hover:text-secondary transition-colors"
+            >
+                <span class="material-symbols-outlined">
+                    favorite
+                </span>
+            </button>
+
+
+            <button
+                id="shopping-cart-button"
+                aria-label="shopping_cart"
+                class="p-2 text-on-surface-variant hover:text-secondary transition-colors"
+            >
+                <span class="material-symbols-outlined">
+                    shopping_cart
+                </span>
+            </button>
+
+
+            <!-- USER -->
+
+            <button
+                id="user-button"
+                aria-label="user"
+                class="p-2 text-on-surface-variant hover:text-secondary transition-colors"
+            >
+                <span class="material-symbols-outlined">
+                    person
+                </span>
+            </button>
+
+        </div>
+
+
+        <!-- MOBILE MENU -->
+
+        <button
+            class="md:hidden p-2 text-on-surface-variant ml-2"
+        >
+            <span class="material-symbols-outlined">
+                menu
+            </span>
+        </button>
+
+    </div>
+</header>
+
+
+<!-- ============================================================
+     MAIN
+============================================================ -->
+
+<main
+    class="flex-grow w-full max-w-screen-2xl mx-auto px-margin-mobile md:px-margin-desktop py-lg"
+>
+
+    <div
+        class="grid grid-cols-1 lg:grid-cols-12 gap-gutter"
+    >
+
+        <!-- ====================================================
+             SIDEBAR
+        ===================================================== -->
+
+        <aside class="lg:col-span-3">
+
+            <h1
+                class="mb-8 text-3xl font-semibold text-on-surface md:text-4xl"
+            >
+                My Account
+            </h1>
+
+
+            <nav class="flex flex-col gap-2">
+
+                <a
+                    href="/marketplace/profile/"
+                    class="flex items-center gap-3 rounded-DEFAULT px-4 py-3 text-on-surface-variant transition-colors hover:bg-surface-container-high"
+                >
+                    <span class="material-symbols-outlined">
+                        person
+                    </span>
+
+                    Profile
+                </a>
+
+
+                <a
+                    href="/marketplace/cart/"
+                    class="flex items-center gap-3 rounded-DEFAULT px-4 py-3 text-on-surface-variant transition-colors hover:bg-surface-container-high"
+                >
+                    <span class="material-symbols-outlined">
+                        inventory_2
+                    </span>
+
+                    My Orders
+                </a>
+
+
+                <!-- ACTIVE ADDRESSES -->
+
+                <a
+                    href=""
+                    class="flex items-center gap-3 rounded-DEFAULT border-l-4 border-secondary bg-surface-container-high px-4 py-3 font-semibold text-on-surface"
+                >
+                    <span class="material-symbols-outlined">
+                        location_on
+                    </span>
+
+                    Addresses
+                </a>
+
+
+                <a
+                    href="/marketplace/profile/payment-methods/"
+                    class="flex items-center gap-3 rounded-DEFAULT px-4 py-3 text-on-surface-variant transition-colors hover:bg-surface-container-high"
+                >
+                    <span class="material-symbols-outlined">
+                        payment
+                    </span>
+
+                    Payment Methods
+                </a>
+
+            </nav>
+
+        </aside>
+
+
+        <!-- ====================================================
+             ADDRESS SECTION
+        ===================================================== -->
+
+        <section
+            class="lg:col-span-9 flex flex-col gap-sm"
+        >
+
+            <div
+                class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-sm mb-sm"
+            >
+
+                <h1
+                    class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface"
+                >
+                    Addresses
+                </h1>
+
+
+                <button
+                    id="add-address-button"
+                    type="button"
+                    class="w-full sm:w-auto bg-primary text-on-primary font-body-md text-body-md font-semibold py-3 px-6 rounded-lg hover:bg-surface-tint hover:shadow-md transition-all active:scale-[0.98] flex items-center justify-center gap-2"
+                >
+                    <span class="material-symbols-outlined text-xl">
+                        add
+                    </span>
+
+                    Add Address
+                </button>
+
+            </div>
+
+
+            <!-- =================================================
+                 ADDRESS FORM
+            ================================================= -->
+
+            <div
+                id="address-form-container"
+                class="hidden bg-surface-container-lowest border border-outline-variant rounded-xl p-md md:p-lg"
+            >
+
+                <div class="mb-md">
+
+                    <h2
+                        class="font-headline-md text-headline-md text-on-surface"
+                    >
+                        Add a new address
+                    </h2>
+
+                    <p
+                        class="text-on-surface-variant text-body-md mt-xs"
+                    >
+                        Enter your address information below.
+                    </p>
+
+                </div>
+
+
+                <!-- COUNTRY -->
+
+                <div class="mb-md">
+
+                    <label
+                        for="address-country"
+                        class="block text-sm font-semibold text-on-surface mb-xs"
+                    >
+                        Country
+                    </label>
+
+                    <select
+                        id="address-country"
+                        class="address-input w-full px-4 py-3 border border-outline-variant rounded-lg bg-surface-container-lowest text-on-surface"
+                    >
+
+                        <option value="">
+                            Select your country
+                        </option>
+
+                        <option value="Indonesia">
+                            Indonesia
+                        </option>
+
+                        <option value="United States">
+                            United States
+                        </option>
+
+                        <option value="Canada">
+                            Canada
+                        </option>
+
+                        <option value="United Kingdom">
+                            United Kingdom
+                        </option>
+
+                        <option value="Australia">
+                            Australia
+                        </option>
+
+                        <option value="Japan">
+                            Japan
+                        </option>
+
+                        <option value="Singapore">
+                            Singapore
+                        </option>
+
+                        <option value="Malaysia">
+                            Malaysia
+                        </option>
+
+                        <option value="Other">
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- ADDRESS -->
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+
+                    <div class="md:col-span-2">
+
+                        <label
+                            for="address-line"
+                            class="block text-sm font-semibold text-on-surface mb-xs"
+                        >
+                            Address
+                        </label>
+
+                        <input
+                            id="address-line"
+                            type="text"
+                            autocomplete="street-address"
+                            placeholder="Address Line"
+                            class="address-input w-full px-4 py-3 border border-outline-variant rounded-lg bg-surface-container-lowest text-on-surface"
+                        />
+
+                    </div>
+
+
+                    <!-- ZIP -->
+
+                    <div>
+
+                        <label
+                            for="address-zip"
+                            class="block text-sm font-semibold text-on-surface mb-xs"
+                        >
+                            ZIP Code
+                        </label>
+
+                        <input
+                            id="address-zip"
+                            type="text"
+                            inputmode="numeric"
+                            autocomplete="postal-code"
+                            placeholder="ZIP code"
+                            class="address-input w-full px-4 py-3 border border-outline-variant rounded-lg bg-surface-container-lowest text-on-surface"
+                        />
+
+                    </div>
+
+
+                    <!-- STATE / REGENCY -->
+
+                    <div>
+
+                        <label
+                            for="address-state"
+                            class="block text-sm font-semibold text-on-surface mb-xs"
+                        >
+                            State / Regency
+                        </label>
+
+                        <input
+                            id="address-state"
+                            type="text"
+                            autocomplete="address-level1"
+                            placeholder="State / Regency"
+                            class="address-input w-full px-4 py-3 border border-outline-variant rounded-lg bg-surface-container-lowest text-on-surface"
+                        />
+
+                    </div>
+
+
+                    <!-- CITY -->
+
+                    <div class="md:col-span-2">
+
+                        <label
+                            for="address-city"
+                            class="block text-sm font-semibold text-on-surface mb-xs"
+                        >
+                            City
+                        </label>
+
+                        <input
+                            id="address-city"
+                            type="text"
+                            autocomplete="address-level2"
+                            placeholder="City"
+                            class="address-input w-full px-4 py-3 border border-outline-variant rounded-lg bg-surface-container-lowest text-on-surface"
+                        />
+
+                    </div>
+
+                </div>
+
+
+                <!-- FORM ACTIONS -->
+
+                <div
+                    class="border-t border-outline-variant mt-lg pt-md flex flex-col sm:flex-row gap-sm"
+                >
+
+                    <button
+                        id="save-address-button"
+                        type="button"
+                        class="w-full sm:w-auto bg-primary text-on-primary font-body-md text-body-md font-semibold py-3 px-6 rounded-lg hover:bg-surface-tint hover:shadow-md transition-all active:scale-[0.98]"
+                    >
+                        Save Address
+                    </button>
+
+
+                    <button
+                        id="cancel-address-button"
+                        type="button"
+                        class="w-full sm:w-auto border border-outline-variant bg-surface-container-lowest text-on-surface font-body-md text-body-md font-semibold py-3 px-6 rounded-lg hover:bg-surface-container-low transition-all"
+                    >
+                        Cancel
+                    </button>
+
+                </div>
+
+
+                <!-- ERROR -->
+
+                <p
+                    id="address-error"
+                    class="hidden text-error font-body-md text-body-md mt-md"
+                ></p>
+
+            </div>
+
+
+            <!-- =================================================
+                 SAVED ADDRESSES
+            ================================================= -->
+
+            <div
+                id="addresses-container"
+                class="flex flex-col gap-sm"
+            ></div>
+
+        </section>
+
+    </div>
+
+</main>
+
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+
+<footer
+    class="bg-surface-container-low text-on-surface font-label-md text-label-md w-full border-t border-outline-variant mt-auto"
+>
+
+    <div
+        class="w-full py-xl px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-md max-w-screen-2xl mx-auto"
+    >
+
+        <div
+            class="mb-4 md:mb-0 text-center md:text-left"
+        >
+
+            <div
+                class="font-headline-sm font-black text-secondary mb-2"
+            >
+                MarketPlace
+            </div>
+
+            <p
+                class="text-on-surface-variant text-sm"
+            >
+                © 2024 MarketPlace Inc. All rights reserved.
+            </p>
+
+        </div>
+
+
+        <nav class="flex flex-wrap justify-center gap-6">
+
+            <a
+                class="text-on-surface-variant hover:text-secondary transition-all duration-200"
+                href="/marketplace/privacy/statement/"
+            >
+                Privacy Policy
+            </a>
+
+            <a
+                class="text-on-surface-variant hover:text-secondary transition-all duration-200"
+                href="/marketplace/servicesagreement/"
+            >
+                Terms of Service
+            </a>
+
+            <a
+                class="text-on-surface-variant hover:text-secondary transition-all duration-200"
+                href="#"
+            >
+                Cookie Settings
+            </a>
+
+            <a
+                class="text-on-surface-variant hover:text-secondary transition-all duration-200"
+                href="/marketplace/help"
+            >
+                Contact Support
+            </a>
+
+        </nav>
+
+    </div>
+
+</footer>
+
+
+<!-- ============================================================
+     JAVASCRIPT
+============================================================ -->
+
+<script>
+
+    // ============================================================
+    // ELEMENTS
+    // ============================================================
+
+    const addAddressButton =
+        document.getElementById(
+            "add-address-button"
+        );
+
+    const addressFormContainer =
+        document.getElementById(
+            "address-form-container"
+        );
+
+    const saveAddressButton =
+        document.getElementById(
+            "save-address-button"
+        );
+
+    const cancelAddressButton =
+        document.getElementById(
+            "cancel-address-button"
+        );
+
+    const addressError =
+        document.getElementById(
+            "address-error"
+        );
+
+    const addressesContainer =
+        document.getElementById(
+            "addresses-container"
+        );
+
+    const countryInput =
+        document.getElementById(
+            "address-country"
+        );
+
+    const addressInput =
+        document.getElementById(
+            "address-line"
+        );
+
+    const zipInput =
+        document.getElementById(
+            "address-zip"
+        );
+
+    const stateInput =
+        document.getElementById(
+            "address-state"
+        );
+
+    const cityInput =
+        document.getElementById(
+            "address-city"
+        );
+
+
+    // ============================================================
+    // SESSION STORAGE
+    // ============================================================
+
+    function getAddresses() {
+
+        try {
+
+            const stored =
+                sessionStorage.getItem(
+                    "addresses"
+                );
+
+            if (!stored) {
+                return {};
+            }
+
+            const parsed =
+                JSON.parse(stored);
+
+            if (
+                parsed &&
+                typeof parsed === "object" &&
+                !Array.isArray(parsed)
+            ) {
+
+                return parsed;
+
+            }
+
+            return {};
+
+        } catch (error) {
+
+            console.error(
+                "Failed to read addresses:",
+                error
+            );
+
+            return {};
+
+        }
+
+    }
+
+
+    function saveAddresses(
+        addresses
+    ) {
+
+        try {
+
+            sessionStorage.setItem(
+                "addresses",
+                JSON.stringify(addresses)
+            );
+
+        } catch (error) {
+
+            console.error(
+                "Failed to save addresses:",
+                error
+            );
+
+        }
+
+    }
+
+
+    // ============================================================
+    // RANDOM 16 CHARACTER ID
+    // ============================================================
+
+    function generateAddressId() {
+
+        const characters =
+            "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+        let id = "";
+
+        for (
+            let i = 0;
+            i < 16;
+            i++
+        ) {
+
+            id +=
+                characters[
+                    Math.floor(
+                        Math.random() *
+                        characters.length
+                    )
+                ];
+
+        }
+
+        return id;
+
+    }
+
+
+    function generateUniqueAddressId(
+        addresses
+    ) {
+
+        let id;
+
+        do {
+
+            id =
+                generateAddressId();
+
+        } while (
+            Object.prototype.hasOwnProperty.call(
+                addresses,
+                id
+            )
+        );
+
+        return id;
+
+    }
+
+
+    // ============================================================
+    // FORMATTING
+    // ============================================================
+
+    function formatTextInput(
+        input
+    ) {
+
+        input.value =
+            input.value
+                .replace(/\s+/g, " ")
+                .trimStart();
+
+    }
+
+
+    function formatZipCode() {
+
+        zipInput.value =
+            zipInput.value
+                .replace(/\D/g, "")
+                .substring(0, 10);
+
+    }
+
+
+    addressInput.addEventListener(
+        "input",
+        function () {
+
+            formatTextInput(this);
+
+        }
+    );
+
+
+    stateInput.addEventListener(
+        "input",
+        function () {
+
+            formatTextInput(this);
+
+        }
+    );
+
+
+    cityInput.addEventListener(
+        "input",
+        function () {
+
+            formatTextInput(this);
+
+        }
+    );
+
+
+    zipInput.addEventListener(
+        "input",
+        function () {
+
+            formatZipCode();
+
+        }
+    );
+
+
+    // ============================================================
+    // FORM CONTROL
+    // ============================================================
+
+    function clearError() {
+
+        addressError.textContent = "";
+
+        addressError.classList.add(
+            "hidden"
+        );
+
+    }
+
+
+    function clearForm() {
+
+        countryInput.value = "";
+
+        addressInput.value = "";
+
+        zipInput.value = "";
+
+        stateInput.value = "";
+
+        cityInput.value = "";
+
+        clearError();
+
+    }
+
+
+    function openAddressForm() {
+
+        clearError();
+
+        addressFormContainer.classList.remove(
+            "hidden"
+        );
+
+        addAddressButton.classList.add(
+            "hidden"
+        );
+
+        countryInput.focus();
+
+    }
+
+
+    function closeAddressForm() {
+
+        addressFormContainer.classList.add(
+            "hidden"
+        );
+
+        addAddressButton.classList.remove(
+            "hidden"
+        );
+
+        clearForm();
+
+    }
+
+
+    addAddressButton.addEventListener(
+        "click",
+        function () {
+
+            openAddressForm();
+
+        }
+    );
+
+
+    cancelAddressButton.addEventListener(
+        "click",
+        function () {
+
+            closeAddressForm();
+
+        }
+    );
+
+
+    // ============================================================
+    // ESCAPE HTML
+    // ============================================================
+
+    function escapeHTML(
+        value
+    ) {
+
+        return String(value)
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+
+    }
+
+
+    // ============================================================
+    // DISPLAY ADDRESSES
+    // ============================================================
+
+    function renderAddresses() {
+
+        const addresses =
+            getAddresses();
+
+        addressesContainer.innerHTML = "";
+
+
+        const addressIds =
+            Object.keys(
+                addresses
+            );
+
+
+        if (
+            addressIds.length === 0
+        ) {
+
+            return;
+
+        }
+
+
+        addressIds.forEach(
+            function (
+                id,
+                index
+            ) {
+
+                const address =
+                    addresses[id];
+
+
+                const card =
+                    document.createElement(
+                        "div"
+                    );
+
+                card.className =
+                    "address-card bg-surface-container-lowest border border-outline-variant rounded-xl p-md md:p-lg";
+
+
+                card.innerHTML = `
+
+                    <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-md">
+
+                        <div class="flex items-start gap-md">
+
+                            <div class="w-11 h-11 rounded-full bg-surface-container flex items-center justify-center flex-shrink-0">
+
+                                <span class="material-symbols-outlined text-on-surface-variant">
+                                    location_on
+                                </span>
+
+                            </div>
+
+
+                            <div>
+
+                                <h2 class="font-headline-md text-headline-md text-on-surface mb-xs">
+                                    Address ${index + 1}
+                                </h2>
+
+
+                                <div class="text-body-md text-on-surface-variant leading-6">
+
+                                    <p>
+                                        ${escapeHTML(address.address)}
+                                    </p>
+
+                                    <p>
+                                        ${escapeHTML(address.state)}
+                                    </p>
+
+                                    <p>
+                                        ${escapeHTML(address.city)}
+                                        (${escapeHTML(address.zip)})
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="remove-address-button flex items-center justify-center gap-2 border border-error text-error px-4 py-2 rounded-lg hover:bg-error-container transition-colors font-semibold"
+                            data-address-id="${escapeHTML(id)}"
+                        >
+
+                            <span class="material-symbols-outlined text-lg">
+                                delete
+                            </span>
+
+                            Remove
+
+                        </button>
+
+                    </div>
+
+                `;
+
+
+                addressesContainer.appendChild(
+                    card
+                );
+
+            }
+        );
+
+
+        document
+            .querySelectorAll(
+                ".remove-address-button"
+            )
+            .forEach(
+                function (
+                    button
+                ) {
+
+                    button.addEventListener(
+                        "click",
+                        function () {
+
+                            removeAddress(
+                                this.dataset.addressId
+                            );
+
+                        }
+                    );
+
+                }
+            );
+
+    }
+
+
+    // ============================================================
+    // REMOVE ADDRESS
+    // ============================================================
+
+    function removeAddress(
+        id
+    ) {
+
+        const addresses =
+            getAddresses();
+
+
+        if (
+            !Object.prototype.hasOwnProperty.call(
+                addresses,
+                id
+            )
+        ) {
+
+            return;
+
+        }
+
+
+        delete addresses[id];
+
+
+        saveAddresses(
+            addresses
+        );
+
+
+        renderAddresses();
+
+    }
+
+
+    // ============================================================
+    // SAVE ADDRESS
+    // ============================================================
+
+    saveAddressButton.addEventListener(
+        "click",
+        function () {
+
+            clearError();
+
+
+            // ----------------------------------------------------
+            // VALIDATE COUNTRY
+            // ----------------------------------------------------
+
+            const country =
+                countryInput.value.trim();
+
+
+            if (!country) {
+
+                addressError.textContent =
+                    "Please select your country.";
+
+                addressError.classList.remove(
+                    "hidden"
+                );
+
+                countryInput.focus();
+
+                return;
+
+            }
+
+
+            // ----------------------------------------------------
+            // GET VALUES
+            // ----------------------------------------------------
+
+            const address =
+                addressInput.value
+                    .replace(/\s+/g, " ")
+                    .trim();
+
+
+            const zip =
+                zipInput.value
+                    .replace(/\D/g, "")
+                    .trim();
+
+
+            const state =
+                stateInput.value
+                    .replace(/\s+/g, " ")
+                    .trim();
+
+
+            const city =
+                cityInput.value
+                    .replace(/\s+/g, " ")
+                    .trim();
+
+
+            // ----------------------------------------------------
+            // VALIDATION
+            // ----------------------------------------------------
+
+            if (!address) {
+
+                addressError.textContent =
+                    "Please enter your address.";
+
+                addressError.classList.remove(
+                    "hidden"
+                );
+
+                addressInput.focus();
+
+                return;
+
+            }
+
+
+            if (!zip) {
+
+                addressError.textContent =
+                    "Please enter your ZIP code.";
+
+                addressError.classList.remove(
+                    "hidden"
+                );
+
+                zipInput.focus();
+
+                return;
+
+            }
+
+
+            if (!state) {
+
+                addressError.textContent =
+                    "Please enter your state or regency.";
+
+                addressError.classList.remove(
+                    "hidden"
+                );
+
+                stateInput.focus();
+
+                return;
+
+            }
+
+
+            if (!city) {
+
+                addressError.textContent =
+                    "Please enter your city.";
+
+                addressError.classList.remove(
+                    "hidden"
+                );
+
+                cityInput.focus();
+
+                return;
+
+            }
+
+
+            // ----------------------------------------------------
+            // LOAD EXISTING ADDRESSES
+            // ----------------------------------------------------
+
+            const addresses =
+                getAddresses();
+
+
+            // ----------------------------------------------------
+            // CREATE UNIQUE ID
+            // ----------------------------------------------------
+
+            const id =
+                generateUniqueAddressId(
+                    addresses
+                );
+
+
+            // ----------------------------------------------------
+            // CREATE ADDRESS OBJECT
+            // ----------------------------------------------------
+
+            addresses[id] = {
+
+                country:
+                    country,
+
+                address:
+                    address,
+
+                zip:
+                    zip,
+
+                state:
+                    state,
+
+                city:
+                    city
+
+            };
+
+
+            // ----------------------------------------------------
+            // SAVE
+            // ----------------------------------------------------
+
+            saveAddresses(
+                addresses
+            );
+
+
+            // ----------------------------------------------------
+            // CLOSE FORM
+            // ----------------------------------------------------
+
+            closeAddressForm();
+
+
+            // ----------------------------------------------------
+            // REFRESH ADDRESS LIST
+            // ----------------------------------------------------
+
+            renderAddresses();
+
+        }
+    );
+
+
+    // ============================================================
+    // USER BUTTON
+    // ============================================================
+
+    const userButton =
+        document.getElementById(
+            "user-button"
+        );
+
+
+    userButton.addEventListener(
+        "click",
+        function () {
+
+            window.location.href =
+                "/marketplace/user";
+
+        }
+    );
+
+
+    // ============================================================
+    // INITIALIZE
+    // ============================================================
+
+    renderAddresses();
+
+</script>
+
+<script src="../script/search.js"></script>
+
+</body>
+</html>

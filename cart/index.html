@@ -5,7 +5,7 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-    <title>My Items - MarketPlace</title>
+    <title>My Orders - MarketPlace</title>
 
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 
@@ -305,6 +305,7 @@
             <button
                 aria-label="favorite"
                 class="p-2 text-on-surface-variant hover:text-secondary transition-colors"
+                onclick="window.location.href ='/marketplace/cart';"
             >
                 <span class="material-symbols-outlined">
                     favorite
@@ -319,6 +320,20 @@
             >
                 <span class="material-symbols-outlined">
                     shopping_cart
+                </span>
+            </button>
+
+
+            <!-- USER -->
+
+            <button
+                id="user-button"
+                aria-label="user profile"
+                class="p-2 text-on-surface-variant hover:text-secondary transition-colors"
+                onclick="window.location.href = '/marketplace/profile';"
+            >
+                <span class="material-symbols-outlined">
+                    person
                 </span>
             </button>
 
@@ -367,7 +382,7 @@
             <nav class="flex flex-col gap-2">
 
                 <a
-                    href="#"
+                    href="/marketplace/profile/"
                     class="flex items-center gap-3 rounded-DEFAULT px-4 py-3 text-on-surface-variant transition-colors hover:bg-surface-container-high"
                 >
                     <span class="material-symbols-outlined">
@@ -381,7 +396,7 @@
                 <!-- ACTIVE -->
 
                 <a
-                    href="/marketplace/items/"
+                    href=""
                     class="flex items-center gap-3 rounded-DEFAULT border-l-4 border-secondary bg-surface-container-high px-4 py-3 font-semibold text-on-surface"
                 >
                     <span class="material-symbols-outlined">
@@ -392,7 +407,7 @@
                 </a>
 
                 <a
-                    href="#"
+                    href="/marketplace/profile/addresses/"
                     class="flex items-center gap-3 rounded-DEFAULT px-4 py-3 text-on-surface-variant transition-colors hover:bg-surface-container-high"
                 >
                     <span class="material-symbols-outlined">
@@ -404,7 +419,7 @@
 
 
                 <a
-                    href="#"
+                    href="/marketplace/profile/payment-methods/"
                     class="flex items-center gap-3 rounded-DEFAULT px-4 py-3 text-on-surface-variant transition-colors hover:bg-surface-container-high"
                 >
                     <span class="material-symbols-outlined">
@@ -2234,6 +2249,6 @@
         }
     );
 </script>
-
+<script src="../script/search.js"></script>
 </body>
 </html>

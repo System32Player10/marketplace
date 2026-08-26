@@ -228,14 +228,17 @@ tailwind.config = {
                 </span>
             </button>
 
+
             <button
                 aria-label="favorite"
                 class="p-2 text-on-surface-variant hover:text-secondary transition-colors"
+                onclick="window.location.href ='/marketplace/cart';"
             >
                 <span class="material-symbols-outlined">
                     favorite
                 </span>
             </button>
+
 
             <button
                 id="shopping-cart-button"
@@ -244,6 +247,20 @@ tailwind.config = {
             >
                 <span class="material-symbols-outlined">
                     shopping_cart
+                </span>
+            </button>
+
+
+            <!-- USER -->
+
+            <button
+                id="user-button"
+                aria-label="user profile"
+                class="p-2 text-on-surface-variant hover:text-secondary transition-colors"
+                onclick="window.location.href = '/marketplace/profile';"
+            >
+                <span class="material-symbols-outlined">
+                    person
                 </span>
             </button>
 
@@ -1403,6 +1420,6 @@ document.addEventListener("DOMContentLoaded", () => {
 <!-- Existing scripts -->
 <script src="../script/cart.js"></script>
 <script src="../script/product.js"></script>
-
+<script src="../script/search.js"></script>
 </body>
 </html>

@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>Profile - MarketPlace</title>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Manrope:wght@600;700&display=swap"
+        rel="stylesheet"
+    />
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:FILL@0..1&display=swap"
+        rel="stylesheet"
+    />
+
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+
+            theme: {
+                extend: {
+                    colors: {
+                        "secondary-fixed": "#d8e2ff",
+                        "tertiary-container": "#191c1e",
+                        "surface-dim": "#cbdbf5",
+                        "surface-container-low": "#eff4ff",
+                        "primary-container": "#131b2e",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed-dim": "#adc6ff",
+                        "on-secondary-fixed-variant": "#004395",
+                        "on-secondary-fixed": "#001a42",
+                        "outline-variant": "#c6c6cd",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "background": "#f8f9ff",
+                        "on-primary-fixed": "#131b2e",
+                        "on-tertiary-container": "#818486",
+                        "tertiary-fixed-dim": "#c4c7c9",
+                        "secondary": "#0058be",
+                        "surface-variant": "#d3e4fe",
+                        "on-error": "#ffffff",
+                        "outline": "#76777d",
+                        "on-tertiary-fixed-variant": "#444749",
+                        "surface-container": "#e5eeff",
+                        "error": "#ba1a1a",
+                        "inverse-primary": "#bec6e0",
+                        "primary": "#000000",
+                        "on-surface": "#0b1c30",
+                        "inverse-on-surface": "#eaf1ff",
+                        "on-error-container": "#93000a",
+                        "surface-tint": "#565e74",
+                        "surface-bright": "#f8f9ff",
+                        "on-tertiary-fixed": "#191c1e",
+                        "primary-fixed": "#dae2fd",
+                        "surface-container-lowest": "#ffffff",
+                        "on-background": "#0b1c30",
+                        "tertiary-fixed": "#e0e3e5",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#fefcff",
+                        "primary-fixed-dim": "#bec6e0",
+                        "secondary-container": "#2170e4",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#d3e4fe",
+                        "error-container": "#ffdad6",
+                        "on-primary-container": "#7c839b",
+                        "surface-container-high": "#dce9ff",
+                        "inverse-surface": "#213145",
+                        "tertiary": "#000000",
+                        "on-surface-variant": "#45464d"
+                    },
+
+                    borderRadius: {
+                        DEFAULT: "0.125rem",
+                        lg: "0.25rem",
+                        xl: "0.5rem",
+                        full: "0.75rem"
+                    },
+
+                    spacing: {
+                        base: "4px",
+                        xs: "8px",
+                        gutter: "24px",
+                        sm: "16px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "16px",
+                        xl: "80px",
+                        lg: "48px",
+                        md: "24px"
+                    },
+
+                    fontFamily: {
+                        "headline-lg": ["Manrope"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-xl": ["Manrope"],
+                        "headline-md": ["Manrope"],
+                        "label-sm": ["Hanken Grotesk"],
+                        "label-md": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Manrope"]
+                    },
+
+                    fontSize: {
+                        "headline-lg": [
+                            "32px",
+                            {
+                                lineHeight: "40px",
+                                letterSpacing: "-0.01em",
+                                fontWeight: "600"
+                            }
+                        ],
+
+                        "body-lg": [
+                            "18px",
+                            {
+                                lineHeight: "28px",
+                                fontWeight: "400"
+                            }
+                        ],
+
+                        "body-md": [
+                            "16px",
+                            {
+                                lineHeight: "24px",
+                                fontWeight: "400"
+                            }
+                        ],
+
+                        "headline-xl": [
+                            "48px",
+                            {
+                                lineHeight: "56px",
+                                letterSpacing: "-0.02em",
+                                fontWeight: "700"
+                            }
+                        ],
+
+                        "headline-md": [
+                            "24px",
+                            {
+                                lineHeight: "32px",
+                                fontWeight: "600"
+                            }
+                        ],
+
+                        "label-sm": [
+                            "12px",
+                            {
+                                lineHeight: "16px",
+                                fontWeight: "600"
+                            }
+                        ],
+
+                        "label-md": [
+                            "14px",
+                            {
+                                lineHeight: "20px",
+                                letterSpacing: "0.01em",
+                                fontWeight: "500"
+                            }
+                        ],
+
+                        "headline-lg-mobile": [
+                            "28px",
+                            {
+                                lineHeight: "36px",
+                                fontWeight: "600"
+                            }
+                        ]
+                    }
+                }
+            }
+        };
+    </script>
+
+    <style>
+        body {
+            font-family: 'Hanken Grotesk', sans-serif;
+            background-color: #f8f9ff;
+            color: #0b1c30;
+        }
+
+        .warning-circle {
+            width: 72px;
+            height: 72px;
+            border-radius: 9999px;
+            background-color: #eff4ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-background antialiased flex flex-col min-h-screen">
+
+<!-- ============================================================
+     TOP NAVBAR
+============================================================ -->
+
+<header
+    class="bg-surface-container-lowest w-full sticky top-0 z-50 border-b border-outline-variant"
+>
+    <div
+        class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-base max-w-screen-2xl mx-auto"
+    >
+
+        <!-- LOGO -->
+
+        <div class="flex items-center gap-md">
+
+            <a
+                class="font-headline-md text-headline-md font-bold text-on-surface"
+                href="/marketplace/"
+            >
+                MarketPlace
+            </a>
+
+        </div>
+
+
+        <!-- SEARCH -->
+
+        <div class="hidden md:flex flex-1 max-w-lg mx-md relative">
+
+            <span
+                class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant"
+            >
+                search
+            </span>
+
+            <input
+                class="w-full pl-10 pr-4 py-2 bg-surface-container-low border border-outline-variant rounded-full text-on-surface focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-all font-body-md text-body-md"
+                placeholder="Search for products, brands and more"
+                type="text"
+            />
+
+        </div>
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="hidden md:flex items-center gap-gutter">
+
+            <a
+                class="text-on-surface-variant hover:text-secondary transition-colors cursor-pointer active:opacity-80 font-body-md text-body-md"
+                href="#"
+            >
+                Store
+            </a>
+
+            <a
+                class="text-on-surface-variant hover:text-secondary transition-colors cursor-pointer active:opacity-80 font-body-md text-body-md"
+                href="#"
+            >
+                Product
+            </a>
+
+            <a
+                class="text-on-surface-variant hover:text-secondary transition-colors cursor-pointer active:opacity-80 font-body-md text-body-md"
+                href="../merchant/"
+            >
+                Sell
+            </a>
+
+            <a
+                class="text-on-surface-variant hover:text-secondary transition-colors cursor-pointer active:opacity-80 font-body-md text-body-md"
+                href="../help/"
+            >
+                Help
+            </a>
+
+        </nav>
+
+
+        <!-- ICONS -->
+
+        <div class="flex items-center gap-sm mt-2">
+
+            <button
+                aria-label="notifications"
+                class="p-2 text-on-surface-variant hover:text-secondary transition-colors"
+            >
+                <span class="material-symbols-outlined">
+                    notifications
+                </span>
+            </button>
+
+
+            <button
+                aria-label="favorite"
+                class="p-2 text-on-surface-variant hover:text-secondary transition-colors"
+                onclick="window.location.href ='/marketplace/cart';"
+            >
+                <span class="material-symbols-outlined">
+                    favorite
+                </span>
+            </button>
+
+
+            <button
+                id="shopping-cart-button"
+                aria-label="shopping_cart"
+                class="p-2 text-on-surface-variant hover:text-secondary transition-colors"
+            >
+                <span class="material-symbols-outlined">
+                    shopping_cart
+                </span>
+            </button>
+
+
+            <!-- USER -->
+
+            <button
+                id="user-button"
+                aria-label="user profile"
+                class="p-2 text-on-surface-variant hover:text-secondary transition-colors"
+                onclick="window.location.href = '/marketplace/profile';"
+            >
+                <span class="material-symbols-outlined">
+                    person
+                </span>
+            </button>
+
+        </div>
+
+
+        <!-- MOBILE MENU -->
+
+        <button
+            class="md:hidden p-2 text-on-surface-variant ml-2"
+            aria-label="menu"
+        >
+            <span class="material-symbols-outlined">
+                menu
+            </span>
+        </button>
+
+    </div>
+</header>
+
+
+<!-- ============================================================
+     MAIN
+============================================================ -->
+
+<main
+    class="flex-grow w-full max-w-screen-2xl mx-auto px-margin-mobile md:px-margin-desktop py-lg"
+>
+
+    <div
+        class="grid grid-cols-1 lg:grid-cols-12 gap-gutter"
+    >
+
+        <!-- ====================================================
+             SIDEBAR
+        ===================================================== -->
+
+        <aside class="lg:col-span-3">
+
+            <h1
+                class="mb-8 text-3xl font-semibold text-on-surface md:text-4xl"
+            >
+                My Account
+            </h1>
+
+
+            <nav class="flex flex-col gap-2">
+
+                <!-- ACTIVE PROFILE -->
+
+                <a
+                    href=""
+                    class="flex items-center gap-3 rounded-DEFAULT border-l-4 border-secondary bg-surface-container-high px-4 py-3 font-semibold text-on-surface"
+                >
+
+                    <span class="material-symbols-outlined">
+                        person
+                    </span>
+
+                    Profile
+
+                </a>
+
+
+                <!-- MY ORDERS -->
+
+                <a
+                    href="/marketplace/cart/"
+                    class="flex items-center gap-3 rounded-DEFAULT px-4 py-3 text-on-surface-variant transition-colors hover:bg-surface-container-high"
+                >
+
+                    <span class="material-symbols-outlined">
+                        inventory_2
+                    </span>
+
+                    My Orders
+
+                </a>
+
+
+                <!-- ADDRESSES -->
+
+                <a
+                    href="/marketplace/profile/addresses/"
+                    class="flex items-center gap-3 rounded-DEFAULT px-4 py-3 text-on-surface-variant transition-colors hover:bg-surface-container-high"
+                >
+
+                    <span class="material-symbols-outlined">
+                        location_on
+                    </span>
+
+                    Addresses
+
+                </a>
+
+
+                <!-- PAYMENT METHODS -->
+
+                <a
+                    href="/marketplace/profile/payment-methods/"
+                    class="flex items-center gap-3 rounded-DEFAULT px-4 py-3 text-on-surface-variant transition-colors hover:bg-surface-container-high"
+                >
+
+                    <span class="material-symbols-outlined">
+                        payment
+                    </span>
+
+                    Payment Methods
+
+                </a>
+
+            </nav>
+
+        </aside>
+
+
+        <!-- ====================================================
+             PROFILE
+        ===================================================== -->
+
+        <section
+            class="lg:col-span-9 flex flex-col gap-sm"
+        >
+
+            <h1
+                class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-sm"
+            >
+                Profile
+            </h1>
+
+
+            <!-- =================================================
+                 EMPTY PROFILE
+            ================================================= -->
+
+            <div
+                class="bg-surface-container-lowest border border-outline-variant rounded-xl p-md md:p-lg flex flex-col items-center justify-center text-center min-h-[420px]"
+            >
+
+                <!-- WARNING ICON -->
+
+                <div
+                    class="warning-circle mb-md"
+                >
+
+                    <span
+                        class="material-symbols-outlined text-4xl text-on-surface-variant"
+                    >
+                        warning
+                    </span>
+
+                </div>
+
+
+                <!-- MESSAGE -->
+
+                <h2
+                    class="font-headline-md text-headline-md text-on-surface mb-xs"
+                >
+                    You're not signed in
+                </h2>
+
+
+                <p
+                    class="text-on-surface-variant text-body-md max-w-md"
+                >
+                    Sign in to your MarketPlace account to customize your profile and manage your account information.
+                </p>
+
+
+                <!-- SIGN IN BUTTON -->
+
+                <button
+                    id="sign-in-button"
+                    type="button"
+                    class="mt-md bg-primary text-on-primary font-body-md text-body-md font-semibold py-3 px-8 rounded-lg hover:bg-surface-tint hover:shadow-md transition-all active:scale-[0.98]"
+                >
+                    Sign In
+                </button>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</main>
+
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+
+<footer
+    class="bg-surface-container-low text-on-surface font-label-md text-label-md w-full border-t border-outline-variant mt-auto"
+>
+
+    <div
+        class="w-full py-xl px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-md max-w-screen-2xl mx-auto"
+    >
+
+        <div
+            class="mb-4 md:mb-0 text-center md:text-left"
+        >
+
+            <div
+                class="font-headline-sm font-black text-secondary mb-2"
+            >
+                MarketPlace
+            </div>
+
+            <p
+                class="text-on-surface-variant text-sm"
+            >
+                © 2024 MarketPlace Inc. All rights reserved.
+            </p>
+
+        </div>
+
+
+        <nav class="flex flex-wrap justify-center gap-6">
+
+            <a
+                class="text-on-surface-variant hover:text-secondary transition-all duration-200"
+                href="/marketplace/privacy/statement/"
+            >
+                Privacy Policy
+            </a>
+
+            <a
+                class="text-on-surface-variant hover:text-secondary transition-all duration-200"
+                href="/marketplace/servicesagreement/"
+            >
+                Terms of Service
+            </a>
+
+            <a
+                class="text-on-surface-variant hover:text-secondary transition-all duration-200"
+                href="#"
+            >
+                Cookie Settings
+            </a>
+
+            <a
+                class="text-on-surface-variant hover:text-secondary transition-all duration-200"
+                href="/marketplace/help"
+            >
+                Contact Support
+            </a>
+
+        </nav>
+
+    </div>
+
+</footer>
+
+<script src="../script/search.js"></script>
+
+</body>
+</html>

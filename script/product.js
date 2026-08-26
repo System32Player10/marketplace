@@ -210,9 +210,10 @@ document.addEventListener("DOMContentLoaded", async () => {
             : [];
 
         productImages.forEach((image, index) => {
-            image.src = imageUrls[index] ?? "";
+            image.src = imageUrls[index - 1] ?? "";
             image.alt = product.name ?? "";
         });
+        productImages[0].src = imageUrls[0];
 
         const price = product.price ?? {};
 

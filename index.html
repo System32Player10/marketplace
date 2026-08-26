@@ -213,17 +213,54 @@
 <a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors cursor-pointer active:opacity-80 font-body-md text-body-md" href="./merchant/">Sell</a>
 <a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors cursor-pointer active:opacity-80 font-body-md text-body-md" href="./help/">Help</a>
 </nav>
-<div class="flex items-center gap-sm mt-2">
-<button aria-label="notifications" class="p-2 text-on-surface-variant hover:text-secondary transition-colors">
-<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
-</button>
-<button aria-label="favorite" class="p-2 text-on-surface-variant hover:text-secondary transition-colors">
-<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
-</button>
-<button id="shopping-cart-button" aria-label="shopping_cart" class="p-2 text-on-surface-variant hover:text-secondary transition-colors">
-<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
-</button>
-</div>
+        <div class="flex items-center gap-sm mt-2">
+
+            <button
+                aria-label="notifications"
+                class="p-2 text-on-surface-variant hover:text-secondary transition-colors"
+            >
+                <span class="material-symbols-outlined">
+                    notifications
+                </span>
+            </button>
+
+
+            <button
+                aria-label="favorite"
+                class="p-2 text-on-surface-variant hover:text-secondary transition-colors"
+                onclick="window.location.href ='/marketplace/cart';"
+            >
+                <span class="material-symbols-outlined">
+                    favorite
+                </span>
+            </button>
+
+
+            <button
+                id="shopping-cart-button"
+                aria-label="shopping_cart"
+                class="p-2 text-on-surface-variant hover:text-secondary transition-colors"
+            >
+                <span class="material-symbols-outlined">
+                    shopping_cart
+                </span>
+            </button>
+
+
+            <!-- USER -->
+
+            <button
+                id="user-button"
+                aria-label="user profile"
+                class="p-2 text-on-surface-variant hover:text-secondary transition-colors"
+                onclick="window.location.href = '/marketplace/profile';"
+            >
+                <span class="material-symbols-outlined">
+                    person
+                </span>
+            </button>
+
+        </div>
 <!-- Mobile Menu Toggle -->
 <button class="md:hidden p-2 text-on-surface-variant ml-2">
 <span class="material-symbols-outlined">menu</span>
@@ -560,5 +597,6 @@ View Store
         </button>
     </div>
 </aside>
+<script src="./script/search.js"></script>
 <script src="./script/cart.js"></script>
 </body></html>

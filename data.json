@@ -1,5 +1,58 @@
 {
     "stores": {
+        "p3K7mQ2L": {
+            "name": "KertasKita",
+            "logo-href": "",
+            "banner-href": "",
+            "about": "Toko alat tulis lokal yang menyediakan kebutuhan sekolah, kantor, dan aktivitas sehari-hari dengan harga terjangkau.",
+            "contact": {
+                "address": "Bandung, Jawa Barat, Indonesia",
+                "support-mail": "halo@kertaskita.id",
+                "website": "www.kertaskita.id"
+            },
+            "join-date": "Jul 2024",
+            "preferences": {
+                "followers": [8.7, "k"],
+                "positive-feedback": 97,
+                "rating": 4.7,
+                "reviews": [2.3, "k"]
+            },
+            "product-ids": [
+                "K3pL8mQ1",
+                "K7xR2vM5",
+                "K4mN9qP2",
+                "K8vL3xR6",
+                "K2pQ7mX4",
+                "K9rM5vL2",
+                "K6xP3qN8",
+                "K1mR7vQ5",
+                "K5pL9xM3",
+                "K8qN2rP6",
+                "K4vM7xL1",
+                "K7pR3qX9",
+                "K2mL8vP4",
+                "K9xQ5rN7",
+                "K3vP6mR2",
+                "K6qL4xM8",
+                "K1pN9vQ3",
+                "K5mR2xL7",
+                "K8pQ4vN6",
+                "K4xM7rP2",
+                "K7vL3qR9",
+                "K2pX8mN5",
+                "K9mQ6vL3",
+                "K3rP7xM1",
+                "K6vN2qR8",
+                "K1xL5mP9",
+                "K5qM8vX2",
+                "K8rL4pN7",
+                "K4mP9xQ3",
+                "K7qV2rL6",
+                "K2xN5mR8",
+                "K9pL3vQ4",
+                "K6mX7qP2"
+            ]
+        },
         "a7Kp2Xq9": {
             "name": "Nike",
             "logo-href": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Logo_NIKE.svg/330px-Logo_NIKE.svg.png",
@@ -2909,6 +2962,1058 @@
                 ["Diameter", "25 cm"],
                 ["Use", "Ambient lighting"]
             ]
-        }
-    }
+        },
+        "K3pL8mQ1": {
+    "name": "Buku Tulis KertasKita A5 58 Lembar",
+    "brand": ["KertasKita", "p3K7mQ2L"],
+    "description": "Buku tulis A5 dengan kertas bergaris yang cocok untuk catatan sekolah, kuliah, dan kebutuhan sehari-hari.",
+    "product-href": [
+        "https://loremflickr.com/800/800/notebook,school?lock=101",
+        "https://loremflickr.com/800/800/notebook,stationery?lock=102",
+        "https://loremflickr.com/800/800/writing,notebook?lock=103",
+        "https://loremflickr.com/800/800/notebook,paper?lock=104"
+    ],
+    "price": {
+        "real": 8
+    },
+    "preferences": {
+        "rating": 4.8,
+        "reviews": [184, ""],
+        "overall": [
+            [5, 82],
+            [4, 13],
+            [3, 3],
+            [2, 1],
+            [1, 1]
+        ]
+    },
+    "variants": {
+        "color": [
+            ["Blue", "#4A90E2"],
+            ["Red", "#E74C3C"],
+            ["Green", "#4CAF50"],
+            ["Yellow", "#F1C40F"]
+        ]
+    },
+    "availability": {
+        "in-stock": true,
+        "ships-within": [24, "h"],
+        "max-amount": 20,
+        "free-shipping": false,
+        "warranty": [0, "y"]
+    },
+    "specification": [
+        ["Size", "A5"],
+        ["Pages", "58 sheets"],
+        ["Paper", "70 GSM lined paper"],
+        ["Binding", "Sewn binding"],
+        ["Usage", "School and daily notes"]
+    ]
+},
+
+"K7xR2vM5": {
+    "name": "Buku Gambar KertasKita A4",
+    "brand": ["KertasKita", "p3K7mQ2L"],
+    "description": "Buku gambar dengan kertas putih yang cocok untuk menggambar, membuat sketsa, dan tugas sekolah.",
+    "product-href": [
+        "https://loremflickr.com/800/800/sketchbook,drawing?lock=105",
+        "https://loremflickr.com/800/800/drawing,book?lock=106",
+        "https://loremflickr.com/800/800/sketch,notebook?lock=107",
+        "https://loremflickr.com/800/800/art,supplies?lock=108"
+    ],
+    "price": {
+        "real": 10
+    },
+    "preferences": {
+        "rating": 4.7,
+        "reviews": [126, ""],
+        "overall": [
+            [5, 79],
+            [4, 15],
+            [3, 4],
+            [2, 1],
+            [1, 1]
+        ]
+    },
+    "variants": {
+        "color": [
+            ["Blue", "#4A90E2"],
+            ["Pink", "#E8A0BF"],
+            ["Green", "#6BAA75"]
+        ]
+    },
+    "availability": {
+        "in-stock": true,
+        "ships-within": [24, "h"],
+        "max-amount": 15,
+        "free-shipping": false,
+        "warranty": [0, "y"]
+    },
+    "specification": [
+        ["Size", "A4"],
+        ["Pages", "30 sheets"],
+        ["Paper", "100 GSM drawing paper"],
+        ["Binding", "Stapled"],
+        ["Usage", "Drawing and sketching"]
+    ]
+},
+
+"K4mN9qP2": {
+    "name": "KertasKita Memo Pad 100 Sheets",
+    "brand": ["KertasKita", "p3K7mQ2L"],
+    "description": "Memo pad praktis untuk mencatat pengingat, daftar tugas, dan catatan singkat.",
+    "product-href": [
+        "https://loremflickr.com/800/800/memo,pad?lock=109",
+        "https://loremflickr.com/800/800/sticky,notes?lock=110",
+        "https://loremflickr.com/800/800/memo,stationery?lock=111",
+        "https://loremflickr.com/800/800/notes,paper?lock=112"
+    ],
+    "price": {
+        "real": 0.75
+    },
+    "preferences": {
+        "rating": 4.9,
+        "reviews": [97, ""],
+        "overall": [
+            [5, 88],
+            [4, 9],
+            [3, 2],
+            [2, 1],
+            [1, 0]
+        ]
+    },
+    "variants": {
+        "color": [
+            ["White", "#FFFFFF"],
+            ["Yellow", "#FFF176"],
+            ["Pink", "#F8BBD0"]
+        ]
+    },
+    "availability": {
+        "in-stock": true,
+        "ships-within": [24, "h"],
+        "max-amount": 30,
+        "free-shipping": false,
+        "warranty": [0, "y"]
+    },
+    "specification": [
+        ["Size", "75 x 75 mm"],
+        ["Sheets", "100 sheets"],
+        ["Paper", "80 GSM"],
+        ["Adhesive", "Non-adhesive"],
+        ["Usage", "Notes and reminders"]
+    ]
+},
+
+"K8vL3xR6": {
+    "name": "KertasKita Sticky Notes 76 x 76 mm",
+    "brand": ["KertasKita", "p3K7mQ2L"],
+    "description": "Sticky notes warna-warni untuk menandai halaman, membuat pengingat, dan mengorganisir catatan.",
+    "product-href": [
+        "https://loremflickr.com/800/800/sticky,notes?lock=113",
+        "https://loremflickr.com/800/800/post,it?lock=114",
+        "https://loremflickr.com/800/800/colorful,notes?lock=115",
+        "https://loremflickr.com/800/800/stationery,notes?lock=116"
+    ],
+    "price": {
+        "real": 0.8
+    },
+    "preferences": {
+        "rating": 4.8,
+        "reviews": [143, ""],
+        "overall": [
+            [5, 84],
+            [4, 12],
+            [3, 3],
+            [2, 1],
+            [1, 0]
+        ]
+    },
+    "variants": {
+        "color": [
+            ["Pastel Mix", "#DCC6E0"],
+            ["Bright Mix", "#FFD54F"],
+            ["Blue Mix", "#90CAF9"]
+        ]
+    },
+    "availability": {
+        "in-stock": true,
+        "ships-within": [24, "h"],
+        "max-amount": 25,
+        "free-shipping": false,
+        "warranty": [0, "y"]
+    },
+    "specification": [
+        ["Size", "76 x 76 mm"],
+        ["Sheets", "100 sheets"],
+        ["Paper", "70 GSM"],
+        ["Adhesive", "Removable adhesive"],
+        ["Usage", "Notes and page marking"]
+    ]
+},
+
+"K2pQ7mX4": {
+    "name": "KertasKita Ballpoint Pen 0.5 mm",
+    "brand": ["KertasKita", "p3K7mQ2L"],
+    "description": "Pulpen tinta gelap dengan ujung 0.5 mm untuk menulis dengan nyaman dan rapi.",
+    "product-href": [
+        "https://loremflickr.com/800/800/ballpoint,pen?lock=117",
+        "https://loremflickr.com/800/800/pen,writing?lock=118",
+        "https://loremflickr.com/800/800/ballpoint,stationery?lock=119",
+        "https://loremflickr.com/800/800/pen,office?lock=120"
+    ],
+    "price": {
+        "real": 1
+    },
+    "preferences": {
+        "rating": 4.8,
+        "reviews": [231, ""],
+        "overall": [
+            [5, 85],
+            [4, 11],
+            [3, 3],
+            [2, 1],
+            [1, 0]
+        ]
+    },
+    "variants": {
+        "color": [
+            ["Black", "#111111"],
+            ["Blue", "#1565C0"],
+            ["Red", "#D32F2F"]
+        ]
+    },
+    "availability": {
+        "in-stock": true,
+        "ships-within": [24, "h"],
+        "max-amount": 50,
+        "free-shipping": false,
+        "warranty": [0, "y"]
+    },
+    "specification": [
+        ["Tip", "0.5 mm"],
+        ["Ink", "Oil-based ink"],
+        ["Body", "Plastic"],
+        ["Grip", "Textured grip"],
+        ["Usage", "Writing"]
+    ]
+},
+
+"K9rM5vL2": {
+    "name": "KertasKita Mechanical Pencil 0.5 mm",
+    "brand": ["KertasKita", "p3K7mQ2L"],
+    "description": "Pensil mekanik 0.5 mm dengan desain ringan untuk menulis dan menggambar secara presisi.",
+    "product-href": [
+        "https://loremflickr.com/800/800/mechanical,pencil?lock=121",
+        "https://loremflickr.com/800/800/mechanical,pencil,stationery?lock=122",
+        "https://loremflickr.com/800/800/mechanical,pencil,writing?lock=123",
+        "https://loremflickr.com/800/800/pencil,office?lock=124"
+    ],
+    "price": {
+        "real": 2
+    },
+    "preferences": {
+        "rating": 4.7,
+        "reviews": [88, ""],
+        "overall": [
+            [5, 79],
+            [4, 15],
+            [3, 4],
+            [2, 1],
+            [1, 1]
+        ]
+    },
+    "variants": {
+        "color": [
+            ["Black", "#222222"],
+            ["Blue", "#1976D2"],
+            ["Pink", "#EC9EC0"]
+        ]
+    },
+    "availability": {
+        "in-stock": true,
+        "ships-within": [24, "h"],
+        "max-amount": 20,
+        "free-shipping": false,
+        "warranty": [0, "y"]
+    },
+    "specification": [
+        ["Lead size", "0.5 mm"],
+        ["Lead hardness", "HB"],
+        ["Body", "Plastic"],
+        ["Mechanism", "Push button"],
+        ["Usage", "Writing and technical drawing"]
+    ]
+},
+
+"K6xP3qN8": {
+    "name": "KertasKita HB Pencil Set 12 pcs",
+    "brand": ["KertasKita", "p3K7mQ2L"],
+    "description": "Set pensil kayu HB untuk kebutuhan sekolah, menulis, dan menggambar.",
+    "product-href": [
+        "https://loremflickr.com/800/800/pencils,school?lock=125",
+        "https://loremflickr.com/800/800/wooden,pencils?lock=126",
+        "https://loremflickr.com/800/800/pencil,set?lock=127",
+        "https://loremflickr.com/800/800/pencils,stationery?lock=128"
+    ],
+    "price": {
+        "real": 0.95
+    },
+    "preferences": {
+        "rating": 4.8,
+        "reviews": [114, ""],
+        "overall": [
+            [5, 83],
+            [4, 13],
+            [3, 3],
+            [2, 1],
+            [1, 0]
+        ]
+    },
+    "variants": {
+        "color": [
+            ["Natural", "#D7A86E"]
+        ]
+    },
+    "availability": {
+        "in-stock": true,
+        "ships-within": [24, "h"],
+        "max-amount": 20,
+        "free-shipping": false,
+        "warranty": [0, "y"]
+    },
+    "specification": [
+        ["Grade", "HB"],
+        ["Quantity", "12 pencils"],
+        ["Body", "Wood"],
+        ["Eraser", "No"],
+        ["Usage", "School and drawing"]
+    ]
+},
+
+"K1mR7vQ5": {
+    "name": "KertasKita Soft Eraser",
+    "brand": ["KertasKita", "p3K7mQ2L"],
+    "description": "Penghapus lembut yang dirancang untuk menghapus tulisan pensil dengan bersih tanpa mudah merusak kertas.",
+    "product-href": [
+        "https://loremflickr.com/800/800/eraser,stationery?lock=129",
+        "https://loremflickr.com/800/800/rubber,eraser?lock=130",
+        "https://loremflickr.com/800/800/eraser,school?lock=131",
+        "https://loremflickr.com/800/800/eraser,pencil?lock=132"
+    ],
+    "price": {
+        "real": 0.5
+    },
+    "preferences": {
+        "rating": 4.8,
+        "reviews": [76, ""],
+        "overall": [
+            [5, 86],
+            [4, 10],
+            [3, 3],
+            [2, 1],
+            [1, 0]
+        ]
+    },
+    "variants": {
+        "color": [
+            ["White", "#FFFFFF"],
+            ["Pink", "#F3A6B8"],
+            ["Blue", "#90CAF9"]
+        ]
+    },
+    "availability": {
+        "in-stock": true,
+        "ships-within": [24, "h"],
+        "max-amount": 50,
+        "free-shipping": false,
+        "warranty": [0, "y"]
+    },
+    "specification": [
+        ["Type", "Soft eraser"],
+        ["Material", "Synthetic rubber"],
+        ["Size", "Small"],
+        ["Usage", "Pencil erasing"]
+    ]
+},
+
+"K5pL9xM3": {
+    "name": "KertasKita Metal Pencil Sharpener",
+    "brand": ["KertasKita", "p3K7mQ2L"],
+    "description": "Rautan pensil berbahan logam dengan satu lubang untuk menghasilkan ujung pensil yang rapi.",
+    "product-href": [
+        "https://loremflickr.com/800/800/pencil,sharpener?lock=133",
+        "https://loremflickr.com/800/800/metal,sharpener?lock=134",
+        "https://loremflickr.com/800/800/pencil,sharpening?lock=135",
+        "https://loremflickr.com/800/800/sharpener,stationery?lock=136"
+    ],
+    "price": {
+        "real": 0.3
+    },
+    "preferences": {
+        "rating": 4.7,
+        "reviews": [64, ""],
+        "overall": [
+            [5, 80],
+            [4, 14],
+            [3, 4],
+            [2, 1],
+            [1, 1]
+        ]
+    },
+    "variants": {
+        "color": [
+            ["Silver", "#BDBDBD"]
+        ]
+    },
+    "availability": {
+        "in-stock": true,
+        "ships-within": [24, "h"],
+        "max-amount": 30,
+        "free-shipping": false,
+        "warranty": [0, "y"]
+    },
+    "specification": [
+        ["Material", "Aluminum alloy"],
+        ["Hole", "Single hole"],
+        ["Blade", "Steel"],
+        ["Usage", "Pencil sharpening"]
+    ]
+},
+
+"K8qN2rP6": {
+    "name": "KertasKita 30 cm Ruler",
+    "brand": ["KertasKita", "p3K7mQ2L"],
+    "description": "Penggaris transparan 30 cm dengan skala milimeter untuk kebutuhan sekolah dan kantor.",
+    "product-href": [
+        "https://loremflickr.com/800/800/ruler,stationery?lock=137",
+        "https://loremflickr.com/800/800/ruler,school?lock=138",
+        "https://loremflickr.com/800/800/ruler,desk?lock=139",
+        "https://loremflickr.com/800/800/transparent,ruler?lock=140"
+    ],
+    "price": {
+        "real": 0.5
+    },
+    "preferences": {
+        "rating": 4.8,
+        "reviews": [91, ""],
+        "overall": [
+            [5, 84],
+            [4, 12],
+            [3, 3],
+            [2, 1],
+            [1, 0]
+        ]
+    },
+    "variants": {
+        "color": [
+            ["Clear", "#E8F1F5"],
+            ["Blue", "#90CAF9"],
+            ["Pink", "#F8BBD0"]
+        ]
+    },
+    "availability": {
+        "in-stock": true,
+        "ships-within": [24, "h"],
+        "max-amount": 30,
+        "free-shipping": false,
+        "warranty": [0, "y"]
+    },
+    "specification": [
+        ["Length", "30 cm"],
+        ["Material", "Transparent plastic"],
+        ["Scale", "Millimeter"],
+        ["Usage", "Measuring and drawing"]
+    ]
+},
+
+"K4vM7xL1": {
+    "name": "KertasKita Pastel Highlighter Set",
+    "brand": ["KertasKita", "p3K7mQ2L"],
+    "description": "Set highlighter warna pastel untuk menandai catatan dengan warna lembut yang nyaman dilihat.",
+    "product-href": [
+        "https://loremflickr.com/800/800/highlighter,stationery?lock=141",
+        "https://loremflickr.com/800/800/pastel,highlighter?lock=142",
+        "https://loremflickr.com/800/800/highlighter,pens?lock=143",
+        "https://loremflickr.com/800/800/colorful,highlighter?lock=144"
+    ],
+    "price": {
+        "real": 1.2
+    },
+    "preferences": {
+        "rating": 4.9,
+        "reviews": [205, ""],
+        "overall": [
+            [5, 90],
+            [4, 8],
+            [3, 1],
+            [2, 1],
+            [1, 0]
+        ]
+    },
+    "variants": {
+        "color": [
+            ["Pastel Set", "#DCC6E0"]
+        ]
+    },
+    "availability": {
+        "in-stock": true,
+        "ships-within": [24, "h"],
+        "max-amount": 20,
+        "free-shipping": false,
+        "warranty": [0, "y"]
+    },
+    "specification": [
+        ["Quantity", "6 pens"],
+        ["Tip", "Chisel tip"],
+        ["Ink", "Water-based"],
+        ["Colors", "Pastel assorted"],
+        ["Usage", "Highlighting"]
+    ]
+},
+
+"K7pR3qX9": {
+    "name": "KertasKita Permanent Marker",
+    "brand": ["KertasKita", "p3K7mQ2L"],
+    "description": "Spidol permanen dengan ujung sedang untuk menulis pada berbagai permukaan.",
+    "product-href": [
+        "https://loremflickr.com/800/800/permanent,marker?lock=145",
+        "https://loremflickr.com/800/800/marker,stationery?lock=146",
+        "https://loremflickr.com/800/800/marker,pen?lock=147",
+        "https://loremflickr.com/800/800/marker,office?lock=148"
+    ],
+    "price": {
+        "real": 0.6
+    },
+    "preferences": {
+        "rating": 4.7,
+        "reviews": [59, ""],
+        "overall": [
+            [5, 79],
+            [4, 15],
+            [3, 4],
+            [2, 1],
+            [1, 1]
+        ]
+    },
+    "variants": {
+        "color": [
+            ["Black", "#111111"],
+            ["Blue", "#1565C0"],
+            ["Red", "#D32F2F"]
+        ]
+    },
+    "availability": {
+        "in-stock": true,
+        "ships-within": [24, "h"],
+        "max-amount": 30,
+        "free-shipping": false,
+        "warranty": [0, "y"]
+    },
+    "specification": [
+        ["Tip", "Medium round tip"],
+        ["Ink", "Permanent ink"],
+        ["Body", "Plastic"],
+        ["Usage", "Paper, cardboard, plastic"]
+    ]
+},
+
+"K2mL8vP4": {
+    "name": "KertasKita Correction Tape 5 mm",
+    "brand": ["KertasKita", "p3K7mQ2L"],
+    "description": "Correction tape berukuran 5 mm untuk memperbaiki kesalahan tulisan secara cepat dan rapi.",
+    "product-href": [
+        "https://loremflickr.com/800/800/correction,tape?lock=149",
+        "https://loremflickr.com/800/800/correction,stationery?lock=150",
+        "https://loremflickr.com/800/800/whiteout,tape?lock=151",
+        "https://loremflickr.com/800/800/office,stationery?lock=152"
+    ],
+    "price": {
+        "real": 2
+    },
+    "preferences": {
+        "rating": 4.8,
+        "reviews": [102, ""],
+        "overall": [
+            [5, 84],
+            [4, 12],
+            [3, 3],
+            [2, 1],
+            [1, 0]
+        ]
+    },
+    "variants": {
+        "color": [
+            ["White", "#FFFFFF"]
+        ]
+    },
+    "availability": {
+        "in-stock": true,
+        "ships-within": [24, "h"],
+        "max-amount": 20,
+        "free-shipping": false,
+        "warranty": [0, "y"]
+    },
+    "specification": [
+        ["Width", "5 mm"],
+        ["Length", "6 m"],
+        ["Type", "Dry correction tape"],
+        ["Usage", "Correcting written text"]
+    ]
+},
+
+"K9xQ5rN7": {
+    "name": "KertasKita Glue Stick 15 g",
+    "brand": ["KertasKita", "p3K7mQ2L"],
+    "description": "Lem stik praktis untuk kebutuhan kerajinan, sekolah, dan pekerjaan kantor.",
+    "product-href": [
+        "https://loremflickr.com/800/800/glue,stick?lock=153",
+        "https://loremflickr.com/800/800/glue,stationery?lock=154",
+        "https://loremflickr.com/800/800/glue,school?lock=155",
+        "https://loremflickr.com/800/800/glue,office?lock=156"
+    ],
+    "price": {
+        "real": 0.3
+    },
+    "preferences": {
+        "rating": 4.7,
+        "reviews": [73, ""],
+        "overall": [
+            [5, 81],
+            [4, 13],
+            [3, 4],
+            [2, 1],
+            [1, 1]
+        ]
+    },
+    "variants": {
+        "color": [
+            ["White", "#FFFFFF"]
+        ]
+    },
+    "availability": {
+        "in-stock": true,
+        "ships-within": [24, "h"],
+        "max-amount": 30,
+        "free-shipping": false,
+        "warranty": [0, "y"]
+    },
+    "specification": [
+        ["Weight", "15 g"],
+        ["Type", "Glue stick"],
+        ["Base", "Water-based"],
+        ["Usage", "Paper and cardboard"]
+    ]
+},
+
+"K3vP6mR2": {
+    "name": "KertasKita School Scissors 5 inch",
+    "brand": ["KertasKita", "p3K7mQ2L"],
+    "description": "Gunting kecil untuk kebutuhan sekolah, kerajinan tangan, dan pekerjaan ringan.",
+    "product-href": [
+        "https://loremflickr.com/800/800/scissors,stationery?lock=157",
+        "https://loremflickr.com/800/800/school,scissors?lock=158",
+        "https://loremflickr.com/800/800/craft,scissors?lock=159",
+        "https://loremflickr.com/800/800/scissors,office?lock=160"
+    ],
+    "price": {
+        "real": 0.8
+    },
+    "preferences": {
+        "rating": 4.8,
+        "reviews": [84, ""],
+        "overall": [
+            [5, 84],
+            [4, 11],
+            [3, 3],
+            [2, 1],
+            [1, 1]
+        ]
+    },
+    "variants": {
+        "color": [
+            ["Blue", "#4A90E2"],
+            ["Pink", "#E8A0BF"],
+            ["Green", "#66BB6A"]
+        ]
+    },
+    "availability": {
+        "in-stock": true,
+        "ships-within": [24, "h"],
+        "max-amount": 20,
+        "free-shipping": false,
+        "warranty": [0, "y"]
+    },
+    "specification": [
+        ["Length", "5 inch"],
+        ["Blade", "Stainless steel"],
+        ["Handle", "Plastic"],
+        ["Usage", "School and crafts"]
+    ]
+},
+
+"K6qL4xM8": {
+    "name": "KertasKita Mini Stapler",
+    "brand": ["KertasKita", "p3K7mQ2L"],
+    "description": "Stapler mini berukuran ringkas untuk penggunaan di sekolah, rumah, dan kantor.",
+    "product-href": [
+        "https://loremflickr.com/800/800/mini,stapler?lock=161",
+        "https://loremflickr.com/800/800/stapler,stationery?lock=162",
+        "https://loremflickr.com/800/800/stapler,office?lock=163",
+        "https://loremflickr.com/800/800/stapler,desk?lock=164"
+    ],
+    "price": {
+        "real": 8
+    },
+    "preferences": {
+        "rating": 4.7,
+        "reviews": [68, ""],
+        "overall": [
+            [5, 80],
+            [4, 14],
+            [3, 4],
+            [2, 1],
+            [1, 1]
+        ]
+    },
+    "variants": {
+        "color": [
+            ["Blue", "#4A90E2"],
+            ["Black", "#333333"],
+            ["Pink", "#E8A0BF"]
+        ]
+    },
+    "availability": {
+        "in-stock": true,
+        "ships-within": [24, "h"],
+        "max-amount": 20,
+        "free-shipping": false,
+        "warranty": [0, "y"]
+    },
+    "specification": [
+        ["Type", "Mini stapler"],
+        ["Staple", "No. 10"],
+        ["Capacity", "15 sheets"],
+        ["Material", "Plastic and metal"]
+    ]
+},
+
+"K1pN9vQ3": {
+    "name": "KertasKita Staples No. 10",
+    "brand": ["KertasKita", "p3K7mQ2L"],
+    "description": "Isi staples No. 10 untuk berbagai stapler kecil dan kebutuhan kantor.",
+    "product-href": [
+        "https://loremflickr.com/800/800/staples,office?lock=165",
+        "https://loremflickr.com/800/800/staples,stationery?lock=166",
+        "https://loremflickr.com/800/800/metal,staples?lock=167",
+        "https://loremflickr.com/800/800/stapler,staples?lock=168"
+    ],
+    "price": {
+        "real": 0.25
+    },
+    "preferences": {
+        "rating": 4.8,
+        "reviews": [52, ""],
+        "overall": [
+            [5, 85],
+            [4, 11],
+            [3, 3],
+            [2, 1],
+            [1, 0]
+        ]
+    },
+    "variants": {
+        "color": [
+            ["Silver", "#BDBDBD"]
+        ]
+    },
+    "availability": {
+        "in-stock": true,
+        "ships-within": [24, "h"],
+        "max-amount": 50,
+        "free-shipping": false,
+        "warranty": [0, "y"]
+    },
+    "specification": [
+        ["Size", "No. 10"],
+        ["Quantity", "1000 staples"],
+        ["Material", "Galvanized steel"],
+        ["Usage", "Stapling paper"]
+    ]
+},
+
+"K5mR2xL7": {
+    "name": "KertasKita A4 Document Folder",
+    "brand": ["KertasKita", "p3K7mQ2L"],
+    "description": "Map dokumen A4 dengan desain sederhana untuk menyimpan tugas, dokumen, dan arsip.",
+    "product-href": [
+        "https://loremflickr.com/800/800/document,folder?lock=169",
+        "https://loremflickr.com/800/800/file,folder?lock=170",
+        "https://loremflickr.com/800/800/folder,stationery?lock=171",
+        "https://loremflickr.com/800/800/document,office?lock=172"
+    ],
+    "price": {
+        "real": 0.8
+    },
+    "preferences": {
+        "rating": 4.7,
+        "reviews": [61, ""],
+        "overall": [
+            [5, 78],
+            [4, 16],
+            [3, 4],
+            [2, 1],
+            [1, 1]
+        ]
+    },
+    "variants": {
+        "color": [
+            ["Blue", "#4A90E2"],
+            ["Red", "#E74C3C"],
+            ["Green", "#4CAF50"],
+            ["Yellow", "#F1C40F"]
+        ]
+    },
+    "availability": {
+        "in-stock": true,
+        "ships-within": [24, "h"],
+        "max-amount": 30,
+        "free-shipping": false,
+        "warranty": [0, "y"]
+    },
+    "specification": [
+        ["Size", "A4"],
+        ["Material", "PVC"],
+        ["Closure", "Button"],
+        ["Usage", "Document storage"]
+    ]
+},
+
+"K8pQ4vN6": {
+    "name": "KertasKita Clear Plastic Folder",
+    "brand": ["KertasKita", "p3K7mQ2L"],
+    "description": "Map plastik transparan untuk menyimpan dokumen dan lembar tugas agar tetap rapi.",
+    "product-href": [
+        "https://loremflickr.com/800/800/clear,folder?lock=173",
+        "https://loremflickr.com/800/800/plastic,folder?lock=174",
+        "https://loremflickr.com/800/800/document,folder?lock=175",
+        "https://loremflickr.com/800/800/clear,document?lock=176"
+    ],
+    "price": {
+        "real": 0.5
+    },
+    "preferences": {
+        "rating": 4.8,
+        "reviews": [49, ""],
+        "overall": [
+            [5, 83],
+            [4, 13],
+            [3, 3],
+            [2, 1],
+            [1, 0]
+        ]
+    },
+    "variants": {
+        "color": [
+            ["Clear", "#E8F1F5"],
+            ["Blue", "#90CAF9"],
+            ["Pink", "#F8BBD0"]
+        ]
+    },
+    "availability": {
+        "in-stock": true,
+        "ships-within": [24, "h"],
+        "max-amount": 30,
+        "free-shipping": false,
+        "warranty": [0, "y"]
+    },
+    "specification": [
+        ["Size", "A4"],
+        ["Material", "PVC"],
+        ["Type", "Clear folder"],
+        ["Usage", "Document storage"]
+    ]
+},
+
+"K4xM7rP2": {
+    "name": "KertasKita A4 Copy Paper 70 GSM",
+    "brand": ["KertasKita", "p3K7mQ2L"],
+    "description": "Kertas putih A4 70 GSM untuk mencetak dokumen, tugas sekolah, dan kebutuhan kantor.",
+    "product-href": [
+        "https://loremflickr.com/800/800/copy,paper?lock=177",
+        "https://loremflickr.com/800/800/printer,paper?lock=178",
+        "https://loremflickr.com/800/800/a4,paper?lock=179",
+        "https://loremflickr.com/800/800/office,paper?lock=180"
+    ],
+    "price": {
+        "real": 10
+    },
+    "preferences": {
+        "rating": 4.8,
+        "reviews": [137, ""],
+        "overall": [
+            [5, 84],
+            [4, 12],
+            [3, 3],
+            [2, 1],
+            [1, 0]
+        ]
+    },
+    "variants": {
+        "color": [
+            ["White", "#FFFFFF"]
+        ]
+    },
+    "availability": {
+        "in-stock": true,
+        "ships-within": [24, "h"],
+        "max-amount": 10,
+        "free-shipping": false,
+        "warranty": [0, "y"]
+    },
+    "specification": [
+        ["Size", "A4"],
+        ["Weight", "70 GSM"],
+        ["Quantity", "500 sheets"],
+        ["Color", "White"],
+        ["Usage", "Printing and copying"]
+    ]
+},
+
+"K7vL3qR9": {
+    "name": "KertasKita Colored Paper Set",
+    "brand": ["KertasKita", "p3K7mQ2L"],
+    "description": "Set kertas warna untuk berbagai kebutuhan kerajinan, tugas sekolah, dan dekorasi.",
+    "product-href": [
+        "https://loremflickr.com/800/800/colored,paper?lock=181",
+        "https://loremflickr.com/800/800/colorful,paper?lock=182",
+        "https://loremflickr.com/800/800/craft,paper?lock=183",
+        "https://loremflickr.com/800/800/paper,crafts?lock=184"
+    ],
+    "price": {
+        "real": 2
+    },
+    "preferences": {
+        "rating": 4.8,
+        "reviews": [73, ""],
+        "overall": [
+            [5, 82],
+            [4, 13],
+            [3, 4],
+            [2, 1],
+            [1, 0]
+        ]
+    },
+    "variants": {
+        "color": [
+            ["Assorted", "#F5B7B1"]
+        ]
+    },
+    "availability": {
+        "in-stock": true,
+        "ships-within": [24, "h"],
+        "max-amount": 20,
+        "free-shipping": false,
+        "warranty": [0, "y"]
+    },
+    "specification": [
+        ["Size", "A4"],
+        ["Quantity", "20 sheets"],
+        ["Paper", "80 GSM"],
+        ["Colors", "10 assorted colors"],
+        ["Usage", "Crafts and school projects"]
+    ]
+},
+
+"K2xN5mR8": {
+    "name": "KertasKita Label Sticker A4",
+    "brand": ["KertasKita", "p3K7mQ2L"],
+    "description": "Kertas sticker A4 yang dapat digunakan untuk label, pengorganisasian, dan berbagai proyek kreatif.",
+    "product-href": [
+        "https://loremflickr.com/800/800/sticker,paper?lock=185",
+        "https://loremflickr.com/800/800/label,sticker?lock=186",
+        "https://loremflickr.com/800/800/sticker,sheet?lock=187",
+        "https://loremflickr.com/800/800/labels,stationery?lock=188"
+    ],
+    "price": {
+        "real": 1
+    },
+    "preferences": {
+        "rating": 4.7,
+        "reviews": [58, ""],
+        "overall": [
+            [5, 79],
+            [4, 15],
+            [3, 4],
+            [2, 1],
+            [1, 1]
+        ]
+    },
+    "variants": {
+        "color": [
+            ["White", "#FFFFFF"]
+        ]
+    },
+    "availability": {
+        "in-stock": true,
+        "ships-within": [24, "h"],
+        "max-amount": 20,
+        "free-shipping": false,
+        "warranty": [0, "y"]
+    },
+    "specification": [
+        ["Size", "A4"],
+        ["Quantity", "10 sheets"],
+        ["Material", "Self-adhesive paper"],
+        ["Surface", "Matte"],
+        ["Usage", "Labels and crafts"]
+    ]
+},
+
+"K9mQ6vL3": {
+    "name": "KertasKita Washi Tape Set",
+    "brand": ["KertasKita", "p3K7mQ2L"],
+    "description": "Set washi tape dengan berbagai motif untuk dekorasi buku, jurnal, hadiah, dan kerajinan.",
+    "product-href": [
+        "https://loremflickr.com/800/800/washi,tape?lock=189",
+        "https://loremflickr.com/800/800/decorative,tape?lock=190",
+        "https://loremflickr.com/800/800/washi,stationery?lock=191",
+        "https://loremflickr.com/800/800/decorative,stationery?lock=192"
+    ],
+    "price": {
+        "real": 1.2
+    },
+    "preferences": {
+        "rating": 4.9,
+        "reviews": [118, ""],
+        "overall": [
+            [5, 88],
+            [4, 9],
+            [3, 2],
+            [2, 1],
+            [1, 0]
+        ]
+    },
+    "variants": {
+        "color": [
+            ["Pastel Mix", "#DCC6E0"],
+            ["Nature Mix", "#A5D6A7"]
+        ]
+    },
+    "availability": {
+        "in-stock": true,
+        "ships-within": [24, "h"],
+        "max-amount": 15,
+        "free-shipping": false,
+        "warranty": [0, "y"]
+    },
+    "specification": [
+        ["Quantity", "6 rolls"],
+        ["Width", "15 mm"],
+        ["Length", "3 m per roll"],
+        ["Material", "Decorative paper"],
+        ["Usage", "Decoration and crafts"]
+    ]
+}
+  }
 }

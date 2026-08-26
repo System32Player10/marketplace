@@ -1,0 +1,2897 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>Payment Methods - MarketPlace</title>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Manrope:wght@600;700&display=swap"
+        rel="stylesheet"
+    />
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:FILL@0..1&display=swap"
+        rel="stylesheet"
+    />
+
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+
+            theme: {
+                extend: {
+                    colors: {
+                        "secondary-fixed": "#d8e2ff",
+                        "tertiary-container": "#191c1e",
+                        "surface-dim": "#cbdbf5",
+                        "surface-container-low": "#eff4ff",
+                        "primary-container": "#131b2e",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed-dim": "#adc6ff",
+                        "on-secondary-fixed-variant": "#004395",
+                        "on-secondary-fixed": "#001a42",
+                        "outline-variant": "#c6c6cd",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "background": "#f8f9ff",
+                        "on-primary-fixed": "#131b2e",
+                        "on-tertiary-container": "#818486",
+                        "tertiary-fixed-dim": "#c4c7c9",
+                        "secondary": "#0058be",
+                        "surface-variant": "#d3e4fe",
+                        "on-error": "#ffffff",
+                        "outline": "#76777d",
+                        "on-tertiary-fixed-variant": "#444749",
+                        "surface-container": "#e5eeff",
+                        "error": "#ba1a1a",
+                        "inverse-primary": "#bec6e0",
+                        "primary": "#000000",
+                        "on-surface": "#0b1c30",
+                        "inverse-on-surface": "#eaf1ff",
+                        "on-error-container": "#93000a",
+                        "surface-tint": "#565e74",
+                        "surface-bright": "#f8f9ff",
+                        "on-tertiary-fixed": "#191c1e",
+                        "primary-fixed": "#dae2fd",
+                        "surface-container-lowest": "#ffffff",
+                        "on-background": "#0b1c30",
+                        "tertiary-fixed": "#e0e3e5",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#fefcff",
+                        "primary-fixed-dim": "#bec6e0",
+                        "secondary-container": "#2170e4",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#d3e4fe",
+                        "error-container": "#ffdad6",
+                        "on-primary-container": "#7c839b",
+                        "surface-container-high": "#dce9ff",
+                        "inverse-surface": "#213145",
+                        "tertiary": "#000000",
+                        "on-surface-variant": "#45464d"
+                    },
+
+                    borderRadius: {
+                        DEFAULT: "0.125rem",
+                        lg: "0.25rem",
+                        xl: "0.5rem",
+                        full: "0.75rem"
+                    },
+
+                    spacing: {
+                        base: "4px",
+                        xs: "8px",
+                        gutter: "24px",
+                        sm: "16px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "16px",
+                        xl: "80px",
+                        lg: "48px",
+                        md: "24px"
+                    },
+
+                    fontFamily: {
+                        "headline-lg": ["Manrope"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-xl": ["Manrope"],
+                        "headline-md": ["Manrope"],
+                        "label-sm": ["Hanken Grotesk"],
+                        "label-md": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Manrope"]
+                    },
+
+                    fontSize: {
+                        "headline-lg": [
+                            "32px",
+                            {
+                                lineHeight: "40px",
+                                letterSpacing: "-0.01em",
+                                fontWeight: "600"
+                            }
+                        ],
+
+                        "body-lg": [
+                            "18px",
+                            {
+                                lineHeight: "28px",
+                                fontWeight: "400"
+                            }
+                        ],
+
+                        "body-md": [
+                            "16px",
+                            {
+                                lineHeight: "24px",
+                                fontWeight: "400"
+                            }
+                        ],
+
+                        "headline-xl": [
+                            "48px",
+                            {
+                                lineHeight: "56px",
+                                letterSpacing: "-0.02em",
+                                fontWeight: "700"
+                            }
+                        ],
+
+                        "headline-md": [
+                            "24px",
+                            {
+                                lineHeight: "32px",
+                                fontWeight: "600"
+                            }
+                        ],
+
+                        "label-sm": [
+                            "12px",
+                            {
+                                lineHeight: "16px",
+                                fontWeight: "600"
+                            }
+                        ],
+
+                        "label-md": [
+                            "14px",
+                            {
+                                lineHeight: "20px",
+                                letterSpacing: "0.01em",
+                                fontWeight: "500"
+                            }
+                        ],
+
+                        "headline-lg-mobile": [
+                            "28px",
+                            {
+                                lineHeight: "36px",
+                                fontWeight: "600"
+                            }
+                        ]
+                    }
+                }
+            }
+        };
+    </script>
+
+    <style>
+        body {
+            font-family: 'Hanken Grotesk', sans-serif;
+            background-color: #f8f9ff;
+            color: #0b1c30;
+        }
+
+        .payment-method-card {
+            transition: all 0.2s ease-in-out;
+        }
+
+        .payment-method-card:hover {
+            border-color: #0058be;
+            background-color: #f8f9ff;
+        }
+
+        .payment-method-card.selected {
+            border-color: #0058be;
+            background-color: #eff4ff;
+        }
+
+        .payment-method-card.selected .payment-radio {
+            border-color: #0058be;
+            background-color: #0058be;
+        }
+
+        .payment-method-card.selected .payment-radio::after {
+            content: "";
+            display: block;
+            width: 6px;
+            height: 6px;
+            border-radius: 9999px;
+            background: white;
+            margin: 3px;
+        }
+
+        .payment-radio {
+            width: 14px;
+            height: 14px;
+            border: 1.5px solid #76777d;
+            border-radius: 9999px;
+            flex-shrink: 0;
+        }
+
+        .payment-logo {
+            width: 68px;
+            height: 42px;
+            border: 1px solid #c6c6cd;
+            border-radius: 8px;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.15s ease;
+        }
+
+        .payment-logo:hover {
+            border-color: #0058be;
+        }
+
+        .payment-logo.selected {
+            border-color: #0058be;
+            box-shadow: 0 0 0 2px rgba(0, 88, 190, 0.12);
+        }
+
+        .payment-logo img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .saved-payment-card {
+            transition: all 0.15s ease;
+        }
+
+        .saved-payment-card:hover {
+            border-color: #0058be;
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-background antialiased flex flex-col min-h-screen">
+
+<!-- ============================================================
+     TOP NAVBAR
+============================================================ -->
+
+<header
+    class="bg-surface-container-lowest w-full sticky top-0 z-50 border-b border-outline-variant"
+>
+    <div
+        class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-base max-w-screen-2xl mx-auto"
+    >
+
+        <div class="flex items-center gap-md">
+            <a
+                class="font-headline-md text-headline-md font-bold text-on-surface"
+                href="/marketplace/"
+            >
+                MarketPlace
+            </a>
+        </div>
+
+        <div class="hidden md:flex flex-1 max-w-lg mx-md relative">
+
+            <span
+                class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant"
+            >
+                search
+            </span>
+
+            <input
+                class="w-full pl-10 pr-4 py-2 bg-surface-container-low border border-outline-variant rounded-full text-on-surface focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-all font-body-md text-body-md"
+                placeholder="Search for products, brands and more"
+                type="text"
+            />
+
+        </div>
+
+        <nav class="hidden md:flex items-center gap-gutter">
+
+            <a
+                class="text-on-surface-variant hover:text-secondary transition-colors cursor-pointer active:opacity-80 font-body-md text-body-md"
+                href="#"
+            >
+                Store
+            </a>
+
+            <a
+                class="text-on-surface-variant hover:text-secondary transition-colors cursor-pointer active:opacity-80 font-body-md text-body-md"
+                href="#"
+            >
+                Product
+            </a>
+
+            <a
+                class="text-on-surface-variant hover:text-secondary transition-colors cursor-pointer active:opacity-80 font-body-md text-body-md"
+                href="../../merchant/"
+            >
+                Sell
+            </a>
+
+            <a
+                class="text-on-surface-variant hover:text-secondary transition-colors cursor-pointer active:opacity-80 font-body-md text-body-md"
+                href="../../help/"
+            >
+                Help
+            </a>
+
+        </nav>
+
+        <div class="flex items-center gap-sm mt-2">
+
+            <button
+                aria-label="notifications"
+                class="p-2 text-on-surface-variant hover:text-secondary transition-colors"
+            >
+                <span class="material-symbols-outlined">
+                    notifications
+                </span>
+            </button>
+
+
+            <button
+                aria-label="favorite"
+                class="p-2 text-on-surface-variant hover:text-secondary transition-colors"
+                onclick="window.location.href ='/marketplace/cart';"
+            >
+                <span class="material-symbols-outlined">
+                    favorite
+                </span>
+            </button>
+
+
+            <button
+                id="shopping-cart-button"
+                aria-label="shopping_cart"
+                class="p-2 text-on-surface-variant hover:text-secondary transition-colors"
+            >
+                <span class="material-symbols-outlined">
+                    shopping_cart
+                </span>
+            </button>
+
+
+            <!-- USER -->
+
+            <button
+                id="user-button"
+                aria-label="user profile"
+                class="p-2 text-on-surface-variant hover:text-secondary transition-colors"
+                onclick="window.location.href = '/marketplace/profile';"
+            >
+                <span class="material-symbols-outlined">
+                    person
+                </span>
+            </button>
+
+        </div>
+
+        <button class="md:hidden p-2 text-on-surface-variant ml-2">
+            <span class="material-symbols-outlined">
+                menu
+            </span>
+        </button>
+
+    </div>
+</header>
+
+
+<!-- ============================================================
+     MAIN
+============================================================ -->
+
+<main
+    class="flex-grow w-full max-w-screen-2xl mx-auto px-margin-mobile md:px-margin-desktop py-lg"
+>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+
+        <!-- ====================================================
+             SIDEBAR
+        ===================================================== -->
+
+        <aside class="lg:col-span-3">
+
+            <h1
+                class="mb-8 text-3xl font-semibold text-on-surface md:text-4xl"
+            >
+                My Account
+            </h1>
+
+            <nav class="flex flex-col gap-2">
+
+                <a
+                    href="/marketplace/profile/"
+                    class="flex items-center gap-3 rounded-DEFAULT px-4 py-3 text-on-surface-variant transition-colors hover:bg-surface-container-high"
+                >
+                    <span class="material-symbols-outlined">
+                        person
+                    </span>
+                    Profile
+                </a>
+
+                <a
+                    href="/marketplace/cart/"
+                    class="flex items-center gap-3 rounded-DEFAULT px-4 py-3 text-on-surface-variant transition-colors hover:bg-surface-container-high"
+                >
+                    <span class="material-symbols-outlined">
+                        inventory_2
+                    </span>
+                    My Orders
+                </a>
+
+                <a
+                    href="/marketplace/profile/addresses/"
+                    class="flex items-center gap-3 rounded-DEFAULT px-4 py-3 text-on-surface-variant transition-colors hover:bg-surface-container-high"
+                >
+                    <span class="material-symbols-outlined">
+                        location_on
+                    </span>
+                    Addresses
+                </a>
+
+                <a
+                    href=""
+                    class="flex items-center gap-3 rounded-DEFAULT border-l-4 border-secondary bg-surface-container-high px-4 py-3 font-semibold text-on-surface"
+                >
+                    <span class="material-symbols-outlined">
+                        payment
+                    </span>
+                    Payment Methods
+                </a>
+
+            </nav>
+
+        </aside>
+
+
+        <!-- ====================================================
+             PAYMENT METHODS
+        ===================================================== -->
+
+        <section class="lg:col-span-9 flex flex-col gap-sm">
+
+            <h1
+                class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-sm"
+            >
+                Payment Methods
+            </h1>
+
+
+            <!-- =================================================
+                 SAVED PAYMENT METHODS
+            ================================================= -->
+
+            <div
+                id="saved-payment-methods"
+                class="flex flex-col gap-sm"
+            ></div>
+
+
+            <!-- =================================================
+                 ADD BUTTON
+            ================================================= -->
+
+            <div
+                id="add-payment-container"
+                class="bg-surface-container-lowest border border-outline-variant rounded-xl p-md md:p-lg"
+            >
+
+                <button
+                    id="add-payment-button"
+                    type="button"
+                    class="w-full flex items-center justify-center gap-2 border border-outline-variant rounded-lg py-4 px-6 text-on-surface font-semibold hover:border-secondary hover:bg-surface-container-low transition-all"
+                >
+
+                    <span class="material-symbols-outlined">
+                        add
+                    </span>
+
+                    Add Payment Method
+
+                </button>
+
+            </div>
+
+
+            <!-- =================================================
+                 ADD PAYMENT FORM
+            ================================================= -->
+
+            <div
+                id="payment-form-container"
+                class="hidden bg-surface-container-lowest border border-outline-variant rounded-xl p-md md:p-lg"
+            >
+
+                <div class="flex items-start justify-between gap-md mb-lg">
+
+                    <div>
+
+                        <h2
+                            class="font-headline-md text-headline-md text-on-surface"
+                        >
+                            Add Payment Method
+                        </h2>
+
+                        <p
+                            class="text-on-surface-variant text-body-md mt-xs"
+                        >
+                            Select your region and preferred payment method.
+                        </p>
+
+                    </div>
+
+                    <button
+                        id="cancel-payment-button"
+                        type="button"
+                        class="p-2 text-on-surface-variant hover:text-secondary"
+                        aria-label="Close"
+                    >
+                        <span class="material-symbols-outlined">
+                            close
+                        </span>
+                    </button>
+
+                </div>
+
+
+                <!-- =================================================
+                     REGION
+                ================================================= -->
+
+                <div class="mb-lg">
+
+                    <label
+                        for="payment-region"
+                        class="block text-sm font-semibold text-on-surface mb-xs"
+                    >
+                        Region
+                    </label>
+
+                    <select
+                        id="payment-region"
+                        class="w-full px-4 py-3 border border-outline-variant rounded-lg bg-surface-container-lowest text-on-surface focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/20"
+                    >
+
+                        <option value="">
+                            Select your region
+                        </option>
+
+                        <option value="ID">
+                            Indonesia
+                        </option>
+
+                        <option value="US">
+                            United States
+                        </option>
+
+                        <option value="GB">
+                            United Kingdom
+                        </option>
+
+                        <option value="SG">
+                            Singapore
+                        </option>
+
+                        <option value="MY">
+                            Malaysia
+                        </option>
+
+                        <option value="OTHER">
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- =================================================
+                     PAYMENT METHOD SELECTION
+                ================================================= -->
+
+                <div
+                    id="payment-selection-section"
+                    class="hidden"
+                >
+
+                    <h3
+                        class="font-headline-md text-headline-md text-on-surface mb-md"
+                    >
+                        Payment Method
+                    </h3>
+
+                    <div
+                        id="payment-methods"
+                        class="flex flex-col gap-sm"
+                    >
+
+                        <!-- CARD -->
+
+                        <button
+                            type="button"
+                            class="payment-method-card w-full text-left border border-outline-variant rounded-xl p-md flex items-center gap-md"
+                            data-payment-method="card"
+                        >
+
+                            <div class="payment-radio"></div>
+
+                            <span
+                                class="material-symbols-outlined text-3xl text-on-surface-variant"
+                            >
+                                credit_card
+                            </span>
+
+                            <div class="flex-1">
+
+                                <div
+                                    class="font-body-lg text-body-lg font-semibold text-on-surface"
+                                >
+                                    Credit or Debit Card
+                                </div>
+
+                                <div
+                                    class="text-sm text-on-surface-variant"
+                                >
+                                    Visa, Mastercard, JCB, American Express and more
+                                </div>
+
+                            </div>
+
+                        </button>
+
+
+                        <!-- PAYPAL -->
+
+                        <button
+                            type="button"
+                            class="payment-method-card w-full text-left border border-outline-variant rounded-xl p-md flex items-center gap-md"
+                            data-payment-method="paypal"
+                        >
+
+                            <div class="payment-radio"></div>
+
+                            <span
+                                class="material-symbols-outlined text-3xl text-on-surface-variant"
+                            >
+                                account_balance_wallet
+                            </span>
+
+                            <div class="flex-1">
+
+                                <div
+                                    class="font-body-lg text-body-lg font-semibold text-on-surface"
+                                >
+                                    PayPal
+                                </div>
+
+                                <div
+                                    class="text-sm text-on-surface-variant"
+                                >
+                                    Pay using your PayPal account
+                                </div>
+
+                            </div>
+
+                        </button>
+
+
+                        <!-- INDONESIA METHODS -->
+
+                        <div
+                            id="indonesia-payment-methods"
+                            class="hidden flex flex-col gap-sm"
+                        >
+
+                            <button
+                                type="button"
+                                class="payment-method-card w-full text-left border border-outline-variant rounded-xl p-md flex items-center gap-md"
+                                data-payment-method="linkaja"
+                            >
+
+                                <div class="payment-radio"></div>
+
+                                <span
+                                    class="material-symbols-outlined text-3xl text-on-surface-variant"
+                                >
+                                    phone_android
+                                </span>
+
+                                <div class="flex-1">
+
+                                    <div
+                                        class="font-body-lg text-body-lg font-semibold text-on-surface"
+                                    >
+                                        LinkAja
+                                    </div>
+
+                                    <div
+                                        class="text-sm text-on-surface-variant"
+                                    >
+                                        Pay using your LinkAja account
+                                    </div>
+
+                                </div>
+
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="payment-method-card w-full text-left border border-outline-variant rounded-xl p-md flex items-center gap-md"
+                                data-payment-method="gopay"
+                            >
+
+                                <div class="payment-radio"></div>
+
+                                <span
+                                    class="material-symbols-outlined text-3xl text-on-surface-variant"
+                                >
+                                    phone_android
+                                </span>
+
+                                <div class="flex-1">
+
+                                    <div
+                                        class="font-body-lg text-body-lg font-semibold text-on-surface"
+                                    >
+                                        GoPay
+                                    </div>
+
+                                    <div
+                                        class="text-sm text-on-surface-variant"
+                                    >
+                                        Pay using your GoPay account
+                                    </div>
+
+                                </div>
+
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="payment-method-card w-full text-left border border-outline-variant rounded-xl p-md flex items-center gap-md"
+                                data-payment-method="shopeepay"
+                            >
+
+                                <div class="payment-radio"></div>
+
+                                <span
+                                    class="material-symbols-outlined text-3xl text-on-surface-variant"
+                                >
+                                    phone_android
+                                </span>
+
+                                <div class="flex-1">
+
+                                    <div
+                                        class="font-body-lg text-body-lg font-semibold text-on-surface"
+                                    >
+                                        ShopeePay
+                                    </div>
+
+                                    <div
+                                        class="text-sm text-on-surface-variant"
+                                    >
+                                        Pay using your ShopeePay account
+                                    </div>
+
+                                </div>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         CARD FORM
+                    ================================================= -->
+
+                    <div
+                        id="card-details"
+                        class="hidden mt-lg border-t border-outline-variant pt-lg"
+                    >
+
+                        <div class="flex flex-col gap-lg">
+
+                            <!-- CARD INFORMATION -->
+
+                            <div>
+
+                                <div
+                                    class="flex items-center justify-between gap-md mb-md"
+                                >
+
+                                    <h3
+                                        class="font-headline-md text-headline-md text-on-surface"
+                                    >
+                                        Card Information
+                                    </h3>
+
+                                    <!-- LOGO BOXES -->
+
+                                    <div class="flex gap-xs">
+
+                                        <button
+                                            type="button"
+                                            class="payment-logo"
+                                            data-card-brand="visa"
+                                            title="Visa"
+                                        >
+                                            <img
+                                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Visa_Inc._logo_%282021%E2%80%93present%29.svg/960px-Visa_Inc._logo_%282021%E2%80%93present%29.svg.png"
+                                                alt="Visa"
+                                                style="padding: 10px;"
+                                            />
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="payment-logo"
+                                            data-card-brand="mastercard"
+                                            title="Mastercard"
+                                        >
+                                            <img
+                                                src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Mastercard_2019_logo.svg"
+                                                alt="Mastercard"
+                                                style="padding: 10px;"
+                                            />
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="payment-logo"
+                                            data-card-brand="jcb"
+                                            title="JCB"
+                                        >
+                                            <img
+                                                src="https://upload.wikimedia.org/wikipedia/commons/4/40/JCB_logo.svg"
+                                                alt="JCB"
+                                                style="padding: 10px;"
+                                            />
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="payment-logo"
+                                            data-card-brand="amex"
+                                            title="American Express"
+                                        >
+                                            <img
+                                                src="https://upload.wikimedia.org/wikipedia/commons/f/fa/American_Express_logo_%282018%29.svg"
+                                                alt="American Express"
+                                                style="padding: 10px;"
+                                            />
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- CARD NUMBER -->
+
+                                <div class="mb-md">
+
+                                    <label
+                                        for="card-number"
+                                        class="block text-sm font-semibold text-on-surface mb-xs"
+                                    >
+                                        Card Number
+                                    </label>
+
+                                    <input
+                                        id="card-number"
+                                        type="text"
+                                        inputmode="numeric"
+                                        autocomplete="cc-number"
+                                        maxlength="19"
+                                        placeholder="1234 5678 9012 3456"
+                                        class="w-full px-4 py-3 border border-outline-variant rounded-lg bg-surface-container-lowest text-on-surface focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/20"
+                                    />
+
+                                </div>
+
+
+                                <!-- FIRST / LAST NAME -->
+
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-md mb-md">
+
+                                    <div>
+
+                                        <label
+                                            for="card-first-name"
+                                            class="block text-sm font-semibold text-on-surface mb-xs"
+                                        >
+                                            First Name
+                                        </label>
+
+                                        <input
+                                            id="card-first-name"
+                                            type="text"
+                                            autocomplete="given-name"
+                                            placeholder="First name"
+                                            class="w-full px-4 py-3 border border-outline-variant rounded-lg bg-surface-container-lowest text-on-surface focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/20"
+                                        />
+
+                                    </div>
+
+                                    <div>
+
+                                        <label
+                                            for="card-last-name"
+                                            class="block text-sm font-semibold text-on-surface mb-xs"
+                                        >
+                                            Last Name
+                                        </label>
+
+                                        <input
+                                            id="card-last-name"
+                                            type="text"
+                                            autocomplete="family-name"
+                                            placeholder="Last name"
+                                            class="w-full px-4 py-3 border border-outline-variant rounded-lg bg-surface-container-lowest text-on-surface focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/20"
+                                        />
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- EXPIRATION / CVV -->
+
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+
+                                    <div>
+
+                                        <label
+                                            for="card-expiry"
+                                            class="block text-sm font-semibold text-on-surface mb-xs"
+                                        >
+                                            Expiration Date
+                                        </label>
+
+                                        <input
+                                            id="card-expiry"
+                                            type="text"
+                                            inputmode="numeric"
+                                            autocomplete="cc-exp"
+                                            maxlength="5"
+                                            placeholder="MM/YY"
+                                            class="w-full px-4 py-3 border border-outline-variant rounded-lg bg-surface-container-lowest text-on-surface focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/20"
+                                        />
+
+                                    </div>
+
+                                    <div>
+
+                                        <label
+                                            for="card-cvv"
+                                            class="block text-sm font-semibold text-on-surface mb-xs"
+                                        >
+                                            CVV
+                                        </label>
+
+                                        <input
+                                            id="card-cvv"
+                                            type="password"
+                                            inputmode="numeric"
+                                            autocomplete="cc-csc"
+                                            maxlength="3"
+                                            placeholder="CVV"
+                                            class="w-full px-4 py-3 border border-outline-variant rounded-lg bg-surface-container-lowest text-on-surface focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/20"
+                                        />
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- BILLING ADDRESS -->
+
+                            <div>
+
+                                <h3
+                                    class="font-headline-md text-headline-md text-on-surface mb-md"
+                                >
+                                    Billing Address
+                                </h3>
+
+
+                                <!-- ADDRESS 1 / ADDRESS 2 -->
+
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-md mb-md">
+
+                                    <div>
+
+                                        <label
+                                            for="billing-address-1"
+                                            class="block text-sm font-semibold text-on-surface mb-xs"
+                                        >
+                                            Address Line 1
+                                        </label>
+
+                                        <input
+                                            id="billing-address-1"
+                                            type="text"
+                                            autocomplete="address-line1"
+                                            placeholder="Street address"
+                                            class="w-full px-4 py-3 border border-outline-variant rounded-lg bg-surface-container-lowest text-on-surface focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/20"
+                                        />
+
+                                    </div>
+
+                                    <div>
+
+                                        <label
+                                            for="billing-address-2"
+                                            class="block text-sm font-semibold text-on-surface mb-xs"
+                                        >
+                                            Address Line 2
+                                        </label>
+
+                                        <input
+                                            id="billing-address-2"
+                                            type="text"
+                                            autocomplete="address-line2"
+                                            placeholder="Apartment, suite, etc. (optional)"
+                                            class="w-full px-4 py-3 border border-outline-variant rounded-lg bg-surface-container-lowest text-on-surface focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/20"
+                                        />
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- CITY / ZIP -->
+
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+
+                                    <div>
+
+                                        <label
+                                            for="billing-city"
+                                            class="block text-sm font-semibold text-on-surface mb-xs"
+                                        >
+                                            City
+                                        </label>
+
+                                        <input
+                                            id="billing-city"
+                                            type="text"
+                                            autocomplete="address-level2"
+                                            placeholder="City"
+                                            class="w-full px-4 py-3 border border-outline-variant rounded-lg bg-surface-container-lowest text-on-surface focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/20"
+                                        />
+
+                                    </div>
+
+                                    <div>
+
+                                        <label
+                                            for="billing-zip"
+                                            class="block text-sm font-semibold text-on-surface mb-xs"
+                                        >
+                                            ZIP Code
+                                        </label>
+
+                                        <input
+                                            id="billing-zip"
+                                            type="text"
+                                            inputmode="numeric"
+                                            autocomplete="postal-code"
+                                            maxlength="10"
+                                            placeholder="ZIP code"
+                                            class="w-full px-4 py-3 border border-outline-variant rounded-lg bg-surface-container-lowest text-on-surface focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/20"
+                                        />
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         WALLET / PAYPAL FORM
+                    ================================================= -->
+
+                    <div
+                        id="contact-details"
+                        class="hidden mt-lg border-t border-outline-variant pt-lg"
+                    >
+
+                        <h3
+                            id="contact-details-title"
+                            class="font-headline-md text-headline-md text-on-surface mb-md"
+                        >
+                            Account Information
+                        </h3>
+
+                        <p
+                            id="contact-details-description"
+                            class="text-on-surface-variant text-body-md mb-md"
+                        >
+                            Enter the phone number or email associated with your payment account.
+                        </p>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+
+                            <div>
+
+                                <label
+                                    for="payment-phone"
+                                    class="block text-sm font-semibold text-on-surface mb-xs"
+                                >
+                                    Phone Number
+                                </label>
+
+                                <input
+                                    id="payment-phone"
+                                    type="tel"
+                                    inputmode="tel"
+                                    autocomplete="tel"
+                                    placeholder="+62 812 3456 7890"
+                                    class="w-full px-4 py-3 border border-outline-variant rounded-lg bg-surface-container-lowest text-on-surface focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/20"
+                                />
+
+                            </div>
+
+                            <div>
+
+                                <label
+                                    for="payment-email"
+                                    class="block text-sm font-semibold text-on-surface mb-xs"
+                                >
+                                    Email Address
+                                </label>
+
+                                <input
+                                    id="payment-email"
+                                    type="email"
+                                    autocomplete="email"
+                                    placeholder="name@example.com"
+                                    class="w-full px-4 py-3 border border-outline-variant rounded-lg bg-surface-container-lowest text-on-surface focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/20"
+                                />
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         FORM ACTION
+                    ================================================= -->
+
+                    <div
+                        class="border-t border-outline-variant mt-lg pt-md"
+                    >
+
+                        <button
+                            id="save-payment-button"
+                            type="button"
+                            class="w-full md:w-auto md:min-w-[180px] bg-primary text-on-primary font-body-md text-body-md font-semibold py-3 px-6 rounded-lg hover:bg-surface-tint hover:shadow-md transition-all active:scale-[0.98]"
+                        >
+                            Add Payment Method
+                        </button>
+
+                        <p
+                            id="payment-error"
+                            class="hidden text-error font-body-md text-body-md mt-md"
+                        ></p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</main>
+
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+
+<footer
+    class="bg-surface-container-low text-on-surface font-label-md text-label-md w-full border-t border-outline-variant mt-auto"
+>
+
+    <div
+        class="w-full py-xl px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-md max-w-screen-2xl mx-auto"
+    >
+
+        <div
+            class="mb-4 md:mb-0 text-center md:text-left"
+        >
+
+            <div
+                class="font-headline-sm font-black text-secondary mb-2"
+            >
+                MarketPlace
+            </div>
+
+            <p
+                class="text-on-surface-variant text-sm"
+            >
+                © 2024 MarketPlace Inc. All rights reserved.
+            </p>
+
+        </div>
+
+        <nav class="flex flex-wrap justify-center gap-6">
+
+            <a
+                class="text-on-surface-variant hover:text-secondary transition-all duration-200"
+                href="/marketplace/privacy/statement/"
+            >
+                Privacy Policy
+            </a>
+
+            <a
+                class="text-on-surface-variant hover:text-secondary transition-all duration-200"
+                href="/marketplace/servicesagreement/"
+            >
+                Terms of Service
+            </a>
+
+            <a
+                class="text-on-surface-variant hover:text-secondary transition-all duration-200"
+                href="#"
+            >
+                Cookie Settings
+            </a>
+
+            <a
+                class="text-on-surface-variant hover:text-secondary transition-all duration-200"
+                href="/marketplace/help"
+            >
+                Contact Support
+            </a>
+
+        </nav>
+
+    </div>
+
+</footer>
+
+
+<!-- ============================================================
+     JAVASCRIPT
+============================================================ -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    // ============================================================
+    // ELEMENTS
+    // ============================================================
+
+    const addPaymentButton =
+        document.getElementById("add-payment-button");
+
+    const addPaymentContainer =
+        document.getElementById("add-payment-container");
+
+    const paymentFormContainer =
+        document.getElementById("payment-form-container");
+
+    const cancelPaymentButton =
+        document.getElementById("cancel-payment-button");
+
+    const regionSelect =
+        document.getElementById("payment-region");
+
+    const paymentSelectionSection =
+        document.getElementById("payment-selection-section");
+
+    const indonesiaPaymentMethods =
+        document.getElementById("indonesia-payment-methods");
+
+    const paymentMethodButtons =
+        document.querySelectorAll(".payment-method-card");
+
+    const cardDetails =
+        document.getElementById("card-details");
+
+    const contactDetails =
+        document.getElementById("contact-details");
+
+    const savePaymentButton =
+        document.getElementById("save-payment-button");
+
+    const paymentError =
+        document.getElementById("payment-error");
+
+    const savedPaymentMethodsContainer =
+        document.getElementById("saved-payment-methods");
+
+    const cardNumber =
+        document.getElementById("card-number");
+
+    const cardExpiry =
+        document.getElementById("card-expiry");
+
+    const cardCVV =
+        document.getElementById("card-cvv");
+
+    const cardFirstName =
+        document.getElementById("card-first-name");
+
+    const cardLastName =
+        document.getElementById("card-last-name");
+
+    const billingAddress1 =
+        document.getElementById("billing-address-1");
+
+    const billingAddress2 =
+        document.getElementById("billing-address-2");
+
+    const billingCity =
+        document.getElementById("billing-city");
+
+    const billingZip =
+        document.getElementById("billing-zip");
+
+    const paymentPhone =
+        document.getElementById("payment-phone");
+
+    const paymentEmail =
+        document.getElementById("payment-email");
+
+    const cardLogoButtons =
+        document.querySelectorAll(".payment-logo");
+
+
+    // ============================================================
+    // STATE
+    // ============================================================
+
+    let selectedPaymentMethod = null;
+    let selectedCardBrand = null;
+
+
+    // ============================================================
+    // PAYMENT METHOD NAMES
+    // ============================================================
+
+    const paymentMethodNames = {
+
+        card:
+            "Credit / Debit Card",
+
+        paypal:
+            "PayPal",
+
+        linkaja:
+            "LinkAja",
+
+        gopay:
+            "GoPay",
+
+        shopeepay:
+            "ShopeePay"
+
+    };
+
+
+    // ============================================================
+    // SESSION STORAGE
+    // ============================================================
+
+    function getPaymentMethods() {
+
+        try {
+
+            const stored =
+                sessionStorage.getItem(
+                    "payment-methods"
+                );
+
+            if (!stored) {
+                return {};
+            }
+
+            const parsed =
+                JSON.parse(stored);
+
+            if (
+                !parsed ||
+                typeof parsed !== "object" ||
+                Array.isArray(parsed)
+            ) {
+                return {};
+            }
+
+            return parsed;
+
+        } catch (error) {
+
+            console.error(
+                "Failed to read payment methods:",
+                error
+            );
+
+            return {};
+
+        }
+
+    }
+
+
+    function savePaymentMethods(
+        paymentMethods
+    ) {
+
+        try {
+
+            sessionStorage.setItem(
+                "payment-methods",
+                JSON.stringify(paymentMethods)
+            );
+
+        } catch (error) {
+
+            console.error(
+                "Failed to save payment methods:",
+                error
+            );
+
+        }
+
+    }
+
+
+    // ============================================================
+    // RANDOM 16 CHARACTER ID
+    // ============================================================
+
+    function generatePaymentMethodId() {
+
+        const characters =
+            "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+        let id = "";
+
+        const paymentMethods =
+            getPaymentMethods();
+
+        do {
+
+            id = "";
+
+            for (
+                let i = 0;
+                i < 16;
+                i++
+            ) {
+
+                id +=
+                    characters[
+                        Math.floor(
+                            Math.random() *
+                            characters.length
+                        )
+                    ];
+
+            }
+
+        } while (
+            Object.prototype.hasOwnProperty.call(
+                paymentMethods,
+                id
+            )
+        );
+
+        return id;
+
+    }
+
+
+    // ============================================================
+    // FORMAT HELPERS
+    // ============================================================
+
+    function maskValue(
+        value,
+        visibleStart = 2,
+        visibleEnd = 0
+    ) {
+
+        if (!value) {
+            return "";
+        }
+
+        const clean =
+            String(value);
+
+        if (
+            clean.length <=
+            visibleStart + visibleEnd
+        ) {
+            return clean;
+        }
+
+        const start =
+            clean.substring(
+                0,
+                visibleStart
+            );
+
+        const end =
+            visibleEnd > 0
+                ? clean.substring(
+                    clean.length - visibleEnd
+                )
+                : "";
+
+        const maskedLength =
+            clean.length -
+            visibleStart -
+            visibleEnd;
+
+        return (
+            start +
+            "*".repeat(maskedLength) +
+            end
+        );
+
+    }
+
+
+    function formatCardDisplay(
+        card
+    ) {
+
+        const number =
+            String(card.cardNumber || "")
+                .replace(/\D/g, "");
+
+        if (!number) {
+            return "Card";
+        }
+
+        if (number.length <= 2) {
+            return number;
+        }
+
+        return (
+            number.substring(0, 2) +
+            "*".repeat(
+                Math.max(
+                    0,
+                    number.length - 2
+                )
+            )
+        );
+
+    }
+
+
+    function formatPhoneInput(
+        input
+    ) {
+
+        let value =
+            input.value
+                .replace(/[^\d+]/g, "");
+
+        if (
+            value.indexOf("+") > 0
+        ) {
+
+            value =
+                value.replace(/\+/g, "");
+
+        }
+
+        if (
+            value.startsWith("+")
+        ) {
+
+            const prefix =
+                value.substring(0, 3);
+
+            const digits =
+                value
+                    .substring(3)
+                    .replace(/\D/g, "");
+
+            const groups =
+                digits.match(/.{1,4}/g) || [];
+
+            input.value =
+                prefix +
+                (
+                    groups.length
+                        ? " " + groups.join(" ")
+                        : ""
+                );
+
+        } else {
+
+            const digits =
+                value.replace(/\D/g, "");
+
+            const groups =
+                digits.match(/.{1,4}/g) || [];
+
+            input.value =
+                groups.join(" ");
+
+        }
+
+    }
+
+
+    // ============================================================
+    // RESET FORM
+    // ============================================================
+
+    function resetForm() {
+
+        selectedPaymentMethod = null;
+        selectedCardBrand = null;
+
+        regionSelect.value = "";
+
+        paymentSelectionSection.classList.add(
+            "hidden"
+        );
+
+        indonesiaPaymentMethods.classList.add(
+            "hidden"
+        );
+
+        cardDetails.classList.add(
+            "hidden"
+        );
+
+        contactDetails.classList.add(
+            "hidden"
+        );
+
+        paymentMethodButtons.forEach(
+            button => {
+
+                button.classList.remove(
+                    "selected"
+                );
+
+            }
+        );
+
+        cardLogoButtons.forEach(
+            button => {
+
+                button.classList.remove(
+                    "selected"
+                );
+
+            }
+        );
+
+        document
+            .querySelectorAll(
+                "#payment-form-container input"
+            )
+            .forEach(
+                input => {
+
+                    input.value = "";
+
+                }
+            );
+
+        paymentError.textContent = "";
+
+        paymentError.classList.add(
+            "hidden"
+        );
+
+    }
+
+
+    // ============================================================
+    // OPEN FORM
+    // ============================================================
+
+    addPaymentButton.addEventListener(
+        "click",
+        () => {
+
+            resetForm();
+
+            addPaymentContainer.classList.add(
+                "hidden"
+            );
+
+            paymentFormContainer.classList.remove(
+                "hidden"
+            );
+
+            paymentFormContainer.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+
+        }
+    );
+
+
+    // ============================================================
+    // CLOSE FORM
+    // ============================================================
+
+    cancelPaymentButton.addEventListener(
+        "click",
+        () => {
+
+            resetForm();
+
+            paymentFormContainer.classList.add(
+                "hidden"
+            );
+
+            addPaymentContainer.classList.remove(
+                "hidden"
+            );
+
+        }
+    );
+
+
+    // ============================================================
+    // REGION CHANGE
+    // ============================================================
+
+    regionSelect.addEventListener(
+        "change",
+        () => {
+
+            selectedPaymentMethod = null;
+
+            paymentMethodButtons.forEach(
+                button => {
+
+                    button.classList.remove(
+                        "selected"
+                    );
+
+                }
+            );
+
+            cardDetails.classList.add(
+                "hidden"
+            );
+
+            contactDetails.classList.add(
+                "hidden"
+            );
+
+            if (!regionSelect.value) {
+
+                paymentSelectionSection.classList.add(
+                    "hidden"
+                );
+
+                indonesiaPaymentMethods.classList.add(
+                    "hidden"
+                );
+
+                return;
+
+            }
+
+
+            paymentSelectionSection.classList.remove(
+                "hidden"
+            );
+
+
+            if (
+                regionSelect.value === "ID"
+            ) {
+
+                indonesiaPaymentMethods.classList.remove(
+                    "hidden"
+                );
+
+            } else {
+
+                indonesiaPaymentMethods.classList.add(
+                    "hidden"
+                );
+
+            }
+
+        }
+    );
+
+
+    // ============================================================
+    // SELECT PAYMENT METHOD
+    // ============================================================
+
+    paymentMethodButtons.forEach(
+        button => {
+
+            button.addEventListener(
+                "click",
+                () => {
+
+                    /*
+                     * Ignore Indonesian methods when
+                     * the selected region isn't Indonesia.
+                     */
+
+                    const method =
+                        button.dataset.paymentMethod;
+
+                    if (
+                        [
+                            "linkaja",
+                            "gopay",
+                            "shopeepay"
+                        ].includes(method) &&
+                        regionSelect.value !== "ID"
+                    ) {
+                        return;
+                    }
+
+
+                    selectedPaymentMethod =
+                        method;
+
+
+                    paymentMethodButtons.forEach(
+                        otherButton => {
+
+                            otherButton.classList.remove(
+                                "selected"
+                            );
+
+                        }
+                    );
+
+
+                    button.classList.add(
+                        "selected"
+                    );
+
+
+                    cardDetails.classList.add(
+                        "hidden"
+                    );
+
+                    contactDetails.classList.add(
+                        "hidden"
+                    );
+
+
+                    if (
+                        method === "card"
+                    ) {
+
+                        cardDetails.classList.remove(
+                            "hidden"
+                        );
+
+                        /*
+                         * Automatically select the first
+                         * available card brand if none
+                         * has been selected.
+                         */
+
+                        if (
+                            !selectedCardBrand
+                        ) {
+
+                            selectCardBrand(
+                                "visa"
+                            );
+
+                        }
+
+                    } else {
+
+                        contactDetails.classList.remove(
+                            "hidden"
+                        );
+
+                        const methodName =
+                            paymentMethodNames[
+                                method
+                            ] || "Payment Method";
+
+                        document.getElementById(
+                            "contact-details-title"
+                        ).textContent =
+                            methodName;
+
+                        if (
+                            method === "paypal"
+                        ) {
+
+                            document.getElementById(
+                                "contact-details-description"
+                            ).textContent =
+                                "Enter the email or phone number associated with your PayPal account.";
+
+                        } else {
+
+                            document.getElementById(
+                                "contact-details-description"
+                            ).textContent =
+                                "Enter the phone number or email associated with your " +
+                                methodName +
+                                " account.";
+
+                        }
+
+                    }
+
+                    clearError();
+
+                }
+            );
+
+        }
+    );
+
+
+    // ============================================================
+    // CARD BRAND SELECTION
+    // ============================================================
+
+    function selectCardBrand(
+        brand
+    ) {
+
+        selectedCardBrand =
+            brand;
+
+        cardLogoButtons.forEach(
+            button => {
+
+                if (
+                    button.dataset.cardBrand ===
+                    brand
+                ) {
+
+                    button.classList.add(
+                        "selected"
+                    );
+
+                } else {
+
+                    button.classList.remove(
+                        "selected"
+                    );
+
+                }
+
+            }
+        );
+
+    }
+
+
+    cardLogoButtons.forEach(
+        button => {
+
+            button.addEventListener(
+                "click",
+                () => {
+
+                    selectCardBrand(
+                        button.dataset.cardBrand
+                    );
+
+                }
+            );
+
+        }
+    );
+
+
+    // ============================================================
+    // CARD NUMBER AUTO FORMAT
+    // ============================================================
+
+    cardNumber.addEventListener(
+        "input",
+        function () {
+
+            let value =
+                this.value
+                    .replace(/\D/g, "")
+                    .substring(0, 16);
+
+
+            const groups =
+                value.match(/.{1,4}/g) || [];
+
+
+            this.value =
+                groups.join(" ");
+
+        }
+    );
+
+
+    // ============================================================
+    // CARD EXPIRATION AUTO FORMAT
+    // ============================================================
+
+    cardExpiry.addEventListener(
+        "input",
+        function () {
+
+            let value =
+                this.value
+                    .replace(/\D/g, "")
+                    .substring(0, 4);
+
+
+            if (
+                value.length > 2
+            ) {
+
+                value =
+                    value.substring(0, 2) +
+                    "/" +
+                    value.substring(2);
+
+            }
+
+
+            this.value =
+                value;
+
+        }
+    );
+
+
+    // ============================================================
+    // CVV AUTO FORMAT
+    // ============================================================
+
+    cardCVV.addEventListener(
+        "input",
+        function () {
+
+            this.value =
+                this.value
+                    .replace(/\D/g, "")
+                    .substring(0, 3);
+
+        }
+    );
+
+
+    // ============================================================
+    // ZIP CODE AUTO FORMAT
+    // ============================================================
+
+    billingZip.addEventListener(
+        "input",
+        function () {
+
+            this.value =
+                this.value
+                    .replace(/\D/g, "")
+                    .substring(0, 10);
+
+        }
+    );
+
+
+    // ============================================================
+    // PHONE AUTO FORMAT
+    // ============================================================
+
+    paymentPhone.addEventListener(
+        "input",
+        function () {
+
+            formatPhoneInput(
+                this
+            );
+
+        }
+    );
+
+
+    // ============================================================
+    // CLEAR ERROR
+    // ============================================================
+
+    function clearError() {
+
+        paymentError.textContent = "";
+
+        paymentError.classList.add(
+            "hidden"
+        );
+
+    }
+
+
+    // ============================================================
+    // SHOW ERROR
+    // ============================================================
+
+    function showError(
+        message
+    ) {
+
+        paymentError.textContent =
+            message;
+
+        paymentError.classList.remove(
+            "hidden"
+        );
+
+    }
+
+
+    // ============================================================
+    // VALIDATE CARD
+    // ============================================================
+
+    function validateCard() {
+
+        const number =
+            cardNumber.value
+                .replace(/\s/g, "");
+
+        const firstName =
+            cardFirstName.value.trim();
+
+        const lastName =
+            cardLastName.value.trim();
+
+        const expiry =
+            cardExpiry.value.trim();
+
+        const cvv =
+            cardCVV.value.trim();
+
+        const address1 =
+            billingAddress1.value.trim();
+
+        const city =
+            billingCity.value.trim();
+
+        const zip =
+            billingZip.value.trim();
+
+
+        if (
+            !selectedCardBrand
+        ) {
+
+            showError(
+                "Please select your card type."
+            );
+
+            return false;
+
+        }
+
+
+        if (
+            !/^\d{13,16}$/.test(number)
+        ) {
+
+            showError(
+                "Please enter a valid card number."
+            );
+
+            return false;
+
+        }
+
+
+        if (
+            !firstName ||
+            !lastName
+        ) {
+
+            showError(
+                "Please enter the cardholder's first and last name."
+            );
+
+            return false;
+
+        }
+
+
+        if (
+            !/^\d{2}\/\d{2}$/.test(expiry)
+        ) {
+
+            showError(
+                "Please enter a valid expiration date in MM/YY format."
+            );
+
+            return false;
+
+        }
+
+
+        if (
+            !/^\d{3}$/.test(cvv)
+        ) {
+
+            showError(
+                "Please enter a valid 3-digit CVV."
+            );
+
+            return false;
+
+        }
+
+
+        if (
+            !address1
+        ) {
+
+            showError(
+                "Please enter Address Line 1."
+            );
+
+            return false;
+
+        }
+
+
+        if (
+            !city
+        ) {
+
+            showError(
+                "Please enter your city."
+            );
+
+            return false;
+
+        }
+
+
+        if (
+            !zip
+        ) {
+
+            showError(
+                "Please enter your ZIP code."
+            );
+
+            return false;
+
+        }
+
+
+        return true;
+
+    }
+
+
+    // ============================================================
+    // VALIDATE CONTACT PAYMENT
+    // ============================================================
+
+    function validateContactPayment() {
+
+        const phone =
+            paymentPhone.value
+                .replace(/\s/g, "")
+                .trim();
+
+        const email =
+            paymentEmail.value.trim();
+
+
+        if (
+            !phone &&
+            !email
+        ) {
+
+            showError(
+                "Please enter your phone number or email address."
+            );
+
+            return false;
+
+        }
+
+
+        if (
+            phone &&
+            !/^\+?\d{7,15}$/.test(phone)
+        ) {
+
+            showError(
+                "Please enter a valid phone number."
+            );
+
+            return false;
+
+        }
+
+
+        if (
+            email &&
+            !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+        ) {
+
+            showError(
+                "Please enter a valid email address."
+            );
+
+            return false;
+
+        }
+
+
+        return true;
+
+    }
+
+
+    // ============================================================
+    // CREATE PAYMENT OBJECT
+    // ============================================================
+
+    function createPaymentObject() {
+
+        const id =
+            generatePaymentMethodId();
+
+
+        // ========================================================
+        // CREDIT / DEBIT CARD
+        // ========================================================
+
+        if (
+            selectedPaymentMethod === "card"
+        ) {
+
+            return {
+
+                id: id,
+
+                type: "card",
+
+                method:
+                    selectedCardBrand,
+
+                region:
+                    regionSelect.value,
+
+                cardNumber:
+                    cardNumber.value
+                        .replace(/\s/g, ""),
+
+                firstName:
+                    cardFirstName.value.trim(),
+
+                lastName:
+                    cardLastName.value.trim(),
+
+                expirationDate:
+                    cardExpiry.value.trim(),
+
+                cvv:
+                    cardCVV.value.trim(),
+
+                billingAddress: {
+
+                    addressLine1:
+                        billingAddress1.value.trim(),
+
+                    addressLine2:
+                        billingAddress2.value.trim(),
+
+                    city:
+                        billingCity.value.trim(),
+
+                    zipCode:
+                        billingZip.value.trim()
+
+                }
+
+            };
+
+        }
+
+
+        // ========================================================
+        // DIGITAL PAYMENT METHOD
+        // ========================================================
+
+        return {
+
+            id: id,
+
+            type: "digital",
+
+            method:
+                selectedPaymentMethod,
+
+            region:
+                regionSelect.value,
+
+            phone:
+                paymentPhone.value.trim(),
+
+            email:
+                paymentEmail.value.trim()
+
+        };
+
+    }
+
+    // ============================================================
+    // SAVE PAYMENT METHOD
+    // ============================================================
+
+    savePaymentButton.addEventListener(
+        "click",
+        () => {
+
+            clearError();
+
+
+            if (
+                !regionSelect.value
+            ) {
+
+                showError(
+                    "Please select your region."
+                );
+
+                return;
+
+            }
+
+
+            if (
+                !selectedPaymentMethod
+            ) {
+
+                showError(
+                    "Please select a payment method."
+                );
+
+                return;
+
+            }
+
+
+            if (
+                selectedPaymentMethod === "card"
+            ) {
+
+                if (
+                    !validateCard()
+                ) {
+
+                    return;
+
+                }
+
+            } else {
+
+                if (
+                    !validateContactPayment()
+                ) {
+
+                    return;
+
+                }
+
+            }
+
+
+            const paymentObject =
+                createPaymentObject();
+
+
+            const paymentMethods =
+                getPaymentMethods();
+
+
+            paymentMethods[
+                paymentObject.id
+            ] =
+                paymentObject;
+
+
+            savePaymentMethods(
+                paymentMethods
+            );
+
+
+            renderSavedPaymentMethods();
+
+
+            /*
+             * Close the form immediately after
+             * successfully adding the method.
+             */
+
+            resetForm();
+
+            paymentFormContainer.classList.add(
+                "hidden"
+            );
+
+            addPaymentContainer.classList.remove(
+                "hidden"
+            );
+
+
+            /*
+             * Put the newly created payment method
+             * into view.
+             */
+
+            const newCard =
+                document.querySelector(
+                    `[data-payment-id="${paymentObject.id}"]`
+                );
+
+            if (newCard) {
+
+                newCard.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center"
+                });
+
+            }
+
+        }
+    );
+
+
+    // ============================================================
+    // RENDER SAVED PAYMENT METHODS
+    // ============================================================
+
+    function renderSavedPaymentMethods() {
+
+        const paymentMethods =
+            getPaymentMethods();
+
+
+        savedPaymentMethodsContainer.innerHTML =
+            "";
+
+
+        const entries =
+            Object.entries(
+                paymentMethods
+            );
+
+
+        if (
+            entries.length === 0
+        ) {
+
+            return;
+
+        }
+
+
+        entries.forEach(
+            ([id, payment]) => {
+
+                const card =
+                    document.createElement(
+                        "div"
+                    );
+
+
+                card.dataset.paymentId =
+                    id;
+
+
+                card.className =
+                    "saved-payment-card bg-surface-container-lowest border border-outline-variant rounded-xl p-md md:p-lg";
+
+
+                const methodName =
+                    payment.type === "card"
+                        ? (
+                            payment.method
+                                ? payment.method.charAt(0).toUpperCase() +
+                                  payment.method.slice(1) +
+                                  " Card"
+                                : "Credit / Debit Card"
+                        )
+                        : (
+                            paymentMethodNames[
+                                payment.method
+                            ] ||
+                            payment.method
+                        );
+
+
+                let identifier = "";
+
+
+                if (
+                    payment.type === "card"
+                ) {
+
+                    identifier =
+                        formatCardDisplay(
+                            payment
+                        );
+
+                } else {
+
+                    const phone =
+                        payment.phone || "";
+
+                    const email =
+                        payment.email || "";
+
+
+                    if (
+                        phone &&
+                        email
+                    ) {
+
+                        identifier =
+                            maskValue(
+                                phone,
+                                3,
+                                2
+                            ) +
+                            " • " +
+                            maskValue(
+                                email,
+                                2,
+                                0
+                            );
+
+                    } else if (
+                        phone
+                    ) {
+
+                        identifier =
+                            maskValue(
+                                phone,
+                                3,
+                                2
+                            );
+
+                    } else {
+
+                        identifier =
+                            maskValue(
+                                email,
+                                2,
+                                0
+                            );
+
+                    }
+
+                }
+
+
+                const regionNames = {
+
+                    ID:
+                        "Indonesia",
+
+                    US:
+                        "United States",
+
+                    GB:
+                        "United Kingdom",
+
+                    SG:
+                        "Singapore",
+
+                    MY:
+                        "Malaysia",
+
+                    OTHER:
+                        "Other"
+
+                };
+
+
+                const region =
+                    regionNames[
+                        payment.region
+                    ] ||
+                    payment.region ||
+                    "";
+
+
+                card.innerHTML = `
+
+                    <div class="flex items-center gap-md">
+
+                        <div class="w-12 h-12 rounded-lg bg-surface-container-low flex items-center justify-center flex-shrink-0">
+
+                            <span class="material-symbols-outlined text-on-surface-variant">
+                                ${payment.type === "card"
+                                    ? "credit_card"
+                                    : "account_balance_wallet"
+                                }
+                            </span>
+
+                        </div>
+
+                        <div class="flex-1 min-w-0">
+
+                            <div class="flex flex-wrap items-center gap-2">
+
+                                <h3 class="font-body-lg text-body-lg font-semibold text-on-surface">
+                                    ${escapeHTML(methodName)}
+                                </h3>
+
+                                <span class="text-xs px-2 py-1 rounded-full bg-surface-container-high text-on-surface-variant">
+                                    ${escapeHTML(region)}
+                                </span>
+
+                            </div>
+
+                            <p class="text-sm text-on-surface-variant mt-1">
+                                ${escapeHTML(identifier)}
+                            </p>
+
+                        </div>
+
+                        <button
+                            type="button"
+                            class="delete-payment-button p-2 text-on-surface-variant hover:text-error transition-colors"
+                            data-payment-id="${escapeHTML(id)}"
+                            aria-label="Remove payment method"
+                        >
+
+                            <span class="material-symbols-outlined">
+                                delete
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                `;
+
+
+                savedPaymentMethodsContainer.appendChild(
+                    card
+                );
+
+            }
+        );
+
+
+        /*
+         * Add delete functionality after rendering.
+         */
+
+        document
+            .querySelectorAll(
+                ".delete-payment-button"
+            )
+            .forEach(
+                button => {
+
+                    button.addEventListener(
+                        "click",
+                        () => {
+
+                            const id =
+                                button.dataset.paymentId;
+
+
+                            const paymentMethods =
+                                getPaymentMethods();
+
+
+                            delete paymentMethods[
+                                id
+                            ];
+
+
+                            savePaymentMethods(
+                                paymentMethods
+                            );
+
+
+                            renderSavedPaymentMethods();
+
+                        }
+                    );
+
+                }
+            );
+
+    }
+
+
+    // ============================================================
+    // ESCAPE HTML
+    // ============================================================
+
+    function escapeHTML(
+        value
+    ) {
+
+        return String(value)
+            .replace(
+                /&/g,
+                "&amp;"
+            )
+            .replace(
+                /</g,
+                "&lt;"
+            )
+            .replace(
+                />/g,
+                "&gt;"
+            )
+            .replace(
+                /"/g,
+                "&quot;"
+            )
+            .replace(
+                /'/g,
+                "&#039;"
+            );
+
+    }
+
+
+    // ============================================================
+    // INITIALIZE
+    // ============================================================
+
+    renderSavedPaymentMethods();
+
+});
+
+</script>
+
+<script src="../../script/search.js"></script>
+
+</body>
+</html>
