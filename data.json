@@ -340,8 +340,13 @@
         "H7kQ2mX9": {
             "name": "iPhone 17",
             "brand": ["Apple", "T6rP0mX3"],
-            "description": "A powerful everyday iPhone with a bright 6.3-inch OLED display, A19 chip, and an advanced dual-camera system. It combines premium performance with a refined design.",
-            "product-href": ["", "", "", ""],
+            "description": "A powerful everyday iPhone with a bright 6.3-inch OLED display, A19 chip, and an advanced dual-camera system.",
+            "product-href": [
+                "https://files.eci.id/documents/product/best/webiphone17at256wh/1760002601-1.webp",
+                "https://files.eci.id/documents/product/best/webiphone17at256wh/1760002601-1.webp",
+                "https://files.eci.id/documents/product/best/webiphone17at256wh/1760002601-1.webp",
+                "https://files.eci.id/documents/product/best/webiphone17at256wh/1760002601-1.webp"
+            ],
             "price": {
                 "real": 799
             },
@@ -362,7 +367,8 @@
                 ["White", "#F5F5F0"],
                 ["Mist Blue", "#B7C9D6"],
                 ["Lavender", "#C7B8D9"]
-                ]
+                ],
+                "storage": ["256GB", "512GB", "1TB"]
             },
             "availability": {
                 "in-stock": true,
@@ -381,106 +387,18 @@
                 ["Charging", "USB-C fast charging and MagSafe"],
                 ["Water resistance", "IP68"]
             ]
-        },
-        "L9vR3kP7": {
-            "name": "iPhone 17",
+            },
+
+            "Q4mX8pL2": {
+            "name": "iPhone Air",
             "brand": ["Apple", "T6rP0mX3"],
-            "description": "A powerful everyday iPhone with a bright 6.3-inch OLED display, A19 chip, and an advanced dual-camera system. It combines premium performance with a refined design.",
-            "product-href": ["", "", "", ""],
-            "price": {
-                "real": 799
-            },
-            "preferences": {
-                "rating": 4.8,
-                "reviews": [982.4, "k"],
-                "overall": [
-                [5, 78],
-                [4, 14],
-                [3, 5],
-                [2, 2],
-                [1, 1]
-                ]
-            },
-            "variants": {
-                "color": [
-                ["Black", "#1D1D1F"],
-                ["White", "#F5F5F0"],
-                ["Mist Blue", "#B7C9D6"],
-                ["Lavender", "#C7B8D9"]
-                ]
-            },
-            "availability": {
-                "in-stock": true,
-                "ships-within": [24, "h"],
-                "max-amount": 5,
-                "free-shipping": true,
-                "warranty": [1, "y"]
-            },
-            "specification": [
-                ["Display", "6.3-inch Super Retina XDR OLED"],
-                ["Refresh rate", "ProMotion adaptive up to 120Hz"],
-                ["Processor", "A19 chip"],
-                ["Camera", "48MP Fusion Main and 48MP Fusion Ultra Wide"],
-                ["Front camera", "18MP Center Stage camera"],
-                ["Connectivity", "5G, Wi-Fi 7, Bluetooth"],
-                ["Charging", "USB-C fast charging and MagSafe"],
-                ["Water resistance", "IP68"]
-            ]
-        },
-        "4mK9xR2v": {
-            "name": "iPhone 17",
-            "brand": ["Apple", "T6rP0mX3"],
-            "description": "A powerful everyday iPhone with a bright 6.3-inch OLED display, A19 chip, and an advanced dual-camera system. It combines premium performance with a refined design.",
-            "product-href": ["", "", "", ""],
-            "price": {
-                "real": 799
-            },
-            "preferences": {
-                "rating": 4.8,
-                "reviews": [982.4, "k"],
-                "overall": [
-                [5, 78],
-                [4, 14],
-                [3, 5],
-                [2, 2],
-                [1, 1]
-                ]
-            },
-            "variants": {
-                "color": [
-                ["Black", "#1D1D1F"],
-                ["White", "#F5F5F0"],
-                ["Mist Blue", "#B7C9D6"],
-                ["Lavender", "#C7B8D9"]
-                ]
-            },
-            "availability": {
-                "in-stock": true,
-                "ships-within": [24, "h"],
-                "max-amount": 5,
-                "free-shipping": true,
-                "warranty": [1, "y"]
-            },
-            "specification": [
-                ["Display", "6.3-inch Super Retina XDR OLED"],
-                ["Refresh rate", "ProMotion adaptive up to 120Hz"],
-                ["Processor", "A19 chip"],
-                ["Camera", "48MP Fusion Main and 48MP Fusion Ultra Wide"],
-                ["Front camera", "18MP Center Stage camera"],
-                ["Connectivity", "5G, Wi-Fi 7, Bluetooth"],
-                ["Charging", "USB-C fast charging and MagSafe"],
-                ["Water resistance", "IP68"]
-            ]
-        },
-        "Q4mX8pL2": {
-            "name": "iPhone 17 Air",
-            "brand": ["Apple", "T6rP0mX3"],
-            "description": "An exceptionally thin iPhone designed around portability and simplicity, featuring a large OLED display and powerful A19 Pro performance. Its lightweight construction makes it ideal for everyday use.",
-            "product-href": ["https://files.eci.id/documents/product/best/webiphone17at256wh/1760002601-1.webp", 
-            "https://files.eci.id/documents/product/best/webiphone17at256wh/1760002601-1.webp",
-            "https://files.eci.id/documents/product/best/webiphone17at256wh/1760002601-1.webp",
-            "https://files.eci.id/documents/product/best/webiphone17at256wh/1760002601-1.webp",
-            "https://files.eci.id/documents/product/best/webiphone17at256wh/1760002601-1.webp"],
+            "description": "An exceptionally thin and lightweight iPhone with a large OLED display and powerful A19 Pro performance.",
+            "product-href": [
+                "https://files.eci.id/documents/product/best/webiphone17at256wh/1760002601-1.webp",
+                "https://files.eci.id/documents/product/best/webiphone17at256wh/1760002601-1.webp",
+                "https://files.eci.id/documents/product/best/webiphone17at256wh/1760002601-1.webp",
+                "https://files.eci.id/documents/product/best/webiphone17at256wh/1760002601-1.webp"
+            ],
             "price": {
                 "real": 999,
                 "discount": 499
@@ -503,7 +421,7 @@
                 ["Space Black", "#202124"],
                 ["Light Gold", "#D8C5A5"]
                 ],
-                "variants": ["128GB", "256GB", "512GB"]
+                "storage": ["128GB", "256GB", "512GB"]
             },
             "availability": {
                 "in-stock": true,
@@ -522,26 +440,39 @@
                 ["Connectivity", "5G, Wi-Fi 7, Bluetooth"],
                 ["Charging", "USB-C and MagSafe"]
             ]
-        },
-        "H2pQ8mR5": {
-            "name": "HP Pavilion 16",
-            "brand": ["Hewlett-Packard", "bK5wZ2nL"],
-            "description": "A versatile 16-inch laptop designed for productivity, entertainment, and everyday computing with a large high-resolution display and modern Intel Core processing.",
-            "product-href": ["", "", "", ""],
+            },
+
+            "L9vR3kP7": {
+            "name": "iPhone 17 Pro",
+            "brand": ["Apple", "T6rP0mX3"],
+            "description": "A professional iPhone featuring A19 Pro performance, an advanced Pro Fusion camera system, and a premium titanium-inspired design.",
+            "product-href": [
+                "https://files.eci.id/documents/product/best/webiphone17at256wh/1760002601-1.webp",
+                "https://files.eci.id/documents/product/best/webiphone17at256wh/1760002601-1.webp",
+                "https://files.eci.id/documents/product/best/webiphone17at256wh/1760002601-1.webp",
+                "https://files.eci.id/documents/product/best/webiphone17at256wh/1760002601-1.webp"
+            ],
             "price": {
-                "real": 899
+                "real": 1099
             },
             "preferences": {
-                "rating": 4.7,
-                "reviews": [184.6, "k"],
-                "overall": [[5, 75], [4, 17], [3, 5], [2, 2], [1, 1]]
+                "rating": 4.8,
+                "reviews": [841.2, "k"],
+                "overall": [
+                [5, 81],
+                [4, 12],
+                [3, 4],
+                [2, 2],
+                [1, 1]
+                ]
             },
             "variants": {
                 "color": [
-                    ["Natural Silver", "#C7C9CC"],
-                    ["Warm Gold", "#D8C6AA"]
+                ["Cosmic Orange", "#C96B32"],
+                ["Deep Blue", "#24364B"],
+                ["Silver", "#D8D8D8"]
                 ],
-                "variants": ["8GB / 512GB", "16GB / 512GB", "16GB / 1TB"]
+                "storage": ["256GB", "512GB", "1TB"]
             },
             "availability": {
                 "in-stock": true,
@@ -551,14 +482,417 @@
                 "warranty": [1, "y"]
             },
             "specification": [
-                ["Display", "16-inch WUXGA IPS"],
-                ["Processor", "Intel Core i5"],
-                ["Memory", "Up to 16GB DDR4"],
-                ["Storage", "Up to 1TB NVMe SSD"],
-                ["Graphics", "Intel integrated graphics"],
-                ["Connectivity", "Wi-Fi 6, Bluetooth"],
-                ["Ports", "USB-C, USB-A, HDMI"],
-                ["Operating system", "Windows 11"]
+                ["Display", "6.3-inch Super Retina XDR OLED"],
+                ["Refresh rate", "ProMotion adaptive up to 120Hz"],
+                ["Processor", "A19 Pro chip"],
+                ["Camera", "48MP Pro Fusion camera system"],
+                ["Front camera", "18MP Center Stage camera"],
+                ["Connectivity", "5G, Wi-Fi 7, Bluetooth"],
+                ["Charging", "USB-C fast charging and MagSafe"],
+                ["Water resistance", "IP68"]
+            ]
+            },
+
+            "4mK9xR2v": {
+            "name": "iPhone 17 Pro Max",
+            "brand": ["Apple", "T6rP0mX3"],
+            "description": "Apple's largest professional iPhone with a large Super Retina XDR display, A19 Pro chip, and advanced Pro Fusion camera system.",
+            "product-href": [
+                "https://files.eci.id/documents/product/best/webiphone17at256wh/1760002601-1.webp",
+                "https://files.eci.id/documents/product/best/webiphone17at256wh/1760002601-1.webp",
+                "https://files.eci.id/documents/product/best/webiphone17at256wh/1760002601-1.webp",
+                "https://files.eci.id/documents/product/best/webiphone17at256wh/1760002601-1.webp"
+            ],
+            "price": {
+                "real": 1199
+            },
+            "preferences": {
+                "rating": 4.9,
+                "reviews": [693.7, "k"],
+                "overall": [
+                [5, 84],
+                [4, 10],
+                [3, 3],
+                [2, 2],
+                [1, 1]
+                ]
+            },
+            "variants": {
+                "color": [
+                ["Cosmic Orange", "#C96B32"],
+                ["Deep Blue", "#24364B"],
+                ["Silver", "#D8D8D8"]
+                ],
+                "storage": ["256GB", "512GB", "1TB", "2TB"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [24, "h"],
+                "max-amount": 5,
+                "free-shipping": true,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Display", "6.9-inch Super Retina XDR OLED"],
+                ["Refresh rate", "ProMotion adaptive up to 120Hz"],
+                ["Processor", "A19 Pro chip"],
+                ["Camera", "48MP Pro Fusion camera system"],
+                ["Front camera", "18MP Center Stage camera"],
+                ["Connectivity", "5G, Wi-Fi 7, Bluetooth"],
+                ["Charging", "USB-C fast charging and MagSafe"],
+                ["Water resistance", "IP68"]
+            ]
+            },
+
+            "N5cW7xQ1": {
+            "name": "MacBook Air 13-inch",
+            "brand": ["Apple", "T6rP0mX3"],
+            "description": "A thin and lightweight MacBook Air designed for everyday productivity, powered by Apple silicon with long battery life.",
+            "product-href": [
+                "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mba13-m3-midnight-select-202403",
+                "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mba13-m3-midnight-select-202403",
+                "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mba13-m3-midnight-select-202403",
+                "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mba13-m3-midnight-select-202403"
+            ],
+            "price": {
+                "real": 999
+            },
+            "preferences": {
+                "rating": 4.8,
+                "reviews": [516.3, "k"],
+                "overall": [
+                [5, 80],
+                [4, 13],
+                [3, 4],
+                [2, 2],
+                [1, 1]
+                ]
+            },
+            "variants": {
+                "color": [
+                ["Sky Blue", "#AFC7D8"],
+                ["Midnight", "#202124"],
+                ["Starlight", "#F0E6D2"],
+                ["Silver", "#D6D6D6"]
+                ],
+                "memory": ["16GB", "24GB", "32GB"],
+                "storage": ["256GB", "512GB", "1TB", "2TB"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [2, "d"],
+                "max-amount": 5,
+                "free-shipping": true,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Display", "13.6-inch Liquid Retina display"],
+                ["Processor", "Apple M4 chip"],
+                ["Camera", "12MP Center Stage camera"],
+                ["Battery", "Up to 18 hours"],
+                ["Connectivity", "Wi-Fi 6E, Bluetooth 5.3"],
+                ["Charging", "MagSafe 3 and USB-C"]
+            ]
+            },
+
+            "R2tM8kV4": {
+            "name": "iPad Air 11-inch",
+            "brand": ["Apple", "T6rP0mX3"],
+            "description": "A versatile iPad Air with a compact Liquid Retina display, powerful Apple silicon, and support for Apple Pencil Pro.",
+            "product-href": [
+                "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-air-finish-select-gallery-202405-blue",
+                "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-air-finish-select-gallery-202405-blue",
+                "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-air-finish-select-gallery-202405-blue",
+                "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-air-finish-select-gallery-202405-blue"
+            ],
+            "price": {
+                "real": 599
+            },
+            "preferences": {
+                "rating": 4.7,
+                "reviews": [438.6, "k"],
+                "overall": [
+                [5, 77],
+                [4, 15],
+                [3, 5],
+                [2, 2],
+                [1, 1]
+                ]
+            },
+            "variants": {
+                "color": [
+                ["Blue", "#8FB8D8"],
+                ["Purple", "#B8A9D0"],
+                ["Starlight", "#F0E6D2"],
+                ["Space Gray", "#6E6E73"]
+                ],
+                "storage": ["128GB", "256GB", "512GB", "1TB"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [2, "d"],
+                "max-amount": 5,
+                "free-shipping": true,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Display", "11-inch Liquid Retina display"],
+                ["Processor", "Apple M3 chip"],
+                ["Camera", "12MP Wide camera"],
+                ["Front camera", "12MP Center Stage camera"],
+                ["Connectivity", "Wi-Fi 6E, Bluetooth 5.3"],
+                ["Charging", "USB-C"],
+                ["Apple Pencil", "Apple Pencil Pro compatible"]
+            ]
+            },
+
+            "X6pQ1mT8": {
+            "name": "Apple Watch Series 11",
+            "brand": ["Apple", "T6rP0mX3"],
+            "description": "A feature-rich smartwatch with advanced health and fitness features, a bright display, and all-day battery life.",
+            "product-href": [
+                "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/watch-s11-alum-silver-sport-band-denim",
+                "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/watch-s11-alum-silver-sport-band-denim",
+                "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/watch-s11-alum-silver-sport-band-denim",
+                "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/watch-s11-alum-silver-sport-band-denim"
+            ],
+            "price": {
+                "real": 399
+            },
+            "preferences": {
+                "rating": 4.7,
+                "reviews": [361.5, "k"],
+                "overall": [
+                [5, 76],
+                [4, 15],
+                [3, 5],
+                [2, 3],
+                [1, 1]
+                ]
+            },
+            "variants": {
+                "color": [
+                ["Jet Black", "#1D1D1F"],
+                ["Silver", "#D6D6D6"],
+                ["Rose Gold", "#E5C4C0"]
+                ],
+                "case-size": ["42mm", "46mm"],
+                "connectivity": ["GPS", "GPS + Cellular"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [2, "d"],
+                "max-amount": 5,
+                "free-shipping": true,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Display", "Always-On Retina display"],
+                ["Battery", "Up to 24 hours"],
+                ["Health", "Advanced health and fitness features"],
+                ["Connectivity", "GPS, Wi-Fi, Bluetooth, optional Cellular"],
+                ["Operating system", "watchOS"],
+                ["Charging", "Fast magnetic charging"]
+            ]
+            },
+
+            "K3vM7xP2": {
+            "name": "AirPods 4",
+            "brand": ["Apple", "T6rP0mX3"],
+            "description": "Compact wireless earbuds featuring the Apple H2 chip, Personalized Spatial Audio, Voice Isolation, and a USB-C charging case.",
+            "product-href": [
+                "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airpods-4-anc-hero-select-202409",
+                "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airpods-4-anc-hero-select-202409",
+                "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airpods-4-anc-hero-select-202409",
+                "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airpods-4-anc-hero-select-202409"
+            ],
+            "price": {
+                "real": 129
+            },
+            "preferences": {
+                "rating": 4.6,
+                "reviews": [512.9, "k"],
+                "overall": [
+                [5, 74],
+                [4, 17],
+                [3, 6],
+                [2, 2],
+                [1, 1]
+                ]
+            },
+            "variants": {
+                "color": [
+                ["White", "#F5F5F0"]
+                ],
+                "model": [
+                "AirPods 4",
+                "AirPods 4 with Active Noise Cancellation"
+                ]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [24, "h"],
+                "max-amount": 10,
+                "free-shipping": true,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Chip", "Apple H2"],
+                ["Audio", "Personalized Spatial Audio"],
+                ["Microphones", "Voice Isolation"],
+                ["Battery", "Up to 5 hours per charge"],
+                ["Total battery", "Up to 30 hours with charging case"],
+                ["Connectivity", "Bluetooth"],
+                ["Charging", "USB-C charging case"]
+            ]
+            },
+
+            "V8qL2mR5": {
+            "name": "Mac mini",
+            "brand": ["Apple", "T6rP0mX3"],
+            "description": "A compact desktop Mac powered by Apple silicon, delivering strong performance in an exceptionally small footprint.",
+            "product-href": [
+                "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mac-mini-hero-202410",
+                "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mac-mini-hero-202410",
+                "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mac-mini-hero-202410",
+                "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mac-mini-hero-202410"
+            ],
+            "price": {
+                "real": 599
+            },
+            "preferences": {
+                "rating": 4.8,
+                "reviews": [287.4, "k"],
+                "overall": [
+                [5, 82],
+                [4, 12],
+                [3, 4],
+                [2, 1],
+                [1, 1]
+                ]
+            },
+            "variants": {
+                "color": [
+                ["Silver", "#D6D6D6"]
+                ],
+                "processor": ["M4", "M4 Pro"],
+                "memory": ["16GB", "24GB", "32GB", "48GB"],
+                "storage": ["256GB", "512GB", "1TB", "2TB"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [2, "d"],
+                "max-amount": 5,
+                "free-shipping": true,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Processor", "Apple M4 or M4 Pro"],
+                ["CPU", "Up to 14-core CPU"],
+                ["GPU", "Up to 20-core GPU"],
+                ["Memory", "Up to 48GB unified memory"],
+                ["Connectivity", "Thunderbolt, USB-C, HDMI, Ethernet"],
+                ["Display support", "Up to three displays"],
+                ["Wireless", "Wi-Fi and Bluetooth"]
+            ]
+            },
+
+            "M4xP9kT6": {
+            "name": "iMac 24-inch",
+            "brand": ["Apple", "T6rP0mX3"],
+            "description": "A colorful all-in-one desktop featuring a 24-inch 4.5K Retina display, Apple silicon, and a 12MP Center Stage camera.",
+            "product-href": [
+                "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/imac-24-blue-selection-hero-202410",
+                "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/imac-24-blue-selection-hero-202410",
+                "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/imac-24-blue-selection-hero-202410",
+                "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/imac-24-blue-selection-hero-202410"
+            ],
+            "price": {
+                "real": 1299
+            },
+            "preferences": {
+                "rating": 4.8,
+                "reviews": [194.7, "k"],
+                "overall": [
+                [5, 81],
+                [4, 13],
+                [3, 4],
+                [2, 1],
+                [1, 1]
+                ]
+            },
+            "variants": {
+                "color": [
+                ["Blue", "#7FB3D5"],
+                ["Purple", "#A88BC4"],
+                ["Pink", "#E7A0A8"],
+                ["Orange", "#E98248"],
+                ["Yellow", "#E8D35C"],
+                ["Green", "#8CBF91"],
+                ["Silver", "#D6D6D6"]
+                ],
+                "memory": ["16GB", "24GB", "32GB"],
+                "storage": ["256GB", "512GB", "1TB", "2TB"]
+            },
+            "availability": {
+                "in-stock": true,
+                "ships-within": [2, "d"],
+                "max-amount": 5,
+                "free-shipping": true,
+                "warranty": [1, "y"]
+            },
+            "specification": [
+                ["Display", "24-inch 4.5K Retina display"],
+                ["Processor", "Apple M4 chip"],
+                ["CPU", "Up to 10-core CPU"],
+                ["GPU", "Up to 10-core GPU"],
+                ["Camera", "12MP Center Stage camera"],
+                ["Memory", "Up to 32GB unified memory"],
+                ["Storage", "Up to 2TB SSD"],
+                ["Connectivity", "Thunderbolt, USB-C, Ethernet"]
+            ]
+        },
+        "H2pQ8mR5": {
+            "name": "HP Pavilion 16",
+            "brand": ["Hewlett-Packard", "bK5wZ2nL"],
+            "description": "A versatile 16-inch laptop designed for productivity, entertainment, and everyday computing with a large high-resolution display and modern Intel Core processing.",
+            "product-href": [
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08943876.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08943876.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08943876.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08943876.png"
+            ],
+            "price": {
+            "real": 899
+            },
+            "preferences": {
+            "rating": 4.7,
+            "reviews": [184.6, "k"],
+            "overall": [[5, 75], [4, 17], [3, 5], [2, 2], [1, 1]]
+            },
+            "variants": {
+            "color": [
+                ["Natural Silver", "#C7C9CC"],
+                ["Warm Gold", "#D8C6AA"]
+            ],
+            "variants": ["8GB / 512GB", "16GB / 512GB", "16GB / 1TB"]
+            },
+            "availability": {
+            "in-stock": true,
+            "ships-within": [24, "h"],
+            "max-amount": 5,
+            "free-shipping": true,
+            "warranty": [1, "y"]
+            },
+            "specification": [
+            ["Display", "16-inch WUXGA IPS"],
+            ["Processor", "Intel Core i5"],
+            ["Memory", "Up to 16GB DDR4"],
+            ["Storage", "Up to 1TB NVMe SSD"],
+            ["Graphics", "Intel integrated graphics"],
+            ["Connectivity", "Wi-Fi 6, Bluetooth"],
+            ["Ports", "USB-C, USB-A, HDMI"],
+            ["Operating system", "Windows 11"]
             ]
         },
 
@@ -566,38 +900,43 @@
             "name": "HP OmniBook X 14",
             "brand": ["Hewlett-Packard", "bK5wZ2nL"],
             "description": "A thin and portable laptop built for everyday productivity, featuring an efficient processor, long battery life, and a premium lightweight design.",
-            "product-href": ["", "", "", ""],
+            "product-href": [
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08862961.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08862961.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08862961.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08862961.png"
+            ],
             "price": {
-                "real": 1099
+            "real": 1099
             },
             "preferences": {
-                "rating": 4.8,
-                "reviews": [126.7, "k"],
-                "overall": [[5, 79], [4, 14], [3, 4], [2, 2], [1, 1]]
+            "rating": 4.8,
+            "reviews": [126.7, "k"],
+            "overall": [[5, 79], [4, 14], [3, 4], [2, 2], [1, 1]]
             },
             "variants": {
-                "color": [
-                    ["Meteor Silver", "#B9BDC2"],
-                    ["Ceramic White", "#F1F0EC"]
-                ],
-                "variants": ["16GB / 512GB", "16GB / 1TB", "32GB / 1TB"]
+            "color": [
+                ["Meteor Silver", "#B9BDC2"],
+                ["Ceramic White", "#F1F0EC"]
+            ],
+            "variants": ["16GB / 512GB", "16GB / 1TB", "32GB / 1TB"]
             },
             "availability": {
-                "in-stock": true,
-                "ships-within": [2, "d"],
-                "max-amount": 5,
-                "free-shipping": true,
-                "warranty": [1, "y"]
+            "in-stock": true,
+            "ships-within": [2, "d"],
+            "max-amount": 5,
+            "free-shipping": true,
+            "warranty": [1, "y"]
             },
             "specification": [
-                ["Display", "14-inch 2.8K OLED"],
-                ["Processor", "AMD Ryzen AI"],
-                ["Memory", "Up to 32GB"],
-                ["Storage", "Up to 1TB NVMe SSD"],
-                ["Graphics", "Integrated Radeon graphics"],
-                ["Battery", "Up to 20 hours"],
-                ["Connectivity", "Wi-Fi 7, Bluetooth"],
-                ["Operating system", "Windows 11"]
+            ["Display", "14-inch 2.8K OLED"],
+            ["Processor", "AMD Ryzen AI"],
+            ["Memory", "Up to 32GB"],
+            ["Storage", "Up to 1TB NVMe SSD"],
+            ["Graphics", "Integrated Radeon graphics"],
+            ["Battery", "Up to 20 hours"],
+            ["Connectivity", "Wi-Fi 7, Bluetooth"],
+            ["Operating system", "Windows 11"]
             ]
         },
 
@@ -605,38 +944,43 @@
             "name": "HP Envy x360 14",
             "brand": ["Hewlett-Packard", "bK5wZ2nL"],
             "description": "A flexible 2-in-1 laptop with a touchscreen display and convertible hinge, designed for work, creativity, entertainment, and everyday productivity.",
-            "product-href": ["", "", "", ""],
+            "product-href": [
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08842252.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08842252.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08842252.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08842252.png"
+            ],
             "price": {
-                "real": 999
+            "real": 999
             },
             "preferences": {
-                "rating": 4.7,
-                "reviews": [143.2, "k"],
-                "overall": [[5, 76], [4, 16], [3, 5], [2, 2], [1, 1]]
+            "rating": 4.7,
+            "reviews": [143.2, "k"],
+            "overall": [[5, 76], [4, 16], [3, 5], [2, 2], [1, 1]]
             },
             "variants": {
-                "color": [
-                    ["Meteor Silver", "#B9BDC2"],
-                    ["Nightfall Black", "#242629"]
-                ],
-                "variants": ["16GB / 512GB", "16GB / 1TB"]
+            "color": [
+                ["Meteor Silver", "#B9BDC2"],
+                ["Nightfall Black", "#242629"]
+            ],
+            "variants": ["16GB / 512GB", "16GB / 1TB"]
             },
             "availability": {
-                "in-stock": true,
-                "ships-within": [24, "h"],
-                "max-amount": 5,
-                "free-shipping": true,
-                "warranty": [1, "y"]
+            "in-stock": true,
+            "ships-within": [24, "h"],
+            "max-amount": 5,
+            "free-shipping": true,
+            "warranty": [1, "y"]
             },
             "specification": [
-                ["Display", "14-inch 2.8K OLED Touch"],
-                ["Processor", "Intel Core Ultra 7"],
-                ["Memory", "16GB LPDDR5x"],
-                ["Storage", "512GB or 1TB NVMe SSD"],
-                ["Graphics", "Intel integrated graphics"],
-                ["Hinge", "360-degree convertible"],
-                ["Connectivity", "Wi-Fi 7, Bluetooth"],
-                ["Operating system", "Windows 11"]
+            ["Display", "14-inch 2.8K OLED Touch"],
+            ["Processor", "Intel Core Ultra 7"],
+            ["Memory", "16GB LPDDR5x"],
+            ["Storage", "512GB or 1TB NVMe SSD"],
+            ["Graphics", "Intel integrated graphics"],
+            ["Hinge", "360-degree convertible"],
+            ["Connectivity", "Wi-Fi 7, Bluetooth"],
+            ["Operating system", "Windows 11"]
             ]
         },
 
@@ -644,38 +988,43 @@
             "name": "HP Spectre x360 14",
             "brand": ["Hewlett-Packard", "bK5wZ2nL"],
             "description": "A premium convertible notebook combining a high-resolution OLED display, powerful processing, and a sophisticated aluminum design.",
-            "product-href": ["", "", "", ""],
+            "product-href": [
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08838624.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08838624.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08838624.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08838624.png"
+            ],
             "price": {
-                "real": 1499
+            "real": 1499
             },
             "preferences": {
-                "rating": 4.9,
-                "reviews": [98.4, "k"],
-                "overall": [[5, 84], [4, 11], [3, 3], [2, 1], [1, 1]]
+            "rating": 4.9,
+            "reviews": [98.4, "k"],
+            "overall": [[5, 84], [4, 11], [3, 3], [2, 1], [1, 1]]
             },
             "variants": {
-                "color": [
-                    ["Slate Blue", "#4D5B6A"],
-                    ["Natural Silver", "#C7C9CC"]
-                ],
-                "variants": ["16GB / 1TB", "32GB / 1TB"]
+            "color": [
+                ["Slate Blue", "#4D5B6A"],
+                ["Natural Silver", "#C7C9CC"]
+            ],
+            "variants": ["16GB / 1TB", "32GB / 1TB"]
             },
             "availability": {
-                "in-stock": true,
-                "ships-within": [2, "d"],
-                "max-amount": 3,
-                "free-shipping": true,
-                "warranty": [2, "y"]
+            "in-stock": true,
+            "ships-within": [2, "d"],
+            "max-amount": 3,
+            "free-shipping": true,
+            "warranty": [2, "y"]
             },
             "specification": [
-                ["Display", "14-inch 2.8K OLED Touch"],
-                ["Processor", "Intel Core Ultra 7"],
-                ["Memory", "Up to 32GB LPDDR5x"],
-                ["Storage", "1TB NVMe SSD"],
-                ["Graphics", "Intel integrated graphics"],
-                ["Camera", "9MP IR camera"],
-                ["Connectivity", "Wi-Fi 7, Bluetooth"],
-                ["Operating system", "Windows 11"]
+            ["Display", "14-inch 2.8K OLED Touch"],
+            ["Processor", "Intel Core Ultra 7"],
+            ["Memory", "Up to 32GB LPDDR5x"],
+            ["Storage", "1TB NVMe SSD"],
+            ["Graphics", "Intel integrated graphics"],
+            ["Camera", "9MP IR camera"],
+            ["Connectivity", "Wi-Fi 7, Bluetooth"],
+            ["Operating system", "Windows 11"]
             ]
         },
 
@@ -683,37 +1032,42 @@
             "name": "HP EliteBook 840 G11",
             "brand": ["Hewlett-Packard", "bK5wZ2nL"],
             "description": "A business-focused laptop designed for professional productivity with enterprise security, a durable chassis, and modern connectivity.",
-            "product-href": ["", "", "", ""],
+            "product-href": [
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08931355.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08931355.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08931355.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08931355.png"
+            ],
             "price": {
-                "real": 1399
+            "real": 1399
             },
             "preferences": {
-                "rating": 4.8,
-                "reviews": [76.5, "k"],
-                "overall": [[5, 81], [4, 13], [3, 4], [2, 1], [1, 1]]
+            "rating": 4.8,
+            "reviews": [76.5, "k"],
+            "overall": [[5, 81], [4, 13], [3, 4], [2, 1], [1, 1]]
             },
             "variants": {
-                "color": [
-                    ["Pike Silver", "#AEB4BA"]
-                ],
-                "variants": ["16GB / 512GB", "32GB / 1TB"]
+            "color": [
+                ["Pike Silver", "#AEB4BA"]
+            ],
+            "variants": ["16GB / 512GB", "32GB / 1TB"]
             },
             "availability": {
-                "in-stock": true,
-                "ships-within": [2, "d"],
-                "max-amount": 5,
-                "free-shipping": true,
-                "warranty": [1, "y"]
+            "in-stock": true,
+            "ships-within": [2, "d"],
+            "max-amount": 5,
+            "free-shipping": true,
+            "warranty": [1, "y"]
             },
             "specification": [
-                ["Display", "14-inch WUXGA IPS"],
-                ["Processor", "Intel Core Ultra 7"],
-                ["Memory", "Up to 32GB DDR5"],
-                ["Storage", "Up to 1TB NVMe SSD"],
-                ["Security", "TPM 2.0 and biometric authentication"],
-                ["Connectivity", "Wi-Fi 6E, Bluetooth"],
-                ["Ports", "Thunderbolt 4, USB-A, HDMI"],
-                ["Operating system", "Windows 11 Pro"]
+            ["Display", "14-inch WUXGA IPS"],
+            ["Processor", "Intel Core Ultra 7"],
+            ["Memory", "Up to 32GB DDR5"],
+            ["Storage", "Up to 1TB NVMe SSD"],
+            ["Security", "TPM 2.0 and biometric authentication"],
+            ["Connectivity", "Wi-Fi 6E, Bluetooth"],
+            ["Ports", "Thunderbolt 4, USB-A, HDMI"],
+            ["Operating system", "Windows 11 Pro"]
             ]
         },
 
@@ -721,37 +1075,42 @@
             "name": "HP ProBook 450 G10",
             "brand": ["Hewlett-Packard", "bK5wZ2nL"],
             "description": "A practical business laptop offering dependable performance, a spacious display, and essential connectivity for office and professional workloads.",
-            "product-href": ["", "", "", ""],
+            "product-href": [
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08579669.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08579669.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08579669.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08579669.png"
+            ],
             "price": {
-                "real": 799
+            "real": 799
             },
             "preferences": {
-                "rating": 4.6,
-                "reviews": [68.9, "k"],
-                "overall": [[5, 71], [4, 18], [3, 7], [2, 3], [1, 1]]
+            "rating": 4.6,
+            "reviews": [68.9, "k"],
+            "overall": [[5, 71], [4, 18], [3, 7], [2, 3], [1, 1]]
             },
             "variants": {
-                "color": [
-                    ["Pike Silver", "#AEB4BA"]
-                ],
-                "variants": ["8GB / 512GB", "16GB / 512GB", "16GB / 1TB"]
+            "color": [
+                ["Pike Silver", "#AEB4BA"]
+            ],
+            "variants": ["8GB / 512GB", "16GB / 512GB", "16GB / 1TB"]
             },
             "availability": {
-                "in-stock": true,
-                "ships-within": [24, "h"],
-                "max-amount": 5,
-                "free-shipping": true,
-                "warranty": [1, "y"]
+            "in-stock": true,
+            "ships-within": [24, "h"],
+            "max-amount": 5,
+            "free-shipping": true,
+            "warranty": [1, "y"]
             },
             "specification": [
-                ["Display", "15.6-inch FHD IPS"],
-                ["Processor", "Intel Core i5"],
-                ["Memory", "Up to 16GB DDR4"],
-                ["Storage", "Up to 1TB NVMe SSD"],
-                ["Graphics", "Intel integrated graphics"],
-                ["Connectivity", "Wi-Fi 6, Bluetooth"],
-                ["Ports", "USB-C, USB-A, HDMI"],
-                ["Operating system", "Windows 11 Pro"]
+            ["Display", "15.6-inch FHD IPS"],
+            ["Processor", "Intel Core i5"],
+            ["Memory", "Up to 16GB DDR4"],
+            ["Storage", "Up to 1TB NVMe SSD"],
+            ["Graphics", "Intel integrated graphics"],
+            ["Connectivity", "Wi-Fi 6, Bluetooth"],
+            ["Ports", "USB-C, USB-A, HDMI"],
+            ["Operating system", "Windows 11 Pro"]
             ]
         },
 
@@ -759,38 +1118,43 @@
             "name": "HP Victus 16",
             "brand": ["Hewlett-Packard", "bK5wZ2nL"],
             "description": "A gaming laptop built for high-performance gaming and demanding workloads with a high-refresh-rate display and dedicated graphics.",
-            "product-href": ["", "", "", ""],
+            "product-href": [
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08904784.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08904784.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08904784.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08904784.png"
+            ],
             "price": {
-                "real": 1199
+            "real": 1199
             },
             "preferences": {
-                "rating": 4.8,
-                "reviews": [152.3, "k"],
-                "overall": [[5, 79], [4, 14], [3, 4], [2, 2], [1, 1]]
+            "rating": 4.8,
+            "reviews": [152.3, "k"],
+            "overall": [[5, 79], [4, 14], [3, 4], [2, 2], [1, 1]]
             },
             "variants": {
-                "color": [
-                    ["Mica Silver", "#5A5B5E"],
-                    ["Performance Blue", "#354B63"]
-                ],
-                "variants": ["16GB / 512GB", "16GB / 1TB", "32GB / 1TB"]
+            "color": [
+                ["Mica Silver", "#5A5B5E"],
+                ["Performance Blue", "#354B63"]
+            ],
+            "variants": ["16GB / 512GB", "16GB / 1TB", "32GB / 1TB"]
             },
             "availability": {
-                "in-stock": true,
-                "ships-within": [2, "d"],
-                "max-amount": 5,
-                "free-shipping": true,
-                "warranty": [1, "y"]
+            "in-stock": true,
+            "ships-within": [2, "d"],
+            "max-amount": 5,
+            "free-shipping": true,
+            "warranty": [1, "y"]
             },
             "specification": [
-                ["Display", "16.1-inch FHD IPS 144Hz"],
-                ["Processor", "AMD Ryzen 7"],
-                ["Memory", "Up to 32GB DDR5"],
-                ["Storage", "Up to 1TB NVMe SSD"],
-                ["Graphics", "NVIDIA GeForce RTX"],
-                ["Cooling", "Dual-fan cooling system"],
-                ["Connectivity", "Wi-Fi 6, Bluetooth"],
-                ["Operating system", "Windows 11"]
+            ["Display", "16.1-inch FHD IPS 144Hz"],
+            ["Processor", "AMD Ryzen 7"],
+            ["Memory", "Up to 32GB DDR5"],
+            ["Storage", "Up to 1TB NVMe SSD"],
+            ["Graphics", "NVIDIA GeForce RTX"],
+            ["Cooling", "Dual-fan cooling system"],
+            ["Connectivity", "Wi-Fi 6, Bluetooth"],
+            ["Operating system", "Windows 11"]
             ]
         },
 
@@ -798,37 +1162,42 @@
             "name": "HP Omen 16",
             "brand": ["Hewlett-Packard", "bK5wZ2nL"],
             "description": "A premium gaming notebook designed for demanding games and creative workloads with powerful processing, dedicated graphics, and a fast display.",
-            "product-href": ["", "", "", ""],
+            "product-href": [
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08901308.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08901308.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08901308.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08901308.png"
+            ],
             "price": {
-                "real": 1799
+            "real": 1799
             },
             "preferences": {
-                "rating": 4.9,
-                "reviews": [87.1, "k"],
-                "overall": [[5, 85], [4, 10], [3, 3], [2, 1], [1, 1]]
+            "rating": 4.9,
+            "reviews": [87.1, "k"],
+            "overall": [[5, 85], [4, 10], [3, 3], [2, 1], [1, 1]]
             },
             "variants": {
-                "color": [
-                    ["Shadow Black", "#191A1C"]
-                ],
-                "variants": ["16GB / 1TB", "32GB / 1TB"]
+            "color": [
+                ["Shadow Black", "#191A1C"]
+            ],
+            "variants": ["16GB / 1TB", "32GB / 1TB"]
             },
             "availability": {
-                "in-stock": true,
-                "ships-within": [2, "d"],
-                "max-amount": 3,
-                "free-shipping": true,
-                "warranty": [2, "y"]
+            "in-stock": true,
+            "ships-within": [2, "d"],
+            "max-amount": 3,
+            "free-shipping": true,
+            "warranty": [2, "y"]
             },
             "specification": [
-                ["Display", "16.1-inch QHD 240Hz"],
-                ["Processor", "Intel Core Ultra 9"],
-                ["Memory", "Up to 32GB DDR5"],
-                ["Storage", "1TB NVMe SSD"],
-                ["Graphics", "NVIDIA GeForce RTX"],
-                ["Cooling", "Advanced dual-fan cooling"],
-                ["Connectivity", "Wi-Fi 7, Bluetooth"],
-                ["Operating system", "Windows 11"]
+            ["Display", "16.1-inch QHD 240Hz"],
+            ["Processor", "Intel Core Ultra 9"],
+            ["Memory", "Up to 32GB DDR5"],
+            ["Storage", "1TB NVMe SSD"],
+            ["Graphics", "NVIDIA GeForce RTX"],
+            ["Cooling", "Advanced dual-fan cooling"],
+            ["Connectivity", "Wi-Fi 7, Bluetooth"],
+            ["Operating system", "Windows 11"]
             ]
         },
 
@@ -836,38 +1205,43 @@
             "name": "HP 24 All-in-One",
             "brand": ["Hewlett-Packard", "bK5wZ2nL"],
             "description": "A compact all-in-one desktop that combines the computer, display, speakers, and webcam into a clean setup for home and office use.",
-            "product-href": ["", "", "", ""],
+            "product-href": [
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08812946.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08812946.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08812946.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08812946.png"
+            ],
             "price": {
-                "real": 649
+            "real": 649
             },
             "preferences": {
-                "rating": 4.6,
-                "reviews": [54.7, "k"],
-                "overall": [[5, 69], [4, 20], [3, 7], [2, 3], [1, 1]]
+            "rating": 4.6,
+            "reviews": [54.7, "k"],
+            "overall": [[5, 69], [4, 20], [3, 7], [2, 3], [1, 1]]
             },
             "variants": {
-                "color": [
-                    ["Snow White", "#F2F2EF"],
-                    ["Jet Black", "#222326"]
-                ],
-                "variants": ["8GB / 512GB", "16GB / 512GB"]
+            "color": [
+                ["Snow White", "#F2F2EF"],
+                ["Jet Black", "#222326"]
+            ],
+            "variants": ["8GB / 512GB", "16GB / 512GB"]
             },
             "availability": {
-                "in-stock": true,
-                "ships-within": [24, "h"],
-                "max-amount": 5,
-                "free-shipping": true,
-                "warranty": [1, "y"]
+            "in-stock": true,
+            "ships-within": [24, "h"],
+            "max-amount": 5,
+            "free-shipping": true,
+            "warranty": [1, "y"]
             },
             "specification": [
-                ["Display", "23.8-inch FHD IPS"],
-                ["Processor", "Intel Core i5"],
-                ["Memory", "Up to 16GB"],
-                ["Storage", "512GB NVMe SSD"],
-                ["Camera", "1080p webcam"],
-                ["Audio", "Integrated stereo speakers"],
-                ["Connectivity", "Wi-Fi 6, Bluetooth"],
-                ["Operating system", "Windows 11"]
+            ["Display", "23.8-inch FHD IPS"],
+            ["Processor", "Intel Core i5"],
+            ["Memory", "Up to 16GB"],
+            ["Storage", "512GB NVMe SSD"],
+            ["Camera", "1080p webcam"],
+            ["Audio", "Integrated stereo speakers"],
+            ["Connectivity", "Wi-Fi 6, Bluetooth"],
+            ["Operating system", "Windows 11"]
             ]
         },
 
@@ -875,37 +1249,42 @@
             "name": "HP ProDesk 400 G9",
             "brand": ["Hewlett-Packard", "bK5wZ2nL"],
             "description": "A compact business desktop designed for office productivity, administration, and everyday professional computing.",
-            "product-href": ["", "", "", ""],
+            "product-href": [
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08805333.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08805333.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08805333.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08805333.png"
+            ],
             "price": {
-                "real": 699
+            "real": 699
             },
             "preferences": {
-                "rating": 4.7,
-                "reviews": [43.8, "k"],
-                "overall": [[5, 74], [4, 17], [3, 6], [2, 2], [1, 1]]
+            "rating": 4.7,
+            "reviews": [43.8, "k"],
+            "overall": [[5, 74], [4, 17], [3, 6], [2, 2], [1, 1]]
             },
             "variants": {
-                "color": [
-                    ["Black", "#252525"]
-                ],
-                "variants": ["8GB / 512GB", "16GB / 512GB", "16GB / 1TB"]
+            "color": [
+                ["Black", "#252525"]
+            ],
+            "variants": ["8GB / 512GB", "16GB / 512GB", "16GB / 1TB"]
             },
             "availability": {
-                "in-stock": true,
-                "ships-within": [2, "d"],
-                "max-amount": 5,
-                "free-shipping": true,
-                "warranty": [1, "y"]
+            "in-stock": true,
+            "ships-within": [2, "d"],
+            "max-amount": 5,
+            "free-shipping": true,
+            "warranty": [1, "y"]
             },
             "specification": [
-                ["Processor", "Intel Core i5"],
-                ["Memory", "Up to 16GB DDR4"],
-                ["Storage", "Up to 1TB NVMe SSD"],
-                ["Graphics", "Intel integrated graphics"],
-                ["Connectivity", "Gigabit Ethernet, Wi-Fi 6"],
-                ["Ports", "USB-C, USB-A, DisplayPort"],
-                ["Form factor", "Small form factor"],
-                ["Operating system", "Windows 11 Pro"]
+            ["Processor", "Intel Core i5"],
+            ["Memory", "Up to 16GB DDR4"],
+            ["Storage", "Up to 1TB NVMe SSD"],
+            ["Graphics", "Intel integrated graphics"],
+            ["Connectivity", "Gigabit Ethernet, Wi-Fi 6"],
+            ["Ports", "USB-C, USB-A, DisplayPort"],
+            ["Form factor", "Small form factor"],
+            ["Operating system", "Windows 11 Pro"]
             ]
         },
 
@@ -913,37 +1292,42 @@
             "name": "HP Z2 Mini G9",
             "brand": ["Hewlett-Packard", "bK5wZ2nL"],
             "description": "A compact workstation designed for professional applications, engineering workflows, content creation, and demanding desktop workloads.",
-            "product-href": ["", "", "", ""],
+            "product-href": [
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08395121.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08395121.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08395121.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08395121.png"
+            ],
             "price": {
-                "real": 1599
+            "real": 1599
             },
             "preferences": {
-                "rating": 4.9,
-                "reviews": [31.5, "k"],
-                "overall": [[5, 86], [4, 10], [3, 3], [2, 1], [1, 0]]
+            "rating": 4.9,
+            "reviews": [31.5, "k"],
+            "overall": [[5, 86], [4, 10], [3, 3], [2, 1], [1, 0]]
             },
             "variants": {
-                "color": [
-                    ["Black", "#252525"]
-                ],
-                "variants": ["16GB / 512GB", "32GB / 1TB", "64GB / 2TB"]
+            "color": [
+                ["Black", "#252525"]
+            ],
+            "variants": ["16GB / 512GB", "32GB / 1TB", "64GB / 2TB"]
             },
             "availability": {
-                "in-stock": true,
-                "ships-within": [2, "d"],
-                "max-amount": 3,
-                "free-shipping": true,
-                "warranty": [3, "y"]
+            "in-stock": true,
+            "ships-within": [2, "d"],
+            "max-amount": 3,
+            "free-shipping": true,
+            "warranty": [3, "y"]
             },
             "specification": [
-                ["Processor", "Intel Core i7"],
-                ["Memory", "Up to 64GB DDR5"],
-                ["Storage", "Up to 2TB NVMe SSD"],
-                ["Graphics", "Professional dedicated graphics"],
-                ["Networking", "2.5Gb Ethernet, Wi-Fi"],
-                ["Ports", "USB-C, USB-A, DisplayPort"],
-                ["Form factor", "Mini workstation"],
-                ["Operating system", "Windows 11 Pro"]
+            ["Processor", "Intel Core i7"],
+            ["Memory", "Up to 64GB DDR5"],
+            ["Storage", "Up to 2TB NVMe SSD"],
+            ["Graphics", "Professional dedicated graphics"],
+            ["Networking", "2.5Gb Ethernet, Wi-Fi"],
+            ["Ports", "USB-C, USB-A, DisplayPort"],
+            ["Form factor", "Mini workstation"],
+            ["Operating system", "Windows 11 Pro"]
             ]
         },
 
@@ -951,37 +1335,42 @@
             "name": "HP E27 G5 Monitor",
             "brand": ["Hewlett-Packard", "bK5wZ2nL"],
             "description": "A 27-inch business monitor designed for comfortable productivity with a sharp Full HD display and ergonomic adjustment.",
-            "product-href": ["", "", "", ""],
+            "product-href": [
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08045524.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08045524.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08045524.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08045524.png"
+            ],
             "price": {
-                "real": 249
+            "real": 249
             },
             "preferences": {
-                "rating": 4.7,
-                "reviews": [37.4, "k"],
-                "overall": [[5, 75], [4, 17], [3, 5], [2, 2], [1, 1]]
+            "rating": 4.7,
+            "reviews": [37.4, "k"],
+            "overall": [[5, 75], [4, 17], [3, 5], [2, 2], [1, 1]]
             },
             "variants": {
-                "color": [
-                    ["Black", "#262626"]
-                ],
-                "variants": ["FHD", "QHD"]
+            "color": [
+                ["Black", "#262626"]
+            ],
+            "variants": ["FHD", "QHD"]
             },
             "availability": {
-                "in-stock": true,
-                "ships-within": [24, "h"],
-                "max-amount": 10,
-                "free-shipping": true,
-                "warranty": [3, "y"]
+            "in-stock": true,
+            "ships-within": [24, "h"],
+            "max-amount": 10,
+            "free-shipping": true,
+            "warranty": [3, "y"]
             },
             "specification": [
-                ["Display", "27-inch IPS"],
-                ["Resolution", "1920 × 1080"],
-                ["Refresh rate", "75Hz"],
-                ["Response time", "5ms"],
-                ["Connectivity", "HDMI, DisplayPort"],
-                ["Ergonomics", "Height, tilt, swivel, pivot"],
-                ["Eye comfort", "Low blue light"],
-                ["Panel", "Anti-glare"]
+            ["Display", "27-inch IPS"],
+            ["Resolution", "1920 × 1080"],
+            ["Refresh rate", "75Hz"],
+            ["Response time", "5ms"],
+            ["Connectivity", "HDMI, DisplayPort"],
+            ["Ergonomics", "Height, tilt, swivel, pivot"],
+            ["Eye comfort", "Low blue light"],
+            ["Panel", "Anti-glare"]
             ]
         },
 
@@ -989,37 +1378,42 @@
             "name": "HP M27f Monitor",
             "brand": ["Hewlett-Packard", "bK5wZ2nL"],
             "description": "A slim 27-inch monitor designed for home offices, entertainment, and everyday computing with a minimalist three-sided borderless design.",
-            "product-href": ["", "", "", ""],
+            "product-href": [
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08011720.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08011720.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08011720.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08011720.png"
+            ],
             "price": {
-                "real": 199
+            "real": 199
             },
             "preferences": {
-                "rating": 4.6,
-                "reviews": [28.2, "k"],
-                "overall": [[5, 70], [4, 19], [3, 7], [2, 3], [1, 1]]
+            "rating": 4.6,
+            "reviews": [28.2, "k"],
+            "overall": [[5, 70], [4, 19], [3, 7], [2, 3], [1, 1]]
             },
             "variants": {
-                "color": [
-                    ["Natural Silver", "#C6C8C9"]
-                ],
-                "variants": ["FHD"]
+            "color": [
+                ["Natural Silver", "#C6C8C9"]
+            ],
+            "variants": ["FHD"]
             },
             "availability": {
-                "in-stock": true,
-                "ships-within": [24, "h"],
-                "max-amount": 10,
-                "free-shipping": true,
-                "warranty": [1, "y"]
+            "in-stock": true,
+            "ships-within": [24, "h"],
+            "max-amount": 10,
+            "free-shipping": true,
+            "warranty": [1, "y"]
             },
             "specification": [
-                ["Display", "27-inch IPS"],
-                ["Resolution", "1920 × 1080"],
-                ["Refresh rate", "75Hz"],
-                ["Brightness", "300 nits"],
-                ["Connectivity", "HDMI, VGA"],
-                ["Design", "Three-sided micro-edge"],
-                ["Eye comfort", "Low blue light"],
-                ["Panel", "Anti-glare"]
+            ["Display", "27-inch IPS"],
+            ["Resolution", "1920 × 1080"],
+            ["Refresh rate", "75Hz"],
+            ["Brightness", "300 nits"],
+            ["Connectivity", "HDMI, VGA"],
+            ["Design", "Three-sided micro-edge"],
+            ["Eye comfort", "Low blue light"],
+            ["Panel", "Anti-glare"]
             ]
         },
 
@@ -1027,37 +1421,42 @@
             "name": "HP Omen 27q Gaming Monitor",
             "brand": ["Hewlett-Packard", "bK5wZ2nL"],
             "description": "A high-refresh-rate gaming monitor with a sharp QHD display, adaptive synchronization, and responsive performance for competitive gaming.",
-            "product-href": ["", "", "", ""],
+            "product-href": [
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08842145.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08842145.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08842145.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08842145.png"
+            ],
             "price": {
-                "real": 349
+            "real": 349
             },
             "preferences": {
-                "rating": 4.8,
-                "reviews": [41.9, "k"],
-                "overall": [[5, 81], [4, 13], [3, 4], [2, 1], [1, 1]]
+            "rating": 4.8,
+            "reviews": [41.9, "k"],
+            "overall": [[5, 81], [4, 13], [3, 4], [2, 1], [1, 1]]
             },
             "variants": {
-                "color": [
-                    ["Black", "#202124"]
-                ],
-                "variants": ["27-inch QHD"]
+            "color": [
+                ["Black", "#202124"]
+            ],
+            "variants": ["27-inch QHD"]
             },
             "availability": {
-                "in-stock": true,
-                "ships-within": [24, "h"],
-                "max-amount": 5,
-                "free-shipping": true,
-                "warranty": [1, "y"]
+            "in-stock": true,
+            "ships-within": [24, "h"],
+            "max-amount": 5,
+            "free-shipping": true,
+            "warranty": [1, "y"]
             },
             "specification": [
-                ["Display", "27-inch IPS"],
-                ["Resolution", "2560 × 1440"],
-                ["Refresh rate", "165Hz"],
-                ["Response time", "1ms"],
-                ["Adaptive sync", "AMD FreeSync"],
-                ["Connectivity", "HDMI, DisplayPort"],
-                ["Brightness", "400 nits"],
-                ["HDR", "HDR400"]
+            ["Display", "27-inch IPS"],
+            ["Resolution", "2560 × 1440"],
+            ["Refresh rate", "165Hz"],
+            ["Response time", "1ms"],
+            ["Adaptive sync", "AMD FreeSync"],
+            ["Connectivity", "HDMI, DisplayPort"],
+            ["Brightness", "400 nits"],
+            ["HDR", "HDR400"]
             ]
         },
 
@@ -1065,37 +1464,42 @@
             "name": "HP LaserJet Pro 4103fdw",
             "brand": ["Hewlett-Packard", "bK5wZ2nL"],
             "description": "A color multifunction laser printer designed for productive home offices and small businesses with printing, scanning, copying, and fax capabilities.",
-            "product-href": ["", "", "", ""],
+            "product-href": [
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08394832.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08394832.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08394832.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08394832.png"
+            ],
             "price": {
-                "real": 549
+            "real": 549
             },
             "preferences": {
-                "rating": 4.7,
-                "reviews": [22.6, "k"],
-                "overall": [[5, 76], [4, 16], [3, 5], [2, 2], [1, 1]]
+            "rating": 4.7,
+            "reviews": [22.6, "k"],
+            "overall": [[5, 76], [4, 16], [3, 5], [2, 2], [1, 1]]
             },
             "variants": {
-                "color": [
-                    ["White", "#E9E9E7"]
-                ],
-                "variants": ["Standard"]
+            "color": [
+                ["White", "#E9E9E7"]
+            ],
+            "variants": ["Standard"]
             },
             "availability": {
-                "in-stock": true,
-                "ships-within": [2, "d"],
-                "max-amount": 3,
-                "free-shipping": true,
-                "warranty": [1, "y"]
+            "in-stock": true,
+            "ships-within": [2, "d"],
+            "max-amount": 3,
+            "free-shipping": true,
+            "warranty": [1, "y"]
             },
             "specification": [
-                ["Type", "Color laser multifunction"],
-                ["Functions", "Print, scan, copy, fax"],
-                ["Print speed", "Up to 35 ppm"],
-                ["Resolution", "Up to 600 × 600 dpi"],
-                ["Duplex", "Automatic"],
-                ["Connectivity", "Wi-Fi, Ethernet, USB"],
-                ["Paper size", "Up to A4"],
-                ["Display", "Color touchscreen"]
+            ["Type", "Color laser multifunction"],
+            ["Functions", "Print, scan, copy, fax"],
+            ["Print speed", "Up to 35 ppm"],
+            ["Resolution", "Up to 600 × 600 dpi"],
+            ["Duplex", "Automatic"],
+            ["Connectivity", "Wi-Fi, Ethernet, USB"],
+            ["Paper size", "Up to A4"],
+            ["Display", "Color touchscreen"]
             ]
         },
 
@@ -1103,37 +1507,42 @@
             "name": "HP LaserJet M209dw",
             "brand": ["Hewlett-Packard", "bK5wZ2nL"],
             "description": "A compact monochrome laser printer designed for fast and reliable document printing in home offices and small workspaces.",
-            "product-href": ["", "", "", ""],
+            "product-href": [
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c07687782.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c07687782.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c07687782.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c07687782.png"
+            ],
             "price": {
-                "real": 229
+            "real": 229
             },
             "preferences": {
-                "rating": 4.6,
-                "reviews": [18.4, "k"],
-                "overall": [[5, 70], [4, 20], [3, 6], [2, 3], [1, 1]]
+            "rating": 4.6,
+            "reviews": [18.4, "k"],
+            "overall": [[5, 70], [4, 20], [3, 6], [2, 3], [1, 1]]
             },
             "variants": {
-                "color": [
-                    ["White", "#E9E9E7"]
-                ],
-                "variants": ["Standard"]
+            "color": [
+                ["White", "#E9E9E7"]
+            ],
+            "variants": ["Standard"]
             },
             "availability": {
-                "in-stock": true,
-                "ships-within": [24, "h"],
-                "max-amount": 5,
-                "free-shipping": true,
-                "warranty": [1, "y"]
+            "in-stock": true,
+            "ships-within": [24, "h"],
+            "max-amount": 5,
+            "free-shipping": true,
+            "warranty": [1, "y"]
             },
             "specification": [
-                ["Type", "Monochrome laser"],
-                ["Print speed", "Up to 30 ppm"],
-                ["Resolution", "Up to 1200 × 1200 dpi"],
-                ["Duplex", "Automatic"],
-                ["Connectivity", "Wi-Fi, Ethernet, USB"],
-                ["Paper size", "Up to A4"],
-                ["Mobile printing", "Supported"],
-                ["Display", "LED control panel"]
+            ["Type", "Monochrome laser"],
+            ["Print speed", "Up to 30 ppm"],
+            ["Resolution", "Up to 1200 × 1200 dpi"],
+            ["Duplex", "Automatic"],
+            ["Connectivity", "Wi-Fi, Ethernet, USB"],
+            ["Paper size", "Up to A4"],
+            ["Mobile printing", "Supported"],
+            ["Display", "LED control panel"]
             ]
         },
 
@@ -1141,37 +1550,42 @@
             "name": "HP Smart Tank 7305",
             "brand": ["Hewlett-Packard", "bK5wZ2nL"],
             "description": "A refillable ink-tank all-in-one printer designed for high-volume home and small-office printing with low running costs.",
-            "product-href": ["", "", "", ""],
+            "product-href": [
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c07933430.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c07933430.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c07933430.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c07933430.png"
+            ],
             "price": {
-                "real": 329
+            "real": 329
             },
             "preferences": {
-                "rating": 4.8,
-                "reviews": [34.5, "k"],
-                "overall": [[5, 79], [4, 14], [3, 4], [2, 2], [1, 1]]
+            "rating": 4.8,
+            "reviews": [34.5, "k"],
+            "overall": [[5, 79], [4, 14], [3, 4], [2, 2], [1, 1]]
             },
             "variants": {
-                "color": [
-                    ["White", "#E8E8E5"]
-                ],
-                "variants": ["Standard"]
+            "color": [
+                ["White", "#E8E8E5"]
+            ],
+            "variants": ["Standard"]
             },
             "availability": {
-                "in-stock": true,
-                "ships-within": [24, "h"],
-                "max-amount": 5,
-                "free-shipping": true,
-                "warranty": [1, "y"]
+            "in-stock": true,
+            "ships-within": [24, "h"],
+            "max-amount": 5,
+            "free-shipping": true,
+            "warranty": [1, "y"]
             },
             "specification": [
-                ["Type", "Color ink tank multifunction"],
-                ["Functions", "Print, scan, copy"],
-                ["Print speed", "Up to 15 ppm"],
-                ["Duplex", "Automatic"],
-                ["Connectivity", "Wi-Fi, USB"],
-                ["Ink system", "Refillable ink tanks"],
-                ["Paper size", "Up to A4"],
-                ["Mobile printing", "HP Smart app"]
+            ["Type", "Color ink tank multifunction"],
+            ["Functions", "Print, scan, copy"],
+            ["Print speed", "Up to 15 ppm"],
+            ["Duplex", "Automatic"],
+            ["Connectivity", "Wi-Fi, USB"],
+            ["Ink system", "Refillable ink tanks"],
+            ["Paper size", "Up to A4"],
+            ["Mobile printing", "HP Smart app"]
             ]
         },
 
@@ -1179,37 +1593,42 @@
             "name": "HP 150 Wired Keyboard and Mouse",
             "brand": ["Hewlett-Packard", "bK5wZ2nL"],
             "description": "A straightforward wired keyboard and mouse combination designed for reliable everyday desktop use at home, school, and work.",
-            "product-href": ["", "", "", ""],
+            "product-href": [
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c07085509.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c07085509.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c07085509.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c07085509.png"
+            ],
             "price": {
-                "real": 29
+            "real": 29
             },
             "preferences": {
-                "rating": 4.5,
-                "reviews": [12.8, "k"],
-                "overall": [[5, 65], [4, 22], [3, 8], [2, 4], [1, 1]]
+            "rating": 4.5,
+            "reviews": [12.8, "k"],
+            "overall": [[5, 65], [4, 22], [3, 8], [2, 4], [1, 1]]
             },
             "variants": {
-                "color": [
-                    ["Black", "#242424"]
-                ],
-                "variants": ["US Layout", "UK Layout"]
+            "color": [
+                ["Black", "#242424"]
+            ],
+            "variants": ["US Layout", "UK Layout"]
             },
             "availability": {
-                "in-stock": true,
-                "ships-within": [24, "h"],
-                "max-amount": 20,
-                "free-shipping": false,
-                "warranty": [1, "y"]
+            "in-stock": true,
+            "ships-within": [24, "h"],
+            "max-amount": 20,
+            "free-shipping": false,
+            "warranty": [1, "y"]
             },
             "specification": [
-                ["Keyboard", "Full-size wired keyboard"],
-                ["Mouse", "Optical wired mouse"],
-                ["Connection", "USB-A"],
-                ["Keyboard layout", "Full-size"],
-                ["Mouse sensor", "Optical"],
-                ["Compatibility", "Windows"],
-                ["Cable", "Wired"],
-                ["Color", "Black"]
+            ["Keyboard", "Full-size wired keyboard"],
+            ["Mouse", "Optical wired mouse"],
+            ["Connection", "USB-A"],
+            ["Keyboard layout", "Full-size"],
+            ["Mouse sensor", "Optical"],
+            ["Compatibility", "Windows"],
+            ["Cable", "Wired"],
+            ["Color", "Black"]
             ]
         },
 
@@ -1217,38 +1636,43 @@
             "name": "HP 930 Creator Wireless Mouse",
             "brand": ["Hewlett-Packard", "bK5wZ2nL"],
             "description": "A premium wireless mouse designed for creators and professionals with customizable controls, precise tracking, and multi-device connectivity.",
-            "product-href": ["", "", "", ""],
+            "product-href": [
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08208917.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08208917.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08208917.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08208917.png"
+            ],
             "price": {
-                "real": 89
+            "real": 89
             },
             "preferences": {
-                "rating": 4.7,
-                "reviews": [9.6, "k"],
-                "overall": [[5, 76], [4, 16], [3, 5], [2, 2], [1, 1]]
+            "rating": 4.7,
+            "reviews": [9.6, "k"],
+            "overall": [[5, 76], [4, 16], [3, 5], [2, 2], [1, 1]]
             },
             "variants": {
-                "color": [
-                    ["Silver", "#BFC2C4"],
-                    ["Black", "#222222"]
-                ],
-                "variants": ["Standard"]
+            "color": [
+                ["Silver", "#BFC2C4"],
+                ["Black", "#222222"]
+            ],
+            "variants": ["Standard"]
             },
             "availability": {
-                "in-stock": true,
-                "ships-within": [24, "h"],
-                "max-amount": 10,
-                "free-shipping": true,
-                "warranty": [1, "y"]
+            "in-stock": true,
+            "ships-within": [24, "h"],
+            "max-amount": 10,
+            "free-shipping": true,
+            "warranty": [1, "y"]
             },
             "specification": [
-                ["Sensor", "High-precision optical sensor"],
-                ["DPI", "Up to 4000 DPI"],
-                ["Connectivity", "Bluetooth and USB receiver"],
-                ["Battery", "Rechargeable"],
-                ["Buttons", "Programmable buttons"],
-                ["Devices", "Multi-device support"],
-                ["Tracking", "Glass-compatible tracking"],
-                ["Compatibility", "Windows and macOS"]
+            ["Sensor", "High-precision optical sensor"],
+            ["DPI", "Up to 4000 DPI"],
+            ["Connectivity", "Bluetooth and USB receiver"],
+            ["Battery", "Rechargeable"],
+            ["Buttons", "Programmable buttons"],
+            ["Devices", "Multi-device support"],
+            ["Tracking", "Glass-compatible tracking"],
+            ["Compatibility", "Windows and macOS"]
             ]
         },
 
@@ -1256,37 +1680,42 @@
             "name": "HP USB-C Dock G5",
             "brand": ["Hewlett-Packard", "bK5wZ2nL"],
             "description": "A versatile USB-C docking station that expands compatible laptops with display, networking, USB, and peripheral connectivity.",
-            "product-href": ["", "", "", ""],
+            "product-href": [
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c06231653.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c06231653.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c06231653.png",
+            "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c06231653.png"
+            ],
             "price": {
-                "real": 179
+            "real": 179
             },
             "preferences": {
-                "rating": 4.7,
-                "reviews": [15.3, "k"],
-                "overall": [[5, 74], [4, 18], [3, 5], [2, 2], [1, 1]]
+            "rating": 4.7,
+            "reviews": [15.3, "k"],
+            "overall": [[5, 74], [4, 18], [3, 5], [2, 2], [1, 1]]
             },
             "variants": {
-                "color": [
-                    ["Black", "#262626"]
-                ],
-                "variants": ["Standard"]
+            "color": [
+                ["Black", "#262626"]
+            ],
+            "variants": ["Standard"]
             },
             "availability": {
-                "in-stock": true,
-                "ships-within": [24, "h"],
-                "max-amount": 10,
-                "free-shipping": true,
-                "warranty": [1, "y"]
+            "in-stock": true,
+            "ships-within": [24, "h"],
+            "max-amount": 10,
+            "free-shipping": true,
+            "warranty": [1, "y"]
             },
             "specification": [
-                ["Connection", "USB-C"],
-                ["Display output", "DisplayPort"],
-                ["USB", "USB-C and USB-A"],
-                ["Networking", "Gigabit Ethernet"],
-                ["Audio", "3.5mm audio"],
-                ["Power delivery", "Up to 100W"],
-                ["Security", "Kensington lock support"],
-                ["Compatibility", "Compatible USB-C laptops"]
+            ["Connection", "USB-C"],
+            ["Display output", "DisplayPort"],
+            ["USB", "USB-C and USB-A"],
+            ["Networking", "Gigabit Ethernet"],
+            ["Audio", "3.5mm audio"],
+            ["Power delivery", "Up to 100W"],
+            ["Security", "Kensington lock support"],
+            ["Compatibility", "Compatible USB-C laptops"]
             ]
         },
         "H5xP8mQ2": {
